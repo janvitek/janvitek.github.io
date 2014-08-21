@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:14 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>When you are done with the abstracts, take a minute to pick the paper that you find the most interesting or intriguing.&#xD;&#xD;Two lectures this Friday: morning as usual and during the PSO (3:30-4:15). &#xD;&#xD;Send me mail to get registered to the 510 mailing list.&#xD;&#xD;A handout on Extreme Programming will be given on Friday, read it over the weekend.</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Schedule, Abstracts, etc.&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Tuesday, August 22, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

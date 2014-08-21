@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:2A19A90B-3A44-4560-85B1-C76281FF24B3</id>
+ <title>Page list Atom feed</title>
+ <updated>2012-04-10T23:28:17-04:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:94B89244-23B5-4C18-B97B-7D29E3DDF911</id>
+  <title>Home</title>
+  <title xmlns="urn:iweb:">Home</title>
+  <in-navbar xmlns="urn:iweb:">94B89244-23B5-4C18-B97B-7D29E3DDF911</in-navbar>
+  <link rel="alternate" href="Home.html"/>
+  <updated>2012-04-10T23:28:17.001-04:00</updated>
+  <content>Home</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:88BAD055-64A3-4409-9BB1-C3977F546B3A</id>
+  <title>Schedule</title>
+  <title xmlns="urn:iweb:">Schedule</title>
+  <in-navbar xmlns="urn:iweb:">88BAD055-64A3-4409-9BB1-C3977F546B3A</in-navbar>
+  <link rel="alternate" href="Schedule.html"/>
+  <updated>2012-04-10T23:28:17.002-04:00</updated>
+  <content>Schedule</content>
+ </entry>
+</feed>

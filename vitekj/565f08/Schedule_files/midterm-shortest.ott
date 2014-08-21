@@ -1,0 +1,242 @@
+metavar integer_literal ::=  {{ lex numeral }}
+metavar var ::=
+indexvar index , i , j , n ::=  {{ lex numeral }}  {{ com index variables }}
+
+grammar
+terminals :: terminals_ ::=
+  | -->                        ::   :: longrightarrow {{ tex \longrightarrow }}
+  | ->                         ::   :: rightarrow     {{ tex \rightarrow }}
+  | =>                         ::   :: Downarrow     {{ tex \Downarrow }}
+  | \                          ::   :: lambda         {{ tex \lambda }}
+  | |->                        ::   :: mapsto         {{ tex \mapsto }}
+  | |-                         ::   :: vdash          {{ tex \vdash }}
+  | !                          ::   :: ref
+  | notin                      ::   :: notin {{ tex \not\in}}
+  | in                         ::   :: in {{ tex \in}}
+
+p :: Pm ::=
+  | d ; p                           :: :: Decl {{ com declarations}}
+  | ts                              :: :: Body {{ com body}}
+
+ts :: Ts ::=
+  | t                               :: :: Stmt  {{ com statement }}
+  | ts ; ts'                        :: :: Stmts {{ com statements }}
+ 
+t :: Tm ::=                                     {{ com terms: }}
+  | if e then ts else ts'           :: :: If    {{ com conditional }}
+  | while x do ts                   :: :: While {{ com loop }}
+  | nop                             :: M :: Noop
+  | dec ( x , e )                   ::   :: Decr      {{ com decrement }}
+
+d :: Dcl ::=
+  | T x = e                        :: :: Decl  {{ com declaration }}
+
+e :: Expr ::=
+  | x                             ::   :: Var       {{ com variable }}
+  | nv                            ::   :: Int       {{ com integer }}
+  | e + e'                        ::   :: Add       {{ com addition }}
+  | e - e'                        ::   :: Decr      {{ com addition }}
+  | e == e'                       ::   :: Test      {{ com equals}}
+  | true                          ::   :: True      {{ com true}}  
+  | false                         ::   :: False     {{ com false}}
+
+
+v :: Va ::=                                         {{ com values: }}
+  | true                          ::   :: True      {{ com true}}  
+  | false                         ::   :: False     {{ com false}}
+  | nv                            ::   :: Int       {{ com integer value }}
+
+nv :: 'i_' ::= {{ com Integers }}
+  | integer_literal :: :: Integer
+
+
+x , y :: x_ ::=  {{ com term variable }}
+   |  var      ::   :: var   {{ com normal variable }}
+
+T :: Ty ::=                      {{ com types: }}
+  | Bool                         ::   :: Bool       {{ com type of booleans }}
+  | Int                          ::   :: Int        {{ com type of integers}}
+
+G {{ tex \Gamma }} :: G_ ::=                    {{ com contexts: }}
+  | empty                        ::   :: empty   {{ com empty context }}
+  | G , x : T                    ::   :: vn      {{ com term variable binding }}
+
+m {{ tex \mu }} :: M_ ::=
+  | [] :: :: empty
+
+s {{ tex \sigma }} :: ss_ ::=
+  | [] :: :: empty
+  | s [ x |-> v ] :: :: bind
+
+S {{ tex \Sigma }} :: S_ ::=
+  | []      :: :: empty
+
+formula :: formula_ ::=           {{ com formulas }}
+    | judgement             :: :: judgement
+    | nv3 = nv1 + nv2       :: :: add
+    | nv3 = nv1 - nv2       :: :: sub
+    | G , S |- t : Ok       :: :: x
+    | G , S |- e : T        :: :: xy
+    | s ( x ) = v           :: :: x11
+    | s = s' [ x |-> v ]    :: :: x21
+    | s = s' [ x |-> nv - nv' ] :: :: x24
+    | v != v'               :: :: x6
+    | s ( x ) = v     :: :: x5
+    | s ( x ) > 0     :: :: x7
+    | s ( x ) <= 0    :: :: x8
+    | nv > 0                :: :: x10
+    | nv = 0                :: :: xx1
+    | nv < 0                :: :: xx2
+    | x : T in G            :: :: xTG       {{ tex [[x]]:[[T]] \in [[G]] }}
+
+subrules
+v <:: e
+
+defns 
+Jop :: '' ::= 
+
+defn 
+G , S |- p : Ok :: :: Ptype :: PT_ {{ com Type Program }} by
+
+G, S |- e : T
+G, x:T, S |- p : Ok
+------------------------- :: Decl
+G, S |- T x = e; p  : Ok
+
+G, S |- t : Ok
+------------------------- :: Stmt
+G, S |- t; ts : Ok
+
+defn 
+G , S |- t : Ok :: :: Ttype :: TT_ {{ com Type Statement }} by
+
+G,S |- e : Bool
+G,S |- ts : Ok
+G,S |- ts' : Ok
+---------------------------------- :: If
+G,S |- if e then ts else ts' : Ok
+
+G,S |- x : Int
+G,S |- ts : Ok
+---------------------------  :: While
+G,S |- while x do ts  : Ok
+
+----------------   :: Nop
+G,S |- nop : Ok
+
+G,S |- e : Int
+G,S |- x : Int
+----------------   :: Decr
+G,S |- dec(x,e) : Ok
+
+defn 
+G , S |- e : T :: :: Etype :: ET_ {{ com Type Expression }} by
+
+
+x:T in G  
+------------- :: Var
+G,S |- x : T
+
+G,S |- e : Int
+G,S |- e' : Int
+-------------------- :: Add
+G,S |- e + e' : Int
+
+G,S |- e : Int
+G,S |- e' : Int
+-------------------- :: Sub
+G,S |- e - e' : Int
+
+G,S |- e : Int
+G,S |- e' : Int
+-------------------- :: Eq
+G,S |- e == e' :Bool
+ 
+------------------ :: Const
+G,S |- nv : Int
+
+------------------ :: T
+G,S |- true : Bool
+
+------------------ :: F
+G,S |- false : Bool
+
+
+defn 
+p , s , m  --> p' , s' , m' :: :: redp :: P_ {{ com Program evaluation }} by
+
+      e, s, m => v, m' 
+      s' = s[x |-> v]
+---------------------------------  :: Decl
+T x = e; p, s, m --> p, s', m'
+
+      t, s, m -> ts', s', m'
+--------------------------------- :: Stmts
+t ; ts, s, m --> ts' ; ts, s', m'
+
+      t, s, m -> ts, s', m'
+------------------------------- :: Stmt
+t , s, m --> ts, s', m'
+
+------------------------------- :: Noop
+nop ; ts, s, m -->  ts, s, m
+
+
+defn 
+t , s , m  -> ts , s' , m' :: :: red :: E_ {{ com Statement Evaluation }} by
+
+      e, s, m => true, m'
+--------------------------------------  :: IfT
+if e then ts else ts', s, m -> ts, s, m'
+
+       e, s, m => false, m'
+--------------------------------------  :: IfF
+if e then ts else ts', s, m -> ts', s, m'
+
+         s(x) > 0
+-------------------------------------------- :: WT
+while x do ts, s, m -> ts; while x do ts, s, m
+
+         s(x) <= 0
+-------------------------------- :: WF
+ while x do ts, s, m -> nop, s, m
+
+     e, s, m => nv, m'
+        s(x) = nv'
+      s'=s[x |-> nv'-nv]
+--------------------------------- :: Decr
+dec(x,e), s, m -> nop, s', m'
+
+defn 
+e , s , m  => v , m' :: :: rede :: E_ {{ com Expression Evaluation }} by
+
+------------------ :: Val
+v, s, m => v, m
+
+   s(x) = v
+-----------------  ::Var
+x, s, m => v, m
+ 
+   e, s, m => nv, m'
+  e', s, m' => nv', m''
+    nv'' = nv + nv'
+------------------------ :: Add
+e + e', s, m => nv'', m''
+
+  e, s, m => nv,m'
+ e', s, m' => nv', m''
+  nv'' = nv - nv'
+----------------------- :: Sub
+e - e', s, m => nv'', m''
+
+   e, s, m => v, m'
+  e', s, m'=> v, m''
+--------------------------- :: Eq
+e == e', s, m => true, m''
+
+   e, s, m => nv, m'
+ e', s, m' => nv', m''
+        nv != nv'
+-------------------------- :: NEq
+e == e', s, m => false, m''
+

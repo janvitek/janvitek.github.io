@@ -1,0 +1,10 @@
+See here:
+
+http://www.cis.upenn.edu/~bcpierce/tapl/checkers/fulluntyped/
+
+See page 75 in the book.  The interpreter in the code above uses method #3 for dealing with variable substitutions.  Pick one of the other methods, and change the interpreter to use that instead of method #3.  We recommend method #1, but you can pick whichever one you like.
+
+Due date is roughly in two weeks (Tue, 30 Sept).  Please include all code, in addition to:
+
+- Your own test cases, and
+- A description of why you chose the method that you chose.

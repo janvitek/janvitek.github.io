@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<rss xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Blog</title>
+    <link>http://web.me.com/vitekj/510s06/Blog</link>
+    <description>General information on the Fall 2006 Graduate Software Engineering class
+
+
+
+
+</description>
+    <item>
+      <title>The last month...</title>
+      <link>http://web.me.com/vitekj/510s06/Blog/Entries/2006/11/19_The_last_month....html</link>
+      <guid isPermaLink="false">09ceaeca-7a76-446f-87c3-a704ed8ebd82</guid>
+      <pubDate>Sun, 19 Nov 2006 11:54:05 -0500</pubDate>
+      <description>This is the last month of CS510. &lt;br/&gt;&lt;br/&gt;We are almost done with Chapter 3 (Constraint Based Analysis -- btw slides are &lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/ppa3.pdf"&gt;here&lt;/a&gt;). The rest of the course will focus on classic papers in software engineering.&lt;br/&gt;&lt;br/&gt;From now on we will devote one class a week to project meetings. The deadline for the project will be set back as far as possible to give you time to do something meaningful. Each team will have a presentation on a date to be set.&lt;br/&gt;&lt;br/&gt;E1, E2 and M2 have been graded and can be inspected by appointment. The short summary is that you did very well. If you keep this up, you will have unusually high grades. (I will have to do something about this in the final).  Speaking of which: the final will cover, in equal parts, the first half of the course (patterns, design, UML, refactoring) and static analysis. And the qualifier will be a superset of the exam and require that you be able to argue about some of the papers covered in class.</description>
+      <iweb:comment enabled="0" count="0" link="http://web.me.com/vitekj/510s06/Blog/Entries/2006/11/19_The_last_month....html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Another exercise:  E2</title>
+      <link>http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/27_Another_exercise%3A__E2.html</link>
+      <guid isPermaLink="false">ab471043-5106-4be1-a52e-932704930f38</guid>
+      <pubDate>Fri, 27 Oct 2006 08:53:34 -0400</pubDate>
+      <description>It&#x2019;s time (again) to train our skills at writing down data flow equations.&lt;br/&gt;&lt;br/&gt;For this assignment allow two hours (120 consecutive minutes)  Do as much as you can, but stop at the end of the alloted time. Grading will be based on the quality of your answer regardless of how far you got. In other words - if you can get full grade with only 20% of the assignment finished -- if what you have is correct.&lt;br/&gt;&lt;br/&gt;For E2, do Exercise 2.14, page 138 of PPA.&lt;br/&gt;&lt;br/&gt;Deadline next Friday.</description>
+      <iweb:comment enabled="0" count="0" link="http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/27_Another_exercise%3A__E2.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Evaluations</title>
+      <link>http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/24_Evaluations.html</link>
+      <guid isPermaLink="false">e8ca5521-c4e9-4604-89e2-3d156650faa9</guid>
+      <pubDate>Tue, 24 Oct 2006 21:45:58 -0400</pubDate>
+      <description>There is one for you and one for me.&lt;br/&gt;&lt;br/&gt;I was really happy to see that you did good on the exercise based on the book. Everyone did it really well. We will have more of those and, they may be longer but always bounded to 60 minutes.&lt;br/&gt;&lt;br/&gt;I also was able to access the result of the midsemester evaluation of the class. It seems that the part that needs most work is the assignments: one of you expressed the desire for &#x201C;Stricter deadlines for homeworks&#x201D;. I will see what can be done. Thanks for filling those in. (If anyone has more comments ... use the Add comment link, I will be happy to hear more)&lt;br/&gt;&lt;br/&gt;</description>
+      <iweb:comment enabled="0" count="0" link="http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/24_Evaluations.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>Projects   </title>
+      <link>http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/23_Projects___.html</link>
+      <guid isPermaLink="false">74897e7a-b78f-484f-bc8b-040143490673</guid>
+      <pubDate>Mon, 23 Oct 2006 08:14:10 -0400</pubDate>
+      <description>The grades for part 1 and part 2 of the verifiers will be split as follows 10 points for part one and 30 points on part 2.&lt;br/&gt;Make sure to write up a good log, comment your code and give us some test cases to run against your code. If in doubt about what is a good log, ask either Hiroshi or me.&lt;br/&gt;</description>
+      <iweb:comment enabled="0" count="0" link="http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/23_Projects___.html#comment_layer"></iweb:comment>
+    </item>
+    <item>
+      <title>PA4 part 1</title>
+      <link>http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/20_PA4_part_1.html</link>
+      <guid isPermaLink="false">0aa53097-4583-4a06-bf88-797c2812d112</guid>
+      <pubDate>Fri, 20 Oct 2006 00:41:30 -0400</pubDate>
+      <description>So how did we grade PA4 part 1?   I suggested the following list of criteria to Hiroshi: &lt;br/&gt;+ Functionality -- does the code generate sensible outputs. At this stage we can accepts some minor defects. Part 2 will catch them.&lt;br/&gt;+ Code quality -- Presence of comments, good programming style, naming conventions.&lt;br/&gt;+ Test -- Presence of tests is a plus. &lt;br/&gt;+ Development log -- The log should document the development of the software and the use of the software engineering techniques covered in class. &lt;br/&gt;&lt;br/&gt;Some remarks about the logs: [&lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/as/4.pdf"&gt;1&lt;/a&gt;] is a nice write up. The pair programming fragment is too detailed. Log is [&lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/as/a4_balla_hoffman_part1_log.pdf"&gt;2&lt;/a&gt;] at the right level  of detail it give a an overview of what has been done, how it  was tested and the development process. Log [&lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/as/log.pdf"&gt;3&lt;/a&gt;] needs to give an overview of the design. Log [&lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/as/sz.pdf"&gt;4&lt;/a&gt;] is a bit to concise. &lt;br/&gt;&lt;br/&gt;For future projects consider using something similar to Blogger used by [&lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/as/a4_balla_hoffman_part1_log.pdf"&gt;2&lt;/a&gt;]. The Log should serve as project documentation and contain useful information. </description>
+      <iweb:comment enabled="0" count="0" link="http://web.me.com/vitekj/510s06/Blog/Entries/2006/10/20_PA4_part_1.html#comment_layer"></iweb:comment>
+    </item>
+    <iweb:dateFormat>EEEE, MMMM d, y</iweb:dateFormat>
+    <iweb:baseURL>http://web.me.com/vitekj/510s06/Blog</iweb:baseURL>
+    <iweb:maximumSummaryItems>5</iweb:maximumSummaryItems>
+  </channel>
+</rss>

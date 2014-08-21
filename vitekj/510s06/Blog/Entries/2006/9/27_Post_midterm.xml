@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:16 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>The midterm is behind us, a quick look at the responses suggests that you did well. &#xD;&#xD;We will have another &#x2018;midterm&#x2019; for the program verification part of the class. These exams are important as they give you feedback and also are a good indication of the kinds of questions that will appear on the final. If you do ok in both, you should have no problems later.&#xD;&#xD;Looking ahead. This Friday we will continue with program analysis in the morning session. In the PSO, I will give the answers to the midterm and comments on your code for PA2 (which you are in the process of fixing for PA3).&#xD;&#xD;Next week, we will cover Data Flow Analysis in the lectures and start our project on Java bytecode verification. For this, we will form groups (2/3 pers per group).&#xD;&#xD;We will also start our LightningTalks series with the paper &#x201C;Who should fix this bug&#x201D;. Volunteers to present those are more than welcome / short of one I will assign the papers.&#xD; </richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Post midterm&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Wednesday, September 27, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="1449BC5F-EE6B-41F5-8D88-F7F8A746F60B">
+  <lastEdited clientType="local-build-20090616" date="2009-06-16 10:34:22 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Czech</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>I am finally catching and putting pictures from the children&#x2019;s summer in the Czech republic.&#xD;Nadia and Anton spent two months with Babi, Deda and Natasha in Prague and Kremze, and, to our surprise, loved it.&#xD;They met members of our family and visited the some of the most beautiful parts of the republic. &#xD;&#xD;&lt;b&gt;                                      [&lt;/b&gt;&lt;b&gt;&lt;a href="perma://BLPageReference/D73F53ED-F0D1-435E-B9EC-BA4A267262FA"&gt; the pictures  are here&lt;/a&gt;&lt;/b&gt;&lt;b&gt; ]&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Tuesday, November 6, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="6_Summer_in_the_Czech_files/shapeimage_1.png" left="0px" top="0px" width="266px" height="200px"/>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Summer in the Czech</richText>
+  </textBox>
+</content>

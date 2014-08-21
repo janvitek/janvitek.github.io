@@ -1,0 +1,199 @@
+.Body {
+    color: rgb(255, 255, 255);
+    font-family: 'Chalkboard', 'Comic Sans MS', sans-serif;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.Header {
+    color: rgb(255, 255, 255);
+    font-family: 'Chalkboard', 'Comic Sans MS', sans-serif;
+    font-size: 48px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 62px;
+    margin-bottom: 0px;
+    margin-left: 23px;
+    margin-right: 153px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.Normal_External_643_127 {
+    position: relative;
+}
+.Normal_External_562_26 {
+    position: relative;
+}
+.Normal {
+    padding: 0px;
+}
+.Normal_External_645_123 {
+    position: relative;
+}
+.Title {
+    color: rgb(109, 71, 34);
+    font-family: 'Chalkboard', 'Comic Sans MS', sans-serif;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 5px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.graphic_generic_body_textbox_style_default_SkipStroke {
+    background: transparent url(Playtime_waves_05.jpg) repeat scroll top left;
+    opacity: 1.00;
+}
+.graphic_generic_header_textbox_style_default_SkipStroke {
+    background: transparent url(Kids_green_header_02.png) repeat scroll top left;
+    opacity: 1.00;
+}
+.graphic_generic_title_textbox_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.graphic_image_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_SkipStroke_4 {
+    background: transparent;
+    opacity: 1.00;
+}
+.graphic_shape_layout_style_default {
+    padding: 4px;
+}
+.style_External_562_26 {
+    position: relative;
+}
+.style_1 {
+    padding: 30px;
+}
+.style {
+    padding: 0px;
+}
+.style_External_645_123 {
+    position: relative;
+}
+.style_External_643_127 {
+    position: relative;
+}
+.style_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_SkipStroke_1 {
+    background: transparent url(Kids_green_header_02.png) repeat scroll top left;
+    opacity: 1.00;
+}
+.style_SkipStroke_2 {
+    background: transparent url(Playtime_waves_05.jpg) repeat scroll top left;
+    opacity: 1.00;
+}
+.graphic_shape_layout_style_default_External_340_251 {
+    position: relative;
+}
+.style_SkipStroke_3 {
+    background: transparent url(Playtime_hills_05.jpg) repeat scroll top left;
+    opacity: 1.00;
+}
+.graphic_shape_style_default_SkipStroke {
+    background: rgb(233, 117, 38);
+    opacity: 1.00;
+}
+#widget0 a:visited {
+    color: rgb(38, 56, 60);
+    text-decoration: none;
+}
+.bumper {
+    font-size: 1px;
+    line-height: 1px;
+}
+#widget0 a:hover {
+    color: rgb(196, 95, 28);
+    text-decoration: none;
+}
+.spacer {
+    font-size: 1px;
+    line-height: 1px;
+}
+.tinyText {
+    font-size: 1px;
+    line-height: 1px;
+}
+#widget0 a {
+    color: rgb(109, 71, 34);
+    text-decoration: underline;
+}
+body { 
+    -webkit-text-size-adjust: none;
+}
+div { 
+    overflow: visible; 
+}
+img { 
+    border: none; 
+}
+.InlineBlock { 
+    display: inline; 
+}
+.InlineBlock { 
+    display: inline-block; 
+}
+.inline-block {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom:0.3em;
+}
+.inline-block.shape-with-text {
+    vertical-align: bottom;
+}
+.vertical-align-middle-middlebox {
+    display: table;
+}
+.vertical-align-middle-innerbox {
+    display: table-cell;
+    vertical-align: middle;
+}
+div.paragraph {
+    position: relative;
+}
+li.full-width {
+    width: 100;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:19 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>This is the last month of CS510. &#xD;&#xD;We are almost done with Chapter 3 (Constraint Based Analysis -- btw slides are &lt;a href="http://www.cs.purdue.edu/homes/jv/courses/510f06/ppa3.pdf"&gt;here&lt;/a&gt;). The rest of the course will focus on classic papers in software engineering.&#xD;&#xD;From now on we will devote one class a week to project meetings. The deadline for the project will be set back as far as possible to give you time to do something meaningful. Each team will have a presentation on a date to be set.&#xD;&#xD;E1, E2 and M2 have been graded and can be inspected by appointment. The short summary is that you did very well. If you keep this up, you will have unusually high grades. (I will have to do something about this in the final).  Speaking of which: the final will cover, in equal parts, the first half of the course (patterns, design, UML, refactoring) and static analysis. And the qualifier will be a superset of the exam and require that you be able to argue about some of the papers covered in class.</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;The last month...&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Sunday, November 19, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

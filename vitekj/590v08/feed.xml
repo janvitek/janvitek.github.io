@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:394814EC-C815-4895-A4A6-42BCD069DF05</id>
+ <title>Page list Atom feed</title>
+ <updated>2009-06-16T10:33:15-04:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:36D55640-7BB8-4868-B913-F9DABD859E06</id>
+  <title>CS590 - 2008</title>
+  <title xmlns="urn:iweb:">CS590 - 2008</title>
+  <in-navbar xmlns="urn:iweb:">36D55640-7BB8-4868-B913-F9DABD859E06</in-navbar>
+  <link rel="alternate" href="CS590_-_2008.html"/>
+  <updated>2009-06-16T10:33:15.001-04:00</updated>
+  <content>CS590 - 2008</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:13B716F9-724F-49A2-9BF2-62C39F847076</id>
+  <title>Schedule</title>
+  <title xmlns="urn:iweb:">Schedule</title>
+  <in-navbar xmlns="urn:iweb:">13B716F9-724F-49A2-9BF2-62C39F847076</in-navbar>
+  <link rel="alternate" href="Schedule.html"/>
+  <updated>2009-06-16T10:33:15.002-04:00</updated>
+  <content>Schedule</content>
+ </entry>
+</feed>

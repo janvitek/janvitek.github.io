@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="1449BC5F-EE6B-41F5-8D88-F7F8A746F60B">
+  <lastEdited clientType="local-build-20090616" date="2009-06-16 10:34:21 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Prague</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>Anton&#x2019;s last year at Montessori was capped by a wonderful show. Anton sang two songs, one about seeds growing up, and the other about a wonderful world. He was really enjoying himself - before the show he was the center of attention. During the first song he was the lead - center stage - and clearly the tallest of the bunch.&#xD;&#xD;&lt;b&gt;                                      [&lt;/b&gt;&lt;b&gt;&lt;a href="perma://BLPageReference/D0DA48AD-7ED5-4C7D-8C67-D0D426A957F0"&gt; the pictures  are here&lt;/a&gt;&lt;/b&gt;&lt;b&gt; ]&#xD;&lt;/b&gt;&#xD;We said goodbye to Lafayette and flew from Indy to Newark to Geneva to Prague. There was a little bit of stress for dad - who was flying alone with two small ones - as our plane was delayed in Newark. Twice. Once to wait for Airforce One to land and another time while waiting for the President to board and leave for Europe. In the end we made it OK and were met by RoseMarie and Jan Sr. The kids had never seen Prague but they liked it right away. It was really wonderful to see.&#xD;We could meet our friends from Lafayette (Paul, Cecile, Marie, Anne and their latest). While Nadia did not remember the girls it did not take them long to become friends again.&#xD;We also met with Radan and his newborn. So cute.&#xD;&#xD;After that Dad flew off to Cyprus and London before returning to Lafayette.</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Friday, June 15, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="15_Summer_in_Prague_files/shapeimage_1.png" left="0px" top="0px" width="266px" height="200px"/>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Summer in Prague</richText>
+  </textBox>
+</content>

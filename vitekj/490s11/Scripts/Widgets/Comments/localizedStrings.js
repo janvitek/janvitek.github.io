@@ -1,0 +1,2 @@
+
+(function(){var strings={};strings['No Comments']='No Comments';strings['1 Comment']='1 Comment';strings['%s Comments']='%s Comments';strings['%s bytes']='%s bytes';strings['%s KB']='%s KB';strings['%s MB']='%s MB';strings['%s GB']='%s GB';strings["Add a Comment"]="Add a Comment";strings["Manage Comments for this Entry"]="Manage Comments for this Entry";RegisterWidgetStrings("com-apple-iweb-widget-comments",strings);})();

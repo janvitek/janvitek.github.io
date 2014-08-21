@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:CCB2CCD8-656C-4E2A-ABE9-D19BD549DE77</id>
+ <title>Page list Atom feed</title>
+ <updated>2011-12-27T17:15:12-05:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:DE789B9D-FA08-42BD-A9BC-93DFD9637571</id>
+  <title>510-Home</title>
+  <title xmlns="urn:iweb:">510-Home</title>
+  <in-navbar xmlns="urn:iweb:">DE789B9D-FA08-42BD-A9BC-93DFD9637571</in-navbar>
+  <link rel="alternate" href="510-Home.html"/>
+  <updated>2011-12-27T17:15:12.001-05:00</updated>
+  <content>510-Home</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:5F185036-EBDE-48E6-8CDD-DB3A440DE672</id>
+  <title>Readings</title>
+  <title xmlns="urn:iweb:">Readings</title>
+  <in-navbar xmlns="urn:iweb:">5F185036-EBDE-48E6-8CDD-DB3A440DE672</in-navbar>
+  <link rel="alternate" href="Readings.html"/>
+  <updated>2011-12-27T17:15:12.002-05:00</updated>
+  <content>Readings</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:4B93C003-8F00-4AE7-A33F-3AC513A6935B</id>
+  <title>Schedule</title>
+  <title xmlns="urn:iweb:">Schedule</title>
+  <in-navbar xmlns="urn:iweb:">4B93C003-8F00-4AE7-A33F-3AC513A6935B</in-navbar>
+  <link rel="alternate" href="Schedule.html"/>
+  <updated>2011-12-27T17:15:12.003-05:00</updated>
+  <content>Schedule</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:2FE9D340-505B-4E7E-96A1-97EED911E115</id>
+  <title>Blog</title>
+  <title xmlns="urn:iweb:">Blog</title>
+  <in-navbar xmlns="urn:iweb:">2FE9D340-505B-4E7E-96A1-97EED911E115</in-navbar>
+  <link rel="alternate" href="Blog/Blog.html"/>
+  <updated>2006-03-20T15:46:43-05:00</updated>
+  <content>Blog</content>
+ </entry>
+</feed>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:15 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>Our first assignment has been released.  The goals of this assignment are to get you started with Java and Eclipse, to have a you look at the Visitor pattern, and to introduce the Java bytecode. The [tar.gz] file that is on the web site has both the sources and documentation of the Ovm bytecode analysis framework. The Javadoc  html files describe most of the API. The repository documentation describes the data structures used to encode Java class files. And to get you started Hiroshi wrote the cs510.Test program which reads a class file and prints the class&#x2019; name and fields.&#xD;&#xD;- Make sure that the output of your tool matches that of &#x201C;javap -c&#x201D;.&#xD;- I strongly advise using Eclipse for development.&#xD;- The assignment is &#x201C;due&#x201D; next week as we will use your code as input to assignment 2. (Both assignments will be graded together)&#xD;&#xD;If you have questions, post them to the mailing list - I am typically online 20x7 and when not, Hiroshi or another student may help out.&#xD;&#xD;&#xD;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;First Assignment&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Friday, September 1, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

@@ -1,0 +1,7 @@
+Do exercise 18.6.2 from TAPL.
+
+This assignment can be done in pairs. 
+
+Be rigorous and precise.
+
+Return your answers by Tuesday 11/11.

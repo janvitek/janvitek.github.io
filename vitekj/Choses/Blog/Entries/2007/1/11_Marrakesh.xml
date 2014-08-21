@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="1449BC5F-EE6B-41F5-8D88-F7F8A746F60B">
+  <lastEdited clientType="local-build-20090616" date="2009-06-16 10:34:17 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Marrakesh</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>We arrived in Marrakesh for Christmas Eve. Right off the plane our local guide Mohamed gave us a tour of the market and the Souk. We left we a toy snake and carpet, Yes, we don&#x2019;t need a carpet. And definitely not one that cost so much that the guy threw in two free carpets for the kids. But, hey - they are good.&#xD;We visited the Jardin Marjorelle -- made by a French guy way back and currently maintained by Yves StLaurent who has a house next door. Wonderful.&#xD;The Souk was a sight to see -- so many people selling the same things. Tourists everywhere. &#xD;The children were very happy with the snake charmer and the monkey. Everyone here wants you to take his picture (and then pay a few dirhams for the privilege).&#xD;We ate in a restaurant located on the roof of a Ryad (a small hotel with an inside courtyard). The food was delicious but took over an hour to appear. Not good with two jet lagged kids.&#xD;&#xD;The photos are &lt;a href="perma://BLPageReference/314E379C-3F58-4C96-BBBD-53ADCED04A6E"&gt;HERE&lt;/a&gt;.</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Thursday, January 11, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="11_Marrakesh_files/shapeimage_1.png" left="0px" top="0px" width="266px" height="200px"/>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Marrakesh</richText>
+  </textBox>
+</content>

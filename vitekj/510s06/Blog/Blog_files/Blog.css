@@ -1,0 +1,449 @@
+.style {
+    padding: 4px;
+}
+.style_1 {
+    padding: 8px;
+}
+.style_External_642_59 {
+    position: relative;
+}
+.style_SkipStroke_2 {
+    background: rgb(239, 225, 208);
+    opacity: 1.00;
+}
+.style_SkipStroke_3 {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_SkipStroke_1 {
+    background: transparent;
+    opacity: 1.00;
+}
+.paragraph_style {
+    color: rgb(39, 33, 0);
+    font-family: 'LucidaGrande', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 4px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.paragraph_style_1 {
+    color: rgb(39, 33, 0);
+    font-family: 'LucidaGrande', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 12px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.paragraph_style_2 {
+    color: rgb(39, 33, 0);
+    font-family: 'Palatino-BoldItalic', 'Palatino', serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.style_SkipStroke_4 {
+    background: transparent;
+    opacity: 1.00;
+}
+.style_External_173_193 {
+    position: relative;
+}
+.style_SkipStroke_5 {
+    background: transparent;
+    opacity: 1.00;
+}
+.Body_Small {
+    color: rgb(39, 33, 0);
+    font-family: 'LucidaGrande', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 12px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 4px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.Header {
+    color: rgb(125, 131, 137);
+    font-family: 'Palatino-Bold', 'Palatino', serif;
+    font-size: 29px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing:     0.16em;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: uppercase;
+}
+.Heading_3 {
+    color: rgb(39, 33, 0);
+    font-family: 'Palatino-BoldItalic', 'Palatino', serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.Normal {
+    padding: 4px;
+}
+.Normal_External_642_59 {
+    position: relative;
+}
+.Normal_External_173_26 {
+    position: relative;
+}
+.Normal_External_173_193 {
+    position: relative;
+}
+.Summary_Archive {
+    color: rgb(35, 32, 0);
+    font-family: 'Palatino-Bold', 'Palatino', serif;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing:     0.06em;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: uppercase;
+}
+.Title {
+    color: rgb(35, 32, 0);
+    font-family: 'Palatino-Bold', 'Palatino', serif;
+    font-size: 10px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing:     0.06em;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: uppercase;
+}
+.graphic_generic_description_textbox_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.graphic_generic_header_textbox_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.graphic_generic_title_textbox_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.graphic_image_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+.graphic_shape_layout_style_default {
+    padding: 4px;
+}
+.graphic_shape_layout_style_default_External_459_32 {
+    position: relative;
+}
+.graphic_shape_style_default_SkipStroke {
+    background: rgb(255, 255, 255);
+    opacity: 1.00;
+}
+.graphic_textbox_layout_style_default {
+    padding: 4px;
+}
+.graphic_textbox_layout_style_default_External_229_23 {
+    position: relative;
+}
+.graphic_textbox_style_default_SkipStroke {
+    background: transparent;
+    opacity: 1.00;
+}
+a {
+    color: rgb(39, 33, 0);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(125, 131, 137);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(186, 122, 76);
+    text-decoration: underline;
+}
+#widget1 a:visited {
+    color: rgb(125, 131, 137);
+    text-decoration: none;
+}
+#widget1 .Summary_Comment {
+    color: rgb(39, 36, 77);
+    font-family: 'Palatino-BoldItalic', 'Palatino', serif;
+    font-size: 12px;
+    font-stretch: normal;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+.searchtext {
+    width: 113px;
+}
+#widget0 a:visited {
+    color: rgb(125, 131, 137);
+    text-decoration: none;
+}
+#widget1 .Summary_Date {
+    color: rgb(39, 33, 0);
+    font-family: 'Palatino-BoldItalic', 'Palatino', serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 6px;
+    margin-top: 0px;
+    opacity: 1.00;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+.spacer {
+    font-size: 1px;
+    line-height: 1px;
+}
+#widget1 a:hover {
+    color: rgb(186, 122, 76);
+    text-decoration: underline;
+}
+.tinyText {
+    font-size: 1px;
+    line-height: 1px;
+}
+#widget1 .Summary_Title {
+    color: rgb(186, 122, 76);
+    font-family: 'Palatino-Bold', 'Palatino', serif;
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+}
+#widget1 .Summary_Read_More {
+    color: rgb(39, 36, 77);
+    font-family: 'Palatino-BoldItalic', 'Palatino', serif;
+    font-size: 12px;
+    font-stretch: normal;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+#widget0 a {
+    color: rgb(39, 33, 0);
+    text-decoration: none;
+}
+#widget0 a:hover {
+    color: rgb(186, 122, 76);
+    text-decoration: underline;
+}
+.bumper {
+    font-size: 1px;
+    line-height: 1px;
+}
+#widget1 a {
+    color: rgb(39, 33, 0);
+    text-decoration: none;
+}
+#widget1 .Summary_Separator {
+    color: rgb(88, 77, 77);
+    font-family: 'Palatino-Roman', 'Palatino', serif;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 23px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+#widget1 .Summary_Body {
+    color: rgb(39, 33, 0);
+    font-family: 'Palatino-Roman', 'Palatino', serif;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+body { 
+    -webkit-text-size-adjust: none;
+}
+div { 
+    overflow: visible; 
+}
+img { 
+    border: none; 
+}
+.InlineBlock { 
+    display: inline; 
+}
+.InlineBlock { 
+    display: inline-block; 
+}
+.inline-block {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom:0.3em;
+}
+.inline-block.shape-with-text {
+    vertical-align: bottom;
+}
+.vertical-align-middle-middlebox {
+    display: table;
+}
+.vertical-align-middle-innerbox {
+    display: table-cell;
+    vertical-align: middle;
+}
+div.paragraph {
+    position: relative;
+}
+li.full-width {
+    width: 100;
+}

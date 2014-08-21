@@ -1,0 +1,22 @@
+div.com-apple-iweb-widget-comments div.Comment_Separator {
+    width: 100%;
+}
+
+div.com-apple-iweb-widget-comments div.Summary_Image {
+}
+
+div.com-apple-iweb-widget-comments div.Comment_Attachment_Caption a
+{
+	text-decoration: none;
+}
+
+div.com-apple-iweb-widget-comments div.Comment_Attachment_Caption a img
+{
+	border-width: 0px;
+}
+
+div.com-apple-iweb-widget-comments span.comment-value-file-info
+{
+	text-decoration: underline;
+    padding-left: 10px;
+}

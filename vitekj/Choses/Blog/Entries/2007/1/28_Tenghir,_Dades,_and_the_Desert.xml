@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="1449BC5F-EE6B-41F5-8D88-F7F8A746F60B">
+  <lastEdited clientType="local-build-20090616" date="2009-06-16 10:34:19 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Tenghir, Dades, Desert</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>We drove on a treacherous mountain road to reach the Oasis of Tenghir. The road was rather scary and the vista made us think of the grand canyon and western movies of the past century. We met a band of fearless Dutch cyclists -- not in their right mind if you ask me.&#xD;The Oasis of Tenghir was impressive with a million palm tree it is a jewel in the midst of a rocky region. A local guide, Mohammed, walked around with us. Anton and Mohammed got along. So much that he agreed to carry Anton when Anton started to complain.&#xD;We went to the Dades Gorge where the wind and cold made us cut our visit short -- the children staying in the car. But it was impressive nonetheless. &#xD;We stopped at another Carpet store. Anton and Jan got to wear local headgear. But we did not buy anything this time.&#xD;&#xD;The pictures of Tenghir are [&lt;a href="perma://BLPageReference/19156901-EDC3-47C9-ABDC-6B2E7A901950"&gt;here&lt;/a&gt;].&#xD;&#xD;Very close to the Algerian border, we finally got to the desert. There we slept in a tent after a short camel ride. Camel rides are fun, scary and hard on some parts of the anatomy. Nadia and Anton were not scared. Nadia even went on a camel by herself while her parents walked for a bit. The desert was one of the highlights of our trip. If it was not so cold (we all got sick) we would have stayed there longer. Olga really wanted to.&#xD;&#xD;The pictures of the Desert are [&lt;a href="perma://BLPageReference/BAEE44A3-3BFC-41F2-9C72-3A425E2CE024"&gt;here&lt;/a&gt;].</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Sunday, January 28, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="28_Tenghir,_Dades,_and_the_Desert_files/shapeimage_1.png" left="0px" top="0px" width="266px" height="200px"/>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Tenghir, Dades, and the Desert</richText>
+  </textBox>
+</content>

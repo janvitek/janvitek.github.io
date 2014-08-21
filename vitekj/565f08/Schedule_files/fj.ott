@@ -1,0 +1,297 @@
+indexvar i, j, k, l, n ::=  {{ com index }} 
+metavar C,D,E ::= {{ com class name }}
+metavar f,g ::=  {{ com field name }} 
+metavar meth, m ::=  {{ com method name }}
+%% FZ cheating here
+metavar var, x, this ::=  {{ com term variable }}  
+metavar oid ::=  {{ com object identifier }} 
+metavar S ::= {{ com atomic set name}}
+
+grammar
+  terminals :: termi_ ::=
+   |  (      :: :: lround   {{ tex (\! }} {{ com left expression bracket }}
+   |  )      :: :: rround   {{ tex \!) }} {{ com right expression bracket }}
+   |  [      :: :: lsquare  {{ tex [\! }} {{ com left environment bracket }}
+   |  ]      :: :: rsquare  {{ tex \!] }} {{ com right environment bracket }}
+   |  ,      :: :: comma    {{ tex \!, }} {{ com separator }}
+   |  /      :: :: replace  {{ tex / }} {{ com `replaces' }}
+   |  :      :: :: colon    {{ tex \!\!:\!\! }} {{ com `is of type' }}
+   |  >      :: :: gt       {{ tex \!>\! }} {{ com `is greater than' }}
+   |  <:      :: :: subty    {{ tex \!\!<:\! }} {{ com `is a subtype of' }}
+   |  /<:      :: :: not_subty    {{ tex \!\!\not<:\! }} {{ com `is not a subtype of' }}
+   |  ->     :: :: returns  {{ tex \rightarrow }} {{ com `returns' }}
+   |  -->    :: :: reduce   {{ tex \longrightarrow }} {{ com `implies' or `reduces' }}
+   |  =      :: :: alias    {{ tex \!=\! }} {{ com equality or alias }}
+   |  ==     :: :: eq       {{ tex \!==\! }} {{ com `is equal to' }}
+   |  /=     :: :: neq      {{ tex \neq }} {{ com `is not equal to' }}
+   |  |-     :: :: vdash    {{ tex \vdash }} {{ com `can deduce' }}
+   |  EX     :: :: ex       {{ tex \exists\! }} {{ com `there exists' }}
+   |  in     :: :: in       {{ tex \!\in\! }} {{ com `in' }}
+   |  notin  :: :: notin    {{ tex \!\notin\! }} {{ com `not in' }}
+   |  \/     :: :: or       {{ tex \,\vee\, }} {{ com `or' }}
+   |  /\     :: :: and      {{ tex \,\wedge\, }} {{ com `and' }}
+   |  bot    :: :: bot      {{ tex \bot }} {{ com `is disjoint from' or `bottom' }}
+   | warning :: :: warning  {{ tex \textit{stupid warning} }}
+   | OK_IN   :: :: ok_in    {{ tex \textbf{OK IN} }}
+
+
+%%% PARAM CLASSES %%%
+  T :: T_ ::= {{ com param class names }}
+  |    C [ v : S ]      :: :: pbase   {{ tex  C\langle v:C'\rangle}}
+  |    C  :: :: bare
+ 
+%%% CLASS DEFINITION %%%
+  cld :: cld_ ::=  {{ com class }}
+    |  class C extends D { fds ; mds }  :: :: def {{ com def. }}
+    |  class C extends D { fds ; mds }  :: :: def2 {{ com def2. }}
+    |  class C extends D { fds ; mds }  :: :: def3 {{ com def3. }}
+
+%%% FIELD DECLARATIONS %%%
+  fds :: fds_ ::= {{ com field declarations }} 
+   |  fd1 .. fdk :: :: def {{ com def. }} 
+
+  fd  :: fd_ ::=
+   |  T f   :: :: def
+   | atomic( S ) T f  :: :: def2
+
+%%% METHOD SIGNATURE %%%
+  msig :: msig_ ::=  {{ com method sig. }}
+   |  T m ( T1 x1 .. Tk xk )  :: :: def  {{ com def. }}
+
+%%% METHOD BODY %%%
+  mbd :: mbd_ ::= {{ com method body }}
+   | x1 .. xk . e    :: :: body
+   | mbody ( m , T ) :: :: mbody
+
+%%% METHOD DEFINITIONS %%%
+  mds :: meth_defs_ ::=  {{ com method def.'s }} 
+   |  md1 .. mdk    :: :: def {{ com def. }} 
+
+  md :: meth_def_ ::= {{ com method def.'s }}
+   | msig { return e }  :: :: def {{ com def. }} 
+   | m                  :: :: name {{ com name }}
+
+%%% EXPRESSION %%%
+  e, d :: e_ ::=  {{ com expressions }}
+   |  x                         :: :: var   {{ com var. }}
+   |  e . f                     :: :: read  {{ com field read }}
+   |  new T ( e1 .. en )        :: :: new   {{ com object creation }}
+   |  e . m ( e1 .. en )        :: :: call  {{ com method call }}
+   | ( T ) e                    :: :: cast  {{ com type cast }}
+   |  e . f = e1                :: :: assign {{ com field assign }}
+   | ( e )                      :: M :: paren
+   | [ subst ] e                :: M :: subst
+
+  subst :: subst_ ::=  {{ com substitution }}
+   | e / x                          :: :: singl 
+   | e1 / x1 , .. , ek / xk            :: :: mult
+   | subst1 , substn                  :: :: comp
+
+
+%%% TYPES %%%
+  t :: t_ ::= {{ com types }}
+   | T                          :: :: base   {{ com base }}
+   | T1 .. Tn -> T              :: :: func   {{ com method }}
+   | Gamma ( x )                :: M :: env  {{ com env lookup }}
+   | mtype ( m , T )            :: M :: look {{ com meth type lookup }}
+
+%%% ENVIRONMENT %%%
+  Gamma {{ tex \Gamma }} :: Gamma_ ::= {{ com type environment }}
+   |                            :: :: empty    {{ com empty env. }}
+   | x : t                      :: :: elem     {{ tex [[x]]{:}[[t]] }} 
+   | x : t , Gamma              :: :: cons     {{ tex [[x]]{:}[[t]],[[Gamma]] }} 
+                                               {{ com element in env. }}
+   | x1 : t1 , .. , xk : tk , Gamma :: :: list  
+%{{ tex [[x1]]{:}[[t1]] .. [[xk]]{:}[[tk]] , [[Gamma]] }}
+
+%%% FORMULAS %%%
+  formula :: formula_ ::= {{ com formulas }}
+   | judgement                           :: :: judgement	{{ com judgement }}
+   | formula1 .. formulak                :: :: dots 		{{ com formula dots }}
+   | cld				 :: :: class_def 	{{ com class definition }} 
+   | fields ( C ) = T1 f1 .. Tk fk       :: :: field_lookup 	{{ com field lookup }}
+   | T /= T'                             :: :: not_eq 		{{ com classes not equal }}
+   | T /<: T'                            :: :: not_sub 		{{ com not subtype }}
+   | warning                             :: :: warning 		{{ com warning }}
+   | md in mds                           :: :: meth_def         {{ com method defined }}
+   | md not in mds                       :: :: meth_undef 	{{ com method undefined }}
+   | t1 = t2                             :: :: type_eq
+
+%%% SUBTYPING %%%
+defns 
+  subtype_def :: st_ ::=
+defn 
+  T1 <: T2 :: :: sub :: '' {{ com subtyping }} by
+
+------ :: refl
+C <: C
+
+------ :: refl2
+C[v:S] <: C[v:S]
+
+T <: T'
+T' <: T''
+------ :: trans
+T <: T''
+
+class C extends D { fds ; mds }
+------------------------------ :: sub
+C <: D
+
+defns
+  meth_type :: mt_ ::=
+defn
+  mtype ( m , C ) = t :: :: mtype :: '' {{ com method type lookup }} by
+ 
+class C extends D { fds ; mds }
+T m (T1 x1 .. Tk xk) { return e } in mds
+----------------------------------------- :: mtype_local
+mtype(m,C) = T1 .. Tk -> T
+
+class C extends D { fds ; mds }
+m not in mds
+----------------------------------------- :: mtype_super
+mtype(m,C) = mtype(m,D)
+
+defns
+  meth_body :: mb_ ::=
+defn
+  mbody ( m , C ) = mbd :: :: btype :: '' {{ com method body lookup }} by
+ 
+class C extends D { fds ; mds }
+T m (T1 x1 .. Tk xk) { return e } in mds
+----------------------------------------- :: mbody_local
+mbody(m,C) = x1 .. xk . e
+
+class C extends D { fds ; mds }
+m not in mds
+----------------------------------------- :: mbody_super
+mbody(m,C) = mbody(m,D)
+
+
+%%%%%
+defns 
+  class_of :: co_ ::=
+defn
+  classof ( e , Gamma ) = C  :: :: classof :: ''  by
+
+Gamma |- e : C
+------------------------- :: class
+classof ( e, Gamma ) = C
+
+Gamma |- e : C[v:S]
+------------------------- :: class2
+classof(e,Gamma)=C
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+defns 
+  type_def :: t_ ::=
+defn 
+  Gamma |- e : t :: :: expr :: '' {{ com expression typing }} by
+ 
+--------------------- :: var
+Gamma |- x : Gamma(x)
+
+classof( e0, Gamma)=C
+fields(C0) = T1 f1 .. Tk fk
+-------------------------- :: field
+Gamma |- e0.fi : Ti
+
+classof(e0,Gamma)=C
+mtype(m,C0) = T1 .. Tk -> T
+Gamma |- e1 : T'1 .. Gamma |- ek : T'k
+T'1 <: T1 .. T'k <: Tk
+------------------------------------ :: invk
+Gamma |- e0.m(e1..ek) : T
+
+class C extends D { fds ; mds } 
+fields(C) = T1 f1 .. Tk fk
+Gamma |- e1 : T'1 .. Gamma |- ek : T'k
+T'1 <: T1 .. T'k <: Tk
+------------------------------------- :: new
+Gamma |- new C(e1 .. ek) : C
+
+classof( e0, Gamma)=C
+fields(C0) = T1 f1 .. Tk fk
+Gamma |- e' : T'
+T' <: T
+--------------------------- :: assign
+Gamma |- e.fi = e'  : Ti
+
+
+Gamma |- e0 : T'
+T' <: T
+------------------ :: upcast
+Gamma |- (T)e0 : T
+
+Gamma |- e0 : T'
+T <: T'     
+T /= T'
+------------------ :: dwcast
+Gamma |- (T)e0 : T
+
+Gamma |- e0 : T
+T /<: T'
+T' /<: T
+warning
+------------------- :: scast
+Gamma |- (T)e0 : T
+
+
+defn
+  msig { return e } OK_IN C :: :: method :: '' {{ com method typing }} by
+
+x1:T1 , .. , xk:Tk, this:T |- e0 : T''0
+T''0 <: T0
+class C extends D { fds ; mds }
+mtype (m,D) = T'1 .. T'k -> T'0 
+T1 = T'1 .. Tk = T'k 
+T0 = T'0
+-------------------------------------------------------------------- :: method
+T0 m(T1 x1 .. Tk xk) { return e0 } OK_IN C
+
+defn 
+  cld OK :: :: class :: '' {{ com class typing }} by
+
+fields(D) = D1 g1 .. Dk gk
+msig1 { return e1 } OK_IN C .. msigj { return ej } OK_IN C
+------------------------------------------------------------------------------------- :: class
+class C extends D { C1 f1 .. Ck fk ; msig1 { return e1 } .. msigj { return ej }  } OK
+
+defns 
+  red :: red_ ::=
+defn 
+  e0 --> e1 :: :: red :: '' {{ com reduction }} by
+ 
+fields(C) = C1 f1 .. Ck fk
+-------------------------- :: field
+(new C(e1..ek)).fi --> ei
+
+mbody(m,C) = x1 .. xk . e0
+--------------------------------------------------------------------- :: invk
+(new C(e1..ek)).m (d1..dk) --> [d1 / x1 , .. , dk/xk , new C(e1..ek) / this] e0
+
+C <: D
+------------------------------------ :: cast
+(D)(new C(e1..ek)) --> new C(e1..ek)
+
+e0 --> e0'
+-------------- :: c_field
+e0.f --> e0'.f
+
+e0 --> e0'
+------------------------------ :: c_inkrecv
+e0.m(e1..ek) --> e0'.m(e1..ek)
+
+ei --> ei'
+-------------------------------------- :: c_invkard
+e0.m(e1..ej ei e'1..e'k) --> e0.m(e1..ej ei' e'1..e'k)
+
+ei --> ei'
+---------------------------------------- :: c_newarg
+new C(e1..ej ei e'1..e'k) --> new C(e1..ej ei' e'1..e'k)
+
+e0 --> e0'
+------------------ :: c_cast
+(C) e0 --> (C) e0'

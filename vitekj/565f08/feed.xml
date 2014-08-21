@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:C2E7D86C-644F-4463-A9F1-52B6E7B68FA3</id>
+ <title>Page list Atom feed</title>
+ <updated>2010-01-04T11:28:53-05:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:BB33371E-76C8-4393-8D69-5B2F28C7CF54</id>
+  <title>Welcome</title>
+  <title xmlns="urn:iweb:">Welcome</title>
+  <in-navbar xmlns="urn:iweb:">BB33371E-76C8-4393-8D69-5B2F28C7CF54</in-navbar>
+  <link rel="alternate" href="Welcome.html"/>
+  <updated>2010-01-04T11:28:53.001-05:00</updated>
+  <content>Welcome</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:82C346E7-DD74-453C-BE1C-0EB9C33E145A</id>
+  <title>Projects</title>
+  <title xmlns="urn:iweb:">Projects</title>
+  <in-navbar xmlns="urn:iweb:">82C346E7-DD74-453C-BE1C-0EB9C33E145A</in-navbar>
+  <link rel="alternate" href="Projects.html"/>
+  <updated>2010-01-04T11:28:53.002-05:00</updated>
+  <content>Projects</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:ED076EB3-4C1E-4D36-9ADC-B30A8983DB81</id>
+  <title>Schedule</title>
+  <title xmlns="urn:iweb:">Schedule</title>
+  <in-navbar xmlns="urn:iweb:">ED076EB3-4C1E-4D36-9ADC-B30A8983DB81</in-navbar>
+  <link rel="alternate" href="Schedule.html"/>
+  <updated>2010-01-04T11:28:53.003-05:00</updated>
+  <content>Schedule</content>
+ </entry>
+</feed>

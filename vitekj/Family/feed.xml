@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:01E20930-A2A6-4959-8232-E4D1B4E0081B</id>
+ <title>Page list Atom feed</title>
+ <updated>2010-06-30T07:05:29+02:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:43F3E5BB-C851-4D33-AA9C-CB778679D040</id>
+  <title>Welcome</title>
+  <title xmlns="urn:iweb:">Welcome</title>
+  <in-navbar xmlns="urn:iweb:">43F3E5BB-C851-4D33-AA9C-CB778679D040</in-navbar>
+  <link rel="alternate" href="Welcome.html"/>
+  <updated>2010-06-30T07:05:29.001+02:00</updated>
+  <content>Welcome</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:D32DF24B-13C4-4237-AC37-60C68391B6C6</id>
+  <title>N+A's_Movie</title>
+  <title xmlns="urn:iweb:">N+A's_Movie</title>
+  <in-navbar xmlns="urn:iweb:">D32DF24B-13C4-4237-AC37-60C68391B6C6</in-navbar>
+  <link rel="alternate" href="N+As_Movie.html"/>
+  <updated>2010-06-30T07:05:29.002+02:00</updated>
+  <content>N+A's_Movie</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:2F8999D7-BE38-4DA5-A423-D183EF0F5167</id>
+  <title>Photos</title>
+  <title xmlns="urn:iweb:">Photos</title>
+  <in-navbar xmlns="urn:iweb:">2F8999D7-BE38-4DA5-A423-D183EF0F5167</in-navbar>
+  <link rel="alternate" href="Photos.html"/>
+  <updated>2010-06-30T07:05:29.003+02:00</updated>
+  <content>Photos</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:7A2AD9FD-0CC7-4609-B1F8-672BBF8EF843</id>
+  <title>LafayetteAndUs</title>
+  <title xmlns="urn:iweb:">LafayetteAndUs</title>
+  <in-navbar xmlns="urn:iweb:">7A2AD9FD-0CC7-4609-B1F8-672BBF8EF843</in-navbar>
+  <link rel="alternate" href="LafayetteAndUs.html"/>
+  <updated>2010-06-30T07:05:29.004+02:00</updated>
+  <content>LafayetteAndUs</content>
+ </entry>
+</feed>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:18 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>The grades for part 1 and part 2 of the verifiers will be split as follows 10 points for part one and 30 points on part 2.&#xD;Make sure to write up a good log, comment your code and give us some test cases to run against your code. If in doubt about what is a good log, ask either Hiroshi or me.&#xD;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Projects   &lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Monday, October 23, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

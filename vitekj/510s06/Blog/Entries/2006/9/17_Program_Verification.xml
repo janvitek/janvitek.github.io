@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:16 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS 510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>The second part of the course, on program verification and validation, is starting this week. For the next few weeks we will study the Principle of Program Analysis text. The goal of this part of the class is to give you sufficient foundations to understand the analysis techniques used in the software engineering literature.&#xD;&lt;b&gt;&#xD;Midterm&#xD;&lt;/b&gt;Next week&#x2019;s midterm will cover all the topics presented in class up to but not including program analysis. This means: Intro to SWEng, XP, UML, Testing, Design Patterns (including Wadler and Zenger), AOP (including the paper on AJ). The handouts on XP, refactoring and patterns are in scope. What will not be covered: the lecture and slide on the Java bytecode.&#xD;The exam will be closed book, and take 50 mins.&#xD;&#xD;&lt;b&gt;Programming Assignment 3&#xD;&lt;/b&gt;Our third project is the implementation of a verifier for the Java bytecode. This assignment builds on the expertise that you gained in the previous two projects and introduces the basics of automated program verification.&#xD;You will be working in pairs. Part of the deliverable for this assignment is a project log in which you will record your design discussions. You are encouraged to try the XP practices and document your experiences in the project log.&#xD;The overall quality of the your software will be taken account in the final grade -- rather than just the output of the tool.&#xD;For this assignment you will have to set up a CVS (or subversion repository).&#xD;&#xD;&lt;b&gt;Attendance&#xD;&lt;/b&gt;If you can not attend the lecture -- please get the notes of one of your colleagues. There is information that is not on the slides or assignment statements and I can not keep track of who has missed a lecture.</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Program Verification&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Sunday, September 17, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

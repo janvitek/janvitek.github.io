@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<content collectionGUID="44FD8F8C-925C-43F3-9CD5-016D1324738E">
+  <lastEdited clientType="local-build-20111227" date="2011-12-27 22:15:16 +0000"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;CS510&#xD;&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;PA4 - Byte Code Verifier Part I&#xD;&lt;/b&gt;The next project is out. Originally, I intended to give the verifier as one project, but it seems that breaking it in two parts makes more sense. This will allow you to get feedback on your design before going too far with the implementation.&#xD;One of the goals of the assignment is for you to try out as many of the XP practices as possible. You should record what works and what does not and think about the development process (as opposed to just hacking the project quick and dirty).&#xD;&#xD;&lt;b&gt;Class Projects&#xD;&lt;/b&gt;Looking forward, we will have another project to finish the verification. After that, we will assemble two teams of  4 students and choose a class project. You will have a free hand in picking the project as long as it fits in either Verification or Automated Testing.&#xD;&#xD;&lt;b&gt;Lighting Talks&#xD;&lt;/b&gt;We will have our first lightning talk this week. If you have a preference as to when you want to talk send me mail right away. Otherwise, I will assign volunteers.&#xD;&#xD;Compilers&#xD;I have found out that the grad compiler class is going to cover some of the same Data Flow Analysis material as we do. Hey, we were here first! Nevertheless, since some of you are taking both classes, I will reduce the overlap by skipping some of the material. The emphasis in compilers is intra-procedural optimizations. We will try to focus on the inter-procedural aspects of Verification. Not the same thing.&#xD;&#xD;&lt;b&gt;Feedback&#xD;&lt;/b&gt;I have received the following request. Please give feedback as it helps me adjust the class (the end of term feedback is much less useful).&#xD;&#xD;Instructors of CS courses:&#xD;&#xD;Please urge all the students in the course(s) that you are teaching to participate as soon as they can in the mid-semester evaluation of CS courses and instructors.&#xD;You may tell them that you will not see the forms submitted but only a summary or compilation of the responses to each question. They should go to:&#xD;&#xD;    &lt;a href="https://portals.cs.purdue.edu"&gt;https://portals.cs.purdue.edu&lt;/a&gt;/&#xD;&#xD;and log in using their Purdue career account ID and password.  What to do next should be clear after they log in.&#xD;&#xD;The deadline is Tuesday, October 17.&#xD;&#xD;The form consists mostly of multiple-choice questions, but there is an opportunity to make comments, and students would do well to be prepared for that.  Students can submit the form only once for each CS course that they are taking.&#xD;&#xD;</richText>
+  </textBox>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Verification&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;&lt;i&gt;Tuesday, October 3, 2006&lt;/i&gt;&lt;/b&gt;</richText>
+  </textBox>
+</content>

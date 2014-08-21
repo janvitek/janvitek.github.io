@@ -1,0 +1,74 @@
+
+Due one week from today (16 Sept, beginning of class).  Please turn this in electronically, by e-mailing to:
+
+pizlo@purdue.edu
+
+I must receive it by the beginning of class for it to count!
+
+From the book:
+
+Page 38: 3.5.5
+Page 39: 3.5.10
+Page 43: 3.5.18
+
+Please do these assignments using TeX.  Generate either Postscript or PDF, and e-mail it to me.
+
+From the professor:
+
+1.a) Using the attached semantics for the small language COND as a starting point, define an equivalent semantics that uses evaluation contexts.
+
+1.b) Prove that semantics are equivalent.
+
+1.c) Modify your semantics so that it becomes deterministic.
+
+For questions 1.a, 1.c, provide Ott-generated .pdf files.  For question 1.b, write the proof in TeX.  It can part of the same file you used for the book assignments, or it can be separate - your choice.
+
+
+
+------------- assign.ott -----------
+
+grammar
+t  ::  't_' ::=
+ | if t then t' else t'' :: :: IfThen  {{com conditional}} 
+ | true                  :: :: True    {{ com true constant}}  {{ tex {\tt true } }}    
+ | false                 :: :: False   {{ com false constant }} {{ tex {\tt false } }}   
+ | v                     :: :: Values  {{ com values }} 
+
+v :: 'v_'  ::=
+|  tt :: :: True                       {{ com true value }}
+|  ff :: :: False                      {{ com false value }}
+
+terminals  :: 'terminals_' ::=
+  |  -->   :: :: red {{tex \rightarrow }}
+
+defns
+R :: '' ::=
+defn
+t1 --> t2 :: :: reduce :: '' by
+
+------------------------------         :: Rtt
+true --> tt
+
+------------------------------         :: Rff
+false --> ff
+
+-------------------------------        :: Rtrue
+if tt then t1 else t2 --> t1
+
+-------------------------------        :: Rfalse
+if ff then t1 else t2 --> t2
+
+t1 --> t'
+---------------------------------------------  :: RredC
+if t1 then t2 else t3 --> if t' then t2 else t3
+
+t2 --> t'
+---------------------------------------------  :: RredT
+if t1 then t2 else t3 --> if t1 then t' else t3
+
+t3 --> t'
+---------------------------------------------  :: RredF
+if t1 then t2 else t3 --> if t1 then t2 else t'
+
+
+

@@ -1,0 +1,215 @@
+indexvar index , i , j ::=  {{ lex numeral }}  {{ com index variables }}
+metavar ident           ::=  {{ lex alphanum }}
+metavar integer_literal ::=  {{ lex numeral }}
+
+grammar
+
+ terminals :: termi_ ::=
+   |  |->        :: :: mapsto   {{ tex \mapsto }}
+   |  -->        :: :: reduce   {{ tex \longrightarrow }}
+   |  =          :: :: alias    {{ tex \!=\! }}
+   |  !=         :: :: neq      {{ tex \neq }}
+   |  in         :: :: in       {{ tex \!\in\! }}
+   |  notin      :: :: notin    {{ tex \!\notin\! }}
+
+
+Program :: 'p_' ::=
+  |  c :: ::Program
+
+int :: 'i_' ::= {{ com Integers }}
+  | integer_literal :: :: Integer
+
+bool :: 'B_' ::= {{ com Boolean }}
+  | true :: :: True  {{ com true constant}}  {{ tex {\tt true } }}
+  | false :: :: False {{ com false constant}}  {{ tex {\tt false} }}
+
+loc :: 'l_' ::= {{ com Locations }}
+  | x :: :: Var
+
+
+c:: 'c_' ::= {{ com Commands }}
+  | skip :: :: Skip
+  | x := a :: :: Ass
+  | c1 ; c2 :: :: Seq
+  | if b then c1 else c2 :: :: Cond
+  | while b do c :: :: While
+
+e :: 'e_' ::=   {{ com Expressions }}
+  | b :: ::  BooleanExp  {{ com Boolean expression }}
+  | a  :: :: ArithmeticExp {{ com Arithemtic expression }}
+  | v :: :: Value        {{ com Value }}
+
+b :: 'a_' ::= {{ com Boolean Expresssions }}
+  | bool :: :: Boolean
+  | a1 = a2 :: :: Eq
+  | a1 < a2 :: :: LT
+  | not b :: :: not
+  | b1 and b2 :: :: and
+  | b1 or b2 :: :: or
+
+a:: 'b_' ::=  {{ com Arithemtic Expressions}}
+  |   int :: :: Integer
+  |  x :: :: Variable
+  | a1 + a2 :: :: Plus
+  | a1 * a2 :: :: Times
+  | a1 - a2 :: :: Minus
+
+v :: 'v_' ::= {{ com Values }}
+ | int :: :: Integer
+ | bool :: :: Boolean
+ | loc :: :: Location
+
+s{{tex \sigma}}  :: s_ ::=                            {{ com env }} 
+ |  s [ x |-> v ]  :: M :: env  {{ com store}}
+
+formula :: formula_ ::=           {{ com formulas }}
+    | judgement :: :: judgement
+    |  v != v'  :: :: noteq
+    | s ( x ) = int :: :: lookup
+    | int1 + int2 = int3 :: :: add
+    | int1 * int2 = int3 :: :: times
+    | int1 - int2 = int3 :: :: sub
+    | bool1 and bool2 = bool3 :: :: and
+    | bool1 or bool2 = bool3 :: :: or
+    | s' = s [ x |-> int ] :: :: upd
+ 
+defns
+exp :: '' ::=
+defn
+e , s --> e'  :: :: reduce :: '' by
+
+s(x) = int 
+-------------------- :: AexpVar
+x , s  --> int
+
+a1 , s --> a1'
+-------------------- :: AexpPlusL
+a1 + a2 , s  --> a1' + a2
+
+a2 , s --> a2'
+-------------------- :: AexpPlusR
+int + a2 , s  --> int + a2'
+
+int1 + int2 = int3
+-------------------- :: AexpPlus
+int1 + int2 , s  --> int3
+
+a1 , s --> a1'
+-------------------- :: AexpTimesL
+a1 * a2 , s  --> a1' * a2
+
+a2 , s --> a2'
+-------------------- :: AexpTimesR
+int * a2 , s  --> int * a2'
+
+int1 * int2 = int3
+-------------------- :: AexpTimes
+int1 * int2 , s  --> int3
+
+
+a1 , s --> a1'
+-------------------- :: AexpSubL
+a1 - a2 , s  --> a1' - a2
+
+a2 , s --> a2'
+-------------------- :: AexpSubR
+int - a2 , s  --> int - a2'
+
+int1 - int2 = int3
+-------------------- :: AexpSub
+int1 - int2 , s  --> int3
+
+
+
+-------------------- :: BexpEq
+int1 = int2 , s --> true
+
+int1 != int2
+-------------------- :: BexpNEq
+int1 = int2' , s --> false
+
+a1 , s --> a1'
+-------------------- :: BexpEqL
+a1 = a2 , s --> a1' = a2
+
+a2 , s --> a2'
+-------------------- :: BexpEqR
+int = a2 , s --> int = a2'
+
+
+-------------------- :: BexpNotT
+not true, s --> false
+
+-------------------- :: BexpNotF
+not false, s --> true
+
+b, s --> b'
+-------------------- :: BexpNot
+not b, s --> not b'
+
+bool1 and bool2 = bool
+-------------------- :: BexpAnd
+bool1 and bool2 , s --> bool
+
+b1 , s --> b1'
+-------------------- :: BexpAndL
+b1 and b2 , s --> b1' and b2
+
+b2 , s --> b2'
+-------------------- :: BexpAndR
+bool and b2 , s --> bool and b2'
+
+
+bool1 or bool2 = bool
+-------------------- :: BexpOr
+bool1 or bool2 , s --> bool
+
+b1 , s --> b1'
+-------------------- :: BexpOrL
+b1 or b2 , s --> b1' or b2
+
+b2 , s --> b2'
+-------------------- :: BexpOrR
+bool or b2 , s --> bool or b2'
+
+defn
+c , s --> c' , s'  :: :: reduceCom :: '' by
+
+---------------------  :: Skip
+skip ; c , s --> c , s 
+
+a , s --> a' 
+--------------------- :: AssignE
+x := a ; c , s --> x := a' ; c , s 
+
+s' = s [ x |-> int ]
+--------------------- :: Assign
+x := int ; c , s --> c , s' 
+
+
+b,s --> b'
+-------------------------------------:: IfE
+if b then c1 else c2 ; c3 , s --> if b' then c1 else c2 ; c3, s
+
+
+-------------------------------------:: IfT
+if true then c1 else c2 ; c3  , s --> c1; c3, s
+
+-------------------------------------:: IfF
+if false then c1 else c2 ; c3 , s --> c2 ; c3, s
+
+
+b,s --> b'
+-------------------------------------:: WhileE
+while b do c1 ; c2 , s --> while  b' do c1;  c2, s
+
+
+-------------------------------------:: WhileT
+while true do  c1 ; c2  , s --> c1; while true do c1; c2, s
+
+-------------------------------------:: WhileF
+while false do c1; c2, s --> c2, s
+
+
+-------------------------------------:: WhileEAlt
+while b do c1 ; c2 , s --> if b then c1 ; while  b do c1 else skip;  c2, s

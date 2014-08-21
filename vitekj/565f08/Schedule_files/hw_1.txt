@@ -1,0 +1,8 @@
+State and prove type preservation for the W-simple language of the midterm. 
+
+This assignment can be done in pairs. 
+
+Be rigorous and precise.
+
+Return your answers by Tuesday 11/04.
+

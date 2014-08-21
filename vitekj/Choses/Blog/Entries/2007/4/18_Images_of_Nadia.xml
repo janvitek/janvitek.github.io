@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<content collectionGUID="1449BC5F-EE6B-41F5-8D88-F7F8A746F60B">
+  <lastEdited clientType="local-build-20090616" date="2009-06-16 10:34:20 -0400"/>
+  <textBox id="generic-header-attribute" dynamic="no" visible="yes">
+    <richText>Images of Nadia</richText>
+  </textBox>
+  <textBox id="generic-body-attributes" dynamic="no" visible="yes">
+    <richText>Molly is Nadia&#x2019;s American Girl(tm). &#xD;&#xD;She lived during the second world war, is smart (because, as Nadia says, she wears glasses) and has red pajamas.&#xD;&#xD;After one of Jan&#x2019;s trip to New York, Nadia received a well deserved gift. Matching pajamas.&#xD;&#xD;[&lt;a href="perma://BLPageReference/952BDBAB-9194-4C32-ADB7-009C97D39EDE"&gt;Pictures are Here&lt;/a&gt;&lt;b&gt;]&lt;/b&gt;</richText>
+  </textBox>
+  <textBox id="generic-datefield-attributes" dynamic="no" visible="yes">
+    <richText>&lt;b&gt;Wednesday, April 18, 2007&lt;/b&gt;</richText>
+  </textBox>
+  <image id="generic-picture-attributes" dynamic="no" visible="yes" src="18_Images_of_Nadia_files/shapeimage_1.png" left="0px" top="0px" width="266px" height="200px"/>
+  <textBox id="generic-title-attributes" dynamic="no" visible="yes">
+    <richText>Images of Nadia</richText>
+  </textBox>
+</content>
