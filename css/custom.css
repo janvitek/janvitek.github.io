@@ -1,0 +1,190 @@
+/*
+ * © Catch Exception s.r.o. 2015
+ */
+
+/* Basic styling */
+body
+{
+  font-family: Helvetica, Arial, Calibri; 
+  font-size: 12px;
+}
+
+body a, body a:hover
+{
+  color: #5eb6ef;
+}
+
+body a.pn-dark, body a.pn-dark:hover
+{
+  color: #333; 
+}
+
+h2
+{
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+h3, .pn-h3-like
+{
+  margin-top: 20px;
+  font-size: 17px;
+  margin-bottom: 17px;
+  line-height: 1.1;
+}
+
+table tr td, table tr th
+{
+  padding: 5px 20px 5px 0;
+}
+
+ul.pn-ul-triangle 
+{
+  margin: 0.75em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+
+ul.pn-ul-triangle li:before 
+{ 
+  content: "";
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.35em 0 0.35em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+}
+
+/* Bootstrap overrides */
+.row.pn-grey-bg, .row.pn-white-bg, .row.pn-transparent-bg
+{
+  padding-bottom: 30px; 
+  padding-left: 15px;
+}
+
+.row.pn-grey-bg
+{
+  background: url('../img/bg-grey.jpg') no-repeat bottom center #efefef;
+}
+
+.row.pn-white-bg
+{
+  background: url('../img/bg-white.jpg') no-repeat bottom center transparent;
+}
+
+.header
+{
+  position: relative;
+  margin-top: 24px;
+}
+
+.header.fixed
+{
+  position: fixed;
+  width: 100%;
+  left: 15px;
+  margin-top: 0;
+  z-index: 1;
+}
+
+.header.fixed .row
+{
+  border-bottom: 1px solid #000; 
+}
+
+.header .row
+{
+  background-color: #efefef;
+}
+
+.header .nav
+{
+  font-family: courier; 
+  padding: 15px 25px;
+}
+
+.header .nav a
+{
+  padding: 0px 6px;
+  color: #000;
+  font-size: 18px;
+}
+
+.footer
+{
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.footer .pn-top
+{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 25px;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  background-color: #EFEFEF;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+/* Custom classes */
+.pn-grey-font
+{
+  color: #959595;
+}
+
+.pn-courier-bold
+{
+  font-family: courier;
+  font-weight: bold;
+}
+
+.pn-contact-span
+{
+  width: 48px;
+  display: inline-block;
+}
+
+.pn-news-span
+{
+  width: 75px;
+  display: inline-block;
+}
+
+.pn-service-link
+{
+  width: 100px;
+  display: inline-block; 
+}
+
+.pn-publications
+{
+  margin-bottom: 5px;
+}
+
+.pn-publications a.pn-link
+{
+  cursor: pointer;
+}
+
+.pn-publications .pn-readmore
+{
+  display: none;
+}
+
+.pn-first-td
+{
+  width: 100px;
+}
+
+.pn-inline-link
+{
+  height: 17px;
+}
