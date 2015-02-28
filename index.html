@@ -23,6 +23,37 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+                                                                                                               
+<script language="JavaScript" type="text/JavaScript"><!--                                                                           
+                                                                                                                                    
+function MM_swapImgRestore() { var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc; }               
+function MM_preloadImages() {                                                                                                       
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();                                                                     
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)                                                   
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}                                                         
+}                                                                                                                                   
+function MM_findObj(n, d) {                                                                                                         
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {                                                   
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}                                                                
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];                                              
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);                                                
+  if(!x && d.getElementById) x=d.getElementById(n); return x;                                                                       
+  }                                                                                                                                 
+function MM_swapImage() {                                                                                                           
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)                                      
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}                                  
+}                                                                                                                                   
+                                                                                                                                    
+function swaptabs (showthis,hidethis) {                                                                                             
+  var style2 = document.getElementById(showthis).style;style2.display = "block";                                                    
+  var style3 = document.getElementById(hidethis).style;style3.display ="none";                                                      
+}                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+//--></script>   
+
+
   </head>
   <body id="pn-top">
     <div class="container">
@@ -57,6 +88,16 @@
             <p>Software & papers should be free. <a href="http://en.wikipedia.org/wiki/Open_access" target="_blank"><img class="pn-inline-link" src="img/open_access.jpg" alt="Open access" /></a></p>
             <p>Research should be repeatable and replicated. <a href="http://cacm.acm.org/magazines/2015/3/183593-the-real-software-crisis/fulltext" target="_blank"><img class="pn-inline-link" src="img/real_software.jpg" alt="The real software crisis" /></a></p>
             <p style="text-align: right">A short biography could read like so:</p>
+
+
+	    <p> 
+	     <a href="http://ccs.neu.edu" target="_blank"><img src="img/neu.png" width=50></a>
+	     <a href="http://www.ccs.neu.edu/research/prl/" target="_blank"> <img src="img/prl.png" width=50></a>
+<br>
+	     <a href="http://fiji-systems.com" target="_blank"> <img src="img/fiji.gif" width=50></a>
+<br>
+	     <a href="http://sigplan.org" target="_blank"><img src="images/sigplan.jpg" width=150></a>
+	    </p>
           </div>
           <div class="col-md-4 pn-grey-font">
             <p>Jan Vitek is a Professor of Computer Science at Northeastern University. He holds degrees from the University of Geneva (PhD'99, BS'89) and University of Victoria (MS'95). Professor Vitek works on topics related to the design and implementation of programming languages. In the <em>Ovm project</em>, he led the implementation of the first real-time Java virtual machine to be successfully flight-tested. Together with Nobel and Potter, he proposed a concept that became known as <em>Ownership Types</em>. Prof Vitek was one of the designers of the Thorn language. He work on gaining a better understanding of the JavaScript language and is now looking at supporting scalable data analysis in R. Prof Vitek chairs ACM SIGPLAN; he is the Chief Scientist at Fiji Systems, a vice chair of AITO and of IFIP WG 2.4. He chaired PLDI, ISMM and LCTES and was program chair of ESOP, ECOOP, VEE, Coordination, and TOOLS. Vitek has started a number of successful workshop series, including MOS on Mobile Objects, IWACO, on aliasing and confinement, and TRANSACT on transactional memory. He is on the steering committees of ECOOP, JTRES, TRANSACT, ICFP, OOPSLA, POPL, PLDI and LCTES.</p>
@@ -769,8 +810,8 @@
                 </div>
               </div>
             </div>       
-	    
-
+	   
+ 
             <div>
               <div class="pn-publications">
                 <a class="pn-link"><strong>VEE'14</strong> |&nbsp;&nbsp;&nbsp; A Fast Abstract Syntax  Tree Interpteter for R</a>
@@ -783,10 +824,28 @@
                 </div>
               </div>
             </div>       
+
+	  
+
+
+            <div>
+              <div class="pn-publications">
+                <a class="pn-link"><strong>ISMM'14</strong> |&nbsp;&nbsp;&nbsp; M3: high-performance memory management from off-the-shelf components<br />
+                <div class="pn-readmore">
+                  <strong>Authors</strong>:  	David Terei, Alex Aiken, Jan Vitek <br />
+                  <strong>Abstract</strong>: Real-world garbage collectors in managed languages are complex. We investigate whether this complexity is really necessary and show that by having a different (but wider) interface between the collector and the developer, we can achieve high performance with off-the-shelf components for real applications. We propose to assemble a memory manager out of multiple, simple collection strategies and to expose the choice of where to use those strategies in the program to the developer. We describe and evaluate an instantiation of our design for C. Our prototype allows developers to choose on a per-type basis whether data should be reference counted or reclaimed by a tracing collector. While neither strategy is optimised, our empirical data shows that we can achieve performance that is competitive with hand-tuned C code for real-world applications.<br />
+		  <strong>Venue</strong>: Proceedings of the 2014 international symposium on Memory management (ISMM) Pages 3-13 <br>
+		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2602988.2602995" target="_blank">10.1145/2602988.2602995</a><br />
+                  <a href="pubs/ismm14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                </div>
+              </div>
+            </div>       
+
+	  Older publication list still to be ported is <a href="yearly.htm">here</a>.
 	  </div>
 
 
-	  Older publication list still to be ported is <a href="yearly.htm">here</a>.
+
       </div>
 
 
@@ -942,6 +1001,79 @@
 
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+        
+        <div class="row pn-transparent-bg">
+          <div class="col-md-12">
+            <h2  id="pn-anchor-publications" class="pn-courier-bold">[varia]</h2>
+          </div>
+
+          <div class="col-md-4">
+	    <table>
+	      <tr>
+              <td width="10%"><p><a  target="_blank" href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image21','','images\
+/before_0001.jpg',1)"><img src="images/after_0001.jpg" name="Image21" width="100" border="0" id="Image21"></a><br>
+		<p align="center">After / Before</p> </td>                 
+	      <td width="90%"><div >                                                                                             
+		  <p  class="pn-grey-font"  >Is there any risk of brain damage? <br>      
+		    <br>                                                                
+		    Well, technically speaking, the operation is brain damage,                                                              
+		    but it's on a par with a night of heavy drinking. Nothing you'll                                                        
+		    miss. </p>                                                                                                              
+		  <p class="style2"><em>Eternal Sunshine of the Spotless Mind</em></p>                                                             
+	      </div></td>                                                                                                                   
+	      </tr>       
+	    </table>
+          </div>
+
+          <div class="col-md-4">
+	    <table>
+	      <tr>
+		<p align="center"><a  target="_blank" href="http://www.onion.com"><img src="images/onion.gif" height="25" border="0"></a></P>
+		<p align="center"><a  target="_blank" href="http://web.engr.illinois.edu/~taoxie/sefamily.htm"><img src="images/tree.jpg" height=80 border="0"></a></p>   	
+	      </tr>
+	    </table>
+          </div>
+          <div class="col-md-4">
+              <p align="left" class="pn-grey-font" >&quot;I understand radiation better and                                                      
+		feel like I could survive an atomic explosion somewhere on the planet,                                                    
+		if it wasn't, of course, really close to me.&quot; </p>                                                                   
+              <p ><em>Amazon.com review of 'All About Radiation' by L.                                                      
+		  Ron Hubbard.</em></p>                                                                                                   
+	      <p align="left" class="pn-grey-font" >&quot;DOS computers manufactured                                                 
+		by companies such as IBM, Compaq, Tandy, and millions of others are by                                                      
+        far the most popular, with about 70 million machines in use worldwide.                                                      
+        Macintosh fans, on the other hand, may note that cockroaches are far                                                        
+        more numerous than humans, and that numbers alone do not denote a higher                                                    
+        life form.&quot;</p>                                                                                                        
+      <p align="right" ><em>-- New York Times, November 26, 1991.</em></p>                                            
+      <p align="left" class="pn-grey-font" >&quot;Dad, do you say the Pledge of Allegiance                                                 
+        at work? ... Ah.  Maybe you should, you know... to be a little                                                              
+        bit part of this country.&quot;</p>                                                                                         
+       <p align="right"><em>-- Nadia Marie Vitek, Age 8.</em></p>
+
+
+	    </table>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
       
       <footer class="footer">
         <p><a href="http://www.catchexception.cz/" target="_blank">© Catchexception s.r.o.</a></p>
