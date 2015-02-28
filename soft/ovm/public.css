@@ -1,0 +1,39 @@
+/* global css for public ovm page */
+
+p,h1,h2,h3,h4,ul,ol,li,div,td,th,address,blockquote,nobr,b,i,dl,dd,dt
+     { font-family:"New Century Schoolbook","Courier","Utopia";color:#000000;}
+
+dt{font-weight:bold;}
+
+
+/* font-family =  Schriftart fuer Textelemente */
+/* Arial,sans-serif = Arial und serifenlose Schrift, Wert aenderbar */
+
+h1{font-size:5ex;align:center;}
+h2{font-size:4ex;background-color:#FEFEFE;color:#002200;width:100%;border-style:none;border-width:thin;padding:0cm;align:center;text-align:center;}
+h3{font-size:3ex;background-color:#FEFEFE;color:#001100;}
+h4{font-size:2ex;}
+h5{font-size:1.5ex;}
+
+hr.small{width:80%;align:center;}
+hr.extrasmall{width:60%;align:center;}
+hr.big{size:5ex;align:center;}
+
+div.quickreference{align:center;font-size:2ex;width:100%;boder-style:none;background-color:#000088;color:#EEEEEE;border-width:thin;padding:0cm;text-align:center;}
+div.compact{columns:4;}
+
+address.public{text-align:right;color:#FF0000;}
+
+body{width:100%;background-color:#FEFEFE;color:#000000;}
+
+pre{font-family:Courier New,Courier; color:#000000;}
+tt{font-family:Courier New,Courier; color:#0000D0;}
+table{background-color:#FEFEFE;color:#0F0F0F;}
+tr{background-color:#FEFEFE;color:#0F0F0F;}
+td{background-color:#FEFEFE;color:#0F0F0F;}
+th{background-color:#FEFEFE;color:#0F0F0F;}
+font.desc{background-color:#DDDDDD;color:#7F0F00;}
+
+a:link{color:#222299; text-decoration:underline;}
+a:visited{color:#34A02C; text-decoration:underline;}
+a:active{color:#ffffff; text-decoration:none;}
