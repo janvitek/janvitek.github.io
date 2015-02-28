@@ -1,0 +1,75 @@
+        
+           5th Mobile Object Systems Workshop:
+      Programming Languages for Wide Area Networks
+
+      In association with the 13th European Conference on 
+           Object-Oriented Programming ECOOP'99
+             Lisbon, Portugal, 14-18 June 1999
+               http://cuiwww.unige.ch/~ecoopws
+
+The fifth workshop on Mobile Object Systems (MOS'99) will address
+fundamental principles in the definition, analysis and implementation
+of languages and models for distributed programming, with particular
+emphasis on languages and calculi for wide-area mobile systems.
+In the last few years work on a number of languages and systems such
+as Telescript, Obliq, Aglets and Java has investigated practical
+aspects of constructing distributed systems based on the notion of
+mobile computations.  Semantic models for mobility have also begun to
+appear recently, including models such as the Join and Ambient
+Calculi, Nomadic Pict, the Seal calculus and Dpi. These account for
+some of the features found in practical systems and can inform new
+designs, but are far from providing a complete theory; there should be
+fruitful interaction between the communities.  
+The workshop aims to bring together researchers in language
+implementation and semantics to discuss issues related to distributed
+programming languages, including:
+
+ - Semantics, operational equivalences, program logics,
+ - Advanced type systems,
+ - Security in programming languages,
+ - Language implementation,
+ - Mobility support,
+ - Experience reports and applications.
+
+
+Submission of papers: Both full papers (max. 15 p.) and position 
+papers (1-2 p.) are welcome. Submissions should sent to: 
+      ecoopws@cui.unige.ch by April 11, 1999.  
+We encourage not only submissions presenting original research
+results, but also papers that attempt to establish links between
+different approaches to mobile object system development, and/or
+papers that include survey material.  Original research results should
+be clearly described, and their usefulness to practitioners outlined.
+
+Publication: 1-2 pages summaries of accepted papers will be published
+in the ECOOP Workshop Reader, full submissions will remain available
+from the workshop web page. Furthermore, selected papers will be
+invited for post workshop publication. (In the past, two Springer
+Verlag state-of-the-art-survey volumes have resulted from MOS
+workshops).
+
+Important Dates:
+ - April 11th: Deadline for submission of papers.
+ - May 3rd: Notification to authors.
+ - June 14: MOS99 workshop
+
+Program Committee:
+  Ciaran Bryce,        U. of Geneva
+  Luca Cardelli,       Microsoft Research
+  Giuseppe Castagna,   CNRS, ENS
+  Thorsten von Eicken, Cornell
+  Cedric Fournet,      Microsoft Research
+  Matthew Hennessy,    U. of Sussex
+  Urs Hoelzle,         UC Santa Barbara
+  Alan Jeffrey,        DePaul University
+  Dejan Milojicic,     HP Labs
+  Scott Nettles,       U. of Pennsylvania
+  Benjamin Pierce,     U. of Pennsylvania
+  Peter Sewell,        U. of Cambridge
+  James Riely,         North Carolina State University
+  Jan Vitek,           U. of Geneva
+  Akinori Yonezawa,    U. Tokyo
+
+Organizers:
+ - Peter Sewell
+ - Jan Vitek

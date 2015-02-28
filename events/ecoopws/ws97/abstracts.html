@@ -1,0 +1,277 @@
+<html>
+<title>
+  Mobile Object Systems ECOOP Workshop'97<br>
+  Abstract of Accepted Papers
+</title>
+<body>
+
+<h2 align=center>
+  Mobile Object Systems ECOOP Workshop'97<br>
+  Abstract of Accepted Papers
+</h2>
+
+The abstracts of the accepted papers are presented in alphabetic order
+of the authors. They reflect the paper's state before revision (May 1997),
+but the papers themselves are the final ones.<p>
+<hr>
+
+
+<h3>Efficient Code Migration for Modular Mobile Agents
+(<a href="papers/hohl.ps.gz">ps.gz</a>)</h3>
+
+Fritz Hohl, Peter Klar<br>
+<tt>{Fritz.Hohl|Peter.Klar}@informatik.uni-stuttgart.de</tt><p>
+
+The efficiency of object migration is a very important aspect of mobile
+object systems.  Since an object consists of at least data and code, and
+since the transport of data cannot be optimized except by using standard
+compression techniques, the migration of code is the most important part
+of the efficiency aspect.  This paper examines therefore the question of
+how to design a code migrating component in an efficient manner.  The
+main focus of this examination lies on mobile agent systems, a special
+case of mobile object systems.<br>
+  Therefore, after listing the requirements of code migration in this
+area, and a description of the code migration mechanisms of the Java
+applet model, a more appropriate approach is proposed.  This new
+approach uses two mechanisms to transport code: one, that is able to get
+classes in an efficient manner and one, that is able to get any valid
+class by its reference.  Both mechanisms uses a transport protocol that
+is both able to interface to local and remote agent runtime environments
+and a code replacement policy, that is able to handle a space restricted
+class storage.  Finally the approach uses digital signatures to protect
+the code migration component, the codeserver, against modification
+attacks.<p>
+<hr>
+
+
+<h3>Mobile Agents in Active Networks
+(<a href="papers/huber.ps.gz">ps.gz</a>)</h3>
+
+Oliver J. Huber, France Laurent Toutain<br>
+<tt>{oliver|toutain}@rennes.enst-bretagne.fr</tt><p>
+
+Active networking introduces a new flexible network service paradigm. 
+The passive data carrier is changed to an active, dynamically
+configurable, data-transport-service machine, through the possibility of
+performing computation in the network nodes.  Utilization of mobile
+agents allows to deliver service tasks to any place in the network.  An
+agent can execute adaptive filtering on the bypassing data streams, do
+user intended signalling and handle network management tasks in a
+distributed manner.<br>
+Looking at the aspects of network services, benefits arise from the fact
+that the transmission protocols can be tailored to the application by
+providing filtering or format conversion within the network.  The "one
+fits all" approach, like TCP/UDP which can just handle end-to-end loss
+control are strongly improved.<br>
+Generally speaking there are two ways in providing active services in
+the network: the full user based approach, allowing the end user to
+distribute its own, application dependent stream forwarding agent.  It
+can be used in the open Internet where the mobile agents can provide
+bridges over legacy systems.  Or, the layered approach, giving only the
+administrator of the network the possibility to deploy new service
+classes within the network.  This is particularly interesting in a
+Intranet scenario, permitting to deploy new services rapidly and
+granting the user  only  the execution of the new service.<br>
+We are also concerned by service and system security and failure
+protection aspects of this approach: When an agent becomes mobile and it
+includes the possibility to reproduce child agents in any number, the
+problems of agent flooding become apparent.  Therefore solutions have to
+be proposed to guarantee, that the agents which get lost or out of
+control, will time out and return to their home, or die immediately.  A
+possible solution based on credits is presented and discussed.<br>
+This paper reviews efforts in the research domain: including the Active
+IP projects at MIT, the Active Networking project at Georgia Institute
+of Technology and the NetScript approach from Columbia University.  Our
+alternative approach is presented, which allows fast service deployment,
+examples of service usage and a service and system security concept for
+the proposed architecture.<p>
+<hr>
+
+
+<h3>Using the Knowbot Operating Environment in a Wide-Area Network
+(<a href="papers/hylton.ps.gz">ps.gz</a>)</h3>
+
+Jeremy Hylton, Guido van Rossum<br>
+<tt>jeremy@cnri.reston.va.us</tt><p>
+
+For a number of years CNRI has been developing a system for supporting
+mobile agents (Knowbot Programs) in a wide-area network.  Applications
+can use the system to migrate computation among nodes in a distributed
+system.  The result is an application that can optimize its
+communication patterns to reduce bandwidth and latency and can adapt to
+changes in network service.  The Knowbot Operating Environment includes
+service stations that run mobile agents and reporting stations that
+track their progress.  These components are integrated via a distributed
+namespace.  We describe the overall architecture and discuss some
+experience with the current implementation.  Experimental results from
+an application that uses Knowbot Programs to monitor Web pages show that
+mobile agents can outperform equivalent stationary programs.  The
+experimenance benefits are obtained by moving clients within the network
+to reduce the costs of wide-area network connections.<p>
+<hr>
+
+
+<h3>Performance Issues in TACOMA
+(<a href="papers/not_revised.ps.gz">ps.gz</a>)</h3>
+
+Dag Johansen, Nils P. Sudmann, Robbert van Renesse<br>
+<tt>dag@cs.uit.no</tt><p>
+
+Mobile code performance depends, in part, on the costs of
+transferring an agent from one host to another and of initiating execution
+of that agent on a target host. These costs are reported for TACOMA
+(Tromso and COrnell Moving Agents) v1.3, a UNIX-based system that
+supports agents. The experiments suggest opportunities for performance
+enhancements, both by changing the underlying operating system and
+by changing the architecture of the TACOMA run-time system.<p>
+<hr>
+
+
+<h3>System Support for Mobile Agents
+(<a href="papers/karnik.ps.gz">ps.gz</a>)</h3>
+
+Neeran M. Karnik, Anand R. Tripathi<br>
+<tt>karnik@cs.umn.edu</tt><p>
+
+Mobile objects can be used as a basis for supporting the mobile agents
+paradigm, which provides an interesting new approach for network-centric
+programming. We examine the language-level features needed for such
+applications, and describe a Java object-based mobile agent architecture
+that can provide system-level support for those features. Security is
+usually a major concern with mobile agent systems. We discuss security
+related issues such as authentication of mobile agents, protection of
+resources and privacy of communications, in the context of our
+architecture.<p>
+<hr>
+
+
+<h3>Old Wine in New Bottles Applying OS Process Migration Technology to
+Mobile Agents
+(<a href="papers/wheeler.ps.gz">ps.gz</a>)</h3>
+
+Dejan S. Milojicic, Shai Guday, Richard Wheeler<br>
+<tt>{d.milojicic|s.guday|r.wheeler}@opengroup.org</tt><p>
+
+We describe how our experience with classic operating system level
+process migration mechanisms influenced the design of MOA, a mobile
+agents project.  A case is presented for implementing mobile agents
+using language environments and overcoming the limitations of those
+environments by employing mechanisms adapted from classic process
+migration implementations.<p>
+<hr>
+
+
+<h3>Travelling Objects, a New Paradigm in Distributed Object Computing
+(<a href="papers/neudeck.ps.gz">ps.gz</a>)</h3>
+
+Arthur Neudeck, Andreas Ehret, Frank Baier<br>
+<tt>neudeck.arthur@ch.swissbank.com</tt><p>
+
+The massive growth of the Internet and the World Wide Web caused a shift
+in thinking about development and distribution of software. The global
+sharing of information, the operation on multiple platforms in
+heterogeneous networks, and the lucrative signs of electronic commerce
+force application developers to make their applications work in a
+distributed client-server environment, dealing with incompatible
+hardware architectures and operating systems.<br>
+
+This paper introduces Travelling Objects (TOs), a new paradigm in
+distributed object computing, based on an enhanced object model and
+built upon the platform-independent and dynamic programming language
+Java. Additionally, the authors provide an insight how the Travelling
+Object Runtime System (TORS) allows to send, receive, and interact with
+TOs. Finally, an easy-to-use TO Generator is introduced that produces
+TOs out of arbitrary Java applications.<p>
+<hr>
+
+
+<h3>On Stacks and Russian Dolls: Mobile Objects in Configurable
+Communication Protocols
+(<a href="papers/pereira.ps.gz">ps.gz</a>)</h3>
+
+Jose Orlando Pereira, Rui Oliveira<br>
+<tt>{jop|rco}@di.uminho.pt</tt><p>
+
+This paper introduces Groupz, a novel group communication protocol
+development framework. It merges advantages of traditional communication
+protocol support environments with object mobility, proposing multiple
+nested mobile objects as the natural evolution of layered protocols. By
+shifting the focus of protocol development from data messages to mobile
+objects, it makes possible to build configurable and adaptable system
+software, suited for problematic environments such as world-wide
+networks, without overlooking efficiency.<p>
+<hr>
+
+
+<h3>Using mobility to make transparent distribution practical
+(<a href="papers/not_revised.ps.gz">ps.gz</a>)</h3>
+
+Peter Van Roy, Seif Haridi, Per Brand, Gert Smolka,
+Michael Mehl, Ralf Scheidhauer<br>
+<tt>pvr@info.ucl.ac.be, {fseif|perbrandg}@sics.se,
+{fsmolka|mehl|scheidhrg}@dfki.uni-sb.de</tt><p>
+
+Some of the most diffcult questions to answer when designing a
+distributed application are related to mobility: what information to
+transfer between sites and when and how to transfer it. Transparent
+distribution, the property that a program's behavior is independent of
+how it is partitioned among sites, does not directly address these
+questions. Therefore we propose to extend the language semantics with
+mobility control. the ability for objects to migrate between sites or to
+remain stationary at one site. In this way, the syntax and semantics of
+objects are the same regardless of whether they are used as stationary
+servers, mobile agents, or simply as caches. We show how to give objects
+an arbitrary mobility behavior that is independent of the object's
+definition. This gives the programmer a simple and effective control both
+over information transfer and over the resulting network communication
+patterns. These ideas have been implemented in Distributed Oz, a
+concurrent object-oriented language which is state-aware and has dataflow
+synchronization. Distributed Oz is an extension to the
+publicly*-available Oz 2.0 system.<p>
+<hr>
+
+
+<h3>Using Mobile Code to Control Native Execution of Distributed UNIX
+(<a href="papers/tschudin.ps.gz">ps.gz</a>)</h3>
+
+Christian Tschudin, Murhimanya Muhugusa, Guy Neuschwander<br>
+<tt>tschudin@icsi.berkeley.edu, {muhugusa|neuschwa}@cui.unige.ch</tt><p>
+
+This paper presents MOS, a hybrid mobile/native code architecture where
+interpreted mobile code (messengers expressed in the M0 language) is
+used to control the execution of native code.  This results in the
+mobile code interpreters becoming microkernels.  Interpreted messengers
+are responsible for resource allocation in the network i.e., they are
+the glue between remote nodes, while CPU intensive tasks are executed by
+native code targeted at some specific hardware architecture. We describe
+the MOS support for native code execution and an implementation done at
+the University of Geneva where we demonstrated the native execution of a
+UNIX process under interpreted mobile code control.<br>
+<i>Keywords:</i> Mobile code, messengers, operating systems,
+microkernel, distributed UNIX.<p>
+<hr>
+
+
+<h3>Protecting Mobile Agents through Tracing
+(<a href="papers/vigna.ps.gz">ps.gz</a>)</h3>
+
+Giovanni Vigna<br>
+<tt>vigna@elet.polimi.it</tt><p>
+
+Mobile code systems provide a flexible and powerful platform
+to build distributed applications in an Internet scale, but they rise strong
+requirements from the security point of view. Security issues include au
+thentication of the different remote parties involved and protection of the
+execution environments from malicious agents. Nonetheless, the most
+diffcult task is to protect roaming agents from execution environments.
+This paper presents a new mechanism based on execution tracing and
+cryptography that allows an agent owner to determine if some site in the
+route followed by the agent tried to tamper with the agent state or code.<br>
+<i>Keywords:</i> mobile code, mobile agents, security, auditing.<p>
+<hr>
+
+<br><i>Back to the main <a href="http://cuiwww.unige.ch/~ecoopws">
+Mobile Object Systems Home Page.</a></i>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<h1>Sitemap</h1>
+
+<ul>
+  <li><a href="index.html">Welcome</a></li>
+  <li>Conference</li>
+    <ul>
+      <li><a href="dates.html">Important Dates</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
+      <li><a href="call-for-papers.html">Call for Papers</a> <a href="ismm2010-cfp.txt">[TXT]</a></li>
+      <li><a href="past.html">Past Conferences</a></li>
+    </ul>
+  <li>Program</li>
+    <ul>
+      <li><a href="program.html">Detailed Program</a></li>
+    </ul>
+  <li>Registration</li>
+    <ul>
+      <li><a href="registration.html">Registration (via PLDI)</a></li>
+    </ul>
+  <li>The Venue</li>  
+    <ul>
+      <li><a target="blank" href="http://www.fairmont.com/RoyalYork?cm_mmc=icppc-_-Branded-RYH%20-%20Royal%20York%20-%20Canada-_-google-_-fairmont+royal+york">Accomodation</a> <small>(new window)</small></li>
+      <li><a target="blank" href="http://en.wikipedia.org/wiki/Toronto">Toronto</a> <small>(new window)</small></li>
+    </ul>
+  <li><a href="sitemap.html">This sitemap</a></li>  
+</ul>

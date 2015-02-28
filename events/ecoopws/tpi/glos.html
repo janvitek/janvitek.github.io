@@ -1,0 +1,36 @@
+<title>Mobile Object Systems: Glossary</title> <center>
+<body bgcolor="#c7c7c7">
+
+<h1>Glossary</h1>
+</center><hr>
+	This glossary was prepared from material and comments contributed (in alphabetic order) by <br>Luca Cardelli, Gianpaolo Cugola, Carlo Ghezzi, Gian Pietro Picco, Christian Tschudin,<br> Giovanni Vigna and Jan Vitek.<p>
+<hr>
+<ul>
+<li><b>Anchored resource</b> A resource which may not be moved to another host, these usually include the like of devices, user interface elements, or files.
+<li><b>Checkpointing</b> Checkpointing, in this context refers to the operation of saving the execution state of a running computation.
+<li><b>Code closure</b> A code closure is the collection of code fragments required for the successful execution a routine, thread or computation. A code closure is exact if it includes only the code fragments that will be executed. It is approximate if it includes code fragments that will not be executed.
+<li><b>Code fragment</b> A code fragment is a syntactically valid sequence of instructions.
+<li><b>Code Mobility</b> In the context of<i> mobile code languages</i>, the term mobility refers to mechanisms to move code among different<i> computational environments.</i>
+Code On Demand paradigm (COD)</b> It is a paradigm to develop<i> mobile code applications.</i> MCAs developed using this paradigm can download and link on-the-fly part of their code from a different (remote) component that acts as a code server.
+<li><b>Component</b> Components are <i>resources </i>or <i>computations.</i>
+<li><b>Computation</b> A computation denotes an executing program composed of one or more active <i>threads. </i>Each computation consists of a <i>code closure</i> which specifies its behaviour, an<i> execution state</i> which stores all control information related to the execution the computation and a <i>data space</i> that includes all the<i> resources</i> accessible by the computation.
+<li><b>Computational Environment (CE)</b> The computational environment is a container for<i> components.</i> It provides some low level services and controls access to underlying resources of the host. The CE's implementation may be a run-time system on top of a standard operating system or an operating system in its own right.
+<li><b>Data space </b> The data space of an <i>computation</i> is composed of all the<i> resources</i> accessible from all the active routines of that computation.
+<li><b>Data closure</b> The data closure of an<i> execution unit</i> is the set of all local and non-local<i> resources</i> that are accessible by the currently executing routine. This<i> data space</i> constituent allows the computation to proceed, possibly calling other routines, but does not necessarily include the resources of the routine's caller.
+<li><b>Execution state </b> The execution state holds all the control information related to a computation. For example, the instruction pointer is part of the execution state.
+<li><b>External resources</b> Resources that are outside of the <i>computational environment,</i> e.g. a window in the host's windowing system.
+<li><b>Location</b> A location is a named <i>computational environment. </i> Locations names may be globally unique or relative to the current computational environment.
+<li><b>Mobile Agent</b>   The term <i>Mobile Agent</i> lacks a widely recognized definition. In this context, we assume that a mobile agent is a synonym of <i>mobile computation.</i>
+<li><b>Mobile Code Applications (MCA)</b> Mobile Code Applications are software systems that exploit some form of<i> code mobility. </i>
+<li><b>Mobile Code Language (MCL)</b> A programming language supporting<i> code mobility. </i>
+<li><b>Mobile Object System </b> A mobile object system is an <i>object system</i> which can move autonomously from a CE to another CE in order carry out a computation.
+<li><b>Mobile Computation</b> It is a computation which is able to migrate autonomously to a different<i> computational environment.</i> Mobile computations imply code mobility.
+<li><b>Mobile Software Agent</b> see <i>Mobile Agent.</i>
+<li><b>Object System</b> An object system is a computation whose data space is composed of objects and whose code closure contains the code that specifies the behaviour of the objects. 
+<li><b>Remote Evaluation paradigm (REV)</b> It is a paradigm to develop <i>mobile code applications.</i> Any <i>component</i> of an MCA developed using this paradigm can invoke services provided by other components (located on different <i>computational environments</i> by providing not only the input data needed to perform the service (like in a remote procedure call scheme) but also providing the code that describes how to perform the service.
+<li><b>Remote reference</b> A network reference allows a <i>computation</i> to access <i>components</i> that are located on a <i>computational environment</i> other than the one where the computation is being executed. 
+<li><b>Resource</b> Resources are passive entities representing data. 
+<li><b>State distribution</b> The use of network references enables an <i>execution unit</i> to own a <i>data space</i> that is composed of components spread on different <i>computational environments.</i> We refer to this situation with the term "state distribution", because a relevant portion of the state of a computation (the <i>data space</i>) is actually distributed on different CEs.
+<li><b>Thread</b> A sequential flow of control.
+<li><b>Ubiquitous resources</b> <i> Resources</i> guaranteed to be present in all the<i> computational environments</i>.
+</ul>

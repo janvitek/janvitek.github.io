@@ -1,0 +1,34 @@
+
+.StileChar {font-family: Verdana, Arial, Helvetica, sans-serif}
+.StileColorWhite {color: #FFFFFF}
+.StileColorBlack {color: #000000}
+.StileColorRed {color: #FF0000}
+.StileColorGreen {color: #66CC66}
+.StileColorBlue {color: #0000FF}
+.StileColorGray {color: #666666}
+.StileCharBold {font-weight: bold;}
+.StileCharSizeBig {font-size: 14px}
+.StileCharSizeNormal {font-size: 12px}
+.StileTitoloCorpo {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+a:link {
+	text-decoration: none;
+	color: #666666;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: underline;
+	color: #666666;
+}
+a:active {
+	text-decoration: none;
+}
+
+
+

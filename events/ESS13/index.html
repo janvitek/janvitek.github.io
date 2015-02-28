@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Old Stairwell 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130313
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ECOOP'13</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"
+      rel="stylesheet" type="text/css">
+    <link href="default.css" rel="stylesheet" type="text/css"
+      media="all">
+    <!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          <h1><a href="http://www.lirmm.fr/ecoop13/">ECOOP Summer School
+              2013</a></h1>
+        </div>
+      </div>
+      <div id="page">
+        <div id="content"> <a name="wuerthinger">
+            <h2>One VM to rule them all </h2>
+          </a> <br>
+          <h3>Thomas Wuerthinger and Doug Simon</h3>
+          <p>July 3rd, 10:45 </p>
+          <p>Current production VMs are designed to target one main
+            language. While they can execute other languages, these are
+            often second-class citizens and their execution performance
+            lags. We present Truffle, a system that allows multiple
+            languages to efficiently execute on top of the Java HotSpot
+            VM. The effort to add new languages is low as it requires
+            only implementing an AST interpreter.</p>
+          <p> We use the Graal compiler to automatically derive compiled
+            code from the interpreter definitions via partial
+            evaluation. We will show how to add a new guest language and
+            how researchers can experiment with our platform.</p>
+          <p> The Truffle API is publicly available as part of the Graal
+            OpenJDK project. </p>
+          <p>Project URL: <a
+              href="http://openjdk.java.net/projects/graal/">http://openjdk.java.net/projects/graal/</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;Contact: <a
+              href="mailto:thomas.wuerthinger@oracle.com">Thomas
+              Wuerthinger</a> </p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h2><a name="serrano" id="serrano">From PCs to tablets:
+              Programming the Diffuse Web. </a></h2>
+          <br>
+          <h3>Manuel Serrano</h3>
+          <p>July 4th, 16:15 </p>
+          <p>Personal computing has been radically changed by
+            smartphones and tablets. Within a few years, these new
+            devices have become as numerous as personal computers. They
+            have also almost bridged the performance gap. A modern
+            smartphone is equipped with a hardware that can compete the
+            traditional laptop on many aspects. </p>
+          <p>Since we permanently carry our phones with us. Since they
+            are always connected to a network and since they are
+            equipped with a vast set of sensors, they allow us to
+            implement new applications that were inconceivable a few
+            years back in the past: the diffuse applications. </p>
+          <p>However, programming diffuse applications is difficult
+            because it combines all the hardest points of the
+            traditional programming to which it brings new problems of
+            its own. In this course, we will present a new programming
+            language called Hop, specially designed for addressing these
+            problems. We will present the language, its constructs, its
+            semantics, and how to program realistic diffuse
+            applications. </p>
+          <p>Project URL: <a href="http://hop.inria.fr/">http://hop.inria.fr</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;Contact: <a
+              href="mailto:manuel.serrano@inria.fr">Manuel Serrano</a></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name="cazzola">
+            <h2> Reusable and Evolvable DSLs in Neverlang</h2>
+          </a> <br>
+          <h3> Walter Cazzola and Edoardo Vacchi </h3>
+          <p>July 4th, 14:15</p>
+          <p>Domain-specific languages are routinely used every day for
+            purposes such as querying databases, typesetting documents
+            and describing web page contents. Embedding a DSL is often
+            idiomatic to many modern programming languages. Several
+            language workbenches permit to develop a custom DSL from the
+            ground up, but developing a DSL is often, for the largest
+            part, a matter of rearranging the same old concepts in a
+            different way.</p>
+          <p> We show how to develop extensible DSLs using Neverlang, a
+            JVM-based framework for language development that emphazises
+            code reuse through composition of language features. We show
+            how to implement each feature in a stand-alone module; that
+            is, a separate, conceptually isolated and independent unit
+            that can be compiled and distributed separately.</p>
+          <p> We demonstrate how Neverlang can be employed to generate
+            compilers andinterpreters that can be extended or restricted
+            at any time, without any further compilation steps. </p>
+          <p>Project URL: <a href="http://neverlang.di.unimi.it">http://neverlang.di.unimi.it</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;Contact: <a
+              href="mailto:cazzola@di.unimi.it">Walter Cazzola</a></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name="logozzo">
+            <h2>The Smart Programming Assistant</h2>
+          </a> <br>
+          <h3>Francesco Logozzo</h3>
+          <p>July 5th, 14:15<br>
+          </p>
+          <p> The Smart Programming Assistant (SPA) analyzes and
+            suggests repairs to your program while you are typing it.
+            SPA tries to prove your program error-free with respect to a
+            specification (Code Contracts), and if SPA finds errors in
+            your program, it suggests a verified code repair. SPA
+            simplifies correct program development via enhanced
+            IntelliSense and via semantic refactoring, inferring general
+            yet precise contracts for the extracted method. It enables
+            code review by answering deep semantic queries. For example,
+            "If x is null and y is &gt; 0, what happens to z at this
+            other program point?" or "In the new version of your program
+            you are making a stronger assumption on the environment.".
+            The Smart Programming Assistant is built on the top of Code
+            Contracts, which provided a uniform and standard API to
+            specify contracts in .NET (since v4) and tools that consume
+            contracts for documentation generation, dynamic, and static
+            analysis. This project is joint work with M. Barnett, M.
+            Fahndrich, S. Lahiri, T. Ball, and many smart interns and
+            visiting researchers.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name="dolby">
+            <h2>Analyzing JavaScript and the Web with WALA</h2>
+          </a> <br>
+          <h3>Julian Dolby and Max Schaefer</h3>
+          <p>July 3rd, 14:15</p>
+          <p>We will present the Watson Libraries for Analysis (WALA)
+            from the perspective of analyzing Web applications,
+            particularly the client side of such applications, i.e. Web
+            pages and associated JavaScript code. As Web applications
+            become more sophisticated on the client side, such analysis
+            becomes more and more important. It also poses particular
+            challenges, as the dynamic nature of JavaScript is
+            exacerbated by rich frameworks that make heavy use of
+            JavaScript's dynamic features to engage in metaprogramming.
+            Specifically, we focus on:</p>
+          <p> 1) The HTML front end that takes Web pages and composes a
+            JavaScript program to analyze. We explain how to model the
+            DOM objects, how to support recording very precise source
+            mappings for JavaScript code, and how different HTML parsers
+            can be integrated into WALA.</p>
+          <p> 2) Code specialization in the front end. As purely static
+            analysis of JavaScript often proves challenging due to the
+            extreme dynamism in the language, we have experimented with
+            techniques that allow specialization of code during IR
+            generation. The mechanism permits arbitrary rewriting of
+            ASTs and multiple different translation for the same method
+            in different contexts.</p>
+          <p> 3) IR specializations for JavaScript. We will discuss ways
+            in which the WALA IR has been specialized to address aspects
+            of JavaScript. We will describe the representation of
+            function calls in particular.</p>
+          <p> 4) Targeted context sensitivity. We will present the
+            support in WALA, such as cartesian product algorithm context
+            sensitivity, allowing analyses to tailor sensitivity to
+            particular functions, object and construct. </p>
+          <p>Project URL: <a href="http://wala.sourceforge.net">http://wala.sourceforge.net</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;Contact: <a
+              href="mailto:dolby@us.ibm.com">Julian Dolby</a></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name="kalibera">
+            <h2>R: A language for Analyzing Data</h2>
+          </a>
+          <br>
+          <h3>Tomas Kalibera </h3>
+          <p>July 4th, 10:45</p>
+          <p>
+            The R language and runtime was released in 1995 and quickly
+            gained its popularity as a tool for scientific computing.
+            Over the last decade it has become a key platform for
+            implementing data analysis algorithms. Today R has over 5000
+            open-source packages, an estimated base of 2000 package
+            developers and 2 million end users.
+            For computer scientists, R is a useful tool for analyzing
+            and visualizing
+            experimental results. But most of all it
+            is a challenge for researchers in programming languages and
+            virtual
+            machines. R has
+            function closures with lexical scoping, but also lazy
+            evaluation of function
+            arguments through which one gets read/write access to caller
+            scope. R allows to reflectively access code as text and to
+            turn text into code and evaluate it in any scope. R code can
+            run in synthetically created scopes, e.g. in data sets. R
+            has rich support for vector arithmetics, including
+            arithmetics with missing data. The FastR project aims to
+            provide a faster implementation of R. FastR is implemented
+            in Java and currently can run simple benchmarks with
+            speedups usually about 3x but up to 20x.
+          </p>
+          <p>Project URL: <a href="https://github.com/allr/fastr">https://github.com/allr/fastr</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;Contact: <a
+              href="mailto:kalibera@cs.purdue.edu">Tomas Kalibera</a> </p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name="rompf">
+            <h2>High-Performance DSLs using Scala, LMS and Delite</h2>
+          </a> <br>
+          <h3>Tiark Rompf and Arvind Sujeeth </h3>
+          <p>July 5th, 10:45</p>
+          <br>
+          <p>This tutorial is an introduction to developing domain
+            specific languages (DSLs) for productivity and performance
+            using Scala, LMS and Delite. Lightweight Modular Staging
+            (LMS) is a pragmatic approach to runtime code generation in
+            Scala and Delite is a compiler framework for embedded DSLs
+            &nbsp;that simplifies the process of implementing DSLs for
+            parallel computation and heterogeneous targets.</p>
+          <p> This tutorial provides an overview of the technology
+            stack, presents existing high-performance DSL built using
+            the framework, and guides the attendees through the process
+            of creating DSLs.</p>
+        </div>
+        <div id="sidebar">
+          <div id="tbox1">
+            <ul class="style2">
+              <li class="first">
+                <h3><strong><a
+                      href="http://www.ssw.uni-linz.ac.at/General/Staff/TW/">Thomas
+                      Wuerthinger</a></strong></h3>
+                <p style="font-size:11px">Thomas Wuerthinger&nbsp;is a
+                  researcher at Oracle Labs, currently leading the Graal
+                  project. His research interests include compilers,
+                  virtual machines, and&nbsp;modular architectures.</p>
+                <img src="images/thomas_wuerthinger.jpg" alt="Thomas"
+                  height="120"></li>
+              <li>
+                <h3><strong><a
+                      href="http://labs.oracle.com/pls/apex/f?p=labs:bio:0:116">Doug
+                      Simon</a></strong></h3>
+                <p style="font-size:11px">Doug Simon is a researcher at
+                  Oracle Labs, currently contributing to the Graal
+                  project. Graal came out of the Maxine&nbsp;project
+                  which Doug led between 2009 and 2012. Doug's research
+                  interests include virtual machines, compilers and
+                  almost&nbsp;anything related to programming language
+                  implementation.</p>
+                <img src="images/doug_simon.jpg" alt="Doug" height="120"></li>
+              <li>
+                <h3><strong><a
+                      href="http://www-sop.inria.fr/members/Manuel.Serrano/">Manuel
+                      Serrano</a></strong></h3>
+                <p style="font-size:11px"> Manuel Serrano is a Senior
+                  Scientist at INRIA, leading the INDES (Informatique
+                  Diffuse et Sécurisée) team in Sophia-Antipolis. After
+                  completing his PhD (Paris VI, 1994), on the
+                  compilation of functional languages, he moved to Nice
+                  and created the Bigloo development environment for
+                  Scheme. He joined INRIA in 2001, and has focussed on
+                  development environments for the diffuse web since
+                  2005.
+                </p>
+                <img src="images/serrano.jpg" alt="walter" height="120"></li>
+              <li>
+                <h3><strong><a href="http://cazzola.di.unimi.it">Walter
+                      Cazzola</a></strong></h3>
+                <p style="font-size:11px">Walter Cazzola is an Associate
+                  Professor at the Università degli Studi di Milano and
+                  the chair of the ADAPT research group. His research
+                  interests include reflection, aspect-oriented
+                  programming, programming methodologies, programming
+                  languages design and implementation. He is the
+                  designer of the mChaRM framework, of the @Java, [a]C#,
+                  @AspectJ, Blueprint programming languages.</p>
+                <img src="images/walter-hi.jpg" alt="walter"
+                  height="120"></li>
+              <li>
+                <h3><strong>Edoardo Vacchi</strong></h3>
+                <p style="font-size:11px">Edoardo Vacchi is a PhD
+                  student. His interests include language development,
+                  parsing, compilation and separation of concerns. His
+                  master thesis consisted in the development of a
+                  dynamically extensible LALR parser generator, called
+                  DEXTER, that is now a core part of Neverlang.</p>
+                <img src="images/edo-hi.jpg" alt="edo" height="120"></li>
+              <li>
+                <h3><strong><a
+                      href="http://research.microsoft.com/en-us/people/logozzo/">Francesco
+                      Logozzo</a></strong></h3>
+                <p style="font-size:11px">Francesco works at Microsoft
+                  Research. His main research interest is the analysis,
+                  the optimization and the verification of
+                  object-oriented programs through abstract
+                  interpretation. He is am working on the design and the
+                  development of a language agnostic abstract
+                  interpretation-based static contract analyzer and
+                  checker for .NET. </p>
+                <img src="images/WebPage.jpg" alt="francesco"
+                  height="120"></li>
+              <li>
+                <h3><strong><a
+href="http://researcher.watson.ibm.com/researcher/view.php?person=us-dolby">Julian
+                      Dolby</a></strong></h3>
+                <p style="font-size:11px">Julian Dolby is Research Staff
+                  Member at IBM's T.J. Watson Research Center. &nbsp;He
+                  co-organized the JSTools workshop at ECOOP 2012.
+                  &nbsp;He works on a range of topics, including static
+                  program analysis, software testing, concurrent
+                  programming models and the semantic Web. &nbsp;His
+                  work has been included in IBM products, most notably
+                  Rational AppScan, Standard Edition and Source Edition.</p>
+                <img src="images/julian.jpg" alt="julian" height="120"></li>
+              <li>
+                <h3><strong><a
+                      href="http://www.ntu.edu.sg/home/schaefer/">Max
+                      Schaefer</a></strong></h3>
+                <p style="font-size:11px">Max Schaefer is an Assistant
+                  Professor at Nanyang Technological University,
+                  Singapore. His research primarily focuses on program
+                  analysis and transformation&nbsp;for dynamic
+                  programming languages, with a particular emphasis
+                  on&nbsp;applying these techniques in the context of
+                  smart IDEs and other&nbsp;programming tools.</p>
+                <img src="images/max.jpg" alt="max" height="120"></li>
+              <li>
+                <h3><strong><a
+                      href="http://www.cs.kent.ac.uk/people/staff/tk243/">Tomas
+                      Kalibera</a></strong></h3>
+                <p style="font-size:11px">Tomas Kalibera is a researcher
+                  working for Purdue University on the FastR project.
+                  His research interests include virtual machines,
+                  garbage collection, and benchmarking based on
+                  statistical methods.</p>
+                <p> <img src="images/face.jpg" alt="edo" height="120"></p>
+              </li>
+              <li>
+                <h3><strong><a href="http://tiarkrompf.github.io"> Tiark
+                      Rompf</a></strong></h3>
+                <p style="font-size:11px">Tiark Rompf is a post-doctoral
+                  researcher at EPFL and Oracle labs. His research
+                  focuses on making making high-level programming
+                  abstractions more performant through staging and
+                  advanced compiler technology. He leads the development
+                  of LMS and is as a member of Martin Odersky's Scala
+                  group at EPFL.</p>
+                <p> <img src="images/tiark.jpeg" alt="edo" height="120"></p>
+              </li>
+              <li>
+                <h3><strong><a
+                      href="http://www.stanford.edu/%7Easujeeth/">Arvind
+                      Sujeeth</a></strong></h3>
+                <p style="font-size:11px">Arvind Sujeeth is a year Ph.D.
+                  student at Stanford University. His research interests
+                  include leveraging domain-specific languages as a
+                  highly productive, high performance parallel
+                  programming model. He has worked on DSLs for machine
+                  learning, graph analysis, scientific computing, and
+                  slightly recursively, for DSL development.</p>
+                <img src="images/arvind.jpeg" alt="edo" height="120"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="three-column">
+        <div id="tbox1">
+          <h2>The ECOOP Summer Scoools</h2>
+          <p>The ECOOP summer schools talks are free ninety minute
+            tutorial talks scheduled during the ECOOP conference. The
+            series is organized by James Noble and Jan Vitek.</p>
+          <p>Previous instances: <a
+              href="http://ecoop12.cs.purdue.edu/content/ecoop-summer-school">ESS'12</a>,
+            <a
+              href="http://scc-sentinel.lancs.ac.uk/ecoop11/?q=program/summer_school">ESS'11</a>,
+            <a href="http://ecoop2010.uni-mb.si/summer_school.html">ESS10</a>,
+            <a href="http://ecoop09.disi.unige.it/summer-school.html">ESS'09</a>.</p>
+        </div>
+        <div id="tbox2">
+          <h2>Theme for 2013</h2>
+          <p>This year the theme of the ESS is dynamic languages, DSL
+            and high-level tools and infrastructure for implementing
+            those languages.</p>
+        </div>
+        <div id="tbox3">
+          <h2>Social</h2>
+          <ul class="style1">
+            <li class="first"><a href="#">Twitter</a></li>
+            <li><a href="https://www.facebook.com/ecoop13">Facebook</a></li>
+            <li><a href="#">Google +</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="footer">
+        <p> Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+      </div>
+    </div>
+  </body>
+</html>

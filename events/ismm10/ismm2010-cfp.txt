@@ -1,0 +1,138 @@
+International Symposium on Memory Management 2010
+Toronto, June 5-6, 2010
+http://www.cs.purdue.edu/ISMM10/
+
+CALL FOR PAPERS
+
+ISMM is a forum for research in memory management. Areas of interest include
+but are not limited to:
+
+ * Memory allocation and deallocation
+ * Garbage collection algorithms and implementations
+ * Compiler analyses and tools to aid memory management
+ * Empirical analysis of heap intensive programs
+ * Formal analysis and verification of heap intensive programs
+ * Memory system design and analysis
+ * Verification of memory management algorithms
+ * Development and evaluation of open source implementations
+
+ISMM solicits full-length submissions covering new work on these topics, as
+well as papers presenting confirmations or refutations of important prior
+results. Surveys and comparative analyses that shed new light on previously
+published techniques are also welcome. 
+
+ORGANIZERS
+
+General Chair: Jan Vitek, Purdue University
+Program Chair: Doug Lea, State University of New York at Oswego
+
+Program Committee:
+ * Hans Boehm, HP Labs
+ * Cliff Click, Azul Systems
+ * David Detlefs, Microsoft Research
+ * Dave Dice, Sun Microsystems
+ * Christine Flood, Sun Microsystems
+ * Daniel Frampton, Australian National University
+ * Samir Genaim, Complutense University of Madrid
+ * Richard Jones, University of Kent
+ * Simon Marlow, Microsoft Research
+ * Nick Mitchell, IBM T.J. Watson Research
+ * Filip Pizlo, Purdue University
+ * Martin Vechev, IBM T.J. Watson Research
+ * Adam Welc, Intel
+
+Review Committee:
+ * Michael Bond, UT Austin
+ * Antonio Cunei, EPFL
+ * Sam Guyer, Tufts University
+ * Matthew Hertz, Canisius College
+ * Martin Hirzel, IBM
+ * Tony Hosking, Purdue University
+ * Rick Hudson, Intel
+ * Maria Jump, King's College
+ * Maged Michael, IBM
+ * Melissa O'Neill, Harvey Mudd College
+ * Erez Petrank, Technion
+ * Tony Printezis, Sun
+ * Fridtjof Siebert, aicas
+ * Bjarne Steensgaard, Microsoft
+
+KEY DATES
+
+Abstracts due: February 3, 2010
+Submissions due: February 9, 2010
+Author response: March 9-11, 2010
+Notification: March 19, 2010
+Final copy: April 2, 2010
+Conference: June 5-6, 2010
+
+SUBMISSIONS
+
+Submitted papers must be in English and formatted to print on US Letter (8.5 x
+11 inches) paper. Submissions must contain an abstract and postal and electronic
+mailing addresses for at least one contact author. All papers must be submitted
+on-line, preferably in Portable Document Format (PDF), although the submission
+system will also accept PostScript. Submissions should be no more than 10 pages
+(including bibliography, excluding well marked appendices) in standard ACM
+SIGPLAN conference format: two columns, nine-point font (or larger) on a
+ten-point baseline (or larger), with columns 20pc (3.33in) wide and 54pc (9in)
+tall, and a column gutter of 2pc (0.33in). Detailed formatting guidelines along
+with formatting templates or style files for LaTeX are available at
+http://www.acm.org/sigs/sigplan/authorInformation.htm. Papers that violate these
+guidelines will be rejected by the program chair. Program committee members are
+not required to read appendices, and so a paper should be intelligible without
+them. All accepted papers will appear in the published proceedings.
+
+Double-blind reviewing
+
+Authors are anonymous to the reviewers, just as reviewers are anonymous to the
+authors. Authors must take reasonable efforts not to disclose their identities
+to reviewers: Do not give your names nor mention your institution, research
+group or project name. Where necessary for flow, a stand-in name such as "XYZ",
+may be used, with a footnote explaining that the actual name is withheld.
+Discuss your own prior work in the third person, as you would other related
+work. You may also provide reviewers with anonymous auxiliary material such as
+proofs and source code via the PC Chair (see below). Reviewers, for their part,
+will be honor-bound not to try to discover authors' identities until their
+initial reviews are complete. Authors' identities will be revealed at a later
+point in the program committee's deliberations, but will be known only to the
+program chair until that point.
+
+Review committee
+
+ISMM uses a separate Review Committee (RC) as part of the reviewing process. The
+RC complements the Program Committee (PC) by providing expert reviews. The same
+reviewing standards apply to the RC as for the PC. However, RC members review
+only a few papers each, and do not participate in the PC meeting. The use of the
+RC increases the breadth and depth of the reviewer pool.
+
+Rebuttal
+
+The rebuttal process will occur in early March 2010, and will give the authors
+opportunity to respond succinctly to factual errors in reviews, before the
+program committee meets to make its decisions. The committee may, but need not,
+respond to rebuttals or revise reviews at or after the committee meeting.
+
+Auxiliary Material
+
+Authors may provide the PC Chair with a URL for upload of auxiliary material.
+The URL itself will not be seen by reviewers. The authors may reference such
+material in their paper, noting that the material has been made available to the
+PC Chair. This facility may be used by authors to provide reviewers with useful
+information beyond the scope of the submitted paper, such as technical reports,
+proofs, and source code, without disclosing the authors' identity. Authors are
+obliged to make reasonable efforts to make all auxiliary material suitably
+anonymous. Authors are reminded that reviewers are under no obligation to read
+any auxiliary material.
+Papers accompanied by or based on open-source implementations are especially
+welcome. However, if the authors are primary contributors to such a project,
+they should provide source URLs separately to the Program Chair for validation,
+and not list them in the submission proper.
+
+Proceedings
+
+The proceedings will be published by the ACM. Authors should read the ACM Author
+Guidelines and related information. Authors of accepted papers must guarantee
+that their paper will be presented at the conference. For additional information
+please feel free to contact the Program Chair.
+

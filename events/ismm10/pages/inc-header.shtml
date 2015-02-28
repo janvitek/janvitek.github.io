@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>International Symposium on Memory Management, Toronto 2010</title>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <style type="text/css">
+    
+BODY {    
+    background-color:#fff;
+  background-image:url("./images/background.png");
+  background-position:center;
+  background-repeat:repeat-y;
+  margin:0px;
+  text-align:center;
+}
+
+IMG {
+  padding:0px;
+  margin:0px;
+  border-width:0px;
+  vertical-align:bottom;
+}
+
+LI {
+  font-family:serif;
+  color:#202020;
+  text-align:justify;
+  font-size:14px;
+}
+
+P {
+  font-family:serif;
+  color:#202020;
+  text-align:justify;
+  font-size:14px;
+}
+
+H1 {
+  font-family:Arial, sans-serif;
+  color:#000000;
+  margin-top:0px;
+  margin-bottom:5px;
+  font-weight:normal;
+  position:relative;
+  left:-20px;
+  background-image:url("./images/background_h1.png");
+  background-repeat:no-repeat;
+  background-position:0px center;
+  padding-left:20px;
+  font-size:20px;
+}
+
+H2 {
+  font-family:Arial, sans-serif;
+  color:#000000;
+  margin-top:0px;
+  margin-bottom:5px;
+  font-weight:normal;
+  position:relative;
+  left:-15px;
+  background-image:url("./images/background_h2.png");
+  background-repeat:no-repeat;
+  background-position:0px center;
+  padding-left:15px;
+  font-size:17px;
+  text-decoration:none;
+}
+    
+#header {
+  width:850px;
+  height:130px;
+  margin:0px auto;
+  background-image:url("./images/toronto_skyline_sketch.png");
+  background-position:right bottom;
+  background-repeat:no-repeat;
+}
+#logo {
+  float:left;
+  position:relative;
+  left:-8px;
+  width:auto;
+}
+#title {
+  padding-top:15px;
+  width:640px;
+}
+#title_year {
+  width:105px;
+  padding-right:40px;
+  text-align:right;
+  vertical-align:top;
+  font-family:Arial, sans-serif;
+  font-size:20px;
+  font-weight:bold;
+  color:#ffffff;
+}
+#title_name {
+  padding-left:50px;
+  width:525px;
+  text-align:left;
+  font-family:Arial, sans-serif;
+  font-size:20px;
+  font-weight:bold;
+}
+#title_venue {
+  padding-left:50px;
+  padding-top:5px;
+  text-align:left;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+  color:#ff0000;
+  font-weight:bold;
+}
+
+#navigation {
+  width:100%;
+  background-image:url("./images/red_dot.png");
+  background-position:10px 10px;
+  background-repeat:repeat-x;
+  text-align:center;
+  height:63px;
+  overflow:hidden;
+}
+#main_menu {
+  width:700px;
+  height:130px;
+  margin:0px auto;
+  padding:0px;
+  padding-left:150px;
+}
+.left_menu {
+  float:left;
+  font-family:Arial, sans-serif;
+  color:black;
+  font-size:14px;
+  font-weight:bold;
+  background-color:#ffffff;
+  padding:0px;
+  padding-top:2px;
+  padding-left:7px;
+  padding-right:7px;
+  cursor:pointer;
+  width:auto;
+}
+.right_menu {
+  float:right;
+  font-family:Arial, sans-serif;
+  color:black;
+  font-size:14px;
+  font-weight:bold;
+  background-color:#ffffff;
+  padding:0px;
+  padding-top:2px;
+  padding-left:7px;
+  padding-right:7px;
+  cursor:pointer;
+  width:auto;
+}
+.menu_ptr {
+  position:relative;
+  top:-4px;
+  visibility:hidden;
+  z-index:5;
+}
+#menu_context {
+  clear:both;
+  width:668px;
+  border-width:1px;
+  border-color:#ff0000;
+  border-style:solid;
+  color:#ff0000;
+  background-color:#fff0f0;
+  visibility:hidden;
+  margin-left:30px;
+  position:relative;
+  top:-5px;
+}
+.menu_item_context {
+  display:none;
+  padding:3px;
+}
+
+#menu_context_sitemap {
+  text-align:right;
+}
+A.menu_item {
+  font-size:14px;
+  font-family:Arial, sans-serif;
+  color:#000000;
+  text-decoration:none;
+  font-weight:bold;
+  padding-left:6px;
+  padding-right:6px;
+}
+A:hover.menu_item {
+  color:#ff0000;
+  padding-left:3px;
+  padding-right:3px;
+  border-width:0px;
+  border-left-width:3px;
+  border-right-width:3px;
+  border-color:#ff0000;
+  border-style:solid;
+}
+
+#page {
+  width:850px;
+  margin:0px auto;
+
+}
+
+#organisers {
+  float:left;
+  width:150px;
+  position:relative;
+  top:-20px;
+}
+
+.organiser_type {
+  font-family:sans-serif;
+  font-size:14px;
+  color:#ff0000;
+  font-weight:bold;
+  text-align:right;
+  padding-left:5px;
+  padding-right:10px;
+}
+.organiser_type_contents {
+  padding-right:7px;
+  text-align:right;
+  padding-top:10px;
+  padding-bottom:20px;
+  font-family:sans-serif;
+  font-size:13px;
+  color:#000000;
+}
+
+A.organiser {
+  font-size:13px;
+  font-family:Arial, sans-serif;
+  color:#000000;
+  text-decoration:none;
+  padding-left:6px;
+  padding-right:6px;
+}
+A:hover.organiser {
+  color:#ff0000;
+  padding-left:3px;
+  padding-right:3px;
+  border-width:0px;
+  border-left-width:3px;
+  border-right-width:3px;
+  border-color:#ff0000;
+  border-style:solid;
+}
+
+A.menuLink {
+    color:#000000;
+}
+A:hover {
+    color:#000000;
+    text-decoration:none;
+}
+
+
+
+#contents {
+  float:left;
+  width:670px;
+  padding-left:30px;
+  text-align:justify;
+  position:relative;
+}
+    
+    </style>
+    <script type="text/javascript">
+    
+var menu_lastItem=false;
+var menu_timeout=false;
+
+function menu_hidePointer(itemName) {
+  if (itemName==false) return;
+  document.getElementById("ptr_"+itemName).style.visibility="hidden";
+}
+
+function menu_showPointer(itemName) {
+  if (itemName==false) return;
+  document.getElementById("ptr_"+itemName).style.visibility="visible";
+}
+
+function menu_switchContext(itemName) {
+  if (menu_lastItem!=false) {
+    document.getElementById("menu_context_"+menu_lastItem).style.display="none";
+  }
+  document.getElementById("menu_context_"+itemName).style.display="block";
+  document.getElementById("menu_context").style.visibility="visible";
+  menu_lastItem=itemName;
+}
+
+function menu_hideContext() {
+  if (menu_lastItem!=false) {
+    document.getElementById("menu_context_"+menu_lastItem).style.display="none";
+  }
+  document.getElementById("menu_context").style.visibility="hidden";
+}
+
+function menu_selectItem(itemName) {
+  menu_cancelTimeout();
+  menu_hidePointer(menu_lastItem);
+  menu_showPointer(itemName);
+  menu_switchContext(itemName);
+  
+}
+function menu_clearRequest() {
+  menu_timeout=window.setTimeout("menu_clear()",100);
+}
+
+function menu_cancelTimeout() {
+  if (menu_timeout==false) return;
+  window.clearTimeout(menu_timeout);
+}
+
+
+function menu_clear() {
+  menu_hidePointer(menu_lastItem);
+  menu_hideContext();
+  menu_lastItem=false;
+}
+
+    
+    </script>
+  </head>
+<body>
+  <div id="header">
+    <div id="logo">
+      <a href="index.html"/><img src="./images/logo.png" alt="ISMM'10 Logo" /></a>
+    </div>
+    <div id="title">
+    <table cellspacing="0" cellpadding="0">
+      <tr>
+        <td rowspan="2" id="title_year">The 2010</td>
+        <td id="title_name">International Symposium on Memory Management</td>
+      </tr>
+      <tr>
+        <td id="title_venue">Toronto, June 5-6</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+  
+  <div id="navigation" onmouseout="menu_clearRequest()" onmousemove="menu_cancelTimeout()">
+    <div id="main_menu">
+      <div id="menu_conference" class="left_menu" onmouseover="menu_selectItem('conference')">
+        The&nbsp;Conference<br/><img id="ptr_conference" class="menu_ptr" src="./images/menu_pointer.png" alt="Menu pointer" /></div>
+      <div id="menu_program" class="left_menu" onmouseover="menu_selectItem('program')">
+        <a href="program.html" class="menuLink">Program</a><br/><img id="ptr_program" class="menu_ptr" src="./images/menu_pointer.png" alt="Menu pointer" /></div>
+      <div id="menu_registration" class="left_menu" onmouseover="menu_selectItem('registration')">
+        <a href="registration.html" class="menuLink">Registration</a><br/><img id="ptr_registration" class="menu_ptr" src="./images/menu_pointer.png" alt="Menu pointer" /></div>
+      <div id="menu_venue" class="left_menu" onmouseover="menu_selectItem('venue')">
+        The&nbsp;Venue<br/><img id="ptr_venue" class="menu_ptr" src="./images/menu_pointer.png" alt="Menu pointer" /></div>
+<!--      <div id="menu_info" class="left_menu" onmouseover="menu_selectItem('info')">
+        Useful&nbsp;Information<br/><img id="ptr_info" class="menu_ptr" src="./images/menu_pointer.png" alt="Menu pointer" /></div> -->
+      <div id="menu_sitemap" class="right_menu" onclick="window.location='sitemap.html'">
+        sitemap</div>
+      <div id="menu_context" onmousemove="menu_cancelTimeout()">
+        <div id="menu_context_conference" class="menu_item_context">
+          <a href="dates.html" class="menu_item">Important Dates</a> -
+          <a href="submissions.html" class="menu_item">Submissions</a> -
+          <a href="call-for-papers.html" class="menu_item">Call for Papers</a> -
+          <a href="past.html" class="menu_item">Past Conferences</a>
+        </div>
+        <div id="menu_context_program" class="menu_item_context">
+          <a href="program.html" class="menu_item">Detailed Program</a>
+        </div>
+        <div id="menu_context_registration" class="menu_item_context">
+          <a href="registration.html" class="menu_item">Registration (via PLDI)</a>
+        </div>
+        <div id="menu_context_venue" class="menu_item_context">
+          <a href="http://www.fairmont.com/RoyalYork?cm_mmc=icppc-_-Branded-RYH%20-%20Royal%20York%20-%20Canada-_-google-_-fairmont+royal+york" class="menu_item" target="blank">Accomodation</a> -
+          <a href="http://en.wikipedia.org/wiki/Toronto" target="blank" class="menu_item">Toronto</a>
+        </div>
+        <div id="menu_context_info" class="menu_item_context">
+          <a href="" class="menu_item">Links</a> -
+          <a href="" class="menu_item">Contact</a>
+        
+        </div>
+        <div id="menu_context_sitemap" class="menu_item_context">
+          you are here: <a href="" class="menu_item">home</a>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <div id="page">
+    <div id="organisers">
+      <div class="organiser_type">General Chair</div>
+      <div class="organiser_type_contents">
+        <a href="http://www.cs.purdue.edu/homes/jv/" class="organiser" target="blank">Jan Vitek</a>
+      </div>
+      <div class="organiser_type">Program Chair</div>
+      <div class="organiser_type_contents">
+        <a href="http://gee.cs.oswego.edu/dl/index.html" class="organiser" target="blank">Doug Lea</a>
+      </div>
+      <div class="organiser_type">Program Committee</div>
+      <div class="organiser_type_contents">
+        <a href="http://www.hpl.hp.com/personal/Hans_Boehm/" class="organiser" target="blank">Hans Boehm</a><br />
+        <a href="http://blogs.azulsystems.com/cliff/" class="organiser" target="blank">Cliff Click</a><br />
+        <a href="http://www.microsoft.com" class="organiser" target="blank">David Detlefs</a><br />
+        <a href="http://blogs.sun.com/dave/" class="organiser" target="blank">Dave Dice</a><br />
+        <a href="http://research.sun.com/people/mybio.php?c=523" class="organiser" target="blank">Christine Flood</a><br />
+        <a href="http://cs.anu.edu.au/people/Daniel.Frampton/" class="organiser" target="blank">Daniel Frampton</a><br />
+        <a href="http://clip.dia.fi.upm.es/~samir/home/viewpost.php?post=Welcome" class="organiser" target="blank">Samir Genaim</a><br />
+        <a href="http://www.cs.kent.ac.uk/people/staff/rej/" class="organiser" target="blank">Richard Jones</a><br />
+        <a href="http://www.haskell.org/~simonmar/" class="organiser" target="blank">Simon Marlow</a><br />
+        <a href="http://domino.research.ibm.com/comm/research_people.nsf/pages/nickmitchell.index.html" class="organiser" target="blank">Nick Mitchell</a><br />
+        <a href="http://www.filpizlo.com/research.html" class="organiser" target="blank">Filip Pizlo</a><br />
+        <a href="http://domino.research.ibm.com/comm/research_people.nsf/pages/mtvechev.index.html" class="organiser" target="blank">Martin Vechev</a><br />
+        <a href="http://techresearch.intel.com/articles/Top-Links/1538.htm" class="organiser" target="blank">Adam Welc</a><br />
+      </div>
+      <div class="organiser_type">Sponsored By</div>
+      <div class="organiser_type_contents">
+	<div style='padding-right:5px;text-align:right;'>
+		<a href="http://www.sigplan.org/" target="blank"><img src="./images/ACM.png" alt="ACM SIGPLAN" /></a><br />
+	</div>
+      </div>    
+      <div class="organiser_type">Supported By</div>
+      <div class="organiser_type_contents">
+	<div style='padding-left:5px;text-align:right;'>
+		<a href="http://www.sun.com/" target="blank"><img src="./images/sun.png" alt="Sun Microsystems" /></a><br />
+<!-- 		<a href="http://www.sun.com/" target="blank" class="organiser" style='font-size:85%;'>Sun Microsystems</a>&nbsp;<br /> -->
+        <br/>
+        <a href="http://www.microsoft.com/" target="blank"><img src="./images/msr.png" alt="Microsoft Research" /></a><br />
+<!--         <a href="http://www.microsoft.com/" target="blank" class="organiser" style='font-size:85%;'>Microsoft Research</a>&nbsp;<br /> -->
+        <br/>
+        <a href="http://www.ibm.com/" target="blank"><img src="./images/ibmr.png" alt="IBM Research" /></a><br />
+<!--         <a href="http://www.ibm.com/" target="blank" class="organiser" style='font-size:85%;'>IBM Research</a>&nbsp;<br /> -->
+	</div>
+      </div>    
+
+    </div>
+    
+    <div id="contents">

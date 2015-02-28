@@ -1,0 +1,23 @@
+<h1>Welcome</h1>
+<p>ISMM is a forum for research in memory management. Areas of interest include but are not limited to:</p>
+<p><ul>
+  <li>Memory allocation and deallocation</li>
+  <li>Garbage collection algorithms and implementations</li>
+  <li>Compiler analyses and tools to aid memory management</li>
+  <li>Empirical analysis of heap intensive programs</li>
+  <li>Formal analysis and verification of heap intensive programs</li>
+  <li>Memory system design and analysis</li>
+  <li>Verification of memory management algorithms</li>
+  <li>Development and evaluation of open source implementations</li>
+ </ul></p>
+<p>ISMM solicits full-length submissions covering new work on these topics, as well as papers presenting confirmations or refutations of important prior results. Surveys and comparative analyses that shed new light on previously published techniques are also welcome.
+</p>
+<p><a href="submissions.html">Submissions</a> will be read by the program committee and designated reviewers, and judged on scientific merit, innovation, readability, and relevance. Papers previously published or already being reviewed by another conference are not eligible; if a closely related paper has been submitted to a journal, the authors must notify the program chair (see the SIGPLAN republication policy).
+<p>Papers are submitted online using the following link (easychair):</p>
+<p><a href="http://www.easychair.org/conferences/?conf=ismm2010">http://www.easychair.org/conferences/?conf=ismm2010</a></p>
+
+<!--#include file="inc-dates.shtml" -->
+<br />
+<h1>Review committee</h1>
+<!--#include file="inc-reviewcommittee.shtml" -->
+

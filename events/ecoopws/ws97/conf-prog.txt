@@ -1,0 +1,2335 @@
+From sakkinen@hepo.jyu.fiTue Apr 22 12:31:08 1997
+Date: Tue, 22 Apr 1997 09:13:44 +0200
+From: Markku Sakkinen <sakkinen@hepo.jyu.fi>
+To: cfp-list@hepo.jyu.fi
+Subject: ECOOP '97 Advance Programme
+
+    [The following text is in the "unknown-8bit" character set]
+    [Your display is set for the "US-ASCII" character set]
+    [Some characters may be displayed incorrectly]
+
+ECOOP '97 -- 11th European Conference on Object-Oriented Programming
+--------------------------------------------------------------------
+We are sorry if you receive this message several times over different
+mailing lists!
+
+This is a slightly abridged version of the printed ECOOP '97 Advance
+Programme and Call for Participation.  For full and up-to-date
+information, please look at http://www.ecoop97.jyu.fi/ .
+
+The registration form is not included! It can be found at 
+http://www.ecoop97.jyu.fi/Registration/ .
+as two PostScript files.  Registration can also be done through WWW;
+look at the address mentioned above.
+
+You can also ask for the registration form via email from ecoop97@cs.jyu.fi .
+
+Finally, you can get the March version of the complete Advance Programme
+and Call for Participation in several parts by anonymous FTP from
+www.ecoop97.jyu.fi .
+The documents are in PostScript format in directory /pub/ecoop97/ps ,
+and in straight text and RTF formats (registration form not included)
+in directory /pub/ecoop97/texts .
+
+TABLE OF CONTENTS
+
+WELCOME
+ORGANIZATION
+TUTORIALS
+WORKSHOPS
+TECHNICAL PROGRAMME
+INVITED TALKS
+EXHIBITION
+DEMONSTRATIONS AND POSTERS
+SOCIAL PROGRAMME
+GENERAL INFORMATION
+PARTICIPATION AND REGISTRATION FEES
+
+-------------------------------------------------------------------------
+
+WELCOME TO ECOOP'97
+
+This year, 1997, marks the 30th anniversary of Simula, and thus of
+object-oriented programming, the 25th anniversary of Smalltalk, and the
+10th anniversary of ECOOP. We cordially invite all researchers,
+practitioners, educators, and students interested in object technology to
+attend ECOOP '97, the 11th European Conference on Object-Oriented
+Programming, to be held on June 9 - 13, 1997, in Jyväskylä, Finland.
+
+The conference is organized by the University of Jyväskylä, in cooperation
+with AITO (Association Internationale pour les Technologies Objets). It has
+been made possible through hard volunteer work by the Organizing Committee
+and the Programme Committee.  We are also grateful to the sponsoring and
+cooperating organizations listed in this booklet.
+
+As always, ECOOP strives to demonstrate the very best and latest research,
+practice, and experience using object technologies.  In this booklet you
+will already see our wide choice of tutorials and workshops on Monday and
+Tuesday, and the exciting technical programme - including first-range
+invited speakers - from Wednesday to Friday. We are also looking forward to
+an interesting offering of posters and demonstrations, and an exhibition of
+object-oriented products from Tuesday to Thursday.
+
+Opportunities for informal contacts between participants have always been
+important at ECOOP.  This year we will offer a more extensive social
+programme than probably ever before.  It includes evening events, some
+arrangements for accompanying persons, and pre- and post-conference tours.
+
+
+Boris Magnusson                                 Markku Sakkinen
+Conference Chair                                Organizing Chair 
+
+
+
+
+ORGANIZATION
+
+ECOOP '97 is organized by the University of Jyväskylä, under the auspices
+of AITO (Association Internationale pour les Technologies Objets).
+
+
+Executive Committee
+
+Conference Chair:       Boris Magnusson (University of Lund, Sweden)
+                        boris@dna.lth.se
+Programme Co-chairs:    Mehmet Aksit (University of Twente, The Netherlands)
+                        aksit@cs.utwente.nl 
+                        Satoshi Matsuoka (Tokyo Institute of Technology, Japan)
+                        matsu@is.titech.ac.jp 
+Organizing Chair:       Markku Sakkinen (University of Jyväskylä, Finland)
+                        sakkinen@cs.jyu.fi
+
+
+Programme Committee
+
+Pierre America (Philips Research Laboratories, Eindhoven, The Netherlands)
+Elisa Bertino (University of Milan, Italy)
+Toby Bloom (CMG Direct Interactive, Andover, MA, USA)
+Frank Buschmann (Siemens, Munich, Germany)
+Luca Cardelli (Digital SRC, Palo Alto, CA, USA)
+Denis Caromel (University of Nice - INRIA Sophia Antipolis, France)
+Pierre Cointe (Ecole des Mines de Nantes, France)
+Derek Coleman (King's College, London, United Kingdom)
+Theo D'Hondt (Brussels Free University, Belgium)
+Peter Dickman (University of Glasgow, United Kingdom)
+Bjorn Freeman-Benson (Object Technology International Inc., Victoria, BC,
+Canada)
+Rachid Guerraoui (EPFL IN-Ecublens, Lausanne, Switzerland)
+Dieter Hammer (Eindhoven University of Technology, The Netherlands)
+Urs Hölzle (University of California, Santa Barbara, CA, USA)
+Shinichi Honiden (Toshiba, Kawasaki, Japan)
+Mehdi Jazayeri (Vienna University of Technology, Austria)
+Eric Jul (University of Copenhagen, Denmark)
+Gerti Kappel (Johannes Kepler University, Linz, Austria)
+Jørgen Lindskov Knudsen (Aarhus University, Denmark)
+John Lamping (Xerox Palo Alto Research Center, CA, USA)
+Karl Lieberherr (Northeastern University, Boston, MA, USA)
+José Meseguer (SRI International, Menlo Park, CA, USA)
+Oscar Nierstrasz (University of Bern, Switzerland)
+Atsushi Ohori (Kyoto University, Japan)
+Jens Palsberg (Purdue University, W. Lafayette, IN, USA)
+Douglas Schmidt (Washington University, St. Louis, MO, USA)
+
+
+Organizing committee
+
+Tutorial Chair:         Erkki Lehtinen (University of Jyväskylä, Finland)
+                        erkkil@jyu.fi (Tutorial Chair) 
+Workshop Chair:         Antero Taivalsaari (Nokia Research Center,
+                                            Helsinki, Finland)
+                        antero.taivalsaari@research.nokia.com 
+Conference Manager
+and Exhibition Chair:   Taru-Maija Heilala-Rasimov (Jyväskylä Congresses,
+                                                    Finland)
+                        heilala@cone.jyu.fi
+Panel Chair:            Jari Veijalainen (University of Jyväskylä, Finland)
+                        veijalai@cs.jyu.fi
+Poster Chair:           Pentti Marttiin (University of Jyväskylä, Finland)
+                        pentti@cs.jyu.fi
+Demonstration Chair:    Risto Pohjonen (University of Jyväskylä, Finland)
+                        rtpo@cc.jyu.fi
+Other members:          Matti Rossi (University of Jyväskylä, Finland)
+                        mor@jyu.fi
+                        Jonne Itkonen (University of Jyväskylä, Finland)
+                        ji@math.jyu.fi
+
+
+Cooperating Associations
+
+AITO (Association Internationale pour les Technologies Objets)
+http://iamwww.unibe.ch/ECOOP/AITO/
+
+ACM SIGPLAN (Association for Computing Machinery, Special Interest Group
+for Programming Languages)
+http://www.acm.org/sigplan/
+
+
+Sponsoring Institutions and Companies
+
+Nokia Research Center
+http://www.nokia.fi/company/overview/nrc_company.html
+See also under Exhibits.
+
+Finnair
+http://www.finnair.fi/
+See also under Useful to know (official carrier of ECOOP '97).
+
+Jyväskylä Science Park Ltd.
+http://www.jsp.fi/jsp/eng/
+
+University of Jyväskylä
+http://www.jyu.fi/
+
+Academy of Finland
+http://www.aka.fi/eng/
+
+City of Jyväskylä
+http://www.jkl.fi/eng/indexeng.htm
+
+
+
+
+TUTORIALS
+
+We received a total of 44 high-quality tutorial proposals, and the
+selection was a difficult task. Finally we picked up 20 tutorials, 4
+full-day and 16 half-day ones, highlighting the object-oriented approach
+from various viewpoints. The aim has been to compile a balanced, covering,
+and attractive program.
+
+To avoid extensive overlapping we shall take the advantage of the
+long-lasting light of Finnish summer nights; for the half-day tutorials, in
+addition to the normal morning and afternoon sessions, there will be a
+third one, starting in the late afternoon. Thus, also the workshop
+participants have an opportunity to attend some tutorials as well.
+
+Please note that the fee for an additional tutorial decreases as the number
+of tutorial units increases (see Participation and Registration Fees).
+
+Erkki Lehtinen
+Tutorial Chair
+
+
+Informal Tutorial Committee: Juhani Iivari (University of Oulu, Finland),
+Markku Nokso-Koivisto (TT-Innovation Oy, Espoo, Finland), Markku Sakkinen
+(University of Jyväskylä) and Jari Veijalainen (University of Jyväskylä)
+
+More information about the tutorials is available on WWW:
+http://www.ecoop97.jyu.fi/Tutorials
+
+T1  From C++ to Advanced Java in One Day
+T2  Testing Object-oriented Components
+T3  A Survey of Object-Oriented Analysis and Design Techniques
+T4  Pattern-Oriented Software Architecture
+T5  Advanced Smalltalk: Elegance and Efficiency
+T6  Analysis Patterns
+T7  Object-based Parallel anda Distributed Computing
+T8  Designing High-Performance Reusable Code
+T9  Software Design and Implementation with Generic (C++) Components
+T10 Capturing an Object-Oriented Software Architecture
+T11 Advanced C++ Programming Styles and Idioms
+T12 Object-Oriented Databases
+T13 Transitioning & Managing Object-Oriented Software Development
+T14 A Theory of Objects
+T15 Engineering the Object-Oriented Software Process: OPEN and MeNtOR
+T16 Real-Time Object-Oriented Modeling
+T17 Object-Oriented Experiences & Future Trends
+T18 Interaction Foundations of Object-Oriented Programming
+T19 Advanced Modeling and Design for Java Systems
+T20 Industrial Applied Object-Technology
+
+The timings of the different tutorials are as follows
+(with a refreshment break in the middle):
+
+Morning         from  8:15 to 11:45
+Afternoon       from 12:45 to 16:15
+Late-afternoon  from 16:45 to 20:15
+
+
+T1  From C++ to Advanced Java in One Day
+
+Desmond F. D'Souza, ICON Computing, Austin, Texas, USA
+
+Monday morning & afternoon (full day), Level: Intermediate
+
+This tutorial will enable developers to effectively and efficiently make
+the transition from C++ to Java, including Java 1.1 APIs, within the
+framework of a solid object-oriented design paradigm. Covering key
+differences between the languages as well as between corresponding design
+approaches, it will illustrate these differences with a series of
+examples.
+
+The objectives of the tutorial are to understand differences between Java
+and C++; to learn  Java as a language for very effectively building object
+systems; to use Java as a general and Web development language; and to
+learn design of advanced interactive systems with Java libraries.
+Discussions and complete case study may be browsed at
+http://www.iconcomp.com.
+
+Attendees must be familiar with C++ and object technology.
+
+Desmond D'Souza is the president of ICON Computing, Inc. and a member of
+the faculty at the Software Quality Institute at the University of Texas at
+Austin. He has used object technology since 1985, and is an author of the
+Catalysis method. He writes the Education and Training column in the
+Journal of Object-Oriented Programming and in Report on Object Analysis and
+Design.
+
+
+T2  Testing Object-oriented Components 
+
+John D. McGregor, Clemson University & Software Architects, Clemson, South
+Carolina, USA
+ 
+Monday morning & afternoon (full day), Level: Intermediate 
+
+This tutorial has two major goals.  First it will present techniques for
+building components that are testable.  Second, it will present techniques
+and a process for testing the components built as part of a project that
+uses object-oriented techniques.
+   
+The tutorial is divided into three parts:  (1) specific techniques and
+small examples to illustrate specific testing algorithms; (2) a case study
+of a small set of classes and the infrastructure required to test them; (3)
+a process for component testing and a context of a complete testing process
+for object-oriented systems.
+   
+The techniques presented in the tutorial are intended to provide a scalable
+process that can be tailored to the size of a project and the degree of
+coverage required by the application. The comprehensive test plan,
+presented in the tutorial, integrates the construction process and the
+testing process to produce an efficient and complete development process. 
+
+
+This tutorial assumes experience in the use of object-oriented development
+methods and a typical developer's knowledge of unit testing techniques. 
+The examples used in the tutorial use C++ syntax; however, the discussion
+of the testing approach provides sufficient context for experienced
+developers to understand the example even if they do not read C++.
+
+Dr. John D. McGregor is an associate professor of computer science at
+Clemson University and a senior partner in Software Architects, a software
+design consulting firm, specializing in object-oriented design techniques.
+Dr. McGregor has developed testing techniques for object-oriented software
+and custom testing processes for a variety of companies. He is co-author of
+"Object-oriented Software Development: Engineering Software for Reuse"
+published by Van Nostrand Reinhold. 
+
+
+T3  A Survey of Object-Oriented Analysis and Design Techniques
+
+Martin Fowler, Independent Consultant, Melrose, Massachusetts, USA
+
+Monday morning, Level: Intermediate
+
+Over the last ten years many trees have sacrificed their lives for writings
+on OO methods. This tutorial gives a guided tour around the highlights of
+these writings, pointing out the common techniques, some less-known but
+valuable techniques, and where to go for more information. 
+
+Rational's Unified Modeling Language (UML) is probably going to be the
+basis for most analysis and design in the future. This tutorial looks at
+the techniques present in the UML, but also looks at other important
+techniques (such as CRC cards, design by contract, and patterns) that will
+be useful and shows how to blend them in a development activity. The
+tutorial shows how different techniques highlight different aspects of a
+design and how a good design will use a mix of techniques to highlight the
+important areas of a particular project.
+
+Attendees should have a working knowledge of object-oriented concepts.
+
+Martin Fowler is an independent consultant who has pioneered the use of
+Object Oriented analysis and design for business information systems. These
+include health care for the UK National Health Service, derivatives trading
+for Citibank, and payroll for Chrysler. He is also a leader in developing
+analysis patterns and is the author of the book "Analysis Patterns:
+Reusable Object Models".
+
+
+T4  Pattern-Oriented Software Architecture
+
+Dietmar Schütz,  Siemens AG, Munich, Germany
+
+Monday morning, Level: Advanced
+
+The tutorial first gives an introduction to patterns. With help of a
+concrete example, the Broker pattern, it discusses the nature and
+properties of patterns, and how patterns complement and complete each
+other. It then presents several patterns at different levels of
+granularity. At the architectural level it presents
+Presentation-Abstraction-Control, an alternative to MVC. Patterns from the
+design level include Command Processor and Forwarder-Receiver. For the
+idiom level, it presents the Counted Pointer idiom for C++ as well as the
+Singleton idiom, both in the C++ and Smalltalk version. At the
+domain-specific level it presents three patterns for building switching
+systems. In all pattern presentations we show how these patterns use or
+build upon other well-known patterns. As a concrete real-world example, the
+tutorial presents the design of a flexible interface for event-driven
+systems. This case study demonstrates how patterns help with building high
+quality software systems. Finally, we discuss our experiences in applying,
+mining and writing patterns.The tutorial concludes with an overview on the
+pattern community.
+
+Sound understanding of object-oriented concepts, foundations of software
+architecture as well knowledge of fundamental GoF patterns are expected.
+
+
+
+T5  Advanced Smalltalk: Elegance and Efficiency
+
+Bruno Schäffer, Swiss Bank Corporation, Basel, Switzerland 
+
+Monday afternoon, Level: Intermediate/advanced
+
+Smalltalk is getting increasingly popular in the industry. The language is
+quite simple, but its concepts and the vast class library make it a
+powerful system.
+
+The tutorial first shows how to write effective Smalltalk code, from naming
+conventions up to design of reusable classes. It then opens the hood of the
+Smalltalk system, looking at how the system works. This paves the way for
+efficiency considerations, pointing out potential bottlenecks and how to
+avoid them.
+
+Smalltalk has powerful reflective facilities. An important part of it,  the
+meta classes, are presented and subsequently used to extend the system.
+Examples both from ParcPlace\VisualWorks and IBM Smalltalk are being used 
+in the tutorial.
+
+Participants should have a good knowledge of object-oriented concepts and
+should be familiar with Smalltalk as a language and the basics of the
+Smalltalk class library.
+
+Bruno Schäffer is working in the architectures and standards group at Swiss
+Bank Corporation. He has been using Smalltalk for more than 10 years. His
+most recent project was Delos, a new, open and flexible browsing
+environment for Smalltalk. He is also teaching Smalltalk courses for the
+Swiss Informaticians Society and at the University of Zurich.
+
+
+T6  Analysis Patterns
+
+Martin Fowler, Independent Consultant, Melrose, Massachusetts, USA
+
+Monday afternoon, Level: Intermediate
+
+Over the last couple of years  Software Patterns have become one of the
+most important areas for software development. Instead of describing
+abstract techniques to build software, they highlight useful examples which
+can be adapted and used again by developers.
+
+Although most known for object-oriented design, patterns are also a
+valuable technique for analysis. This tutorial looks at a selection of the
+patterns Martin Fowler has collected and published in his book. The
+tutorial selects two areas: it first outlines patterns first discovered in
+health care which were then used for corporate financial analysis - a prime
+example of how pattern reuse can cross traditional vertical domains. It
+then moves to accounting, showing how a financial system can be built as a
+network of accounts and posting rules which contain the rules for
+transferring the amounts between the accounts.
+
+Attendees should have a working knowledge of object-oriented concepts and
+at least one object-oriented analysis and design method.
+
+Martin Fowler: see T3.
+
+
+T7  Object-based Parallel anda Distributed Computing:
+    Survey and Classification
+
+Jean-Pierre Briot, LIP6, Paris, France
+Rachid Guerraoui, Ecole Polytechnique Fédérale de Lausanne, Switzerland
+
+Monday late-afternoon, Level: Intermediate
+
+This tutorial aims at providing a comprehensive survey of the technology of
+object-based parallel and distributed computing. Therefore, it discusses
+and classifies the various ways along which the "object" paradigm is used
+in both parallel and distributed contexts. More precisely, they are grouped
+into three main approaches: "applicative", "integrative" and "reflective".
+
+Rougly speaking, the applicative approach helps the system designer to
+structure parallel and distributed computer systems through a set of
+generic libraries.
+
+The integrative approach provides the application programmer with a simple
+unified model by merging concepts such as: object and activity, message
+passing and transaction.
+
+The reflective approach may be considered as a bridge between the two
+previous approaches as it helps at integrating protocol libraries
+intimately within a programming language or system, thus helping at its
+dynamic customization.
+
+During the tutorial, each approach is analyzed, compared, and illustrated
+by several examples of existing languages or systems.
+
+Some prior exposure to basic concepts of object-oriented programming is
+expected but no specific experience in parallel or distributed programming
+is needed.
+
+Jean-Pierre Briot is a CNRS researcher at LIP6, a joint Paris-6 University
+- CNRS computer science research lab. He took part in the design of several
+object-based concurrent programming projects, including an Esprit parallel
+computing action that he co-headed. He recently co-edited a book on
+"Object-Based Parallel and Distributed Computation", in Springer LNCS
+series (#1107).
+  
+Rachid Guerraoui is a lecturer at the Operating System Lab. of the Computer
+Science Department in Ecole Polytechnique Fédérale de Lausanne (EPFL). He
+is technical coordinator of the ''OpenDreams'' Esprit project which aims at
+designing a CORBA compliant platform for industrial applications. He
+teaches Object-Oriented programming at EPFL and has co-edited a book on
+"Object-Based Distributed Programming", in Springer LNCS series (#791).
+
+
+T8  Designing High-Performance Reusable Code
+
+Gregor Kiczales  & Chris Maeda, Xerox PARC, Palo Alto, California, USA
+
+Monday late-afternoon, Level: Intermediate
+
+How does one design high-performance reusable code?  It has to please a
+wide range of users_so it can be reused_and yet it must provide all of them
+with good performance.  This kind of problem, once the sole responsibility
+of system software experts, is of increasing importance to the designers of
+any code that is intended to be reusable.
+
+This tutorial will present a number of case studies _ ranging from small to
+large _ that are examples of high performance, reusable software.  From the
+examples, we will abstract a set of guidelines and techniques that can be
+used to understand the examples, and that can be applied to your future
+design problems.
+
+Familiarity of computer science is expected and experience designing or
+using reusable software is a plus.
+
+Gregor Kiczales is a principal scientist at the Xerox Palo Alto Research
+Center.  He is one of the inventors of the concept of open implementation
+which is at the foundation of this tutorial.
+
+Chris Maeda is a researcher at Xerox PARC.  He has experience applying
+these techniques to a wide variety of software systems from operating
+systems to applications.
+
+
+T9  Software Design and Implementation with Generic (C++) 
+    Components
+
+Mehdi Jazayeri & Georg Trausmuth, Technical University of Vienna, Austria
+
+Monday late-afternoon, Level: Intermediate
+
+The primary goal of the tutorial is to show how template and inheritance
+mechanisms can be combined to build highly generic and efficient software
+components. The participants will learn the principles of component
+programming, a new, multiparadigm, approach to software design and
+implementation using generic components. This approach integrates
+techniques from procedural programming, functional programming,
+object-oriented programming, and generic programming in a seamless way. The
+tutorial shows how the template and class facilities of C++ can be used to
+build "plug-compatible" components in these seemingly disparate paradigms.
+It will give examples from C++ and the Standard Template Library (STL), a
+library of software components developed at Hewlett-Packard Laboratories,
+and adopted as ISO/ANSI standard for C++. Several different styles of using
+templates to build software components will be compared.
+
+The tutorial addresses both academic and industrial concerns. The
+instructors are currently applying the techniques of this tutorial in
+re-engineering industrial applications.
+
+The audience should be familiar with the concepts of object-oriented
+programming, and C++ knowledge is useful for detailed understanding.
+
+Mehdi Jazayeri was a member of the technical staff at Hewlett-Packard
+Laboratories and is currently professor of distributed systems at the
+Technical University of Vienna. He has been a software engineer and has
+managed research and development projects both in the US and in Europe,
+producing programming tools and environments. He is co-author of two
+popular textbooks: "Programming Language Concepts" (with Carlo Ghezzi), and
+"Fundamentals of Software Engineering" (with Carlo Ghezzi and Dino
+Mandrioli). He is co-editor of an IEEE Tutorial Text on "Process-centered
+software engineering environments". He is on the editorial board of the
+IEEE Transaction on Software Engineering.
+
+Georg Trausmuth is an assistant professor at the Department of Distributed
+Systems of the Technical University of Vienna. He has taught both
+university and industry courses on C++ and STL. His research covers
+Software Design and Implementation with Software Components. His special
+interests are programming languages and software engineering. His PhD
+dissertation was on the development and use of generic components.
+
+
+T10 Capturing an Object-Oriented Software Architecture
+
+Charles Weir, Independent Software Architect, London, UK
+     
+Monday late-afternoon, Level: Introductory/intermediate
+
+This tutorial will teach delegates how to document a software architecture.
+A software architecture consists of all the decisions about how the system
+will satisfy its non-functional requirements: performance, scaling,
+distribution, and fault-tolerance. The presenter has drawn on experience
+designing several large OO systems to produce a format to help writing a
+software architecture document: what the documentation needs to contain,
+and what is a sensible structure for it.
+     
+In particular the tutorial will examine how to write down the major
+architectural decisions:  strategic decisions about the environment;
+priorities and major design issues; structural overviews of how the system
+fits together; and policy decisions such as error handling and what
+implementation patterns to use.  The tutorial will also discuss how
+to create 'decision documents' to track the rationale behind major project
+decisions.
+          
+The tutorial will explore techniques and approaches suitable for these
+architecture and decision documents. It will be illustrated with
+experiences from particular software projects.
+
+Attendees should be familiar with the basic concepts of
+object-orientation.
+
+Charles Weir has more than ten years' experience of working on Software
+Development projects and has been using object-oriented techniques for more
+than six.  As a consultant with Object Designers Ltd., he has provided
+on-site mentoring to many companies in countries including the UK,
+Switzerland and Finland.
+
+
+T11 Advanced C++ Programming Styles and Idioms
+
+Jim Coplien, Bell Laboratories, Naperville, Illinois, USA
+            
+Tuesday morning & afternoon (full day), Level: Intermediate/advanced
+
+Is C++ a high-level or low-level language? It depends how you use it! This
+tutorial introduces programming techniques that raise the level of C++
+programming by freeing the programmer from administrative details, and by
+modeling the powerful semantics of high-end object-oriented programming
+languages. These techniques form C++-specific patterns called idioms, which
+remain an important component of the contemporary pattern discipline. Many
+of the techniques are presented in pattern form.
+
+The tutorial goes beyond most introductory C++ texts with programming
+styles that can expand the horizons of accomplished C++ programmers.
+Drawing from the book "Advanced C++ Programming Styles and Idioms", the
+tutorial tackles difficult but common problems faced by developers of C++
+systems, both large and small.
+
+This tutorial is for the C++ programmer with at least a year of experience
+in C++ or another object-oriented programming language.
+
+Jim Coplien is author of "C++ Programming Styles and Idioms", the foremost
+high-end C++ book in the industry, and co-editor of two volumes of "Pattern
+Languages of Program Design". He is author of the SIGS management briefing
+on Software Patterns, and writes a pattern column for the C++ Report. He
+sits on the board of the Hillside Generative Patterns Group. 
+
+
+T12 Object-Oriented Databases
+
+Marc H. Scholl, University of Konstanz, Germany
+
+Tuesday morning & afternoon (full day), Level: Intermediate
+
+Object-oriented concepts have made their way into database systems (DBMSs)
+over the last few years. Extended relational DBMSs, post-relational DBMSs,
+complex-object DBMSs, object-oriented DBMSs, object-relational DBMSs, and
+object database systems are only some of the terms that have been coined
+for this development. Research has been going on for about 10-15 years,
+products have entered the market place, and standardization is on its way.
+
+
+The tutorial starts out by a brief summary of database essentials, showing
+the virtues and limitations of current (relational) DBMS technology, and
+thus motivating the proposed extensions. After that, different approaches
+to object-oriented data models are compared, collecting a suite of
+requirements for next generation DBMSs. The tutorial concentrates on
+functional requirements (data model, interface languages) rather than
+architectural and implementation problems (such as, for example,
+efficiency). That is, we focus on the distinction between OO and non-OO
+database systems. There are a lot of further characteristics of new DBMSs,
+that are often relevant for investment decisions, but not particularly
+related to object-oriented versus relational (for instance) database
+systems. We comment on these, but do not elaborate them in detail.
+
+In the next section, we review current standardization efforts (ODMG,
+SQL-3, CORBA), evaluate their status with respect to the suite of
+requirements set up earlier, and compare them. Based on this collection of
+criteria, we give an overview of products and prototypes available, and
+point to further sources of information.
+
+Marc Scholl is a Full Professor of Computer Science at the University of
+Konstanz, where he leads the Databases and Information Systems group. The
+group is investigating object database technology in theoretical and
+practical aspects; particular current interests are the architecture of OO
+database systems with powerful query and update optimizers.
+
+
+T13 Transitioning & Managing Object-Oriented Software
+    Development
+
+Mohamed E. Fayad, University of Nevada, Reno, Nevada, USA
+Mauri Laitinen, Laitinen Consulting, Tahoe City, California, USA
+
+Tuesday morning, Level: Introductory
+
+OO technology and popularity has grown dramatically over the last few
+years. Several organizations have sponsored small projects and technology
+efforts that demonstrate the potential power of this new software paradigm.
+Now, organizations are searching for an approach to harness the vast
+potential of OO and efficiently apply it in the real world, on real
+projects,  with real people, real budgets and real deadlines. These teams
+want to take OO concepts out of the textbooks and actually use it to
+improve their software.
+
+The tutorial presents a complete transition plan and provides guidelines on
+dealing with several issues, such as culture changes, selecting the best
+method for the project, the finest development environment, staffing the
+project, tracking and controlling the OO software development, documenting
+the software development process, and training. The tutorial also includes
+sections on:  planning, cost estimation, object-oriented software metrics,
+test issues, quality issues, documentation, and cost reduction. An OO
+transition process is presented and examined with respect to two central
+themes: "What makes the transition to OOSD a mission with a lot of
+problems?" and "How can the transition to OOSD be accomplished with minimum
+impact on the cost and schedule?" A transition plan is presented which is
+based upon lessons-learned from real-world experience. Several effective
+practices that managers can implement are suggested.
+
+This is a from-the-trenches, pragmatic tutorial specifically designed to
+help organizations effectively apply OO technology in the real world.
+
+Familiarity with basic notions of software engineering and project
+management is expected.
+
+Mohamed Fayad is an Associate Professor at University of Nevada, Reno. He
+has been actively involved in over 60 OO projects in several companies
+using Shlaer-Mellor, Colbert, OMT, Use Case Approach, Unified Approach,
+Design Patterns, Application Frameworks, Distributed Computing, and others.
+He is a Sr. Referee for IEEE Computer, an Associate Editor and editorial
+advisor for the Communications of the ACM, an Editor-In-Chief for IEEE
+Computer Society Press - Computer Science and Engineering Practice Press.
+Dr Fayad is the sole author of "Software Development Planning for OO
+Projects", and "OO Modeling & Applications", IEEE CS Press, December, 1996
+and June, 1997. His research topic is Object-Oriented Software Engineering:
+Problems & Perspectives.
+
+Mauri Laitinen, principal in Laitinen Consulting, has over 25 years of
+experience in software development and software management. He was one of
+the founders of Autodesk, Inc., a world leader in the development of
+computer aided design and modeling software. At Autodesk, he created and
+directed the Quality Assurance Department, which had responsibility for
+ensuring high standards for the development, production, and maintenance of
+software and documentation. As Director of Software Development at
+Autodesk, he managed the development of the AutoCAD and AutoSketch group of
+products.As a consultant, he has worked with a number of start-up software
+companies. Previously, Mr. Laitinen has held management positions at
+Control Data Corp., and Information Systems Design, Inc., and has developed
+software for Bechtel, Computer Sciences Corporation, and Jet Propulsion
+Labs. Mr. Laitinen is a co-author with Dr. Fayad of the forthcoming book,
+"Transition to Object-Oriented Management".
+
+
+T14 A Theory of Objects
+
+Martín Abadi & Luca Cardelli, Digital Equipment Corporation, Palo Alto,
+California, USA
+
+Tuesday morning, Level: Intermediate 
+
+This tutorial introduces a theory of objects as a foundation for
+object-oriented languages and programming. This theory provides
+explanations for object-oriented notions in terms of a few basic
+primitives, and can be useful for the design and understanding of
+programming languages. 
+
+We cover both the semantics of objects and their typing rules.  We account
+for a range of object-oriented concepts, such as self, dynamic dispatch,
+classes, inheritance, prototyping, subtyping, covariance and
+contravariance, and method specialization.
+
+The audience should be familiar with more than one OO language and with OO
+semantic and typing issues. Some exposure to formal systems and techniques
+is also expected.
+
+Martín Abadi's research interests are in: security in distributed systems;
+specification and verification methods; programming languages, and in
+particular principles of object-oriented programming. 
+
+Luca Cardelli's research interests are in all aspects of programming
+languages, and particularly in the semantic and type-theoretic foundations
+of object-oriented languages.
+
+
+T15 Engineering the Object-Oriented Software Process: OPEN and
+    MeNtOR
+
+Tony Simons, University of Sheffield, UK
+Paul Swatman, Swinburne University of Technology, Hawthorn, Victoria,
+Australia
+
+Tuesday afternoon, Level: Intermediate/advanced
+
+A full lifecycle object-oriented software process, OPEN-MeNtOR, is
+described which encompasses all the software engineering concerns required
+to utilize object-oriented software development techniques on real
+projects. OPEN-MeNtOR (OPEN stands for Object-oriented Process, Environment
+and Notation) is an "umbrella" process-focussed methodology created by the
+merger of a large number of OO methodologies and the ideas from a cohesive
+group of over 20 internationally recognized methodologists and researchers.
+It combines MOSES, SOMA and Firesmith with significant influences from
+several other methodologies such as Martin/Odell, OOram, BON, RDD and OBA;
+as well as the formal OO language, Object-Z. It is not only the first
+third-generation OO methodology, it is also the public domain version of
+the commercial software process MeNtOR.
+
+The structure of this tutorial, which focusses on the process issues
+resolved in the public domain OPEN-MeNtOR methodology, falls into four
+parts: First, it will begin by overviewing some of the currently available
+object-oriented methods and evaluating their strengths and weaknesses.
+Secord, it will then discuss some of the issues that arise with OO methods
+when object technology is deployed on a larger scale within an
+organization. It will outline the evolution of OPEN-MeNtOR process which
+embodies over seven years' experience with OO methods. Next, the talk will
+then examine the architecture of OPEN-MeNtOR in detail providing attendees
+with an understanding of an industrial strength OO software process.
+Finally, a number of research issues and industrial case studies will be
+outlined as well as a model for deployment of  such a process.
+ 
+Attendees are expected to be fully conversant with basic OO terminology and
+the need for a full lifecycle process methodology. Experience with OO
+methodologies advantageous.
+ 
+Tony Simons is a tenured lecturer in the Department of Computer Science at
+the University of Sheffield, UK. He has ten years' experience in a wide
+range of fields in object technology, having developed speech processing
+systems in C++ and CLOS, data management interfaces in CLOS and Smalltalk
+and robust controllers in Eiffel.  His research over the last five years
+has included object-oriented language design, type theory and the
+comparative evaluation of development methodologies. 
+
+Paul Swatman is Director of the Information Systems Technical Board of the
+Australian Computer Society and, at Swinburne University of Technology in
+Melbourne, Australia, is Associate Professor of Information Systems and
+Director of the Centre for Information Systems Research. Since 1990, he has
+led a group researching into object-oriented requirements engineering for
+high-quality information systems.  
+
+
+T16 Real-Time Object-Oriented Modeling
+
+Bran Selic, ObjecTime Limited, Kanata, Canada
+
+Tuesday afternoon, Level: Intermediate
+
+The intricacy of most real-time systems is simply a reflection of the
+bewildering complexity of the real-world. When we consider the additional
+challenges of meeting stringent timing and resource constraints it becomes
+evident that real-time software design cannot be adequately addressed
+through general-purpose development methods.
+
+Real-Time Object-Oriented Modeling (ROOM) is a practical method for
+developing real-time software that combines the object paradigm with
+advanced domain-specific modeling concepts. Special emphasis is placed on
+modeling the architectural levels of software that are key to reliability,
+understandability, and evolvability. The method is also distinguished by
+its ability to take advantage of computer-based automation (through
+executable models, reuse, and automatic code generation) for better product
+quality and greater productivity. In the past several years, ROOM has been
+used successfully on a large number of diverse industrial projects.
+
+The primary objective of the tutorial is to demonstrate how the object
+paradigm can be used to advantage to develop reliable real-time software.
+
+Bran Selic is the Vice President of Advanced Technology at ObjecTime
+Limited, a company that develops and markets the ObjecTime toolset that
+supports the ROOM method. He has over 20 years of experience, both as a
+developer and a manager, with real-time software development, covering a
+spectrum of application domains (telecommunications, aerospace, and
+robotics), and over 9 years of experience with object-oriented design and
+programming. He is the principal author of the book, "Real-Time
+Object-Oriented Modeling", co-authored with Garth Gullekson and Paul Ward.
+
+
+T17 Object-Oriented Experiences & Future Trends
+
+Mohamed E. Fayad, University of Nevada, Reno, Nevada, USA
+
+Tuesday late-afternoon, Level: Introductory/intermediate
+
+This tutorial is based on our experiences in applying many currently used
+object-oriented development techniques (e.g., OMT, Use Case Approach, and
+UML), design patterns, frameworks, object-oriented distributed computing,
+and managerial approaches on real software development projects in various
+problem domains. The tutorial reports on both the good points and the bad
+points of these techniques. The tutorial explains the aspects of various
+techniques that should be avoided and why they should be avoided. Four case
+studies (real projects) and the lessons that were learned from each are
+presented. They illustrate how to minimize software costs with OO and
+describe the common lessons that were learned while applying different
+object-oriented software techniques. Solutions and strategies relative to
+some existing problems with OO techniques will be presented. These lessons
+are related to: technical issues; modeling and notation issues; standards
+and process issues; and managerial issues. Enhancement proposals, new
+techniques, for one or two of the presented OO techniques. 
+
+Familiarity with basic notions of software engineering and object-oriented
+concepts is expected.
+
+Mohamed Fayad: see T13
+
+
+T18 Interaction Foundations of Object-Oriented Programming
+
+Peter Wegner, Brown University, Providence, Rhode Island, USA
+
+Tuesday late-afternoon, Level: Intermediate
+
+Though object-based programming has become a dominant practical technology,
+its conceptual framework and theoretical foundations are still
+unsatisfactory: it is fashionable to say that everyone talks about it but
+no one knows what it is. "Knowing what it is" has proved elusive because of
+the implicit assumption that explanations must specify "what it is" in
+terms of algorithms. Accepting irreducibility as a fact of life has a
+liberating effect: "what it is" can be more naturally defined in terms of
+interactive models.
+ 
+This tutorial develops new foundations for object-oriented programming in
+terms of interactive rather than algorithmic computing. The paradigm shift
+from algorithms to interaction captures the technology shift from
+mainframes to workstations and networks, from number-crunching to embedded
+systems and graphical user interfaces, and from procedure-oriented to
+object-based and distributed programming. Interaction is shown to be more
+powerful than rule-based algorithms for computer problem solving,
+overturning the prevalent view that all computing is expressible as
+algorithms. The radical notion that interactive systems are more powerful
+problem-solving engines than algorithms is the basis for a new paradigm for
+computing technology built around the unifying concept of interaction.
+Recent papers on this subject are available from
+http://www.cs.brown.edu/people/pw
+
+Peter Wegner is a professor of computer science at Brown University and has
+published widely in the area of object-oriented programming.
+
+
+T19 Advanced Modeling and Design for Java Systems
+
+Desmond F. D'Souza, ICON Computing, Austin, Texas, USA
+
+Tuesday late-afternoon, Level: Intermediate/advanced
+
+This tutorial will explore usage of selected advanced modeling techniques
+from Catalysis for complete support of development of object-oriented and
+component systems, exploiting Java as the implementation vehicle. Its
+objectives are to understand how Java enables certain design and
+composition mechanisms, and to learn powerful modeling techniques for
+describing such compositions.
+
+The tutorial will discuss collaboration patterns, the most interesting
+parts of a Java system. Every collaboration imposes assumptions and
+guarantees on its participants, so it needs a clear vocabulary. This
+vocabulary is made precise with a rich modeling toolbox permitting clear
+specification of responsibilities, while not imposing implementation
+decisions. Second, the tutorial will present how a clear notion of
+refinement permits more detailed descriptions to be built in a systematic
+way from abstract ones. Further, we introduce a simple yet powerful
+mechanism for composing views and precisely describing the essential
+dependencies between them. Compositional modeling and its mapping to Java
+lets one, e.g. achieve early reuse by composing existing patterns and
+components.
+
+The approach presented here using selected parts of the Catalysis method
+builds on strengths of methods like Unified OMT-Booch, Fusion, and
+Objectory. It has specific features which dovetail effectively with Java on
+interface vs. class, exception specification, etc., while adding full
+consistency between models, views and pattern synthesis, multiple types and
+interfaces per object, rigor and refinement, as well as using architectural
+components with and for Java.
+
+Attendees must be knowledgeable of object design, be familiar with a
+modeling method like OMT or Fusion, and have some familiarity with Java.
+
+Desmond D'Souza: see T1.
+
+
+T20 Industrial Applied Object-Technology - The Nokia Case
+
+Jürgen Ziegler & László Huray, Nokia Research Center, Helsinki, Finland
+
+Tuesday late-afternoon, Level: Intermediate
+
+Nokia's mainstream products are embedded real-time systems. Adopting object
+ technology can help developing real-time systems in a way that more
+naturally maps to the inherent nature of the systems being built, while
+providing benefits similar to those well known and widely reported for
+other branches of software. However, the object-oriented method must match
+also the requirements specific to real-time systems.
+
+Nokia internally applies a method, called Octopus, which provides a
+systematic and effective approach for developing object-oriented software
+for embedded real-time systems. It has been developed at the Nokia Research
+Center. The method can be browsed at
+http://www.nokia.com/company/nrc/octopus.html.
+
+The attendee will learn about this method and how it has been evolved since
+its introduction. Because meanwhile this method is in wide use inside
+Nokia, the attendee will hear about the experience made with it, thus
+gaining industrial insights and competitive advantage.
+
+The attendees should be generally familiar with the basics of the
+object-oriented paradigm and concepts and should understand the common
+notations.
+
+Jürgen Ziegler developed real-time software for chemical instruments and
+managed development projects for almost ten years at Hewlett Packard. After
+that, he was responsible for the development of system software products at
+Nokia Data. Since joining the Nokia Research Center in 1990, he is working
+on promoting object-oriented technology to embedded systems. He co-authored
+a book about Octopus, "Object-Oriented Technology for Real-Time Systems",
+Prentice Hall, 1996.
+
+László Huray has twenty years of experience in developing real-time
+software for  industrial control systems and telecommunication products at
+different Hungarian and Finnish companies and research institutes. He has
+also long experience in hardware design and project management. His focus
+since joining Nokia Research Center is on object-oriented technology and
+distribution in embedded systems.
+
+
+
+WORKSHOPS
+
+As in previous years, ECOOP '97 will host a number of workshops addressing
+different areas of object-oriented technology. Workshops serve as a forum
+for exchanging emerging, late-breaking research ideas, and they typically
+focus either on in-depth or cross-domain areas related to object-oriented
+technology and its applications.
+
+In this year's ECOOP there will be 18 workshops in total: 3 two-day
+workshops and 15 one-day workshops. We were happy to receive a large number
+of high-quality workshop proposals, and we are looking forward to an
+interesting workshop programme.
+
+
+Antero Taivalsaari
+Workshop Chair
+
+
+Workshops at a glance
+
+
+MONDAY, JUNE 9
+8:15 - 16:15
+
+TUESDAY, JUNE 10
+8:15 - 16:15
+
+
+For participation in any workshop, please communicate directly with the
+announced contact person, or have a look at the appropriate WWW pages.
+There is a page for each workshop N (for N from 1 to 18) named
+http://www.ecoop97.jyu.fi/Workshops/workshopN. The URL of the actual home
+page maintained by the workshop organizers is listed in each workshop
+description.
+
+The workshop sessions are planned to begin earlier than usually, at 8:15,
+and to end at 16:15. This is in order to give workshop participants an
+opportunity to attend late-afternoon tutorials (see Tutorials).
+
+
+W1  Object Oriented Technology for Telecommunications
+    Services Engineering
+
+Organizers: Prof. Simon Znaty, Ecole Nationale Superieure des 
+            Télécommunication de Bretagne (ENST-B), France
+            Prof. Jean-Pierre Hubaux, Swiss Federal Institute of
+            Technology, Lausanne
+Contact:    znaty@tcom.epfl.ch
+URL:        http://www.rennes.enst-bretagne.fr/~znaty/ECOOP97.html
+Day:        Monday and Tuesday
+
+Long term trends in the telecommunications market calls for Integrated
+Service Engineering to promote rapid introduction of new and enhanced
+services, their management and the management of the underlying networks
+that are used to provide those services. One of the main technologies that
+needs to be applied to master the service engineering complexity is object
+orientation. Authors are invited to submit either original research
+contributions, or experience reports that provide new insight into the use
+of object-oriented technology for telecommunications services engineering.
+
+
+
+W2  Introducing Object-Orientation through Team-Oriented 
+    Projects - What makes introductory projects successful
+
+Organizers: Jürgen Börstler, Umeå University
+            Thorsten Janning, Deutsche Krankenversicherung AG, Köln 
+Contact:    jubo@cs.umu.se
+URL:        http://www.cs.umu.se/~jubo/ECOOP/CFP.html
+Day:        Monday
+
+The workshop will bring together people from industry and academia to
+discuss team project oriented introductions to object-oriented technology.
+The areas of interest range from teaching team-oriented projects courses in
+both industry and academia to project-oriented migration strategies to
+object technology.
+
+The (main) goals of the workshop are
+
+- to create an initial checklist with recommendations for the
+  organization of a team project oriented introduction to object technology
+- to work out a classification scheme for migration strategies based on
+  scenarios of an information technology environment and a list of success
+  factors
+- to set-up an infrastructure for the discussion of concrete examples,
+  which may later be used as reference projects.
+
+All workshop participants are required to submit a position paper together
+with project's success.
+
+
+W3  Reflective Real-time Object-Oriented Programming and
+    Systems
+
+Organizers: Dr. S. E. Mitchell, University of York
+            Dr. R. J. Stroud, University of Newcastle upon Tyne, Newcastle
+Contact:    stuart@minster.york.ac.uk
+URL:        http://www.cs.york.ac.uk/~stuart/ecoop_workshop.html
+Day:        Tuesday
+
+In recent years the separate topics of reflective object-oriented
+programming and real-time have undergone significant developments. This
+workshop is aimed at combining these topics and thus exploring the
+advantages that the disciplined separation of concerns offered by a
+reflective system can provide within a real-time system. There has already
+been some published work related to this area (for example, the Spring
+Kernel, FLEX, RTC++, RT Java, DROL) and the organisers are both members of
+"Design for Validation", an ESPRIT Long Term Research project which is
+exploring the use of reflection as a structuring mechanism for building
+dependable validatable real time distributed systems. We therefore believe
+that there is both the demand for a workshop on the subject of combining
+reflection and real-time as well as considerable benefit to be gained from
+the resulting collaboration between interested researchers and
+practitioners.
+
+
+
+W4  Language Support for Design Patterns and Frameworks
+
+Organizers: Jan Bosch, University of Karlskrona, Ronneby
+            Görel Hedin, Lund University
+            Kai Koskimies, University of Tampere, Finland
+Contact:    Jan.Bosch@ide.hk-r.se
+URL:        http://www.ide.hk-r.se/~bosch/lsdf
+Day:        Tuesday
+
+Languages (textual or graphical) are related to design patterns and
+frameworks in many ways which we only are beginning to understand. The
+concepts of an application domain are traditionally modelled as classes and
+their relationships and behaviour. Another approach, used e.g. in 4GL
+systems, is to map domain concepts to special language structures. In this
+sense, a framework corresponds to a language, and its instantiation
+corresponds to a program written in this language. By studying the
+relationships of (domain-oriented) languages and frameworks, it seems
+feasible to develop attractive tools for the difficult activity of
+framework instantiation. Also other interactions between languages,
+patterns, and frameworks exist. A collection of domain-oriented patterns
+constitutes a language that is the basis of design of applications and
+frameworks in that domain. Further, design patterns can be supported by
+special language constructs, extending general-purpose languages. It is
+also interesting to note that language engineering benefits from language
+implementation frameworks, allowing the rapid development of new
+domain-oriented languages based on reused architectures and components.
+Although many researchers have identified the above topics and recognised
+their importance, these issues still are relatively little understood and
+need to investigated further. To support this process, we believe a
+workshop would provide the appropriate platform, since it balances the
+presentation of new ideas with considerable amounts of discussion.
+
+
+
+W5  Precise Semantics for Object-Oriented Modeling Techniques
+
+Organizers: Haim Kilov, IBM T J Watson Research Center, Hawthorne
+            Bernhard Rumpe, Technische Universität München
+Contact:    rumpe@informatik.tu-muenchen.de
+URL:        http://www4.informatik.tu-muenchen.de/~rumpe/ecoop
+Day:        Tuesday
+
+Currently there is an ongoing standardization process for object-oriented
+modeling techniques (OOMT) initiated by the OMG. A standardization of OOMT
+does not only include a precise syntax, but a precise semantics as well.
+This is essential for unambiguous understanding business and system
+specifications modeled with OOMT. A precise semantics allows us to detect
+inconsistencies and inaccuracies both in OOMTs themselves (meta-modeling),
+and in specifications written using these OOMTs (modeling), as well as to
+compare different OOMT on a more precise way, improving the notation and
+also enables interoperability between different OOMT.  But it also allows
+us to use a notation in a more standardized way, thus leading to better and
+unambiguous understanding and therefore supporting true reuse of
+specifications and design, a more accurate definition of context conditions
+or (code) generators. Furthermore, requirement decisions could be traced
+more precisely to produced code.
+
+The scope of the workshop includes, but is not limited to
+
+- precise semantics for OOMT
+- integration of semantics for a heterogeneous set of OOMT
+- formal development and refinement techniques for OOMT
+- comparisons of existing semantics models
+- ways to achieve preciseness
+- concurrency and OOMT
+- tool support
+- existing standards (e. g. ISO) and OOMT
+
+
+W6  Models, Formalisms and Methods for Distributed Object-
+    Oriented Computing
+
+Organizers: Rémi Bastide, LIS - Université Toulouse I
+            Didier Buchs, Swiss Federal Institute of Technology, Lausanne
+Contact:    bastide@cict.fr
+URL:        http://lis.univ-tlse1.fr/ecoop-ws
+Day:        Monday
+
+The emergence of enabling technologies such as CORBA or Java RMI makes it
+possible to develop industrial scale Object-based distributed systems at a
+fraction of the cost that they would require using more conventional
+techniques. However, it seems that these technologies still lack a firm
+ground to develop on: no model of distributed object-oriented computation
+is widely agreed upon. It is not quite clear how existing formal notations
+for distributed and concurrent systems (such as Petri Nets, Estelle, LOTOS,
+...) can support the object paradigm, and methodological practice for this
+kind of systems is still at its early stages. Furthermore considering the
+growing interest in distributed embedded critical systems,  questions arise
+on how object-orientation can be used to develop reliable systems at the
+early stages of the development process. The purpose of this workshop is to
+bring together researchers interested in the foundations of concurrent and
+distributed object-oriented computing.
+
+Specific areas of interest include, but are not limited to
+
+- fundamental models of concurrent and distributed object systems
+- formal notations for the analysis, design, validation and verification
+  of concurrent and distributed OO systems.
+- methodological issues, notably the inclusion of formal approaches
+  within semi-formal methods such as OMT, Fusion, etc.
+
+
+
+W7  CORBA : Implementation, Use, and Evaluation
+
+Organizers: Luc Bellissard, INRIA Rhone Alpes,France
+            Rachid Guerraoui, DI-LSE, EPFL IN-Ecublens,Lausanne
+            Thomas Jell,Siemens AG, Munich
+            Douglas C. Schmidt, Washington University, Missouri
+            Steve Vinoski,Hewlett-Packard, Chelmsford
+Contact:    Luc.Bellissard@inrialpes.fr
+URL:        http://sirac.inrialpes.fr/~bellissa/wecoop97
+Day:        Tuesday
+
+Progress in telecommunication technologies, along with the evolution of the
+structure and the organization of companies have led to the emergence of
+complex distributed applications. Such applications are often made of
+legacy software pieces, implemented with heterogeneous languages and
+executed on a variety of computer and system platforms. Object-based
+technology has become a cornerstone of distributed systems implementations
+and distributed software engineering methods. Standardization efforts of
+the Open Distributed Processing (ODP) and especially the Object Management
+Group (OMG) tends to prove this assertion. In particular, the Common Object
+Request Broker Architecture. (CORBA) promoted by the OMG, seems to be a
+solution to the problem of having distributed software, and especially
+distributed objects interoperate in heterogeneous environment. This
+workshop aims at confronting practical issues and experience reports in
+using the CORBA technology, as well as outlining limitations and/or
+promising use of CORBA-like systems.
+
+
+
+W8  FAMOOS Workshop on Object Oriented Software Evolution
+    and Re-Engineering
+
+Organizers: Thomas Lindner, Forschungszentrum Informatik,Germany
+            Eduardo Casais, Nokia Research Center, Finland
+            Ari Jaaksi, Nokia Telecommunications, Finland
+Contact:    lindner@fzi.de
+URL:        http://www.fzi.de/ecoop97ws8
+Day:        Tuesday
+
+This workshop focuses on the re-engineering of object-oriented software.
+The general goal is to bring together researchers, practitioners, and tool
+providers in order to synchronize their efforts on advancing
+object-oriented software evolution. Therefore, it is intended to create a
+forum for generating and exchanging ideas for how to deal with large-scale,
+mature object-oriented systems and frameworks.
+
+Issues to be covered in the workshop include, but are not limited to
+
+- documentation and re-use of object-oriented systems
+- analysis of object-oriented systems with respect to re-usability and
+  flexibility
+- abstract models of object-oriented systems that help to understand and
+  re-engineer large programs
+- methodological support for the transformation of object-oriented
+  systems  into frameworks
+- design metrics that help to measure progress/improvement of object-
+  oriented designs during or after re-engineering
+- tool support for all of the above topics
+
+This workshops builds upon the lessons learnt at the workshop on
+Object-Oriented Software Evolution and Re-Engineering held at OOPSLA'96.
+
+
+W9  Mobile Object Systems
+
+Organizers: Christian Tschudin, University of Zurich
+            Joachim Baumann,  IPVR, University of Stuttgart
+            Marc Shapiro, INRIA, Domaine de Voluceau, Rocquencourt
+            Jan Vitek, University of Geneva
+Contact:    tschudin@ifi.unizh.ch
+URL:        http://cuiwww.unige.ch/~ecoopws
+Day:        Monday and Tuesday
+
+The more implementations of mobile object systems are being developed, the
+more it becomes obvious that the underlying runtime software are proper
+operating systems for mobile computations. The first ECOOP workshop on
+mobile computations did a first investigation on mobile agents (we were
+among the very first to offer a public discussion forum on this topic!),
+the second ECOOP workshop in 1996 helped a lot to clarify positions and to
+make common viewpoints visible although participants came from the network,
+operating systems or programming language communities. In the proposed
+third ECOOP workshop we suggest to focus on the OS theme but to keep it
+explicitely open for the programming language viewpoint and for operational
+issues.
+
+The following topics are recommended areas of interest
+
+- operating systems for mobile computations
+- programming language support for mobility
+- Integration of programming languages and operating systems
+- resource management techniques
+- innovative scheduling strategies
+- security mechanisms and policies for mobile computations
+- portable intermediate representations
+- linking issues
+- communication mechanisms
+- management of mobile object systems
+- experience reports
+
+
+
+W10 Modeling Software Processes and Artifacts
+
+Organizers: Klaas van den Berg, University of Twente
+            Mehmet Aksit, University of Twente
+            Pim van den Broek, University of Twente
+            Leon Osterweil, University of Massachusetts
+            Karl Lieberherr, Northeastern University, Boston
+            Francesco Marcelloni, University of Pisa
+Contact:    vdberg@cs.utwente.nl
+URL:        http://wwwtrese.cs.utwente.nl/ecoop97mspa
+Day:        Monday
+
+Cost-effective realization of robust, adaptable and reusable software
+systems demands efficient and effective management of the overall software
+production process. Software process models aims at capturing the essential
+information about the production process and the manufactured products
+(called artifacts).
+
+Current object-oriented methods are not fully formalized and lack the
+ability of reasoning about the quality of processes and artifacts. There is
+a need for new modeling formalisms which enable the quantification of the
+required quality attributes.
+
+Object-oriented models for object-oriented software processes and artifacts
+have not been studied extensively. The object-oriented approach can provide
+new perspectives, since artifacts may be modeled as active objects and
+encapsulate the details of the manufacturing process.
+
+Some relevant topics to be addressed in this workshop are
+
+- which type of artifact and process models are suited for
+  object-oriented software development?
+- what are the process rules and how to capture these in artifacts?
+- how to define adaptable and reusable process and product models and 
+  how to manage them?
+- how to deal with uncertainty, concurrency and ambiguity?
+- how to quantify desirable quality attributes with metrics?
+
+
+
+W11 Second ECOOP Workshop on Prototype-based object-
+    oriented    programming
+
+Organizers: James Noble, Macquarie University, Sydney 
+            Ivan Moore, OTI UK Ltd, London
+Contact:        kjx@mri.mq.edu.au
+URL:        http://www.mri.mq.edu.au/~kjx/proto97.html
+Day:        Monday
+
+Prototype-based programming is an alternative to the traditional
+class-based object-oriented model.  In this paradigm there are no classes.
+Rather, new kinds of objects are formed more directly by composing
+concrete, fully-fledged objects, which are often referred to as prototypes.
+Prototype-based languages are conceptually simpler than class-based
+languages, and are especially appealing to the development of evolving,
+exploratory software systems. Yet prototypes are still relatively poorly
+known outside the research world, and the number of industrial applications
+relying on prototypes is minimal compared to the number of applications
+relying on more mainstream object technology.
+
+In this workshop we will examine the state-of-the-art in prototype-based
+object-oriented programming, focusing especially on the following
+questions
+
+- what are the specific advantages or niches of the prototype-based 
+  paradigm which will make or break its widespread use?
+- how is the prototype-based paradigm simpler to understand and use  than
+  the traditional class-based paradigm?
+- what ultimately distinguishes prototype-based programming from
+  class-based programming?
+
+This workshop will build upon the results of the successful workshops on
+this topic held at ECOOP'96 and OOPSLA'96.
+
+
+
+W12 Component-Oriented Programming (WCOP'97)
+
+Organizers: Prof. Dr. Jan Bosch, University of Karlskrona,Ronneby
+            Prof. Dr. Clemens Szyperski,  Queensland University of
+            Technology, Australia
+            Dr. Wolfgang Weck,  Åbo Akademi University, Finland
+Contact:    Wolfgang.Weck@abo.fi
+URL:        http://www.abo.fi/~wweck/WCOP97
+Day:        Monday
+
+Component-oriented programming has been identified as producing software
+components for a component market and for late composition. Components are
+to be composed by third parties, possibly end users, who are not able to
+change the components. This requires standards to allow independently
+created components to interoperate, like COM/OLE 2, CORBA/SOM/OpenDoc, and
+more recently Java/JavaBeans or Netscape ONE. Further, specifications are
+needed to put the composer into the position to decide what can be composed
+under which conditions. Open research questions raised by these isues
+include what kind of standards are needed and how they should be defined,
+what information specifications need to give, how this information should
+be provided, and how correct implementation and usage of specifications
+should be verified or enforced. WCOP'97 is a follow-up event to the
+successful WCOP'96, which took place in conjunction with ECOOP'96. WCOP'96
+laid some foundations, including some term definitions, a review of the
+status quo, and hints at important areas for future research. WCOP'97 will
+build on its predecessor and thus aims at more focussed and specialized
+contributions and discussions.
+
+
+
+W13 7th ECOOP Workshop for Doctoral Students in Object-
+    Oriented Systems
+
+Organizers: Erik Ernst, Denmark
+            Frank Gerhardt, Mercedes-Benz AG, Stuttgart
+            Lutz Wohlrab, Technische Universität Chemnitz-Zwickau,
+            Chemnitz
+Contact:    eernst@daimi.aau.dk
+URL:        http://mbi.dkfz-heidelberg.de/PhDOOS
+Day:        Monday and Tuesday
+
+The aim of the workshop is to bring together PhD students who are working
+on foundations, design, implementation, or application of object-oriented
+systems and methods. The workshop will provide an opportunity for PhD
+students to meet, to discuss their research, and to further develop their
+working skills. It will generally be interactive, focusing on active work
+in groups. The technical programme of the workshop will be held in
+subgroups, followed by a summary session of all attendants. In the
+subgroups, discussions on 3-4 related topics will be held, bringing
+together participants who work in related areas. The discussions will be
+based on position  statements and paper presentations. The corresponding
+abstracts and papers will be electronically distributed among the
+participants in advance. The non-technical programme consists of two
+keynote talks by invited speakers about the PhD-getting process and
+conducting research, a writing workshop, and discussions about the results
+of the preECOOP initiative of the PhDOOS network, about further
+developments of the PhDOOS network, and about the social situation of PhD
+students.
+
+
+W14 Object-Oriented Technology and Real-Time Systems
+
+Organizers: Leonor Barroca,The Open University, Milton Keynes, UK
+            Eugène Dürr, Utrecht University
+            François Terrier, Centre d'Etudes de Saclay,Gif sur Yvette
+Contact:    E.H.Durr@fys.ruu.nl
+URL:        http://www.fys.ruu.nl/~durr/ecoop.html
+Day:        Monday
+
+As the advantages of object technology have become more widely known,
+objects are being applied more and more in Real-Time systems. This workshop
+treats in an OO-RT perspective:
+
+- analysis and design aspects, like specification of time constraints
+- implementation aspects,like languages, code generation, patterns and
+  frameworks
+- validation and testing of dynamic behaviour and meeting time
+  constraints
+- OO real time kernels and mapping of OO designs on existing kernels
+  (RTOS)
+
+Papers of prime interest are the ones which pay special attention to
+implementation experience.
+
+Participants in the workshop should submit either
+
+- a two pages position paper or experience report
+- a  6  pages technical paper, on one of the above issues
+
+Electronic submissions are strongly encouraged. Please inform us of your
+interest via email: durr@fys.ruu.nl. Accepted papers will be sent to the
+participants. Guidelines will be provided. Accepted technical papers are
+considered for publication.
+
+
+
+W15 Aspect-Oriented Programming
+
+Organizers: Cristina Videira Lopes, Xerox PARC
+            Gregor Kiczales, Xerox PARC
+            Kim Mens, Free University of Brussels
+            Bedir Tekinerdogan, University of Twente
+Contact:    lopes@parc.xerox.com
+URL:        http://wwwtrese.cs.utwente.nl/aop-ecoop97
+Day:        Tuesday
+
+To date, the primary idea for organizing software systems has been to break
+the system down into modular units such as subroutines, procedures, objects
+etc.  Many systems have properties that cut across these abstraction
+mechanisms: failure handling, persistence, communication, concurrency, and
+many other aspects of a system's behavior are not easily localizable to a
+single block of executable code_even though they can often be thought about
+relatively separately.
+
+Because source code modules correspond so directly to blocks of executable
+code, and different aspects of concern must cross-cut the executable code,
+many modules end up being a tangled mess of lines of code for different
+purposes.  This "tangling-of-aspects" phenomenon is at the heart of much of
+the complexity in existing software systems.
+
+A number of researchers have begun working on approaches to this problem
+that allow programmers to first express each of a system's aspects of
+concern in a separate and natural form, and then automatically combine
+those separate descriptions into a final executable form using automatic
+tools. These approaches have been called Aspect-Oriented Programming (AOP).
+The purpose of this workshop is to bring together researchers and
+practitioners working on a wide range of AOP techniques, including
+languages, tools, frameworks, programming styles, etc.
+
+
+
+W16 ECOOP'97 System Implementors' Workshop
+
+Organizers: Peter Dickman, University of Glasgow
+            Huw Evans, University of Glasgow
+            Eric Jul, DIKU, Copenhagen
+Contact:    huw@dcs.gla.ac.uk
+URL:        http://www.dcs.gla.ac.uk/~huw/siw97
+Day:        Monday
+
+The Systems Implementors' Workshop aims to bring together researchers and
+industrialists with significant experience and interest in the construction
+of Object Support Systems. Those wishing to attend will be required to
+submit a position paper describing both their past experience and one topic
+that they feel merits discussion and debate. The workshop organisers will
+select participants and run the structured  discussion, as described
+overleaf. The workshop will NOT involve significant numbers of formal
+presentations. It may, however, involve break-out groups focussing on
+distinct topics of special interest, as well as the main discussion
+sessions covering issues of general interest.
+
+
+
+W17 Object-Orientation and Operating Systems
+
+Organizers: Henning Schmidt, Universität Potsdam
+            Frank Schubert,Technische Universität Chemnitz,Germany
+            Lutz Wohlrab, Technische Universität Chemnitz
+Contact:    fsc@informatik.tu-chemnitz.de
+URL:        http://www.tu-chemnitz.de/informatik/osg/ecoopooosws
+Day:        Tuesday
+
+The aim of the workshop is to bring together researchers working on
+object-oriented operating systems, to provide a platform for discussing
+problems arising from the application of object-orientation to operating
+systems and  solutions for them.
+
+Suggested topics for position papers and discussions include, but are not
+limited to:
+
+- adaptable and adaptive OOOS
+- frameworks for OOOS
+- distributed and parallel OOOS
+- reusability and interoperability of OOOS components
+- OOOS configurability, maintenance, tuning and optimizations
+- real-time OOOS
+
+The programme of the workshop consists of a talk given by an invited
+speaker, position paper presentations, discussions, and a summary session.
+The discussions will be held in subgroups, bringing together attendants
+working on similar problems.
+
+
+
+W18 Dynamic Models in Forward and Reverse Engineering of
+    Object Systems.
+
+Organizers: Michael Christensen, Aarhus University, Denmark.
+            Kai Koskimies, University of Tampere, Finland.
+            Kurt Nørmark, Aalborg University, Denmark.
+            Elmer Sandvad, Aarhus University, Denmark.
+Contact:    normark@iesd.auc.dk
+URL:        http://www.daimi.aau.dk/~toby/ecoop97_workshop.html
+Day:        Monday
+
+In object-oriented design, static models and dynamic models complement each
+other. However, when people discuss an object-oriented design they tend to
+draw informal dynamic models in which objects somehow interact with each
+other. Consequently, it seems to be the case that dynamic models are
+important to get a full understanding of an object system.
+
+Many dynamic models lend themselves towards scenarios. Via use of scenarios
+it is possible to understand a design through concrete examples of object
+interactions.  Furthermore it is possible to express use cases as
+scenarios.  Many design methods employ use cases and scenarios as a central
+technique for describing requirements and for extracting relevant design
+information.
+
+Several authors have recently proposed to visualize a running
+object-oriented system through scenarios. Hence scenarios are useful for
+reverse engineering as well. An existing system (e.g. a framework) and its
+behavioural patterns can be understood by following an example trace of the
+system in terms of the message flow between the objects, as represented by
+a scenario. On the basis of such scenarios, various design documents (e.g.
+state diagrams) can be possibly automatically produced for the system.
+
+The idea with this workshop is to gather together researches who are
+interested in dynamic modelling and the use of scenarios in forward as well
+as reverse object-oriented software engineering.
+
+
+
+TECHNICAL PROGRAMME
+
+
+The ECOOP '97 technical program consists of 20 technical papers (selected
+from 103 submissions), three invited speakers, plus one panel. The program
+committee, consisting of 26 distinguished researchers in
+object-orientation, met at the University of Twente in the Netherlands
+during January 30-31 for paper selection. All papers were reviewed by at
+least four members of the program committee. The topics of the accepted
+papers cover traditional ECOOP topics such as programming languages, types,
+implementation, and formal specifications, as well as some new topics such
+as design patterns, metaprogramming, and Java.
+
+As for invited speakers, we are very honored to be able to present the
+talks by Kristen Nygaard, the well-known pioneer of object-oriented
+programming languages with his work on Simula-67 which was born 30 years
+ago in Scandinavia; Gregor Kiczales, who is now proposing a new direction
+in object-oriented research, called Aspect-Oriented Programming; and
+Erich Gamma, a European pioneer on patterns.
+
+We would like to express our deepest appreciation to the authors of
+submitted papers, the program committee members, the external referees, and
+many others who have contributed towards the formulation of the ECOOP '97
+technical program.  We hope that the resulting technical program this year
+is another solid step towards advancing the object-oriented software
+technology, as previous ECOOPs have been. 
+
+Mehmet Aksit and Satoshi Matsuoka
+Program Co-chairs
+
+
+Panel
+
+This year ECOOP has only one panel discussion, but it is on a  topic of
+paramount importance: how do the OO methods work in practical industrial
+environments. The goal is to discuss experiences gained when applying  the
+methods in practice and analyse their pros and cons. The panel will
+hopefully interest academic participants as it gives real feedback on
+whether and how the ideas developed in research really work. Industry
+participants will hopefully find the panel discussions  interesting and
+helpful for finding their path through the forest of OO methods.
+
+Jari Veijalainen
+Panel Chair
+
+Wednesday, 11 June
+
+8:00 -          Registration
+9:00 -  9:30    Opening session
+9:30 - 10:45    Invited Talk I:
+                     GOODS to Appear on the Stage
+                     Kristen Nygaard (University of Oslo, Norway)
+10:45 - 11:15   Coffee break
+11:15 - 12:45   Paper session I: Programming Languages
+
+                Balloon Types: Controlling Sharing of State in Data Types
+                Paulo Sérgio Almeida (Imperial College of Science, 
+                Technology and Medicine, London, United Kingdom)
+
+                Static integrity constraint management in object-oriented
+                database programming languages via predicate transformers
+                Véronique Benzaken, Xavier Schaefer
+                (Université de Paris XI, France)
+
+                Issues with Exception Handling in Object-Oriented Systems
+                Robert Miller, Anand Tripathi
+                (University of Minnesota, Minneapolis, MN, USA)
+
+12:45 - 14:15   Lunch
+14:15 - 15:45   Paper session II: Types
+
+                Subtyping is not a good "Match" for object-oriented languages
+                Kim B. Bruce, Leaf Petersen (Williams College, Williamstown,
+                MA, USA),
+                Adrian Fiech (Memorial University of Newfoundland, St. John's,
+                Canada)
+
+                Near optimal Hierarchical Encoding of Types
+                Andreas Krall (Technische Universität Wien, Austria),
+                Jan Vitek (Université de Genève, Switzerland),
+                R. Nigel Horspool (University of Victoria, BC, Canada)
+
+                An Extended Theory of Primitive Objects: First Order System
+                Luigi Liquori (Università di Torino, Italy)
+
+15:45 - 16:15   Coffee break
+16:15 - 17:15   Paper session III: Metaprogramming
+
+                A Reflective Architecture for Process Control Applications
+                Charlotte Pii Lunau (Aalborg University, Denmark)
+
+                Dynamic Object Evolution without Name Collisions
+                Mira Mezini (University of Siegen, Germany)
+
+
+Evening programme:  Lake Cruise, followed by Finnish Evening
+
+
+
+Thursday, 12 June
+
+8:00 -          Registration
+9:00 - 10:15    Invited Talk II
+
+                Aspect-Oriented Programming
+                Gregor Kiczales (Xerox PARC, Palo Alto, CA, USA)
+
+10:15 - 10:45   Coffee break
+10:45 - 12:15   Paper session IV: Implementation and Systems
+
+                DRASTIC: A Run-Time Architecture for Evolving, Distributed,
+                Persistent Systems
+                Huw Evans, Peter Dickman (Glasgow University, United Kingdom)
+
+                A General Framework For Inheritance Management and Method
+                Dispatch in Object-Oriented Languages
+                Wade Holst, Duane Szafron (University of Alberta, Edmonton,
+                Canada)
+
+                Optimizing Smalltalk by Selector Code Indexing Can Be Practical
+                Tamiya Onodera, Hiroaki Nakamura
+                (IBM Research, Tokyo Research Laboratory, Japan)
+
+12:15 - 13:45   Lunch
+13:45 - 15:15   Paper session V: Formal Methods and Specifications
+
+                Objects, Associations and Subsystems: a hierarchical approach
+                to encapsulation
+                J.C. Bicarregui, K.C. Lano, T.S.E. Maibaum
+                (Imperial College, London, United Kingdom)
+
+                Towards a Formalization of the Unified Modeling Language
+                Ruth Breu, Ursula Hinkel, Christoph Hofmann, Cornel Klein,
+                Barbara Paech, Bernhard Rumpe, Veronika Thurner
+                (Technische Universität München, Germany)
+
+                Coordination Requirements Expressed in Types for Active Objects
+                Franz Puntigam (Technische Universität Wien, Austria)
+
+15:15 - 15:45   Coffee break
+15:45 - 17:15   Panel
+
+                Object-Technology at Industry
+
+                Moderator:
+                     Jürgen Ziegler, Nokia Research Center, Helsinki, Finland
+                Members: 
+                     Henning Rietz (Condat, Software GmbH, Berlin, Germany)
+                     Maher Awad (Alcatel Telecom, Antwerpen, Belgium)
+                     Derek Coleman (King's College, London, United Kingdom)
+                     Ruth Malan (HP Labs, Palo Alto, CA, USA)
+
+17:15 -     Poster session (possibly)
+
+
+Evening programme:  Conference Banquet
+
+
+
+Friday, 13 June
+
+8:00 -          Registration
+9:00 - 10:30    Paper session VI: Java
+
+                Java is Type Safe - Probably
+                Sophia Drossopoulou, Susan Eisenbach
+                (Imperial College, London, United Kingdom)
+
+                Feature-Oriented Programming: A Fresh Look at Objects
+                Christian Prehofer (Technische Universität München, Germany)
+
+                Genericity in Java with Virtual Types
+                Kresten Krab Thorup (Aarhus University, Denmark)
+
+10:30 - 11:00   Coffee break
+
+11:00 - 12:30   Paper session VII: Patterns
+
+                Tool support for object-oriented patterns
+                Gert Florijn, Marco Meijers, Pieter van Winsen 
+                (Utrecht University, The Netherlands)
+
+                A Model for Structuring User Documentation of Object-Oriented
+                Frameworks Using Patterns and Hypertext
+                Matthias Meusel, Krzysztof Czarnecki, Wolfgang Köpf
+                (Daimler-Benz AG, Research and Technology, Ulm, Germany)
+
+                Using Patterns for Design and Documentation
+                Georg Odenthal, Klaus Quibeldey-Cirkel 
+                (University of Siegen, Germany)
+
+12:30 - 14:00   Lunch
+14:00 - 15:15   Invited Talk III
+
+                Going Beyond Objects with Design Patterns
+                Erich Gamma 
+                (Object Technology International, Zurich, Switzerland)
+
+15:15 - 15:45   Closing session, Welcome to ECOOP '98
+15:45 -         Farewell drinks
+
+
+
+
+INVITED TALKS
+
+
+GOODS to Appear on the Stage
+
+Kristen Nygaard
+
+The lecture will trace the development of some important object-oriented
+concepts and point out the analogy between performances at the stage of a
+theatre and the operation of information systems (and program executions).
+This metaphor will be used in a description of the ideas pursued and
+developed in the GOODS Project (General Object-Oriented Distributed
+Systems), a three year project supported by The Norwegian Research Council
+and which started in 1997. GOODS aims at extending the framework of
+object-oriented programming to include a multi-layered approach to the
+organisation of the relationship between people, computer hardware,
+organisational rules and programs in general distributed systems. GOODS
+also aims at introducing general tools for specifying visibilities of
+objects (scopes) and the precise dealing with the identities of objects
+that exist in many versions in a distributed environment
+
+Kristen Nygaard is a professor of computer science at University of Oslo
+since 1977. His professional career, which dates back to 1948, include
+being research director of the Norwegian Computing Center and heading the
+operational research group at the Norwegian Defense Research Establishment.
+He has been visiting scientist and researcher at Stanford University,
+Aarhus University, and at Xerox PARC. He has been promoted to Doctor
+Honoris Causa at Lund University, Sweden, and at Aalborg University,
+Denmark, and has been awarded the Norbert Wiener Prize for Social
+Responsibility and professional work in 1990 and Computer Worlds honorary
+prize in 1992.
+
+His research has included work on operational research and programming
+languages, resulting in languages such as SIMULA 67, and BETA. For this
+work he is now known as one of the originators of object-oriented
+programming. He has also worked in the area of information systems and the
+social impact of computer technology. Some of this work was done in
+cooperation with the Norwegian trade unions pioneering the approach now
+known as participatory design.
+
+
+
+
+Aspect-Oriented Programming
+
+Gregor Kiczales
+
+The abstract will be available on WWW.
+
+Gregor Kiczales is a principal scientist at the Xerox Palo Alto Research
+Center.  His work focuses on issues of software architecture, programming
+languages and software engineering.  He has done extensive work in
+object-oriented programming language design and implementation. He is one
+of the designers of the Common Lisp Object System (CLOS), and the
+implementor of PCL, a high-performance portable implementation of CLOS.  He
+is the designer of the CLOS metaobject protocol, and the author, with Jim
+des Rivieres and Danny Bobrow, of "The Art of the Metaobject Protocol," a
+key work in the development of metaobject protocol and reflection
+technology.  He is the inventor of aspect-oriented programming (AOP), and
+is the leader of a Xerox PARC team developing AOP technology.
+
+
+
+Going Beyond Objects with Design Patterns
+
+Erich Gamma
+
+A design pattern systematically names, explains, and evaluates an important
+and recurring design. This idea for capturing design experience has
+progressed rapidly from cult to mainstream status. Design patterns become a
+catalyst for design reuse and enable to understand a design at a higher
+level than individual objects. This talk reports experience on how design
+patterns can address key challenges of software development.
+
+Erich Gamma has been discovering and working with Design Patterns for the
+past eight years. He is currently with OTI in Zurich, Switzerland. In his
+previous positions he has applied patterns as a senior consultant at IFA in
+Zurich and as an engineer at Taligent, where he led the design and
+implementation of several frameworks. Erich has a Ph.D. in Computer Science
+from the University of Zurich.
+
+
+
+
+EXHIBITS
+
+The main conference will be accompanied by a three-day commercial
+exhibition from June 10 to 12. Vendors of object-oriented products and
+services should contact the exhibits chair at the earliest convenience to
+insure their inclusion. For further information please contact:
+
+Taru-Maija Heilala-Rasimov
+ECOOP '97 Exhibits Chair
+
+
+The following exhibitors have already confirmed their presence at ECOOP '97
+in Jyväskylä:
+
+
+Nokia Research Center
+
+A corporate research unit interacting closely with all Nokia business
+units. In an industry like Nokia's, software is of strategic importance,
+and it goes without saying that Nokia has to stay on the cutting edge of
+software design. Right now, that tends to mean object-technology. With this
+in mind, the Software Technology Laboratory - one of the seven laboratories
+of the Nokia Research Center - has produced an object-oriented software
+development method, called Octopus, and object-oriented analysis/design
+tools like TDE and Mermaid. Anybody can find Octopus at
+http://www.nokia.com/company/nrc/octopus.html. It is also published as a
+book (M. Awad, J. Kuusela, J. Ziegler: Object-Oriented Technology for
+Real-Time Systems - A Practical Approach Using OMT and Fusion, Prentice
+Hall, 1996).
+
+
+
+H&P Software Engineering Center Oy
+
+The mission of H&P Software Engineering Center Oy is to improve the client
+software process by technology transfer. SEC represents in Finland, Estonia
+and St. Petersburg leading object oriented tools providers like Select,
+Verilog and Versant.
+URL: http://www.sec.fi.
+
+
+New exhibitors can still make their reservations. The ECOOP '97 WWW-site
+will be regularly updated with the information provided by the exhibitors:
+http://www.ecoop97.jyu.fi/Exhibition
+In addition, your ad can be inserted in the Exhibition Catalogue to be
+distributed on-site.
+
+
+
+DEMONSTRATIONS AND POSTERS
+
+Live demonstrations of the very latest in object-oriented technology are an
+exciting part of every ECOOP conference, offering an excellent venue for
+discussing technical aspects of object-oriented applications, tools, and
+systems. These demonstrations are given by technical members of their
+implementation team. Presentations must be in the form of running computer
+programs.
+
+Poster sessions are an alternative forum for viewing results of
+object-oriented work, with the opportunity for one-on-one interaction with
+presenters. Poster themes cover the breadth of object-oriented technology -
+from theory to experiences in applications.
+
+Risto Pohjonen                  Pentti Marttiin
+ECOOP '97 Demonstration Chair   ECOOP '97 Poster Chair
+
+
+Information on the accepted demonstrations and posters will be
+available at WWW:
+
+    http://www.ecoop97.jyu.fi/Demonstrations
+    http://www.ecoop97.jyu.fi/Posters
+
+
+
+SOCIAL PROGRAMME
+
+In addition to the professional content matter, ECOOP '97 provides the
+following evening programme included in the Conference participation and
+accompanying persons' fee (except for the optional Finnish Evening):
+
+For full information on the Social Programme, see 
+http://www.ecoop97.jyu.fi/General/socialprog.html
+or you may send an enquiry by e-mail to ecoop97@cs.jyu.fi
+
+  Tutorial and Workshop Get-Together, Monday, June 9
+  Exhibitors' Welcoming Reception, Tuesday, June 10
+  Lake Cruise followed by Finnish Evening, Wednesday, June 11 
+  Conference Banquet, Thursday, June 12
+  Sauna and swimming, Friday, June 13
+
+Further information available from the Conference Secretariat.
+
+
+Accompanying Person's Programme
+
+All registered accompanying persons are cordially welcome to join the
+conference evening programme (please see Social Programme) and the farewell
+drinks at the end of conference. In addition, the following special
+programme will be offered:
+
+Wednesday morning, June 11 (min. 8 persons)
+
+Guided walking tour around the University Main Campus, a living display of
+culture. During the tour  a visit to the Alvar Aalto Museum exhibiting  the
+life's work of Alvar Aalto will be paid.
+
+Thursday, June 12 (min. 8  persons)
+
+A visit to a versatile tourist centre, with old barn buildings now
+exhibiting high quality Finnish handicrafts - a shopping possibility - and
+art exhibition. A chance to visit the Aviation Museum of Central Finland
+will also be offered. a buffet-type coffee table in a cafeteria offering 
+an art exhibition.
+
+
+
+Pre- and Post-Conference Tours
+
+Booking for the Pre- and Post-Conference tours should be made on the
+registration form, and the tours must be prepaid in full when reservations
+are made. Please note the deadline for the St.Petersburg tour: May 9,
+1997.
+
+For full information on pre- and post-conference tours, see
+http://www.ecoop97.jyu.fi/General/tours.html
+or you may send an enquiry by e-mail to ecoop97@cs.jyu.fi
+
+
+  Lapland, June 6-8, Friday-Sunday (min. 20 participants)
+  National Park, Sunday, June 8  (min. 15 participants)
+  St.Petersburg, Russia, June 13-16, Friday-Monday (min. 15 participants)
+    Note: booking by May 9.
+  Tour of Central Finland, Saturday, June 14 (min. 25 participants)
+
+
+
+GENERAL INFORMATION
+
+Accommodation
+
+The standard of hotels in Finland is high. Double rooms have either double
+beds or twin beds, and all rooms have bath or shower. A buffet breakfast is
+included in the Conference room rates. Most hotels have sauna facilities
+available for hotel guests free of charge either in the mornings or in the
+evenings. The rooms in youth hostels have shared facilities. Special rates,
+quoted below (FIM/night/person, VAT and breakfast included), are available
+for reservations made through the Secretariat. Please note that
+accommodation is to be paid directly to the hotel upon departure.
+
+- Hotel Alba: single FIM 360, double FIM 210 (lake-side, 500 m from the
+  Conference site) tel. (+358 14) 636 311, fax (+358 14) 636 300
+- Hotel Alex: single FIM 370, double FIM 220 (city centre, 1.3 km from
+  the Conference site) tel. (+358 14) 651 211, fax (+358 14) 651 200
+- Hotel Alexandra: single FIM 430, double FIM 255 (city centre, 1.3 km
+  from the  Conference site) tel. (+358 14) 651 211, fax (+358 14) 651 200
+- Hotel Cumulus: single FIM 320, double FIM 190 (city centre, 
+  c. 1.5 km from the Conference site, Finnair bus stop in front of 
+  Hotel Cumulus) tel. (+358 14) 653 211, fax (+358 14) 653 299
+- Summer Hotel Amis: single FIM 210, double FIM 155 (city centre, 
+  c. 2 km from the  Conference site, cooking facilities)
+  tel. (+358 14) 612 920, fax (+358 14) 612 935
+- Youth Hostel Laajari: shared facilities only, FIM 100 (c. 3 km from 
+  the Conference  site, good bus connections) tel. (+358 14) 253 355
+- Hotel Rantasipi Laajavuori: double FIM 200 (c. 3 km from the Conference
+  site, good bus connections, site of the conference  banquet)
+  tel. (+358 14) 628 211, fax (+358 14) 628 500
+
+Reservations will be made on a "first-come, first-served" basis, and the
+discount prices can only be guaranteed if your reservation is received
+before May 9, 1997. Should you cancel your booking before this date, no
+cancellation fee will be charged.
+ 
+
+Useful to Know
+
+Conference Venue
+
+The Conference venue is Jyväskylä,  capital of Central Finland, a lively
+university and industrial town with some 80 000 inhabitants. Throughout the
+year the city offers a rich variety of cultural events and programmes, it
+is also called a paradise of sports and fitness lovers, as the region
+offers something for every taste. For up-date information, please check:
+http://www.jkl.fi/eng/indexeng.htm.
+
+ECOOP '97 will be held on the Main Campus of the University of Jyväskylä
+(Seminaarinmäki) largely designed by Alvar Aalto and internationally
+acclaimed by experts of architecture. The Campus lies within walking
+distance of the city centre and a range of comfortable hotels. The
+Conference Office will be located in the foyer of the University Main
+Building (Building C). The Office will be at your service throughout the
+Conference days, starting on Sunday afternoon, June 8, until the Closing
+Session, Friday afternoon, June 13. All Conference  sessions will be held
+in Building C, whereas some of the workshop and tutorial sessions will be
+held in the neighbouring university buildings on the campus.
+
+Registration is possible at the Conference Office during the following times:
+  Sunday from 17:00 to 20:00
+  Monday and Tuesday from 7:15 to 20:00
+  Wednesday and Thursday from 8:00 to 18:00
+  Friday from 8:00 to 11:00
+
+Electronic Mail
+
+Internet access will be provided at the Conference site.
+
+Travel Connections
+
+Finland is easily accessible from all over the world. Several international
+airlines have regular flights to Helsinki, the national capital. A
+convenient way is also to take a ferry from Stockholm to Helsinki or Turku.
+The City of Jyväskylä is located about 280 km north of Helsinki, in the
+heart of the Finnish lake area. Jyväskylä can be reached from Helsinki and
+Turku through several daily connections by plane, train and bus.
+Approximate journey times from Helsinki to Jyväskylä are: air 40 min, train
+3.5 hours, and bus 4.5 hours. There are also bus connections between
+Jyväskylä and Helsinki Airport.
+
+Official Carrier
+
+The Official Carrier of the Conference is Finnair. Finnair offices
+throughout the world will be happy to assist in your travel arrangements.
+Please contact your local Finnair office for special arrangements made for
+ECOOP '97 Conference participants. Finnair Internet: http://www.finnair.fi
+
+Transportation in Jyväskylä
+
+Each participant will be provided with a public transportation ticket which
+is valid during the Conference days in local buses. Please check the
+evening  programme information for any special transportation
+arrangements.
+
+Weather
+
+Due to its location on the Arctic Circle, Finland enjoys the exotic White
+Nights - the sun does not go below the horizon for over 70 days in the
+north of Finland during summer. In June the Jyväskylä area night length is
+about 5 hours, most of which is actually twilight. The Jyväskylä weather in
+mid-June is normally pleasant, the temperature varying between 15 - 25 °C.
+We recommend, however, that you come prepared also for cooler and rainy
+weather.
+
+Finnish Visa Formalities
+
+At present, an entry visa to Finland is not required for many nationals,
+e.g. the citizens of the European Union countries, the USA, the UK, and
+Australia need no visa for visits less than 3 months duration to Finland.
+Please check with your travel agent or with the Finnish Consulate whether
+or not you need a visa to enter Finland.
+
+Health Regulations
+
+No vaccinations are required when entering Finland from any country.
+
+Insurance
+
+The Conference organizers will not be able to take out any kind of
+insurance for the participants or accompanying persons. Participants are
+requested to make their own arrangements concerning insurance.
+
+Currency
+
+The Finnish currency is the markka (Finnish Mark, FIM) divided into 100
+penni (the approx. exchange rate in March 1997: 1 $ = 5 FIM, 1 £ = 8 FIM, 1
+DEM = 3 FIM). All major credit cards are accepted in most shops, hotels,
+and restaurants. The banks are open on weekdays from 9.30 a.m. to 4.30
+p.m.
+
+Shopping
+
+Finland is well known for its high-quality furs, interior textiles, glass
+and other designer ware, as well as ceramics and jewellery. Tax-free
+shopping (VAT refund on leaving Finland) is possible for visitors from
+outside the European Economic Area.
+
+
+
+
+PARTICIPATION AND REGISTRATION FEES
+
+The Conference is open to all registered participants. The official
+language of ECOOP '97 is English.
+
+The registration form available at http://www.ecoop97.jyu.fi/Registration
+should be completed (only one participant per form) and returned to the 
+Conference Secretariat. Your registration form has to be accompanied by 
+the payment of your fee, otherwise the registration will not be processed.
+Please refer to the instructions for payment given on the registration 
+form. All expenses due to bank transfer have to be covered by the 
+conference participant. All prices are indicated in Finnish currency 
+(FIM). The registrations will be confirmed by the Conference Secretariat 
+after receipt of your registration and payment. On-site registration with 
+cash (FIM) or credit card is also possible. This may be preferable to 
+sending the payment and registration form very late before the conference.
+
+Note that there is a rich evening programme included in the conference fee.
+In particular, we felt the banquet on Thursday evening to be so important
+for the spirit of the conference that we wanted to give all Conference
+participants the opportunity to be there. We kindly ask you to mark on the
+registration form which of these events you intend to attend, so we can
+plan sufficient capacities.
+
+                            by May 9    from May 10 onwards
+
+Conference fee (not including tutorials)
+  Non-member                FIM 2600        FIM 3000    
+  Member                    FIM 2200        FIM 2600    
+  Eastern European          FIM 1600        FIM 1900    
+  Student                   FIM 1200        FIM 1500
+
+Workshops-only fee  
+  Non-member                FIM 1100        FIM 1300
+  Member                    FIM  900        FIM 1100
+  Eastern European          FIM  600        FIM  750
+  Student                   FIM  450        FIM  600
+
+Tutorial fee, half-day (1 unit) - see below if you intend to take more than
+one unit
+  Non-member                FIM 1000        FIM 1200
+  Member                    FIM  800        FIM 1000
+  Eastern European          FIM  550        FIM  700
+  Student                   FIM  400        FIM  550
+
+Accompanying person         FIM 1000        FIM 1200
+
+Full-time students qualify for student fees. Student registration must be
+accompanied by an official letter of an advisor / course instructor
+confirming full-time-student status.
+
+The Eastern European fees are valid for participants from former socialist
+countries. Any resident of one of those countries whose registration and
+participation at ECOOP '97 would require economic support (in addition to
+the reduced conference fee) is asked to write before April 30 to the ECOOP
+'97 Organizing Chair, Markku Sakkinen (address below).
+
+The Member fees are valid for members of the cooperating associations (ACM
+and AITO), who must specify the name of the association and their member
+number on the registration form.
+
+The Non-member fees apply to all other participants.
+
+The Conference fee includes: attendance at the Conference, a copy of the
+Proceedings (to be published by Springer), Get-Together, Exhibitors'
+Welcoming Reception, Lake Cruise, Banquet, Farewell drinks, Sauna and
+swimming, lunches on all five days, and refreshments during the breaks.
+Participants registered for the main conference are not charged any
+additional fee for attending workshops. However, at most workshops 
+participation is limited by their organisers. See the call for each
+workshop separately.
+
+The Workshops-only fee includes: attendance at the Workshop(s) selected, a
+copy of the workshop notes, Get-Together, Exhibitors' Welcoming Reception,
+Lake Cruise, Farewell drinks, Sauna and swimming, lunches on Monday and
+Tuesday, and refreshments during the breaks.
+
+Note: You are requested to indicate on the registration form which
+workshops you intend to participate in, even if you do not know about your
+acceptance. This is important for room allocation.
+
+The Tutorial fee includes: attendance at the Tutorial selected, a copy of
+the tutorial notes, Get-Together, Exhibitors' Welcoming Reception, Farewell
+drinks, Sauna and swimming, lunches on Monday and Tuesday, and refreshments
+during the break.
+
+There is a regressive pricing scheme for delegates taking several (2 to 6)
+tutorial units (a full-day tutorial is counted as 2 tutorial units).  I.e.,
+each additional tutorial unit is cheaper than the previous one.  Multiply
+the basic fee by the factor corresponding to the number of units in the
+table below:
+
+        Units       1    2    3    4    5    6
+        Factor     1.0  1.7  2.3  2.8  3.2  3.6
+
+The Accompanying person's fee includes:  Guided walking tour and Excursion
+(see Accompanying person's programme), plus Get-Together, Exhibitors'
+Welcoming Reception, Lake Cruise, Banquet, Farewell drinks, and Sauna and
+swimming.
+
+No refunds are possible for any part of the package not taken. The fee for
+additional tickets for the Finnish Evening and the Conference Banquet is
+FIM 250/person/event.
+
+If you have any questions about the registration, you may send an enquiry
+by e-mail to ecoop97@cs.jyu.fi .
+
+
+
+Cancellation/Refund policy
+
+Only written notification of cancellation sent to the Conference
+Secretariat will be considered. Cancellations made prior to May 9, 1997
+will be subject to a FIM 300 cancellation fee. For cancellations received
+after this date or for participants who do not attend, no refund will be
+made.
+
+
+      The organizers reserve the right to amend the programme
+      according to unforeseen circumstances. 
+
+
+Further Information
+
+For further information about the conference, you are recommended to
+consult the WWW pages and to send e-mail enquiries to ecoop97@cs.jyu.fi.
+You may also contact the appropriate responsible persons given in this
+Advance Programme on specific questions, or on general questions:
+
+Taru-Maija Heilala-Rasimov      Markku Sakkinen
+ECOOP '97 Conference Manager    ECOOP '97  Organizing Chair
+Jyväskylä Congresses            University of Jyväskylä
+P.O. Box 35                     P.O. Box 35
+FIN-40351 Jyväskylä, Finland    FIN-40351 Jyväskylä, Finland
+Tel:  +358 14 603663            Tel:  +358 14 603047
+Fax:  +358 14 603727            Fax:  +358 14 603011
+E-mail: heilala@cone.jyu.fi     E-mail: sakkinen@cs.jyu.fi
+
+
+When in trouble
+
+Both before and during the conference, somebody ready to assist you
+should be reachable at the phone number (+358 14) 603 663.
+
+--------------------------------------------------------------------
+
+This was an announcement of
+ECOOP '97 -- 11th European Conference on Object-Oriented Programming,
+June 9 - 13, 1997, Jyväskylä, Finland.
+                                         Updated 21 April 1997

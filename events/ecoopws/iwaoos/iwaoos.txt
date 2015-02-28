@@ -1,0 +1,106 @@
+			      IWAOOS'99
+
+      Intercontinental Workshop on Aliasing in Object-Oriented Systems
+
+     In association with the 13th European Conference on Object-Oriented
+                           Programming (ECOOP'99)
+                     Lisbon, Portugal, 14-18 June 1999 
+                  http://cuiwww.unige.ch/~ecoopws/iwaoos
+
+----------------------------------------------------------------------------
+Aliasing is endemic in object oriented programming. Because an object
+can be modified via any alias, object oriented programs are hard to
+understand, maintain, and analyse. For example, aliasing can cause
+representation exposure, when an internal implementation object of an
+aggregate object is accessible outside the aggregate, and argument
+dependence, when an object's integrity depends upon the state of an
+aliased object outside its control.  These aliasing problems make
+objects depend on their environment in unpredictable ways, breaking
+the encapsulation necessary for reliable software components.
+
+On the other hand, understanding aliasing, or more generally,
+understanding the implicit structure of inter-object references in
+object-oriented programs, offers many opportunities for improving the
+implementation of object-oriented systems. The performance of garbage
+collection, cpu caches, virtual memory, distributed object systems,
+and object-oriented data bases all depend to some extent on the
+object-oriented program's aliasing structure.
+
+Aliasing has been extensively studied in areas outside object-oriented
+programs, but features peculiar to object-oriented programs raise many
+new issues that have not yet been adequately addressed. In this
+workshop, we will focus once again on the objects in the
+"object-oriented" systems that we build, rather than the classes which
+exist merely to support these objects. We will examine the state of
+the art in aliasing in object-oriented systems, discuss recent
+progress, and identify open questions. More specifically, the workshop
+will address the following issues:
+
+   * Models of object ownership, aliasing, uniqueness.
+   * Techniques for alias prevention, detection, protection, and
+     advertisement.
+   * Analysis and design techniques and notations for describing aliasing.
+   * Programming language mechanisms for managing aliasing.
+   * Design guidelines, idioms, and patterns for programming with aliasing.
+   * Optimisation techniques based on alias analysis.
+   * Empirical studies of alias structures in programs or alias-based
+     techniques
+   * Experience programming with alias-aware systems.
+
+We encourage not only submissions presenting original research
+results, but also papers that attempt to establish links between
+different approaches and/or papers that include survey
+material. Original research results should be clearly described, and
+their usefulness to practitioners outlined. Paper selection will be
+based on the quality of the submitted material.
+
+The workshop will be held on the 15th of June 1999, as part of the
+ECOOP'99 conference taking place in Lisbon, Portugal.
+
+Submissions:
+
+Both full papers (<15 p.) and position papers (1 p.) are welcome. Send
+submissions to: ecoopws@cui.unige.ch by April 4, 1999 (e-mail in
+PostScript, PDF, or ASCII format is strongly preferred). All
+submissions will be reviewed by the programme committee.
+
+Publication:
+
+1-2 page summaries of accepted papers will be published in the ECOOP
+Workshop Reader, and all accepted submissions will remain available
+from the workshop web page. Selected papers will be included in a
+special issue of Theory and Practice of Object Systems (TAPOS) to be
+published after the workshop.
+
+Important Dates:
+
+   * April 4th: Deadline for submission of papers.
+   * May 3rd: Notification of authors.
+   * June 5th: Final version of papers.
+   * June 15th: IWAOOS.
+
+Programme Committee:
+
+Ole Agesen, Sun Microsystems Laboratories
+Paulo Sergio Almeida, Universidade do Minho
+John Tang Boyland, U. Wisconsin-Milwaukee
+Laurie Hendren, McGill University
+John Hogg, ObjecTime
+Doug Lea, State University of New York at Oswego
+Rustan Leino, COMPAQ Systems Research Center
+James Noble, Microsoft Research Institute, Macquarie University
+Jens Palsberg, Purdue University
+Bill Pugh, University of Maryland
+Jan Vitek, Universite de Geneve, Geneva
+
+Organisers:
+
+James Noble (Australia) kjx@mri.mq.edu.au
+Jan Vitek (Europe) Jan.Vitek@cui.unige.ch
+Doug Lea (America) dl@cs.oswego.edu
+Paulo Sergio Almeida (Local) psa@homer.di.uminho.pt
+
+Questions:
+
+Email ecoopws@cui.unige.ch
+

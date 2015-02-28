@@ -1,0 +1,4846 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 5.1
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%-
+%- Frame ps_prolog 5.0, for use with Frame 5.0 products
+%- This ps_prolog file is Copyright (c) 1986-1996 Adobe Systems, Incoporated.
+%- All rights reserved.  This ps_prolog file may be freely copied and 
+%- distributed in conjunction with documents created using FrameMaker, 
+%- FrameMaker/SGML FrameReader and FrameViewer as long as this 
+%- copyright notice is preserved.
+%-
+%- FrameMaker users specify the proper paper size for each print job in the
+%- "Print" dialog's "Printer Paper Size" "Width" and "Height~ fields.  If the
+%- printer that the PS file is sent to does not support the requested paper
+%- size, or if there is no paper tray of the proper size currently installed, 
+%- then the job will not be printed.  The following flag, if set to true, will
+%- cause the job to print on the default paper in such cases.
+/FMAllowPaperSizeMismatch            false def
+%-
+%- Frame products normally print colors as their true color on a color printer
+%- or as shades of gray, based on luminance, on a black-and white printer. The
+%- following flag, if set to true, forces all non-white colors to print as pure
+%- black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%-
+%- Frame products can either set their own line screens or use a printer's 
+%- default settings. Three flags below control this separately for no 
+%- separations, spot separations and process separations. If a flag
+%- is true, then the default printer settings will not be changed. If it is
+%- false, Frame products will use their own settings from a table based on
+%- the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%-
+%- For any given PostScript printer resolution, Frame products have two sets of 
+%- screen angles and frequencies for printing process separations, which are 
+%- recomended by Adobe. The following variable chooses the higher frequencies
+%- when set to true or the lower frequencies when set to false. This is only
+%- effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%-
+%- The following is a set of predefined optimal frequencies and angles for various
+%- common dpi settings. This is taken from "Advances in Color Separation Using
+%- PostScript Software Technology," from Adobe Systems (3/13/89 P.N. LPS 0043)
+%- and corrolated with information which is in various PPD (4.0) files.
+%-
+%- The "dpiranges" figure is the minimum dots per inch device resolution which
+%- can support this setting. The "low" and "high" values are controlled by the
+%- setting of the FMUseHighFrequencyScreens flag above. The "TDot" flags control
+%- the use of the "Yellow Triple Dot" feature whereby the frequency id divided by
+%- three, but the dot function is "trippled" giving a block of 3x3 dots per cell.
+%-
+%- PatFreq is a compromise pattern frequency for ps Level 2 printers which is close
+%- to the ideal WYSIWYG pattern frequency of 9 repetitions/inch but does not beat
+%- (too badly) against the screen frequencies of any separations for that DPI.
+% This is computed by taking dpi/9 as the ideal pixels per repetition, and then
+% computing a tiling size in printer pixels for each of the four separations as 
+% (dpi/screenFreq)*(cos(screenAngle)+sin(screenAngle)) Actually, this is the same 
+% for Cyan and Magenta). Then, we take a "nice" LCM of the tile sizes close to
+% the desired pattern tile where the beat factor is not more than 2 or 3.
+%
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+%-
+%- PostScript Level 2 printers contain an "Accurate Screens" feature which can
+%- improve process separation rendering at the expense of compute time. This 
+%- flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%-
+%- The following PostScript procedure defines the spot function that Frame
+%- products will use for process separations. You may un-comment-out one of
+%- the alternative functions below, or use your own.
+%-
+%- Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%-
+%- Line function
+%- /FMSpotFunction { pop } def
+%-
+%- Elipse function
+%- /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%-		sqrt 1 exch sub } def
+%-
+%-
+
+/FMversion (5.0) def % matches PS_VERSION in fmprintdriver
+
+% PostScript Level 1 = true, 2 = false
+/fMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+
+% Set up Color vs. Black-and-White
+/FMPColor
+	fMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+%		statusdict /processcolors known {
+%			statusdict /processcolors get exec
+%		} {1} ifelse
+%		1 gt
+		true
+	} ifelse
+def
+
+/FrameDict 400 dict def % should check this value each time changes made
+
+%
+% For NeWS we add a fake errordict, so we can psh files
+%
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+
+%- The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put % save old rangecheck
+errordict /rangecheck {FrameDict /bug true put} put % will flag bug found
+FrameDict /bug false put % flag bug not found
+mark % since we're not sure what will happen next
+%- Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark % junk from readline and rangecheck
+errordict /rangecheck FrameDict /tmprangecheck get put % restore rangecheck
+FrameDict /bug get { % redefine readline if last one got a rangecheck
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop % get a char
+			dup 10 eq {exit} if % exit if LF
+			dup 13 eq {exit} if % exit if CR
+			gstring exch gindex exch put % store it away
+			/gindex gindex 1 add def % bump index
+		} loop
+		pop % eol character
+		gstring 0 gindex getinterval true % simulate real readline
+		} bind def
+	} if
+
+% outer-world defs
+
+/FMshowpage /showpage load def
+/FMquit /quit load def
+
+/FMFAILURE { % enter with two error strings on the stack
+	dup = flush % send a copy of the message to the console
+	FMshowpage % msg on a page by itself, so it can't be, say, black on black
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto show
+	72 220 moveto show
+	FMshowpage % we might be in the middle of some EPS, where "showpage"
+	FMquit % and "quit" are redefined
+	} def % only used once at most, so no bind
+
+/FMVERSION {
+	FMversion ne {
+		(Adobe Frame product version does not match ps_prolog!  Check installation;)
+		(also check ~/fminit and ./fminit for old versions) FMFAILURE
+		} if
+	} def % only used at startup, so no bind
+
+/FMBADEPSF { % Call with bad operator name on stack (as a string)
+	(Adobe's PostScript Language Reference Manual, 2nd Edition, section H.2.4)
+	(says your EPS file is not valid, as it calls X              )
+	dup dup (X) search pop exch pop exch pop length % parmstr errstr errstr indx
+	5 -1 roll % errstr errstr index parmstr
+	putinterval % errstr
+	FMFAILURE
+	} def
+
+% standard concatprocs routine
+/fmConcatProcs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+
+% Put all local variables here in alphabetical order.
+FrameDict begin [
+	/ALDsave
+	/FMdicttop
+	/FMoptop
+	/FMpointsize
+	/FMsaveobject
+	/b
+	/bitmapsave
+	/blut
+	/bpside
+	/bs
+	/bstring
+	/bwidth
+	/c
+	/cf
+	/cs
+	/cynu
+	/depth
+	/edown
+	/fh
+	/fillvals
+	/fw
+	/fx
+	/fy
+	/g
+	/gfile
+	/gindex
+	/grnt
+	/gryt
+	/gstring
+	/height
+	/hh
+	/i
+	/im
+	/indx
+	/is
+	/k
+	/kk
+	/landscape
+	/lb
+	/len
+	/llx
+	/lly
+	/m
+	/magu
+	/manualfeed
+	/n
+	/offbits
+	/onbits
+	/organgle
+	/orgbangle
+	/orgbfreq
+	/orgbproc
+	/orgbxfer
+	/orgfreq
+	/orggangle
+	/orggfreq
+	/orggproc
+	/orggxfer
+	/orgmatrix
+	/orgproc
+	/orgrangle
+	/orgrfreq
+	/orgrproc
+	/orgrxfer
+	/orgxfer
+	/pagesave
+	/paperheight
+	/papersizedict
+	/paperwidth
+	/pos
+	/pwid
+	/r
+	/rad
+	/redt
+	/sl
+	/str
+	/tran
+	/u
+	/urx
+	/ury
+	/val
+	/width
+	/width
+	/ws
+	/ww
+	/x
+	/x1
+	/x2
+	/xindex
+	/xpoint
+	/xscale
+	/xx
+	/y
+	/y1
+	/y2
+	/yelu
+	/yindex
+	/ypoint
+	/yscale
+	/yy
+] { 0 def } forall
+
+% Start of PDF/Acrobat support
+
+% Bind def
+/FmBD {bind def} bind def
+
+systemdict /pdfmark known {
+	/fMAcrobat true def
+
+	% FmPD is a conditional PDFMark
+	/FmPD /pdfmark load def
+	
+	% FmPT is a show text operator which only show up when distiller is active
+	/FmPT /show load def
+	
+	% FmPD2 and FmPA are Acrobat 2.0-specific
+	currentdistillerparams /CoreDistVersion get 2000 ge {
+	
+		% FmPD2 is like FmPD but for Acrobat 2.0-specific PDF
+		/FmPD2 /pdfmark load def
+		
+		% x y/name FmPA
+		% 	is equivalent to
+		% [/Dest/name/View[/FitH x y FmDC exch pop]/DEST FmPD
+		% It is a shortcut for pagragraph Uinique ID designators whic occurr commonly.
+		/FmPA { mark exch /Dest exch 5 3 roll 
+				/View [ /XYZ null 6 -2 roll FmDC exch pop null] /DEST FmPD 
+		}FmBD
+	} {
+		% These are No-Ops for Distiller 1.0
+		/FmPD2 /cleartomark load def
+		/FmPA {pop pop pop}FmBD
+	} ifelse
+} {
+	% these are the No-Ops for regular PostScript
+	/fMAcrobat false def
+	/FmPD /cleartomark load def
+	/FmPD2 /cleartomark load def
+	/FmPT /pop load def
+	/FmPA {pop pop pop}FmBD
+} ifelse
+
+% This convert a set of X Y coordinates from the current user space to the default
+% PostScript coordinates needed by some pdfmark variants. We also convert to 
+% integer because the distiller doesn't always like floats!
+/FmDC {
+	transform fMDefaultMatrix itransform cvi exch cvi exch
+}FmBD
+
+% This converts four numbers into a bounding box making sure the first two are maller than the last two
+/FmBx {
+	dup 3 index lt {3 1 roll exch} if 
+	1 index 4 index lt {4 -1 roll 3 1 roll exch 4 1 roll} if
+}FmBD
+
+% End of PDF/Acrobat support
+
+%
+% Color separation code
+%
+
+% Constants.
+
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+
+/fMNegative false def % we are inverting the page
+
+% Variables.
+
+/FrameSepIs FMnone def % separation we are printing
+% If FrameSepIs is FMcustom, this is the custom color
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def % c m y k r g b
+
+% Utility routines
+
+/FrameColorEpsilon .001 def	% epsilon by which values can differ and sill be equal
+/eqepsilon {		% v1 v2 eqeps bool
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+
+% are the cmyk and cmykrgb arrays on the stack the same color?
+/FrameCmpColorsCMYK { % [ c1 m1 y1 k1 ] [ c2 m2 y2 k2 r2 g2 b2] -> bool
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+% are the rgb and cmykrgb arrays on the stack the same color?
+/FrameCmpColorsRGB { % [ r1 g1 b1 ] [ c2 m2 y2 k2 r2 g2 b2] -> bool
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+
+% convert r g b to c m y k
+/RGBtoCMYK { % r g b
+	1 exch sub % r g y
+	3 1 roll % y r g
+	1 exch sub % y r m
+	3 1 roll % m y r
+	1 exch sub % m y c
+	3 1 roll % c m y
+	3 copy % c m y c m y
+	2 copy % c m y c m y m y
+	le { pop } { exch pop } ifelse % c m y c min(m,y)
+	2 copy % c m y c min(m,y) c min(m,y)
+	le { pop } { exch pop } ifelse % c m y min(c, min(m,y))
+	dup dup dup % c m y k k k k
+	6 1 roll % c k m y k k k
+	4 1 roll % c k m k y k k
+	7 1 roll % k c k m k y k
+	sub % k c k m k y
+	6 1 roll % y k c k m k
+	sub % y k c k m
+	5 1 roll % m y k c k
+	sub % m y k c
+	4 1 roll % c m y k 
+} bind def
+/CMYKtoRGB { % c m y k CMYKtoRGB r g b
+	dup dup 4 -1 roll add 						  % c m k k y+k
+	5 1 roll 3 -1 roll add 						  % y+k c k m+k
+	4 1 roll add 								  % m+k y+k c+k
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  % r m+k y+k
+	1 exch sub dup 0 lt {pop 0} if exch 	      % r b m+k
+	1 exch sub dup 0 lt {pop 0} if exch	  		  % r g b
+} bind def
+
+% Public routines
+
+
+% Happens at the top of each page that is a separation
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+% Tell the separation code that this separation is for a custom color
+/FrameSetSepColor { % c m y k r g b
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+% Tell the separation code that this separation is Cyan
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+% Tell the separation code that this separation is Magenta
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+% Tell the separation code that this separation is Yellow
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+% Tell the separation code that this separation is Black
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+% Tell the separation code we are not doing a separation
+/FrameNoSep { %
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+
+% Initialize the separation code with all the custom colors we are
+% separating (not process colors)
+/FrameSetSepColors { % list of arrays of [c m y k r g b] count 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  % array of arrays of colors we are separating
+	exch def end
+	} bind def
+
+% is this color array in the array of custom color separations?
+/FrameColorInSepListCMYK { % [ c m y k ] -> bool
+	FrameSepColors {  % color elem-of-array
+       		exch dup 3 -1 roll % color color elem
+       		FrameCmpColorsCMYK % color bool
+       		{ pop true exit } if
+    	} forall % exits with either [color] or true
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { % [ r g b ] -> bool
+	FrameSepColors {  % color elem-of-array
+       		exch dup 3 -1 roll % color color elem
+       		FrameCmpColorsRGB % color bool
+       		{ pop true exit } if
+    	} forall % exits with either [color] or true
+	dup true ne {pop false} if
+	} bind def
+
+% Level 1 color operators saved and redefined
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+
+% Setgray patch
+/setgray { % num
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ % go to white unless the current sep color is black
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { % r g b
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] % r g b [ r g b ]
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor % safe since we will overwrite the color state
+		currentrgbcolor  % r g b - Let PostsCript to the conversion.
+		setrgbcolor % call our version
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		RealSetrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { % c m y k
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+
+% Set up a prototype pattern for PostScript Level 2
+fMLevel1 { 
+	% set up screen functions for the patterns in PS level 1
+	% each entry contains an angle, spot function, flipped spot function,
+	% gray level and frequency multiplier.
+	/patScreenDict 7 dict dup begin
+		<0f1e3c78f0e1c387> [ 45  { pop } {exch pop} 		.5   2 sqrt] FmBD
+		<0f87c3e1f0783c1e> [ 135 { pop } {exch pop}			.5   2 sqrt] FmBD
+		<cccccccccccccccc> [ 0   { pop } dup				.5   2	   ] FmBD
+		<ffff0000ffff0000> [ 90  { pop } dup				.5   2	   ] FmBD
+		<8142241818244281> [ 45  { 2 copy lt {exch} if pop}	dup .75  2 sqrt] FmBD
+		<03060c183060c081> [ 45  { pop } {exch pop}			.875 2 sqrt] FmBD
+		<8040201008040201> [ 135 { pop } {exch pop}			.875 2 sqrt] FmBD
+	end def
+} { % prototype level 2 pattern dictionary
+	% define some PostScript procedures for known jaggy patterns.
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		% Always 1 for PS Level 2
+		/PaintType 2 def		% Uncolored pattern
+		/TilingType 3 def		% constant spacing and faster tiling
+		/BBox [ 0 0 8 8 ] def 	% bounding box
+		/XStep 8 def			% X offset
+		/YStep 8 def			% Y offset
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} ifelse
+
+%combineColor puts together the current gray value (which could also be
+%a fraction of on bits for a fill pattern and the current color and calls
+%the appropriate function
+%
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode fMLevel1 or not {
+			% Level 2 pattern
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				fMAcrobat not FMPColor graymode and and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { % separation case
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode fMLevel1 or not {
+			% Level 2 pattern
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not fMLevel1 and {
+				% Level 1 patterns are either all there or not there at all
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/fMDefaultMatrix matrix defaultmatrix def
+/fMatrix2 matrix def
+/dpi    72 0 fMDefaultMatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+% freq and sangle are used for ps Level 1 pattern building.
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 fMDefaultMatrix dtransform exch atan def
+	sangle fMatrix2 rotate 
+	fMDefaultMatrix fMatrix2 concatmatrix 
+	dup 0 get /sflipx exch def
+	    3 get /sflipy exch def
+
+%
+% screen index depending on dpi
+%	- screenIndex smallint
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+
+%
+% These routines get the standard Adobe frequencies, angles, and spot functions
+% depending on the DPI
+%
+% - getCyanScreen freq angle spotfunction
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+
+%
+% - getMagentaScreen freq angle spotFunction
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+
+%
+% - getYellowScreen freq angle spotFunction
+% note that some of these use a "tripple dot" function at 1/3 the frequency
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+
+%
+% - getBlackScreen freq angle spotFunction
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+
+%
+% - getSpotScreen freq angle spotFunction
+/getSpotScreen {
+	getBlackScreen
+} bind def
+
+%
+% - getCompositeScreen freq angle spotFunction
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+
+% FmSetScreen sets the screen for either PostScript Level 1 or Level 2 and optionally
+% sets the accuratescreens flag in the latter case
+% freq angle spotfunction FMSetScreen -
+/FMSetScreen 
+	fMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+
+% This sets the default screen as was set at the beginning of the job
+% - setDefaultScreen -
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+
+% This sets the current screen depending on FrameSepIs
+% - setCurrentScreen -
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+
+
+end
+
+% End of Color separation code
+%
+	
+/FMDOCUMENT { % xscale yscale edown negative paperwidth paperheight manfeed numcopies numfonts
+	array /FMfonts exch def % Why isn't this in FrameDict???
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /fMNegative exch def % invert page
+	0 ne /edown exch def % flip page along y axis
+	/yscale exch def
+	/xscale exch def
+
+	fMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def % some PS's leave junk on dict ...
+		/FMoptop count def % ...or on operand stack...
+		setpapername % This stuff may alter the transfer/screen/angle
+		manualfeed {true} {papersize} ifelse % true->more work to do
+		{manualpapersize} {false} ifelse % true->more work to do
+		{desperatepapersize} {false} ifelse % true->failed completely
+		{papersizefailure} if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for %...if tray not installed
+		}
+		{2 dict
+		 dup /PageSize [paperwidth paperheight] put
+		 manualfeed {dup /ManualFeed manualfeed put} if
+		 {setpagedevice} stopped {papersizefailure} if
+		}
+	ifelse % fMLevel1
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+
+			currentcolortransfer 
+			fMNegative {
+				1 1 4 { 
+					pop { 1 exch sub } fmConcatProcs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		fMNegative {
+			{ 1 exch sub } fmConcatProcs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+
+	end % FrameDict
+} def % only used at startup, so no bind
+
+/FMBEGINPAGE { % pagewidth pageheight landscape color-arrays count
+	FrameDict begin % for the whole page...
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { % check for landscape
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+% paint the whole page in "white".  If the page is inverted, then
+% this will actually paint our black background
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave % for CLIP
+} def % only used infrequently, so no bind
+
+/FMENDPAGE {
+	grestore % for CLIP
+	pagesave restore
+	end % FrameDict
+	showpage
+	} def % only used infrequently, so no bind
+
+/FMFONTDEFINE { % fontindex nonstd_encoding fontname -- 
+	FrameDict begin
+	findfont % fontindex nonstd_encoding font
+	ReEncode % fontindex font'
+	1 index exch % fontindex fontindex font'
+	definefont % fontindex font"
+	FMfonts 3 1 roll %  FMfonts fontindex font"
+	put
+	end % FrameDict
+	} def % only used infrequently, so no bind
+
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end % framedict
+	} def % Only called once, so no bind
+
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end % FrameDict
+	} def % only used infrequently, so no bind
+
+% Set things to a known, quiescent state, for when we switch to another writer
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray % Not FMsetgray; only called outside of our environment!
+	} bind def
+
+/FMBEGINEPSF { % <theta> llx lly urx ury fw fh fx fy
+	end % FrameDict
+	/FMEPSF save def % in userdict
+	/showpage {} def % this def is in userdict
+%- See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+%- "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def % FMBADEPSF knows this is the longest!
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+%	/initmatrix {(initmatrix) FMBADEPSF} def	% Aldus Freehand 4.0 epsf uses this harmlessly <Gus 4/26/95>
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS % in case we're in a strange state
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall % neat trick
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale % then scale
+	llx neg lly neg translate % then compensate for LL offset 
+	/FMdicttop countdictstack 1 add def % high-water mark of dict stack
+	/FMoptop count def % tricky! "/FMoptop" on stack
+	} bind def
+
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for % clear EPS junk from operand stack
+	countdictstack -1 FMdicttop {pop end} for % ditto for dict stack
+	FMEPSF restore
+	FrameDict begin % for the whole page...
+	} bind def
+
+FrameDict begin % put most defs here
+
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+
+/pagedimen { % name width height
+	paperheight sub abs 16 lt exch % 16pt is an arbitrary slop amount
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+
+/setpapername { % Already set up: paperwidth paperheight and manualfeed
+	/papersizedict 14 dict def % one for /papername, one for /unknown
+	papersizedict begin
+	/papername /unknown def % in case no match
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end % return true if more work to do
+	} bind def
+
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped % return true if more work to do
+	} bind def
+
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped % return true iff failed
+		end
+		} {true} ifelse % return true iff failed
+	} bind def
+
+/papersizefailure {
+	FMAllowPaperSizeMismatch not
+		{
+(The requested paper size is not available in any currently-installed tray)
+(Edit the PS file to "FMAllowPaperSizeMismatch true" to use default tray)
+		 FMFAILURE } if
+	} def
+
+%
+% Font re-encoding to include diacritics
+% 
+/DiacriticEncoding [
+
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+
+] def
+
+/ReEncode { % nonstd_encoding font -- reencodedfont
+	dup % nonstd_encoding font font
+	length % nonstd_encoding font dictlength
+	dict begin % nonstd_encoding font % currentdict = newdict
+	{% forall % forall is over font to be copied
+	1 index /FID ne % skip FID
+		{def} % defs go into newfontdict which is currentdict
+		{pop pop} ifelse % copy all keys including /Encoding
+	} forall % nonstd_encoding
+	0 eq {/Encoding DiacriticEncoding def} if % --
+	currentdict % push a copy of the copied font dict onto operand stack
+	end % font' % before popping it off dictionary stack
+	} bind def
+
+FMPColor 
+	% setup procs for color printing
+	{
+
+	/BEGINBITMAPCOLOR { % iw, ih, width, height, theta, x y 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { % iw, ih, width, height, theta, x y 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/BEGINBITMAPCMYK { 
+		BITMAPCMYK } def
+	/BEGINBITMAPCMYKc { 
+		BITMAPCMYKc } def
+	}
+	% setup procs for B&W printing
+	{
+	/BEGINBITMAPCOLOR { % iw, ih, width, height, theta, x y 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { % iw, ih, width, height, theta, x y 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/BEGINBITMAPCMYK { 
+		BITMAPCMYKGRAY } def
+	/BEGINBITMAPCMYKc { 
+		BITMAPCMYKGRAYc } def
+	}
+ifelse
+
+/K { % c m y k r g b SEPARATION
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+%
+% graymode is true if we are just doing gray fills, this way do not keep calling
+% setscreen. I don't know what the cost is on calling setscreen with defaults, but
+% this is easy to keep track of, and we know for sure we aren't wasting cycles.
+% if graymode is false and fMLevel1 is false, then we are using Level 2 patterns.
+%
+/graymode true def
+
+% used by level 1 patterns
+% defaultflip matrixentry fmGetFlit -> eith -1 or 1
+fMLevel1 {
+	/fmGetFlip {
+		fMatrix2 exch get mul 0 lt { -1 } { 1 } ifelse
+	} FmBD
+} if
+
+/setPatternMode {
+	fMLevel1 {
+		2 index patScreenDict exch known {
+			pop pop
+			patScreenDict exch get aload pop % angle spot fspot gray mult
+			freq 								% freq
+			mul									% times multiplier
+			5 2 roll							% angle spot fspot gray mult freq -> gray freq angle spot fspot
+			fMatrix2 currentmatrix 1 get 0 ne {
+				3 -1 roll 90 add 3 1 roll 		% landscape
+				sflipx 1 fmGetFlip sflipy 2 fmGetFlip neg mul
+			} {  								% portrait     
+				sflipx 0 fmGetFlip sflipy 3 fmGetFlip mul 
+			} ifelse
+			0 lt {exch pop} {pop} ifelse 		% take regular or flipped spot function
+			fMNegative { 
+				{neg} fmConcatProcs 			% invert spot function
+			} if
+			bind
+			% we need to bypass any screen filter and go directly to systemdict
+			% to avoid problems with Kodak Precision calibration software
+			% <Gus 9/13/93>
+			systemdict /setscreen get exec		% leave graylevel on stack
+			/FrameCurGray exch def
+		} {
+			/bwidth  exch def
+			/bpside  exch def
+			/bstring exch def
+			/onbits 0 def  /offbits 0 def
+			freq sangle landscape {90 add} if 
+				{/ypoint exch def
+				 /xpoint exch def
+				 /xindex xpoint 1 add 2 div bpside mul cvi def
+				 /yindex ypoint 1 add 2 div bpside mul cvi def
+				 bstring yindex bwidth mul xindex 8 idiv add get
+				 1 7 xindex 8 mod sub bitshift and 0 ne fMNegative {not} if
+				 {/onbits  onbits  1 add def 1}
+				 {/offbits offbits 1 add def 0}
+				 ifelse
+				}
+				setscreen
+			offbits offbits onbits add div fMNegative {1.0 exch sub} if
+			/FrameCurGray exch def
+		} ifelse
+	} { % Level 2 version
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { % not in cache
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+%			9 orgfreq 
+%				organgle sin abs organgle cos abs add div
+%				dup 16 div round dup 0 le {pop 1} if  % Unix pattern size
+%			    dup  9 div round dup 0 le {pop 1} if  % Mac larger (WYSIWYG) size
+%					div div dup matrix scale % This gives Unix pattern size.
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		fMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+
+/lnormalize { % line widths are always odd so that arrow heads work
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+
+/H { % THICK
+	lnormalize setlinewidth
+	} bind def
+
+/Z {
+	setlinecap
+	} bind def
+	
+% This is used to fill or stroke white behind a Level 2 pattern
+/PFill {
+	graymode fMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode fMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+
+/X { % TEXTURE
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} % Silly to pass parameters here
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+
+/V { % FILL
+	PFill gsave eofill grestore
+	} bind def
+
+/Vclip {
+	clip
+	} bind def
+
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+
+/N { % PEN
+	PStroke
+	} bind def
+
+/Nclip {
+	strokepath clip newpath
+	} bind def
+
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+
+/L { % POLYLINE
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+
+/Y { % POLYGON !!!
+	L % POLYLINE
+	closepath
+	} bind def
+
+/R { % RECT x1 y1 x2 y2
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y % POLYGON
+	} bind def
+
+/rarc % Leaves all sorts of junk on the operand stack for caller to clear off
+	{rad % arcto might fail if we're scaled way down
+	 arcto
+	} bind def
+
+/RR { % ROUNDRECT x1 y1 x2 y2 r
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if % in case rarc failed for degenerate arcs
+	cleartomark
+	} bind def
+
+/RRR { % ROUNDRECT ROTATED xs ys x1 y1 x2 y2 x3 y3 x4 y4 r
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto % eats xs ys
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+
+/C { % CLIP
+	grestore
+	gsave
+	R % RECT
+	clip
+	setCurrentScreen
+} bind def
+
+/CP { % CLIPPOLY p1x p1y p2x p2y ... n 
+	grestore
+	gsave
+	Y % POLYGON
+	clip
+	setCurrentScreen
+} bind def
+
+/F { % FONT
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+
+/Q { % POINTSIZE (& font)
+	/FMpointsize exch def
+	F % could be slightly optimized here
+	} bind def
+
+/T { % TEXT <string> <x> <y>
+	moveto show
+	} bind def
+
+% Callers of RF (rotate/flip) must gsave (or save) first; (g)restore when done
+/RF { % <flip> <theta>
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+
+/TF { % TEXTFLIPROTATE <string> <flip> <theta> <x> <y>
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+
+/P { % PADTEXT <pad> <string> <x> <y>
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+
+/PF { % PADTEXTFLIPROTATE <pad> <string> <flip> <theta> <x> <y>
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+
+/S { % SPREADTEXT <spread> <string> <x> <y>
+	moveto
+	0 exch ashow
+	} bind def
+
+/SF { % SPREADTEXTFLIPROTATE <spread> <string> <flip> <theta> <x> <y>
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+
+/B { % PADSPREADTEXT <pad> <spread> <string> <x> <y>
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+
+/BF { % PADSPREADTEXTFLIPROTATE <pad> <spread> <string> <flip> <theta> <x> <y>
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+
+/G { % ARCFILL theta1 theta2 width height x y
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto % eats x y
+	dnormalize scale % eats width height
+	0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch % theta1 theta2 width height x y
+    normalize 2 index 2 div sub exch 3 index 2 div add exch % theta1 theta2 width height x y
+    translate
+    scale % eats width height
+    0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+
+/Gclip { % ARCFILL theta1 theta2 width height x y swid
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto % eats x y
+	dnormalize scale % eats width height
+	0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+
+/GG { % ARCFILL ROTATED theta1 theta2 width height angle x y
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto % eats x y
+	rotate % eats angle
+	dnormalize scale % eats width height
+	0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+
+/GGclip { % ARCFILL ROTATED theta1 theta2 width height angle x y
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto % eats x y
+    rotate % eats angle
+    dnormalize scale % eats width height
+    0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+
+/GGstrk { % ARCFILL ROTATED swid theta1 theta2 width height angle x y
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto % eats x y
+    rotate % eats angle
+    dnormalize scale % eats width height
+    0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+
+/A { % ARCPEN theta1 theta2 width height x y
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch % theta1 theta2 width height x y
+	normalize 2 index 2 div sub exch 3 index 2 div add exch % theta1 theta2 width height x y
+	translate 
+	scale % eats width height
+	0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto % eats x y
+	dnormalize scale % eats width height
+	0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+
+/Astrk {
+	Gstrk
+} bind def
+
+/AA { % ARCPEN ROTATED theta1 theta2 width height angle x y
+	gsave
+	savematrix
+	newpath
+	% theta1 theta2 width height angle x y
+	3 index 2 div add exch 4 index 2 div sub exch 
+	% theta1 theta2 width height angle x y
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate % eats x y
+	rotate % eats angle
+	scale % eats width height
+	0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto % eats x y
+    rotate % eats angle
+    dnormalize scale % eats width height
+    0.0 0.0 1.0 5 3 roll arc % eats theta1 theta2
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+
+/AAstrk {
+	GGstrk
+} bind def
+
+/BEGINPRINTCODE { % -x -y width height
+	/FMdicttop countdictstack 1 add def % high-water mark of dict stack
+	/FMoptop count 7 sub def % tricky! 7 params on stack, plus "/FMoptop"
+	/FMsaveobject save def
+	userdict begin % insulate user from FrameDict; not in /FMdicttop count
+	/showpage {} def % this def is in userdict
+	FMNORMALIZEGRAPHICS % in case we're in a strange state
+	3 index neg 3 index neg translate
+	} bind def
+
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for % clear user junk from operand stack
+	countdictstack -1 FMdicttop {pop end} for % ditto for dict stack
+	FMsaveobject restore % this is now safe, unless user very malicious
+	} bind def
+
+/gn { % get a number in a funny encoding scheme
+	0 % result on stack
+	{	46 mul % shift old digits
+		cf read pop % get next character
+		32 sub % zero is the space character
+		dup 46 lt {exit} if % quit if we're the last digit
+		46 sub add % add in this digit and loop around for next
+		} loop
+	add % result on stack
+	} bind def
+
+/cfs { % create a string of length "sl" filled with "val"s
+	/str sl string def % create string as "str"
+	0 1 sl 1 sub {str exch val put} for % fill array
+	str def % define real array name, too; name is on stack from caller
+	} bind def
+
+/ic [ % "case" stmt list of procedures that the image commands should call
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+
+/ms { % make all the strings
+	/sl exch def % remember length of currently existing strings
+	/val 255 def % that's white
+	/ws cfs % make "ws" a string filled with white
+	/im cfs % and "im" is a complete image scanline
+	/val 0 def % that's black
+	/bs cfs % make "bs" a string filled with black
+	/cs cfs % here's where we'll put complete command lines
+	} bind def
+
+400 ms % make strings that will be plenty long for most applications
+
+/ip { % image procedure; reads and executes commands to make scanlines
+	is % leave image string and...
+	0 % ...image position on stack all through this procedure
+	cf cs readline pop % get a string of commands
+	{	ic exch get exec % execute next command
+		add % all commands leave a length on the stack; update pos
+		} forall % step through all commands
+	pop % get rid of image position pointer
+	% image string left on stack, so it's returned to image primitive
+	} bind def
+/rip { % this is similar to ip above, except for 24 bit images
+	   % this takes an extra argument, the width of the image
+	  % do red
+	  bis ris copy pop % copy blue to red
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop % remove is and position from stack
+	  ris gis copy pop % copy red to green
+	  dup is exch % position of green is width bytes into is
+	  % do green
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop % copy green to blue
+	  dup add is exch % position of blue is 2*width bytes into is
+	  % do blue
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+
+/rip4 { % this is similar to ip above, except for 32 bit images
+	   % this takes an extra argument, the width of the image
+	  % do cyan
+	  kis cis copy pop % copy black to cyan
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop % remove is and position from stack
+	  cis mis copy pop % copy cyan to magenta
+	  dup is exch % position of magenta is width bytes into is
+	  % do magenta
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  mis yis copy pop % copy magenta to yellow
+	  dup dup add is exch % position of yellow is 2*width bytes into is
+	  % do yellow
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  yis kis copy pop % copy yellow to black
+	  3 mul is exch % position of black is 3*width bytes into is
+	  % do black
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+
+
+/wh { % fill a number of bytes with "white"
+	/len exch def % number of bytes to fill
+	/pos exch def % position to put them at
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len % remember where we got to
+	} bind def
+
+/bl { % fill a number of bytes with "black"
+	/len exch def % number of bytes to fill
+	/pos exch def % position to put them at
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len % remember where we got to
+	} bind def
+
+/s1 1 string def
+
+/fl { % fill a number of bytes with a specific hex value
+	/len exch def % number of bytes to fill
+	/pos exch def % position to put them at
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len % remember where we got to
+	} bind def
+
+/hx { % read hex bytes directly; on entry, stack has <str> <pos> <len>
+	3 copy getinterval % stack has <str> <pos> <len> <substr>
+	cf exch readhexstring pop pop % stack back to <str> <pos> <len>
+	} bind def
+
+/wbytes { % width depth -> wb      find width in bytes  given 1, 2, 8 or 24 or 32
+      dup dup
+      8 gt { pop 8 idiv mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { % iw, ih, width, height, theta, x y 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { % iw, ih, width, height, theta, x y 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { % iw, ih, width, height, theta, x y 
+	2 {} COMMONBITMAPc
+	} bind def
+%
+% Common routine for imaging compressed images
+%
+/COMMONBITMAPc { % iw, ih, width, height, theta, x y depth proc
+		 % (x,y) is the lower left corner of the image
+	/cvtProc exch def
+	/depth exch def
+	gsave
+	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/lb width depth wbytes def % so "lb" has width in bytes
+	sl lb lt {lb ms} if % maybe make bigger strings
+	/bitmapsave save def % LW+ has a buggy memory leak!
+	cvtProc                % run the desired proc after save has occurred
+	/is im 0 lb getinterval def % image substring
+	ws 0 lb getinterval is copy pop % whiten it
+	/cf currentfile def % evaluate "currentfile" only once
+	width height depth [width 0 0 height neg 0 height] % top to bottom
+	{ip} image % zap!
+	bitmapsave restore % avoid occasional disaster on the LW+
+	grestore
+	} bind def
+/BEGINBITMAPBW { % iw, ih, width, height, theta, x y 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { % iw, ih, width, height, theta, x y 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { % iw, ih, width, height, theta, x y 
+	2 {} COMMONBITMAP
+	} bind def
+%
+% Common routine for uncompressed images
+%
+/COMMONBITMAP { % iw, ih, width, height, theta, x y depth proc
+	/cvtProc exch def
+	/depth exch def
+	gsave
+	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/bitmapsave save def % LW+ has a buggy memory leak!
+	cvtProc              % run the desired proc after save has occurred
+	/is width depth wbytes string def
+	/cf currentfile def % evaluate "currentfile" only once
+	width height depth [width 0 0 height neg 0 height] % top to bottom
+	{cf is readhexstring pop} image
+	bitmapsave restore % avoid occasional disaster on the LW+
+	grestore
+	} bind def
+
+%
+% All this hairy color setup stuff gus wrote on the mac, I just copied and
+% changed the variable names to be humanly readable.
+
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+
+fMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/kk cynu magu min yelu min def
+% The HP PaintJet XL300 ignores the gray transfer curve but still sets its
+% default black generation and undercolor removal functions as if it is
+% used. This causes black colors not to work. Bug#56844 <Gus 2/22/93>
+% - We go back to the old (correct?) way of doing this since this code
+% is now bypassed for PS Level 2 printers in favor of colorSetup2 which
+% uses PS Level 2 indexed color, which is much cleaner. <Gus 3/3/93>
+		/u kk currentundercolorremoval exec def
+%-		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 kk currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+% Here, we set up indexed color for imaging on PS Level 2 without mucking around
+% with the transfer functions.
+
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+
+%
+% Setup a transfer function to convert psuedo color values into grayscale
+% values based on the color lookup tables.
+%
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch fmConcatProcs settransfer
+} bind def
+%
+% image a color image
+%
+/BITMAPCOLOR { % iw, ih, width, height, theta, x y 
+	/depth 8 def
+	gsave
+	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/bitmapsave save def
+	fMLevel1 {	
+		colorsetup
+		/is width depth wbytes string def
+		/cf currentfile def % evaluate "currentfile" only once
+		width height depth [width 0 0 height neg 0 height] % top to bottom
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is width depth wbytes string def
+		/cf currentfile def % evaluate "currentfile" only once
+		7 dict dup begin
+			/ImageType 1 def
+			/Width width def
+			/Height height def
+			/ImageMatrix [width 0 0 height neg 0 height] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent depth def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+%
+% Compressed color image rendering
+%
+/BITMAPCOLORc { % iw, ih, width, height, theta, x y 
+	/depth 8 def
+	gsave
+	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/lb width depth wbytes def % so "lb" has width in bytes
+	sl lb lt {lb ms} if % maybe make bigger strings
+	/bitmapsave save def 
+	fMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def % image substring
+		ws 0 lb getinterval is copy pop % whiten it
+		/cf currentfile def % evaluate "currentfile" only once
+		width height depth [width 0 0 height neg 0 height] % top to bottom
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def % image substring
+		ws 0 lb getinterval is copy pop % whiten it
+		/cf currentfile def % evaluate "currentfile" only once
+		7 dict dup begin
+			/ImageType 1 def
+			/Width width def
+			/Height height def
+			/ImageMatrix [width 0 0 height neg 0 height] def
+			/DataSource {ip} bind def
+			/BitsPerComponent depth def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/depth 24 def
+        gsave
+ 	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/lb width depth wbytes def % so "lb" has width in bytes
+	sl lb lt {lb ms} if % maybe make bigger strings
+	/bitmapsave save def 
+        
+	/is im 0 lb getinterval def	% Whole scanline
+	/ris im 0 width getinterval def	% red part of im
+	/gis im width width getinterval def	% green part of im
+	/bis im width 2 mul width getinterval def % blue part of im
+        
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	width height 8 [width 0 0 height neg 0 height] 
+	{width rip pop ris} {gis} {bis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCMYKc { 
+	/depth 32 def
+        gsave
+ 	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/lb width depth wbytes def % so "lb" has width in bytes
+	sl lb lt {lb ms} if % maybe make bigger strings
+	/bitmapsave save def 
+        
+	/is im 0 lb getinterval def	% Whole scanline
+	/cis im 0 width getinterval def	% cyan part of im
+	/mis im width width getinterval def	% magenta part of im
+	/yis im width 2 mul width getinterval def % yellow part of im
+	/kis im width 3 mul width getinterval def % black part of im
+        
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	width height 8 [width 0 0 height neg 0 height] 
+	{width rip4 pop cis} {mis} {yis} {kis} true 4 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		% rotate about center of image
+		3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+		4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+		translate		% iw ih width height theta
+		rotate			% iw ih width height
+		1 index 2 div neg	% iw ih width height -(width/2)
+		1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+		translate		% iw ih width height
+		scale			% iw ih
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /gis width string def
+        /bis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPCMYK { 
+        gsave
+		% rotate about center of image
+		3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+		4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+		translate		% iw ih width height theta
+		rotate			% iw ih width height
+		1 index 2 div neg	% iw ih width height -(width/2)
+		1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+		translate		% iw ih width height
+		scale			% iw ih
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /mis width string def
+        /yis width string def
+        /kis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop } 
+        { cf mis readhexstring pop } 
+        { cf yis readhexstring pop } 
+        { cf kis readhexstring pop } 
+        true 4 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+%
+% image a color image to a b&width device
+%
+/BITMAPTRUEGRAYc { 
+	/depth 24 def
+        gsave
+	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/lb width depth wbytes def % so "lb" has width in bytes
+	sl lb lt {lb ms} if % maybe make bigger strings
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	% Whole scanline
+	/ris im 0 width getinterval def	% red part of im
+	/gis im width width getinterval def	% green part of im
+	/bis im width 2 mul width getinterval def % blue part of im
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        {width rip pop ris gis bis width gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPCMYKGRAYc { 
+	/depth 32 def
+        gsave
+	% rotate about center of image
+	3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+	4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+	translate		% iw ih width height theta
+	rotate			% iw ih width height
+	1 index 2 div neg	% iw ih width height -(width/2)
+	1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+	translate		% iw ih width height
+	scale			% iw ih
+	/height exch def /width exch def
+	/lb width depth wbytes def % so "lb" has width in bytes
+	sl lb lt {lb ms} if % maybe make bigger strings
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	% Whole scanline
+	/cis im 0 width getinterval def	% cyan part of im
+	/mis im width width getinterval def	% magenta part of im
+	/yis im width 2 mul width getinterval def % yellow part of im
+	/kis im width 3 mul width getinterval def % black part of im
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        {width rip pop cis mis yis kis width cgray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/cgray { % c m y k width
+        /ww exch def
+        /k exch def
+        /y exch def
+        /m exch def
+        /c exch def
+        0 1 ww 1 sub { /i exch def c i get m i get y i get k i get CMYKtoRGB
+				.144 mul 3 1 roll .587 mul 3 1 roll .299 mul add add
+				c i 3 -1 roll floor cvi put } for
+        c
+ 		} bind def
+/gray { % r g b width
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		% rotate about center of image
+		3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+		4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+		translate		% iw ih width height theta
+		rotate			% iw ih width height
+		1 index 2 div neg	% iw ih width height -(width/2)
+		1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+		translate		% iw ih width height
+		scale			% iw ih
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /gis width string def
+        /bis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop width gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPCMYKGRAY { 
+        gsave
+		% rotate about center of image
+		3 index 2 div add exch	% iw ih width height theta y+(height/2) x
+		4 index 2 div add exch	% iw ih width height theta x+(width/2) y+(height/2)
+		translate		% iw ih width height theta
+		rotate			% iw ih width height
+		1 index 2 div neg	% iw ih width height -(width/2)
+		1 index 2 div neg	% iw ih width height -(width/2) -(height/2)
+		translate		% iw ih width height
+		scale			% iw ih
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /yis width string def
+        /mis width string def
+        /kis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop 
+          cf mis readhexstring pop 
+          cf yis readhexstring pop 
+          cf kis readhexstring pop width cgray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { % iw, ih, width, height, theta, x y 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { % iw, ih, width, height, theta, x y 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end % of FrameDict definitions
+
+% OPI stuff
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+
+% Dashed lines stuff
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+
+%%EndProlog
+%%BeginSetup
+(5.0) FMVERSION
+1 1 0 0 595.28 841.89 0 1 16 FMDOCUMENT
+0 0 /Times-Roman FMFONTDEFINE
+1 0 /Times-Bold FMFONTDEFINE
+2 0 /Courier FMFONTDEFINE
+3 0 /Times-Italic FMFONTDEFINE
+4 0 /Courier-Bold FMFONTDEFINE
+5 0 /Helvetica FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: A4
+%%EndPaperSize
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(1) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 18 Q
+(A Model of Attacks of Malicious Hosts Against Mobile) 91.48 770.36 T
+(Agents) 273.98 746.36 T
+0 12 Q
+(Fritz Hohl) 275.64 714.36 T
+0 0 0 1 0 0 0 K
+0 10 Q
+(Institute of Parallel and Distributed High-Performance Systems \050IPVR\051,) 156.32 696.7 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(University of Stuttgart, Germany) 234.37 684.7 T
+0 0 0 1 0 0 0 K
+2 12 Q
+(Fritz.Hohl@informatik.uni-stuttgart.de) 163.67 666.36 T
+0 F
+(Last Modification: 15 June 1998 3:33 pm) 200.81 647.36 T
+3 F
+(4th Workshop on Mobile Object Systems \050MOS\32598\051: Secure Internet Mobile Computations) 83.17 628.36 T
+1 F
+(Biography) 73.7 604.36 T
+0 F
+0.14 (Fritz Hohl finished his studies in Computer Science at the University of Stuttgart, Germany in) 73.7 585.36 P
+0.4 (1995. Since then, he works as a research assistant at the Distributed Systems Research Group) 73.7 571.36 P
+-0.57 (of the Institute of Parallel and Distributed High-Performance Systems at the University of Stutt-) 73.7 557.36 P
+0.18 (gart. His research interests are mobile agents, especially the security aspects of agent systems.) 73.7 543.36 P
+0.37 (Currently, he is working on an approach that tries to protect agents from attacks by malicious) 73.7 529.36 P
+(hosts.) 73.7 515.36 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "1" 1
+%%Page: "2" 2
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(2) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 18 Q
+(A Model of Attacks of Malicious Hosts Against Mobile) 91.48 770.36 T
+(Agents) 270.38 746.36 T
+1 14.4 Q
+(1) 323.37 753.56 T
+0 0 0 1 0 0 0 K
+0 10 Q
+(Fritz Hohl) 279.78 707.7 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 9 Q
+(Institute of P) 170.89 687.36 T
+(arallel and Distrib) 217.26 687.36 T
+(uted High-Performance Systems \050IPVR\051,) 282.07 687.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Uni) 241.25 676.36 T
+(v) 254.52 676.36 T
+(ersity of Stuttg) 258.89 676.36 T
+(art, German) 312.35 676.36 T
+(y) 355.2 676.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(Fritz.Hohl@informatik.uni-stuttgart.de) 197.87 660.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 14 Q
+(1) 73.7 473.91 T
+( Intr) 87.87 473.91 T
+(oduction) 115.23 473.91 T
+0 12 Q
+-0.62 (Mobile agents and other mobile code entities extend the potential of \050stationary\051 distributed sys-) 73.7 453.25 P
+0.21 (tems by the possibility of programs being executed at computers that are often not maintained) 73.7 439.25 P
+0.02 (by the employer of that program. As then two parties are involved in running a program, guar-) 73.7 425.25 P
+(antees have to be given that one party will not harm the other.) 73.7 411.25 T
+0.5 (One aspect of this problem is the fear of the computer owners of inviting viruses, worms and) 73.7 392.25 P
+0.46 (trojan horses to damage their system. As the owners do not know the arriving program in ad-) 73.7 378.25 P
+0.79 (vance in every case, and since normal application-type programs such as word processors or) 73.7 364.25 P
+0.69 (games may damage a computer system in a severe manner, there have to be technical means) 73.7 350.25 P
+0.91 (that prevent mobile programs of becoming a nightmare. Fortunately, some work has already) 73.7 336.25 P
+0.17 (been invested to achieve exactly such a protection. One example are Java applets, mobile pro-) 73.7 322.25 P
+-0.26 (grams that run in closed environments, the so-called sandboxes. Available inside a sandbox are) 73.7 308.25 P
+-0.5 (all operations that are not security sensitive, e.g. addition and comparing operations, and the ap-) 73.7 294.25 P
+0.66 (plets may use these operations in their program at will. Security sensitive operations like file) 73.7 280.25 P
+0.11 (system and network access are outside the sandbox and cannot be used by applet programs, or) 73.7 266.25 P
+(at least in a strictly controlled manner.) 73.7 252.25 T
+0.84 (The other aspect of a program not being executed by its employer anymore is the protection) 73.7 233.25 P
+-0.69 (need of a mobile agent against potential attacks by the executing party. As we will see in Section) 73.7 219.25 P
+0.21 (2, this need exists even in modest applications, especially of those in the electronic commerce) 73.7 205.25 P
+0.14 (domain. Here, the problem is not already solved by mobile code systems since it is mainly the) 73.7 191.25 P
+0.35 (difference between mobile code entities and mobile agents that have to be protected: the state) 73.7 177.25 P
+-0.36 (of the single mobile agent instance that persist over the different execution nodes. Furthermore,) 73.7 163.25 P
+-0.26 (the problem itself of protecting running programs from their runtime environments seems to be) 73.7 149.25 P
+0.02 (very difficult as there are currently only two approaches that try to solve this problem entirely,) 73.7 135.25 P
+0.59 (namely Mobile Cryptography [ST97] and Time Limited Blackbox Protection [Hoh98]. Some) 73.7 121.25 P
+73.7 93.21 527.24 107.38 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+82.2 105.4 223.94 105.4 2 L
+0.5 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+0 9 Q
+0 X
+0 0 0 1 0 0 0 K
+(1.) 91.7 87.21 T
+(This w) 98.45 87.21 T
+(ork w) 123.11 87.21 T
+(as funded by the German Research Community \050DFG\051) 143.76 87.21 T
+0 0 0 1 0 0 0 K
+128.98 511.25 471.97 633.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 10 Q
+0 X
+0 0 0 1 0 0 0 K
+0.72 (Abstract.) 157.32 624.92 P
+0 F
+0.72 ( Dri) 197.03 624.92 P
+0.72 (v) 213.33 624.92 P
+0.72 (en by the need for a model of malicious hosts attacking) 218.18 624.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.41 (mobile agents, we present in this paper a set of requirements for such a) 157.32 612.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.54 (model. Using an e) 157.32 600.92 P
+-0.54 (xisting machine model, namely Random Access Stored) 228.32 600.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1.28 (Program machines \050or RASPS\051, an attack model that ful\336lls these re-) 157.32 588.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.22 (quirements is presented. In this model, the components of the e) 157.32 576.92 P
+0.22 (x) 412.17 576.92 P
+0.22 (ecution) 417.02 576.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.12 (process can be accessed by the outside. This f) 157.32 564.92 P
+0.12 (act is used by another ma-) 341.17 564.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.43 (chine that e) 157.32 552.92 P
+-0.43 (x) 202.41 552.92 P
+-0.43 (ecutes an attack program to control the e) 207.26 552.92 P
+-0.43 (x) 366.54 552.92 P
+-0.43 (ecution of an agent) 371.39 552.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.33 (program. This construction is suitable to demonstrate the problem of ma-) 157.32 540.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.22 (licious hosts and to serv) 157.32 528.92 P
+-0.22 (e as a basis to pro) 252.38 528.92 P
+-0.22 (v) 321.92 528.92 P
+-0.22 (e the protection strength of al-) 326.77 528.92 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(gorithms that try to protect agents from attacks by malicious hosts.) 157.32 516.92 T
+0 0 0 1 0 0 0 K
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "2" 2
+%%Page: "3" 3
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(3) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+-0.34 (authors even declared this problem which is called the problem of malicious hosts, not solvable) 73.7 774.36 P
+(\050see e.g. [FGS96] and [HCK95]\051.) 73.7 760.36 T
+-0.21 (Another difficulty in finding a solution for this problem, is that - contrary to some other system) 73.7 741.36 P
+-0.55 (mechanisms for mobile agents - it is not enough to just propose a mechanism that seem to tackle) 73.7 727.36 P
+0.35 (the problem, but it has to be proved formally that the solution holds, even with computer sys-) 73.7 713.36 P
+(tems becoming faster and faster.) 73.7 699.36 T
+0.71 (This paper therefore proposes a model of attacks that can be used by malicious hosts against) 73.7 680.36 P
+0.7 (mobile agents. It is intended to be the basis for a formal analysis of single attacks and of the) 73.7 666.36 P
+(strength of potential protection mechanisms.) 73.7 652.36 T
+-0.42 (The rest of the paper is organized as follows: Section 2 presents the problem of malicious hosts,) 73.7 633.36 P
+0.02 (Section 3 describes approaches that try to solve this problem. Section 4 lists abilities and char-) 73.7 619.36 P
+0.38 (acteristics of an attacker, Section 5 requirements for an attack model. In Section 6, a machine) 73.7 605.36 P
+-0.1 (model is presented that can be used to model the execution of an agent. The attack model itself) 73.7 591.36 P
+(is presented in Section 7. Section 8 concludes the presented approach.) 73.7 577.36 T
+1 14 Q
+(2) 73.7 548.03 T
+( The Pr) 87.87 548.03 T
+(oblem of Malicious Hosts) 132.73 548.03 T
+0 12 Q
+1.43 (The fact that the runtime environment \050the host\051 may attack the program \050the agent\051, plays) 73.7 527.36 P
+0.83 (hardly a role in existing computer systems. Normally, the party that maintains the hosts also) 73.7 513.36 P
+0.68 (employs the program. But in the area of open mobile agents systems, an agent is operated in) 73.7 499.36 P
+-0.07 (most cases by another party, the agent owner. This environment leads to a problem that is vital) 73.7 485.36 P
+0.73 (for the usage of mobile agents in open systems: the) 73.7 471.36 P
+3 F
+0.73 (problem of malicious hosts) 329.61 471.36 P
+0 F
+0.73 (. A malicious) 461.46 471.36 P
+0.28 (host can be defined in a general way as a party that is able to execute an agent that belongs to) 73.7 457.36 P
+0.96 (another party and that tries to attack that agent in some way. The question of what action is) 73.7 443.36 P
+0.31 (considered to be an attack depends on the question which assurances an agent owner needs in) 73.7 429.36 P
+0.02 (order to use a mobile agent. If we try to achieve a protection level that is comparable to that of) 73.7 415.36 P
+(agents that run on non-malicious, or) 73.7 401.36 T
+3 F
+(trusted) 250.02 401.36 T
+0 F
+( hosts, we can identify the following attacks:) 283.35 401.36 T
+0 0 0 1 0 0 0 K
+(1.) 73.7 387.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sp) 87.87 387.36 T
+(ying out code) 98.42 387.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(2.) 73.7 373.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sp) 87.87 373.36 T
+(ying out data) 98.42 373.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(3.) 73.7 359.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sp) 87.87 359.36 T
+(ying out control \337o) 98.42 359.36 T
+(w) 190.46 359.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(4.) 73.7 345.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(manipulation of code) 87.87 345.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(5.) 73.7 331.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(manipulation of data) 87.87 331.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(6.) 73.7 317.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(manipulation of control \337o) 87.87 317.36 T
+(w) 216.57 317.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(7.) 73.7 303.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(incorrect e) 87.87 303.36 T
+(x) 138.67 303.36 T
+(ecution of code) 144.49 303.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(8.) 73.7 289.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(masquerading of the host) 87.87 289.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(9.) 73.7 275.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(denial of e) 87.87 275.36 T
+(x) 138.35 275.36 T
+(ecution) 144.16 275.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(10.) 73.7 261.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(sp) 88.7 261.36 T
+(ying out interaction with other agents) 99.25 261.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(11.) 73.7 247.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(manipulation of interaction with other agents) 88.7 247.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(12.) 73.7 233.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(returning wrong results of system calls issued by the agent) 88.7 233.36 T
+0 0 0 1 0 0 0 K
+1.35 (To illustrate these attacks we will use a small purchase agent as an example. The purchase) 73.7 214.36 P
+(agent contains a data and a code block. Entries in the data block may include:) 73.7 200.36 T
+184.25 94.43 416.69 196.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Address) 194.16 184.07 T
+4 F
+(home) 242.16 184.07 T
+2 F
+( = \322PDA, sweet PDA\323) 266.16 184.07 T
+(Money) 194.16 172.07 T
+4 F
+(wallet) 230.16 172.07 T
+2 F
+( = 20$) 266.16 172.07 T
+(float) 194.16 160.07 T
+4 F
+(maximumprice) 230.16 160.07 T
+2 F
+( = 20.00$) 302.16 160.07 T
+(good) 194.16 148.07 T
+4 F
+(flowers) 224.16 148.07 T
+2 F
+( = 10 red roses) 266.16 148.07 T
+(Address) 194.16 136.07 T
+4 F
+(shoplist) 242.16 136.07 T
+2 F
+([] = empty list) 290.16 136.07 T
+(int) 194.16 124.07 T
+4 F
+(shoplistindex) 218.16 124.07 T
+2 F
+( = 0) 296.16 124.07 T
+(float) 194.16 112.07 T
+4 F
+(bestprice) 230.16 112.07 T
+2 F
+( = 20.00$) 284.16 112.07 T
+(Address) 194.16 100.07 T
+4 F
+(bestshop) 242.16 100.07 T
+2 F
+( = empty) 290.16 100.07 T
+189.92 96.51 408.19 194.27 R
+0.5 H
+2 Z
+N
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "3" 3
+%%Page: "4" 4
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(4) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0.83 (The central procedure) 73.7 774.36 P
+2 F
+1.99 (startAgent) 184.48 774.36 P
+0 F
+0.83 (, that is called by the host every time the agent arrives,) 256.48 774.36 P
+(could look like this:) 73.7 760.36 T
+(Using this example, the attacks listed above can be illustrated.) 73.7 435.64 T
+3 F
+(1. Spying out code) 73.7 416.64 T
+0 F
+-0.57 (The code of the agent has to be readable by the host. Although this requirement can be restricted) 73.7 397.64 P
+0.62 (to the next executable instruction at any single point of time, this does not solve the problem) 73.7 383.64 P
+-0.18 (since some hosts see almost all of the code because they execute most of the commands. In our) 73.7 369.64 P
+-0.04 (example the host visited last executes nearly all the code. If the agent code is characteristic not) 73.7 355.64 P
+0.14 (only for a single, but a whole class of agents, the whole code of the agent may be known even) 73.7 341.64 P
+-0.25 (before execution time. If an agent is generated out of standard building blocks \050which is a good) 73.7 327.64 P
+-0 (idea regarding code migration costs as then code can be cached easily\051, the detail specification) 73.7 313.64 P
+0.64 (is available for building blocks like libraries or classes. Furthermore, these blocks can be ex-) 73.7 299.64 P
+-0.29 (plored by blackbox tests. Knowing the code leads to knowledge about the execution strategy of) 73.7 285.64 P
+0.12 (the agent, knowledge about the exact physical structure of code and data in the memory of the) 73.7 271.64 P
+0.57 (host and sometimes \050by using data statements like initial variable assignments\051 to knowledge) 73.7 257.64 P
+(about parts of the agent data.) 73.7 243.64 T
+3 F
+(2. Spying out data) 73.7 224.64 T
+0 F
+0.05 (The threat of a host reading the private data of an agent is very severe as it leaves no trace that) 73.7 205.64 P
+-0.18 (could be detected. This is not necessarily true for the consequences of this knowledge, but they) 73.7 191.64 P
+-0.37 (can occur a long time after the visit of the agent on the malicious host. This is a special problem) 73.7 177.64 P
+0.08 (for data classes such as secret keys or electronic cash, where the simple knowledge of the data) 73.7 163.64 P
+-0.02 (results in loss of privacy or money. In our example, the money variable would be security sen-) 73.7 149.64 P
+0.79 (sitive when it is represented in a way that the binary number of the \322coin\323) 73.7 135.64 P
+1 F
+0.79 (is) 443.2 135.64 P
+0 F
+0.79 ( the money and) 451.21 135.64 P
+0.13 (therefore can be used as real world cash. But there are also other classes of data, which can be) 73.7 121.64 P
+0.12 (used for an attack although they have not the nature of classes like e-cash. In our example, the) 73.7 107.64 P
+-0.63 (knowledge of the maximum price or the best price so far can be used by a malicious host to offer) 73.7 93.64 P
+127.56 450.64 473.39 756.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(1) 133.23 745.43 T
+(public void startAgent\050\051 {) 147.4 745.43 T
+(2) 133.23 733.43 T
+(3) 133.23 721.43 T
+(if \050shoplist == null\051 {) 159.4 721.43 T
+(4) 133.23 709.43 T
+(    shoplist = getTrader\050\051.) 147.4 709.43 T
+(5) 133.23 697.43 T
+(getProvidersOf\050\322BuyFlowers\323\051;) 177.4 697.43 T
+(6) 133.23 685.43 T
+(    go\050shoplist[1]\051;) 147.4 685.43 T
+(7) 133.23 673.43 T
+(    break;) 147.4 673.43 T
+(8) 133.23 661.43 T
+(  }) 147.4 661.43 T
+(9) 133.23 649.43 T
+(  if \050shoplist[shoplistindex].) 147.4 649.43 T
+(10) 133.23 637.43 T
+(askprice\050flowers\051 < bestprice\051 {) 169.23 637.43 T
+(11) 133.23 625.43 T
+(    bestprice = shoplist[shoplistindex].) 151.23 625.43 T
+(12) 133.23 613.43 T
+(askprice\050flowers\051;) 259.23 613.43 T
+(13) 133.23 601.43 T
+(    bestshop = shoplist[shoplistindex];) 151.23 601.43 T
+(14) 133.23 589.43 T
+(  }) 151.23 589.43 T
+(15) 133.23 577.43 T
+(  if \050shoplistindex >= \050shoplist.length - 1\051\051 {) 151.23 577.43 T
+(16) 133.23 565.43 T
+(    // remote buy) 151.23 565.43 T
+(17) 133.23 553.43 T
+(    buy\050bestshop,flowers,wallet\051;) 151.23 553.43 T
+(18) 133.23 541.43 T
+(// go home and deliver wallet) 175.23 541.43 T
+(19) 133.23 529.43 T
+(go\050home\051;) 175.23 529.43 T
+(20) 133.23 517.43 T
+(if \050location.getAddress\050\051 = home\051 {) 175.23 517.43 T
+(21) 133.23 505.43 T
+(location.put\050wallet\051;) 187.23 505.43 T
+(22) 133.23 493.43 T
+(}) 175.23 493.43 T
+(23) 133.23 481.43 T
+(  }) 151.23 481.43 T
+(24) 133.23 469.43 T
+(go\050shoplist[++shoplistindex]\051;) 163.23 469.43 T
+(25) 133.23 457.43 T
+(}}) 151.23 457.43 T
+130.39 453.06 467.71 754.24 R
+0.5 H
+2 Z
+N
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "4" 4
+%%Page: "5" 5
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(5) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+-0.03 (flowers for a slightly lower amount than the competitorswith the regular price being still much) 73.7 774.36 P
+(lower.) 73.7 760.36 T
+3 F
+(3. Spying out control flow) 73.7 741.36 T
+0 F
+0.58 (As soon as the host knows the entire code of the agent and its data, it can determine the next) 73.7 722.36 P
+0.31 (execution step at any given time. Even if we could protect the used data somehow, it is rather) 73.7 708.36 P
+-0.14 (difficult to protect the information about the actual control flow. This is a problem, because to-) 73.7 694.36 P
+-0.38 (gether with the knowledge of the code, a malicious host can deduce more information about the) 73.7 680.36 P
+-0.31 (state of the agent. In our example, we can recognize whether an offer is better or worse than the) 73.7 666.36 P
+(best offer so far by simply watching the control flow, even if we could not read any data.) 73.7 652.36 T
+3 F
+(4. Manipulation of code) 73.7 633.36 T
+0 F
+-0.34 (If the host is able to read the code and if it has access to the code memory, it can normally mod-) 73.7 614.36 P
+0.35 (ify the program of an agent. It could exploit this either by altering the code permanently, thus) 73.7 600.36 P
+0.75 (implanting a virus, worm or trojan horse. It could also temporarily alter the behaviour of the) 73.7 586.36 P
+-0.15 (agent on that particular host only. The advantage of the latter approach consists in the fact, that) 73.7 572.36 P
+-0.69 (the host to which the agent migrates cannot detect a manipulation of the code since it is not mod-) 73.7 558.36 P
+-0.04 (ified. Applied to our example, a malicious host could modify the code of the agent with the ef-) 73.7 544.36 P
+(fect that it prefers the offer of a certain flower provider, regardless of the price.) 73.7 530.36 T
+3 F
+(5. Manipulation of data) 73.7 511.36 T
+0 F
+-0.5 (If the host knows the physical location of the data in the memory and the semantics of the single) 73.7 492.36 P
+-0.12 (data elements, it can modify data as well. In our example, the host could cut down the shop list) 73.7 478.36 P
+(after setting the offer of the local flower provider as the best offer.) 73.7 464.36 T
+3 F
+(6. Manipulation of control flow) 73.7 445.36 T
+0 F
+0.4 (Even if the host does not have access to the data of the agent, it can conduct the behaviour of) 73.7 426.36 P
+-0.36 (the agent by manipulating the control flow. In our example, the host could simply alter the flow) 73.7 412.36 P
+0.15 (at the second or third) 73.7 398.36 P
+2 F
+0.37 (if) 178.78 398.36 P
+0 F
+0.15 ( statement, forcing the agent to choose the offer of the shop preferred) 193.18 398.36 P
+(by the host as the best.) 73.7 384.36 T
+3 F
+(7. Incorrect execution of code) 73.7 365.36 T
+0 F
+0.07 (Without changing the code or the flow of control, a host may also alter the way it executes the) 73.7 346.36 P
+(code of an agent, resulting in the same effects as above.) 73.7 332.36 T
+3 F
+(8. Masquerade) 73.7 313.36 T
+0 F
+-0.04 (It is the liability of a host that sends an agent to a receiver host to ensure the identity of that re-) 73.7 294.36 P
+-0.39 (ceiver. Still, a third party may intercept or copy an agent transfer and start the agent by masking) 73.7 280.36 P
+-0.29 (itself as the correct receiver host. A masquerade will probably be followed by other attacks like) 73.7 266.36 P
+(read attacks.) 73.7 252.36 T
+3 F
+(9. Denial of execution) 73.7 233.36 T
+0 F
+-0.49 (As the agent is executed by the host, i.e. passive, the host can simply not execute the agent. This) 73.7 214.36 P
+0.15 (can be used as an attack e.g. in the case that a host knows about a time limited special offer of) 73.7 200.36 P
+-0.42 (another host. The host simply can prevent the detection of this offer by the agent by delaying its) 73.7 186.36 P
+(execution until the offer expires.) 73.7 172.36 T
+3 F
+(10. Spying out interaction with other agents) 73.7 153.36 T
+0 F
+-0.29 (The agent may buy the flowers remotely from a shop situated on another host. If the interaction) 73.7 134.36 P
+-0.45 (between agent and the remote flower shop is not protected, the host of the agent is able to watch) 73.7 120.36 P
+-0.02 (the buy interaction even in case the host cannot watch the execution of the agent. In our exam-) 73.7 106.36 P
+(ple, the host could read e.g.) 73.7 92.36 T
+2 F
+(wallet) 208.68 92.36 T
+0 F
+( and spend the stored money.) 251.88 92.36 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "5" 5
+%%Page: "6" 6
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(6) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 12 Q
+(11. Manipulation of interaction with other agents) 73.7 774.36 T
+0 F
+-0.67 (If the host can also manipulate the interaction of the agent it can act with the identity of the agent) 73.7 755.36 P
+0.44 (or mask itself as the partner of the agent. In our example the host can e.g. redirect the buying) 73.7 741.36 P
+-0.51 (interaction to another shop, or it can interrupt the interaction e.g. to prevent spending the money) 73.7 727.36 P
+(by the agent.) 73.7 713.36 T
+3 F
+(12. Returning wrong results of system calls issued by the agent) 73.7 694.36 T
+0 F
+-0.08 (In line 20 of the example code \050\322) 73.7 675.36 P
+2 F
+-0.2 (if \050location.getAddress\050\051 = home\051) 231.42 675.36 P
+0 F
+-0.08 (\323\051, the agent) 468.43 675.36 P
+0.33 (requests the name of the current location. Here the host could mask itself as the agent\325s home) 73.7 661.36 P
+-0.42 (location by returning the corresponding address. The agent then thinks that it is at home and de-) 73.7 647.36 P
+(livers the wallet to the host.) 73.7 633.36 T
+1.25 (After having learned about the problem of malicious hosts, we will now have a look at ap-) 73.7 614.36 P
+(proaches that try to solve this problem.) 73.7 600.36 T
+1 14 Q
+(3) 73.7 571.03 T
+( A) 87.87 571.03 T
+(ppr) 101.13 571.03 T
+(oaches that T) 122.66 571.03 T
+(ry to Solv) 201.74 571.03 T
+(e the Pr) 259.15 571.03 T
+(oblem of Malicious Hosts) 305.55 571.03 T
+0 12 Q
+0.76 (In this section, we will have a look on approaches that try to solve the problem of malicious) 73.7 550.36 P
+0.95 (hosts. None of these approaches uses an explicit attack model, and currently, no such attack) 73.7 536.36 P
+0.82 (model seems to exist in the literature. Approaches that try to solve the problem of malicious) 73.7 522.36 P
+-0 (hosts can be divided into three categories: such that try to avoid the problem by using a setting) 73.7 508.36 P
+0.05 (where hosts are not untrusted, such that try to handle single attacks and such that try to protect) 73.7 494.36 P
+(an agent from all the attacks.) 73.7 480.36 T
+-0.46 (The first category comprises approaches that either employ a host infrastructure that is operated) 73.7 461.36 P
+-0.6 (by a single party [GM96] \050e.g. a well-known company\051, and approaches that allow agents to mi-) 73.7 447.36 P
+-0.29 (grate only to trusted hosts [FGS96] or such with a good reputation [RJ96]. As these approaches) 73.7 433.36 P
+-0.1 (does not need to model attacks by malicious hosts, they will not be examined further in this ar-) 73.7 419.36 P
+(ticle \050an overview can be found e.g. in [Hoh98]\051.) 73.7 405.36 T
+0.59 (The second category contains approaches that try to prevent single attacks \050see, e.g. [Mea97]) 73.7 386.36 P
+0.31 ([Vig97], [Yee97]\051. [Vig97] enables an agent to detect and prove modification attacks in order) 73.7 372.36 P
+0.09 (to allow the owner to use legal or organizational ways to get its damage refunded. But this ap-) 73.7 358.36 P
+-0.38 (proach cannot prevent other attacks, and it assumes an organizational or legal framework for an) 73.7 344.36 P
+0.33 (agent system. [Yee97] gives an overview over some partial approaches like proof verification) 73.7 330.36 P
+(and fault-tolerance techniques that also cover some, but not all aspects of protecting an agent.) 73.7 316.36 T
+0.06 (Finally the third category contains approaches that try to protect an agent from any attack by a) 73.7 297.36 P
+0.22 (malicious host resulting in agent applications that do not need to employ a certain strategy for) 73.7 283.36 P
+0.98 (the sake of security. This first class of approaches assumes the existence of special, tamper-) 73.7 269.36 P
+0.2 (proof hardware \050see e.g. [Pal94] or [Yee94]\051. We will not examine this class further since this) 73.7 255.36 P
+-0.61 (assumption seems to be too restricting on the one hand; on the other hand these approaches need) 73.7 241.36 P
+(another attack model that is different from the one presented in this article.) 73.7 227.36 T
+1.02 (The remaining two approaches in this category seek to protect an agent using only software) 73.7 208.36 P
+0.47 (means that are part of the agent itself. These two approaches are called) 73.7 194.36 P
+3 F
+0.47 (Mobile Cryptography) 422.44 194.36 P
+0 F
+(and) 73.7 180.36 T
+3 F
+(Time Limited Blackbox Protection) 94.03 180.36 T
+0 F
+(.) 259.02 180.36 T
+1 F
+(3.1) 73.7 154.36 T
+( Mobile Cryptograph) 88.7 154.36 T
+(y) 197.85 154.36 T
+0 F
+0.89 (Sander and Tschudin describe in [ST98a] and [ST97] a way to use) 73.7 135.36 P
+3 F
+0.89 (encrypted programs) 406.27 135.36 P
+0 F
+0.89 ( as a) 504.14 135.36 P
+-0.23 (means to protect agents from malicious hosts. Encrypted programs are programs that consist of) 73.7 121.36 P
+-0.08 (operations that work on encrypted data. Agents are produced by converting an agent specifica-) 73.7 107.36 P
+0.07 (tion into some executable code plus initial, encrypted data. Since the attacker cannot break the) 73.7 93.36 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "6" 6
+%%Page: "7" 7
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(7) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+2.4 (encryption of the data, it cannot read or manipulate the original data. See [ST98a] for a) 73.7 774.36 P
+(detailed description of the Mobile Cryptography approach.) 73.7 760.36 T
+(The advantages of this approach over the one that will be presented in the next paragraph are:) 73.7 741.36 T
+0 0 0 1 0 0 0 K
+(\245) 73.7 727.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the protection of the agent is easily pro) 94.94 727.36 T
+(v) 281.73 727.36 T
+(able) 287.43 727.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 73.7 713.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the costs of the protection are rather small) 94.94 713.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 73.7 699.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(the protection is not time-limited) 94.94 699.36 T
+0 0 0 1 0 0 0 K
+(The current restrictions of the Mobile Cryptography approach are:) 73.7 680.36 T
+0 0 0 1 0 0 0 K
+(\245) 73.7 666.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.08 (random programs cannot be used as the input speci\336cation; currently only polynomial and) 94.94 666.36 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(rational functions can be used for this purpose) 94.93 652.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 73.7 638.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+-0.19 (the interaction model of the agent suf) 94.94 638.36 P
+-0.19 (fers the restriction that clearte) 272.83 638.36 P
+-0.19 (xt data can be sent only) 415.19 638.36 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(to trusted hosts) 94.93 624.36 T
+0 0 0 1 0 0 0 K
+0.41 (The extension of the approach to recursive functions and Turing machine program equivalent) 73.7 605.36 P
+-0.16 (mechanisms is subject to future work. The second restriction \050cleartext data can be sent only to) 73.7 591.36 P
+0.02 (trusted hosts\051 is not mentioned explicitly. Still, receivers can only read encrypted output of the) 73.7 577.36 P
+0.28 (agent when they know the decryption function \050which includes a potential key\051. If an attacker) 73.7 563.36 P
+0.58 (is able to decrypt the output of an protected agent, it is likely that it can also attack the agent) 73.7 549.36 P
+(itself.) 73.7 535.36 T
+1.17 (Although this approach can prove that the key element, function encryption, is hard against) 73.7 516.36 P
+0.69 (analysis, the question whether agents created by an implementation of this approach are pro-) 73.7 502.36 P
+0.13 (tected against all attacks, remains open. One reason is that of course the approach is described) 73.7 488.36 P
+1.42 (in articles, but not the complete algorithm that creates agents. Another reason is that a bad) 73.7 474.36 P
+-0.29 (implementation may produce agents that can be attacked, since attacks may depend on the very) 73.7 460.36 P
+2.07 (detail of a program. For ensuring that also the implementation of a Mobile Cryptography) 73.7 446.36 P
+0.75 (approach is secure against attacks, an attack model like the one that will be described in this) 73.7 432.36 P
+(article, is essential.) 73.7 418.36 T
+1 F
+(3.2) 73.7 392.36 T
+( T) 88.7 392.36 T
+(ime Limited Blackbox Pr) 99.49 392.36 T
+(otection) 228.27 392.36 T
+0 F
+2.21 (As we have seen, the above approach is currently not applicable to every existing agent.) 73.7 373.36 P
+0.38 (Another approach \050[Hoh98]\051 uses any executable agent as input, but also produces an execut-) 73.7 359.36 P
+1.1 (able agent as output. This output is constructed in a way, that the agent is protected against) 73.7 345.36 P
+1.07 (analysis by the attacker, and, therefore, against attacks. It is not assumed that the protection) 73.7 331.36 P
+0.42 (holds forever, but only for a limited, known minimal time interval known in advance. Agents) 73.7 317.36 P
+-0 (that are protected by such a mechanism are called blackboxes, since they possess the blackbox) 73.7 303.36 P
+(property.) 73.7 289.36 T
+3 F
+(Def: Time Limited Blackbox Property) 73.7 270.36 T
+0 0 0 1 0 0 0 K
+0 F
+(\245) 73.7 256.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(an agent is a blackbox if:) 94.94 256.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(1.) 94.94 242.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(for a certain kno) 116.25 242.36 T
+(wn time interv) 194.92 242.36 T
+(al) 264.62 242.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(2.) 94.94 228.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(code and data of the agent speci\336cation cannot be read) 116.25 228.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(3.) 94.94 214.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0.5 (code and data of the agent speci\336cation cannot be modi-) 116.25 214.36 P
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\336ed) 116.25 200.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(\245) 73.7 186.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(attacks after the protection interv) 94.94 186.36 T
+(al are possible) 253.27 186.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(4.) 94.94 172.36 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(b) 116.25 172.36 T
+(ut these attacks do not ha) 122.01 172.36 T
+(v) 242.76 172.36 T
+(e ef) 248.58 172.36 T
+(fects) 265.93 172.36 T
+0 0 0 1 0 0 0 K
+(To make the protection time interval explicit, an) 73.7 153.36 T
+3 F
+(expiration date) 308.67 153.36 T
+0 F
+( is attached to the blackbox.) 381.67 153.36 T
+0.73 (The original, or input agent is converted in the blackbox form using mechanisms that can be) 73.7 134.36 P
+0.23 (called) 73.7 120.36 P
+3 F
+0.23 (mess-up) 105.58 120.36 P
+0 F
+0.23 ( or) 144.91 120.36 P
+3 F
+0.23 (obfuscating) 161.36 120.36 P
+0 F
+0.23 ( algorithms. These algorithms convert a program and a data part) 217.36 120.36 P
+0.02 (into an blackbox agent that does basically the same as the original agent. This new form of the) 73.7 106.36 P
+-0.24 (agent has to be difficult to analyse in terms of programs that examine a program like flow anal-) 73.7 92.36 P
+396.98 179.15 527.24 278.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+424.26 217 494.89 244.41 R
+0 X
+0 0 0 1 0 0 0 K
+V
+0.5 H
+0 Z
+7 X
+N
+423.92 244.72 449.49 256.42 516.08 256.42 495.57 244.72 4 Y
+0 X
+V
+N
+495.23 216.69 495.23 244.41 515.75 256.42 515.75 235.17 4 Y
+V
+7 X
+N
+5 10 Q
+0 X
+(Input) 459.74 260.71 T
+(Output) 455.2 205.8 T
+0 F
+(agent) 399.71 235.49 T
+(alpha) 399.71 224.93 T
+398.02 184.82 524.77 274.9 R
+N
+0 0 0 0 1 1 1 K
+7 X
+0 0 0 0 1 1 1 K
+(will e) 431.63 233.99 T
+(xpire in:) 453.98 233.99 T
+(13305 ms) 438.06 223.28 T
+0 0 0 1 0 0 0 K
+1 9 Q
+0 X
+0 0 0 1 0 0 0 K
+(Fig. 1:) 400.61 190.08 T
+0 F
+(Time l. blackbox property) 427.36 190.08 T
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "7" 7
+%%Page: "8" 8
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(8) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(ysis or program slicing techniques.) 73.7 774.36 T
+1.47 (One of the main problems of this approach \050see [Hoh98] for more details\051 is, that it is not) 73.7 755.36 P
+0.62 (enough to just develop a mess-up algorithm. In order to have people trust this protection, the) 73.7 741.36 P
+1.64 (protection strength must be provable as in cryptography. Therefore, an attack model is the) 73.7 727.36 P
+(essential prerequisite to employ such an approach.) 73.7 713.36 T
+1.09 (As we have seen, an appropriate attack model can help to develop and analyse mechanisms) 73.7 694.36 P
+(that protect agents from malicious hosts. Which requirements must a such attack model fulfil?) 73.7 680.36 T
+1 14 Q
+(4) 73.7 651.03 T
+( Abilities and Characteristics of the Attack) 87.87 651.03 T
+(er) 342.81 651.03 T
+0 12 Q
+(To model the properties of the attacker, we have to distinguish two cases.) 73.7 630.36 T
+-0.2 (In the first case, the attacker does not know the original version of the agent in advance. There-) 73.7 611.36 P
+0.03 (fore, either rather simple attacks \050like recognizing data elements e.g. electronic cash coins\051 are) 73.7 597.36 P
+0.97 (possible, or a human has to analyse the blackbox to build up a mental model. Although this) 73.7 583.36 P
+0.77 (human can then use the aid of computerized tools to do this, humans tend to be far too slow) 73.7 569.36 P
+0.94 (compared to the execution speed of computers. This slowness cannot be reduced fundamen-) 73.7 555.36 P
+0.9 (tally since it is not possible to speed up humans. Therefore, the next case seems to be much) 73.7 541.36 P
+(more relevant.) 73.7 527.36 T
+-0.15 (In the second case, the attacker does know the exact specification of the agent in advance. This) 73.7 508.36 P
+0.87 (case is probably the common one if most agents in an agent system are instances of a set of) 73.7 494.36 P
+-0 (standard agents. If it is possible to identify the type of an agent, i.e. the original agent, then the) 73.7 480.36 P
+0.26 (exact specification is accessible. If now an attacker knows the exact specification, it can auto-) 73.7 466.36 P
+1.57 (mate the attack by generating a program that tries to compute only a few or even a single) 73.7 452.36 P
+0.14 (attribute of the agent, e.g. the current location of a certain variable in the blackboxed agent. In) 73.7 438.36 P
+-0.09 (this case the attack can be accelerated by using faster computers or by employing several com-) 73.7 424.36 P
+(puters in parallel.) 73.7 410.36 T
+0.56 (As it is the more relevant case, this paper concentrates on the second aspect. This means that) 73.7 391.36 P
+0.15 (the malicious host attacks by using a program that is able to control the execution of the agent) 73.7 377.36 P
+0.84 (program. In the next section, the requirements to the attack model will be presented in more) 73.7 363.36 P
+(detail.) 73.7 349.36 T
+1 14 Q
+(5) 73.7 320.03 T
+( Requir) 87.87 320.03 T
+(ements f) 133.12 320.03 T
+(or an Attack Model) 182.92 320.03 T
+0 12 Q
+0.23 (Considering the different possible attacks by malicious hosts, a set of requirements have to be) 73.7 299.36 P
+(met by an adequate attack model.) 73.7 285.36 T
+1 F
+(Requirement 1: The attacker can read and modify the whole data part of an agent) 73.7 266.36 T
+0 F
+-0.3 (The attacker is able to read and write at any time every data element of the agent, either in form) 73.7 252.36 P
+0.39 (of the content of a variable, constant or expression value, or in form of the content of the raw) 73.7 238.36 P
+-0.49 (memory. This results from the fact that an attacker can scan and alter the memory of a computer) 73.7 224.36 P
+0.26 (system if the attacker has system privileges. Further, the attacker sees the program and knows) 73.7 210.36 P
+(therefore the relation of data elements to the raw memory.) 73.7 196.36 T
+1 F
+(Requirement 2: The attacker can read and modify the code part of an agent) 73.7 177.36 T
+0 F
+0.19 (Code is also stored in the memory and the attacker as the executing party knows of course the) 73.7 163.36 P
+0.1 (interpretation of memory content to language statements. The problem is, that although the at-) 73.7 149.36 P
+0.19 (tacker sees every statement it executes and every statement it had executed in past, statements) 73.7 135.36 P
+-0.34 (executed in the future does not need to exist in the memory in a readable form. When self-mod-) 73.7 121.36 P
+0.38 (ifying code is possible, the agent may compute the next statements just before they were exe-) 73.7 107.36 P
+0.16 (cuted. Therefore, also code statements have to be of a form that can be computed by the agent) 73.7 93.36 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "8" 8
+%%Page: "9" 9
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(9) 519.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(code.) 73.7 774.36 T
+1 F
+-0.26 (Requirement 3: The attacker can read and modify the current state of the execution envi-) 73.7 755.36 P
+(ronment of the agent) 73.7 741.36 T
+0 F
+0 (The attacker cannot only read and modify the code and data area of an agent during the execu-) 73.7 727.36 P
+0.93 (tion, but also the elements that are needed to execute the agent by the runtime environment.) 73.7 713.36 P
+0.72 (These elements include e.g. the parameter and return stack, the program counter or registers.) 73.7 699.36 P
+-0.73 (This allows the attacker to see also values that do not appear in the program code, e.g. evaluation) 73.7 685.36 P
+0.37 (values of language expressions. It allows also to control other aspects like the targets of jump) 73.7 671.36 P
+(statements etc.) 73.7 657.36 T
+1 F
+(Requirement 4: The attacker can modify the way an agent is executed) 73.7 638.36 T
+0 F
+-0.25 (The interpreter of a program, be it a software interpreter of a high-level language or the proces-) 73.7 624.36 P
+-0.1 (sor interpreting machine code, implements a ruleset to execute programs of a certain language.) 73.7 610.36 P
+0.26 (One family of attacks might use the fact that it might be impossible to control the observation) 73.7 596.36 P
+0.62 (of this ruleset. As an example, the attacker can execute the \322true\323-branch of an) 73.7 582.36 P
+2 F
+1.48 (if) 462.85 582.36 P
+0 F
+0.62 (-statement) 477.25 582.36 P
+0.38 (regardless of the) 73.7 568.36 P
+2 F
+0.92 (if) 157.16 568.36 P
+0 F
+0.38 (condition because it knows that this) 179.68 568.36 P
+2 F
+0.92 (if) 356.63 568.36 P
+0 F
+0.38 ( controls whether the agent con-) 371.03 568.36 P
+0.52 (tinues or stops the execution. Therefore, the attacker must also be able to control the way the) 73.7 554.36 P
+(runtime environment interprets the program.) 73.7 540.36 T
+1 F
+(Requirement 5: The attacker can control the results of system calls) 73.7 521.36 T
+0 F
+-0.39 (As a program, a mobile agent is a passive entity. This results in the fact that a mobile agent can-) 73.7 507.36 P
+0.55 (not learn about its environment but by using its runtime system. Whenever an agent wants to) 73.7 493.36 P
+0.29 (know the current time or produce a random number, it has to ask the host by issuing a system) 73.7 479.36 P
+-0.71 (call. With the control over even this kind of input, a host can be deceptive about the environment) 73.7 465.36 P
+0.42 (of the agent. Since e.g. most cryptographic algorithms require for a user to produce a random) 73.7 451.36 P
+-0.32 (number or a time stamp, this aspect can be crucial for the usage of such algorithm for the agent.) 73.7 437.36 P
+1 (Therefore, an attacker in the model has to have the possibility to return any values when an) 73.7 423.36 P
+(agent issues a system call.) 73.7 409.36 T
+1 F
+0.46 (Requirement 6: The attacker can read and modify the communication of the agent with) 73.7 390.36 P
+(third parties) 73.7 376.36 T
+0 F
+-0.28 (Since an agent can communicate with a third party and since the host is able to control commu-) 73.7 362.36 P
+0.71 (nication made via the host, possible attacks also include the \322listening\323 to or modification of) 73.7 348.36 P
+(such types of interactions.) 73.7 334.36 T
+0.04 (Additionally to the more technical requirements that result from the possible attacks, there is a) 73.7 315.36 P
+2.02 (further requirement that results from the interaction of protection mechanisms that can be) 73.7 301.36 P
+(thought of to the execution systems of mobile agents.) 73.7 287.36 T
+1 F
+-0.69 (Requirement 7: The attacker consists of a program that controls the execution of the agent) 73.7 268.36 P
+(program) 73.7 254.36 T
+0 F
+-0.13 (As stated in the last section, the malicious host attacks by using a program since manual mech-) 73.7 240.36 P
+(anisms are far to slow.) 73.7 226.36 T
+1 F
+0.22 (Requirement A: The attack model should be as abstract, i.e. generally applicable as pos-) 73.7 207.36 P
+(sible) 73.7 193.36 T
+0 F
+0.26 (This requirement does not only mean that the model should be applicable to all existing agent) 73.7 179.36 P
+0.46 (languages, but also to those that can be created due to their potential to protect mobile agents) 73.7 165.36 P
+(from host attacks.) 73.7 151.36 T
+0.68 (The drawback of this generality is, that it is likely that agents executed in existing languages) 73.7 132.36 P
+-0.18 (especially such as Java, Tcl and C++, can be easier attacked by malicious hosts. The reason for) 73.7 118.36 P
+0.31 (that drawback lies in the fact that these languages are designed by people tried to enhance the) 73.7 104.36 P
+0.42 (performance both of the program execution and of the program creation. The goal of an ideal) 73.7 90.36 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "9" 9
+%%Page: "10" 10
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(10) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0.31 (agent language for protection purposes is somewhat contrary to these goals: the execution en-) 73.7 774.36 P
+0.33 (vironment should know as little as possible about the executed program, whereas in \322normal\323) 73.7 760.36 P
+-0.36 (languages, the interpreter should know as much as possible about the code. An example for this) 73.7 746.36 P
+0.3 (gap between normal modern languages and such better suited for protection purposes is) 73.7 732.36 P
+3 F
+0.3 (static) 501.24 732.36 P
+0.33 (typing) 73.7 718.36 P
+0 F
+0.33 (. Static typing means, that the type of any value can be determined at compilation time.) 103.7 718.36 P
+0.22 (It is obviously easier to read a data value when we know the type of it than if we had to guess) 73.7 704.36 P
+(the type since the type of an element is the link between a set of bits and the semantic value.) 73.7 690.36 T
+-0.13 (Before an attack model that meets these requirements is presented, we will now have a look on) 73.7 671.36 P
+(an existing machine model that we can use as a base.) 73.7 657.36 T
+1 14 Q
+(6) 73.7 628.03 T
+( Random Access Stor) 87.87 628.03 T
+(ed Pr) 214.77 628.03 T
+(ogram plus Stack Machines \050RASPS\051) 246.79 628.03 T
+0 12 Q
+0.26 (As a basic element of our attack model, we need an abstract machine model. Machine models) 73.7 607.36 P
+-0.44 (currently used in e.g. complexity theory do have one feature that makes them not feasible to our) 73.7 593.36 P
+0.43 (need. Turing machines, RAMs and stack machines do have a notion of the machine program,) 73.7 579.36 P
+0.02 (often in form of a state transition function. The problem is, that this function cannot be manip-) 73.7 565.36 P
+(ulated by the program itself.) 73.7 551.36 T
+1.21 (Fortunately, a machine model that is better suited for our purposes exists. Elgot and Calvin) 73.7 532.36 P
+0.17 (present in [ER64], some 30 years ago, a model which they called Random Access Stored Pro-) 73.7 518.36 P
+-0 (gram machine \050or RASP\051. Their aim was to build a model that corresponds to the then modern) 73.7 504.36 P
+1 (computer architecture of a Von-Neumann machine. Their improvement over the Turing ma-) 73.7 490.36 P
+0.59 (chine was the introduction of instruction symbols that are stored in the machine memory and) 73.7 476.36 P
+-0.13 (that can be calculated by executing instructions. Hartmanis explored six years later the compu-) 73.7 462.36 P
+0.16 (tational complexity of RASPs [Har70]. Engeler [Eng73] showed that RASPs are equivalent to) 73.7 448.36 P
+(Turing machines.) 73.7 434.36 T
+0.38 (Although RASPs are a good starting point, one small modification enhances the clarity of the) 73.7 415.36 P
+-0.4 (program execution mechanism without altering the characteristics: a stack. A RASPS \050Random) 73.7 401.36 P
+0.5 (Access Stored Program plus Stack\051 machine, which is a modified RASP, can be explained as) 73.7 387.36 P
+(follows:) 73.7 373.36 T
+-0.36 (A RASPS consists of a vector of memory cells, a stack and a stackpointer, and a program coun-) 73.7 87.77 P
+77.6 102.77 523.35 369.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+111.61 289.99 236.34 312.67 R
+0.5 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+111.61 267.32 236.34 289.99 R
+N
+1 12 Q
+(0) 88.93 295.66 T
+(1) 88.93 272.99 T
+111.61 244.64 236.34 267.32 R
+N
+111.61 221.96 236.34 244.64 R
+N
+(2) 88.93 250.31 T
+(3) 88.93 227.63 T
+111.61 199.29 236.34 221.96 R
+N
+111.61 176.61 236.34 199.29 R
+N
+(4) 88.93 204.96 T
+(5) 88.93 182.28 T
+111.61 153.93 236.34 176.61 R
+N
+111.61 131.25 236.34 153.93 R
+N
+(6) 88.93 159.6 T
+(7) 88.93 136.92 T
+(memory) 146.32 327.24 T
+270.35 312.67 372.4 335.35 R
+N
+(pr) 276.02 349.91 T
+(ogram counter) 287.81 349.91 T
+247.62 233.3 247.62 230.33 237.24 233.3 247.62 236.28 4 Y
+0 Z
+N
+247.62 233.3 247.62 230.33 237.24 233.3 247.62 236.28 4 Y
+V
+315.71 324.01 315.71 233.3 247.87 233.3 3 L
+2 Z
+N
+410.78 295.66 497.12 318.34 R
+N
+410.78 272.99 497.12 295.66 R
+N
+(0) 395.08 301.33 T
+(1) 395.08 278.66 T
+410.78 250.31 497.12 272.99 R
+N
+410.78 227.63 497.12 250.31 R
+N
+(2) 395.08 255.98 T
+(3) 395.08 233.3 T
+410.78 204.96 497.12 227.63 R
+N
+410.78 182.28 497.12 204.96 R
+N
+(4) 395.08 210.62 T
+(5) 395.08 187.95 T
+410.78 159.6 497.12 182.28 R
+N
+410.78 136.92 497.12 159.6 R
+N
+(6) 395.08 165.27 T
+(7) 395.08 142.59 T
+(stack) 434.8 332.91 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+270.35 159.6 372.4 182.28 R
+N
+(stack pointer) 290.41 196.08 T
+378.12 148.26 378.12 151.24 388.5 148.26 378.12 145.29 4 Y
+0 Z
+N
+378.12 148.26 378.12 151.24 388.5 148.26 378.12 145.29 4 Y
+V
+321.38 170.94 321.38 148.26 377.87 148.26 3 L
+2 Z
+N
+0 F
+(Push x \050=250\051) 122.95 295.66 T
+(10) 128.62 272.99 T
+(Push x \050=250\051) 122.95 250.31 T
+(30) 128.62 227.63 T
+(Add \050=251\051) 128.62 204.96 T
+(Push x \050=250\051) 128.62 182.28 T
+(8) 128.62 165.27 T
+(Store \050=252\051) 128.62 142.59 T
+(30) 440.43 142.59 T
+(10) 440.43 165.27 T
+83.27 119.91 514.13 363.69 R
+N
+0 0 0 1 0 0 0 K
+1 10 Q
+(Fig. 2: RASPS) 83.27 108.58 T
+0 0 0 1 0 0 0 K
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "10" 10
+%%Page: "11" 11
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(11) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+-0.04 (ter. A cell of the memory or of the stack can contain a number. Cells are indexed by simple in-) 73.7 774.36 P
+0.89 (teger addresses starting at 0. When the next instruction is about to be executed, the machine) 73.7 760.36 P
+0.64 (takes the value of the cell that is referenced by the index stored in the program counter. This) 73.7 746.36 P
+0.5 (value is considered to be an instruction. The machine decodes the instruction and executes it.) 73.7 732.36 P
+-0.43 (Some instructions contain literal data and consist of several memory cells. An example is mem-) 73.7 718.36 P
+-0.35 (ory cell 2 where the numerical value, 250, was decoded by the machine as the \322Push x\323 instruc-) 73.7 704.36 P
+2.28 (tion. This statement consists of an additional memory cell, that contain a parameter. The) 73.7 690.36 P
+-0.02 (interpretation rule for the \322Push x\323 statement says that the parameter has to be pushed onto the) 73.7 676.36 P
+-0.03 (stack. After an instruction was executed, the program counter is incremented by the number of) 73.7 662.36 P
+(memory cells used by the statement. Afterwards, the next instruction is decoded and so on.) 73.7 648.36 T
+0.67 (The program counter and the stack counter are simple cells, and also the stack can be imple-) 73.7 629.36 P
+-0.69 (mented as part of the memory vector, which then matches to the original RASP. Since the model) 73.7 615.36 P
+-0.11 (shall reflect reality, the memory vector is assumed to be of a fixed length. Single memory cells) 73.7 601.36 P
+-0.06 (are also of a fixed length. For simplicity reasons, every memory cell can contain a number that) 73.7 587.36 P
+(is equal to the highest possible memory cell address.) 73.7 573.36 T
+(After having explained the basic elements of the model, we will now see the parts fit together.) 73.7 554.36 T
+1 14 Q
+(7) 73.7 525.03 T
+( The Attack Model) 87.87 525.03 T
+0 12 Q
+0.95 (The attack model \050see Fig. 3\051 contains two main components: the machine that executes the) 73.7 504.36 P
+-0.11 (agent program and the machine that executes the attack program. The attack program has to be) 73.7 490.36 P
+0.62 (able to control the aspects of the execution of the agent program. The agent cannot sense the) 73.7 476.36 P
+-0.28 (environment like global time by itself, it has to use the runtime environment for that purpose. It) 73.7 462.36 P
+0.24 (is also not possible for an agent to communicate directly with a communication partner, it has) 73.7 448.36 P
+-0.1 (to use the communication means offered by also the runtime environment. Instead of using an-) 73.7 434.36 P
+0.17 (other runtime environment component, the attacker machine itself is modelled to be that envi-) 73.7 420.36 P
+(ronment. Therefore, and for the sake of simplicity, the attacker machine is also a RASPS.) 73.7 406.36 T
+-0.06 (This allows to model system calls by the agent simply as calls to parts of the attacker program.) 73.7 174.18 P
+(Such a system call mechanism can be modelled as presented in Fig. 4:) 73.7 160.18 T
+93.28 189.18 507.66 402.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+7 X
+0 0 0 1 0 0 0 K
+90 450 33.27 32.44 138.9 305.06 G
+0.5 H
+2 Z
+0 X
+90 450 33.27 32.44 138.9 305.06 A
+0 12 Q
+(Agent) 122.48 309.48 T
+(RASPS) 119.81 295.08 T
+7 X
+90 450 61.25 72.5 323.33 295.21 G
+0 X
+90 450 61.25 72.5 323.33 295.21 A
+(Attacker) 302.08 301.88 T
+(RASPS) 303.75 283.54 T
+7 X
+90 450 21.25 20 449.17 360.21 G
+0 X
+90 450 21.25 20 449.17 360.21 A
+(clock) 437.08 357.71 T
+418.88 349.14 417.94 351.96 428.72 352.42 419.82 346.32 4 Y
+0 Z
+N
+418.88 349.14 417.94 351.96 428.72 352.42 419.82 346.32 4 Y
+V
+374.58 334.38 418.64 349.06 2 L
+2 Z
+N
+180.85 317.55 181.02 314.58 170.49 316.93 180.67 320.52 4 Y
+0 Z
+N
+180.85 317.55 181.02 314.58 170.49 316.93 180.67 320.52 4 Y
+V
+160.42 329.38 267.08 322.71 181.1 317.57 3 L
+2 Z
+N
+(calls system code) 177.92 332.71 T
+90 450 1.5 1.5 180 188.94 289.38 GG
+187.44 289.38 187.44 285.58 174.19 289.38 187.44 293.17 4 Y
+3 H
+0 Z
+N
+187.44 289.38 187.44 285.58 174.19 289.38 187.44 293.17 4 Y
+V
+262.08 289.38 188.94 289.38 2 L
+2 Z
+N
+(reads properties) 181.25 267.71 T
+(manipulates prop.) 181.25 254.38 T
+(controls execution) 181.25 240.21 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+7 X
+90 450 21.25 20 466.33 300.54 G
+0.5 H
+0 X
+90 450 21.25 20 466.33 300.54 A
+(partner) 450.92 293.88 T
+434.21 298.88 433.86 301.83 444.52 300.1 434.56 295.92 4 Y
+0 Z
+N
+434.21 298.88 433.86 301.83 444.52 300.1 434.56 295.92 4 Y
+V
+385.08 293.04 433.96 298.85 2 L
+2 Z
+N
+(agent) 455.42 304.38 T
+90 450 34.58 32.92 461.67 237.29 A
+416.27 241.75 417.11 244.61 426.21 238.8 415.42 238.9 4 Y
+0 Z
+N
+416.27 241.75 417.11 244.61 426.21 238.8 415.42 238.9 4 Y
+V
+373.75 254.38 416.03 241.83 2 L
+2 Z
+N
+(reads) 378.75 349.38 T
+(environment) 431.25 235.21 T
+97.08 194.38 504.59 394.38 R
+N
+1 F
+(Fig 3: Attack model) 103.75 199.38 T
+0 0 595.28 841.89 C
+145.8 85.97 455.14 156.18 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 10 Q
+0 X
+0 0 0 1 0 0 0 K
+-0.14 (callsystem <address of attacker RASPS memory cell>) 152.1 142.54 P
+3 F
+(Stack before execution:) 152.1 126.54 T
+0 0 0 1 0 0 0 K
+0 F
+( <parameter1> .. <parameter n>) 245.96 126.54 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 152.1 114.54 T
+0 0 0 1 0 0 0 K
+0 F
+( <result of procedure>) 239.3 114.54 T
+0 0 0 1 0 0 0 K
+1 12 Q
+(Fig 4: The callsystem statement) 151.47 91.37 T
+147.92 104.39 452.08 153.55 R
+0.5 H
+2 Z
+N
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "11" 11
+%%Page: "12" 12
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(12) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+-0.29 (As in reality, the agent senses the environment and communicates to interaction partners by us-) 73.7 774.36 P
+0.22 (ing system calls. Fig. 5 lists some of the possible system calls offered by the runtime environ-) 73.7 760.36 P
+(ment:) 73.7 746.36 T
+0.4 (The statements of the agent RASPS contain the usual stack machine commands such as stack) 73.7 543.43 P
+(manipulating operations, mathematical operations, control statements and so on.) 73.7 529.43 T
+-0.5 (The attack program cannot only access the memory and stack of the own RASPS, but also those) 73.7 510.43 P
+(of the agent RASPS \050see Fig. 6\051.) 73.7 496.43 T
+-0.65 (At the beginning of the agent execution, the agent RASPS is loaded with the agent, i.e. blackbox) 73.7 139.87 P
+0.06 (code. This code was migrated by the agent. The attacker RASPS is loaded with the attack pro-) 73.7 125.87 P
+-0.51 (gram. This program was generated by the attacker, considering parameters like the original pro-) 73.7 111.87 P
+(gram, the migrated blackbox program and the attack targets \050e.g. names of original variables\051.) 73.7 97.87 T
+175.78 558.43 425.16 742.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(callsystem 100) 182.08 728.73 T
+3 F
+(Stack before execution:) 182.08 714.73 T
+0 0 0 1 0 0 0 K
+0 F
+( v p) 275.94 714.73 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 182.08 702.73 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 269.28 702.73 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 182.08 690.73 T
+0 0 0 1 0 0 0 K
+0 F
+( send value) 223.74 690.73 T
+0 0 0 1 0 0 0 K
+2 F
+(v) 271.23 690.73 T
+0 0 0 1 0 0 0 K
+0 F
+( to partner) 277.23 690.73 T
+0 0 0 1 0 0 0 K
+2 F
+(p) 320.83 690.73 T
+4 F
+(callsystem 200) 182.08 674.73 T
+3 F
+(Stack before execution:) 182.08 660.73 T
+0 0 0 1 0 0 0 K
+0 F
+( p) 275.94 660.73 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 182.08 648.73 T
+0 0 0 1 0 0 0 K
+0 F
+( v) 269.28 648.73 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 182.08 636.73 T
+0 0 0 1 0 0 0 K
+0 F
+( receive value) 223.74 636.73 T
+0 0 0 1 0 0 0 K
+2 F
+(v) 281.77 636.73 T
+0 0 0 1 0 0 0 K
+0 F
+( from partner) 287.77 636.73 T
+0 0 0 1 0 0 0 K
+2 F
+(p) 343.03 636.73 T
+4 F
+(callsystem 300) 182.08 620.73 T
+3 F
+(Stack before execution:) 182.08 606.73 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 275.94 606.73 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 182.08 594.73 T
+0 0 0 1 0 0 0 K
+0 F
+( t) 269.28 594.73 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 182.08 582.73 T
+0 0 0 1 0 0 0 K
+0 F
+( request actual system time) 223.74 582.73 T
+0 0 0 1 0 0 0 K
+2 F
+(t) 334.56 582.73 T
+0 0 0 1 0 0 0 K
+0 F
+( in milliseconds) 340.56 582.73 T
+0 0 0 1 0 0 0 K
+1 12 Q
+(Fig. 5: Example system calls) 178.86 564.17 T
+178.75 576.89 421.25 739.39 R
+0.5 H
+2 Z
+N
+0 0 595.28 841.89 C
+138.04 154.87 462.9 492.43 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+4 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(fetchagent <address of agent RASPS memory cell>) 149.52 478.82 T
+3 F
+(Stack before execution:) 149.52 466.82 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 243.38 466.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 149.52 454.82 T
+0 0 0 1 0 0 0 K
+0 F
+( v) 236.72 454.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 149.52 442.82 T
+0 0 0 1 0 0 0 K
+0 F
+( request value of memory cell <address> of agent RASPS) 191.18 442.82 T
+0 0 0 1 0 0 0 K
+4 F
+(storeagent <address of agent RASPS memory cell>) 149.52 426.82 T
+3 F
+(Stack before execution:) 149.52 414.82 T
+0 0 0 1 0 0 0 K
+0 F
+( v) 243.38 414.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 149.52 402.82 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 236.72 402.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 149.52 390.82 T
+0 0 0 1 0 0 0 K
+0 F
+( store value v in memory cell <address> of agent RASPS) 191.18 390.82 T
+0 0 0 1 0 0 0 K
+4 F
+(fetchstackagent <address of agent RASPS stack cell>) 149.52 374.82 T
+3 F
+(Stack before execution:) 149.52 362.82 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 243.38 362.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 149.52 350.82 T
+0 0 0 1 0 0 0 K
+0 F
+( v) 236.72 350.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 149.52 338.82 T
+0 0 0 1 0 0 0 K
+0 F
+( request value of stack cell <address> of agent RASPS) 191.18 338.82 T
+0 0 0 1 0 0 0 K
+4 F
+(storestackagent <address of agent RASPS stack cell>) 149.52 322.82 T
+3 F
+(Stack before execution:) 149.52 310.82 T
+0 0 0 1 0 0 0 K
+0 F
+( v) 243.38 310.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 149.52 298.82 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 236.72 298.82 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 149.52 286.83 T
+0 0 0 1 0 0 0 K
+0 F
+( store value v in stack cell <address> of agent RASPS) 191.18 286.83 T
+0 0 0 1 0 0 0 K
+4 F
+(readstackpointer) 149.52 270.83 T
+3 F
+(Stack before execution:) 149.52 258.83 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 243.38 258.83 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 149.52 246.83 T
+0 0 0 1 0 0 0 K
+0 F
+( i) 236.72 246.83 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 149.52 234.83 T
+0 0 0 1 0 0 0 K
+0 F
+( request value of the stack pointer of the agent RASPS) 191.18 234.83 T
+0 0 0 1 0 0 0 K
+4 F
+(writestackpointer) 149.52 218.83 T
+3 F
+(Stack before execution:) 149.52 206.83 T
+0 0 0 1 0 0 0 K
+0 F
+( v) 243.38 206.83 T
+0 0 0 1 0 0 0 K
+3 F
+(Stack after execution:) 149.52 194.83 T
+0 0 0 1 0 0 0 K
+0 F
+( --) 236.72 194.83 T
+0 0 0 1 0 0 0 K
+3 F
+(Comment:) 149.52 182.83 T
+0 0 0 1 0 0 0 K
+0 F
+( store value v in the stack pointer of agent RASPS) 191.18 182.83 T
+0 0 0 1 0 0 0 K
+1 12 Q
+(Fig. 6: Agent RASPS access statements) 148.85 161.17 T
+144.05 175.94 455.86 489.26 R
+0.5 H
+2 Z
+N
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "12" 12
+%%Page: "13" 13
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(13) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+-0.14 (Before a new statement of the agent is executed, the following piece of code is executed on the) 73.7 774.36 P
+(attacker RASPS:) 73.7 760.36 T
+(1.) 73.7 741.36 T
+(decode ne) 87.87 741.36 T
+(xt statement of the agent RASPS) 136.01 741.36 T
+(2.) 73.7 727.36 T
+(store on the stack of the attack) 87.87 727.36 T
+(er RASPS:) 233.72 727.36 T
+(\245) 73.7 713.36 T
+(ne) 87.87 713.36 T
+(xt statement of the agent RASPS) 99.02 713.36 T
+(\245) 73.7 699.36 T
+(parameters of this statement) 87.87 699.36 T
+(3.) 73.7 685.36 T
+-0.31 (compute the future program counter of the agent RASPS and store this v) 87.87 685.36 P
+-0.31 (alue on the stack of) 432.48 685.36 P
+(the attack) 87.87 671.36 T
+(er RASPS) 134.07 671.36 T
+(4.) 73.7 657.36 T
+(e) 87.87 657.36 T
+(x) 93.02 657.36 T
+(ecute attack procedure of the attack) 98.84 657.36 T
+(er RASPS) 268.99 657.36 T
+(5.) 73.7 643.36 T
+(e) 87.87 643.36 T
+(x) 93.02 643.36 T
+(ecute the ne) 98.84 643.36 T
+(xt statement stored on the stack of the attack) 155.97 643.36 T
+(er RASPS using the also stored) 369.15 643.36 T
+(parameters) 87.87 629.36 T
+(6.) 73.7 615.36 T
+(store future program counter stored on the stack of the attack) 87.87 615.36 T
+(er RASPS into the program) 380.35 615.36 T
+(counter of the agent RASPS) 87.87 601.36 T
+(7.) 73.7 587.36 T
+(return to step 1.) 87.87 587.36 T
+0.35 (This piece of code can be modelled as a part of the program of the attacker RASPS \050allowing) 73.7 568.36 P
+(to use an unmodified RASPS\051 or can be integrated into the interpreter of the attacker RASPS.) 73.7 554.36 T
+1 F
+(7.1) 73.7 528.36 T
+( An example) 88.7 528.36 T
+0 F
+-0.32 (To illustrate the attack model, we will now) 73.7 509.36 P
+0.12 (have a look on imaginary agent and attack) 73.7 495.36 P
+2.36 (programs. The agent program shall exe-) 73.7 481.36 P
+0.78 (cute a buy procedure defined in the agent) 73.7 467.36 P
+-0.31 (program, buying some goods \050see Fig. 7a\051.) 73.7 453.36 P
+-0.36 (One of the parameters of the buy operation) 73.7 439.36 P
+1.75 (is a parameter A that contains electronic) 73.7 425.36 P
+(money.) 73.7 411.36 T
+0.19 (As the knowledge of the bitstring contain-) 73.7 392.36 P
+2.56 (ing electronic money means already the) 73.7 378.36 P
+0.51 (ability to spend it, the agent wants to pro-) 73.7 364.36 P
+1.16 (tect this data. Therefore, the agent uses a) 73.7 350.36 P
+1.41 (mechanism that allows to store values as) 73.7 336.36 P
+-0.37 (pieces in different variables. Fig. 7b shows) 73.7 322.36 P
+-0.51 (the transformation function used to distrib-) 73.7 308.36 P
+(ute the original values.) 73.7 294.36 T
+-0.31 (Using this transformation, a blackbox con-) 73.7 275.36 P
+1.12 (version mechanism creates blackbox pro-) 73.7 261.36 P
+-0.57 (tected code out of the original one \050see Fig.) 73.7 247.36 P
+0.05 (7a for the original code and Fig. 7c for the) 73.7 233.36 P
+(resulting blackbox code\051.) 73.7 219.36 T
+-0.09 (The attacker seeks to know the electronic money value. It knows the original code of the arriv-) 73.7 200.36 P
+0.28 (ing agent, but not the transformation function. Fortunately for him, this does not matter as the) 73.7 186.36 P
+-0.12 (blackbox protection mechanism has a severe problem: even values that were not stored in their) 73.7 172.36 P
+0.45 (original format occur as plaintext, as the parameters of procedure calls. It is therefore enough) 73.7 158.36 P
+0.55 (for the attacker to wait for statements that call the buy procedure and to read then the correct) 73.7 144.36 P
+283.46 236.75 527.24 517.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(Fetch 10) 294.8 492.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(# 10 = Variable A) 365.67 492.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 11) 294.8 480.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(# 11 = Variable B) 365.67 480.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 12) 294.8 468.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(# 12 = Variable C) 365.67 468.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Call 40) 294.8 456.62 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(# 40 = buy) 365.67 456.62 T
+0 0 0 1 0 0 0 K
+289.13 448.27 447.87 504.96 R
+0.5 H
+2 Z
+N
+0 0 0 1 0 0 0 K
+1 F
+(Fig. 7a: original code) 289.13 436.93 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(A = \050<230>XOR<194>\051+<233>) 292.98 416.37 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(B = \050<193> Shift <231>\051 * <190>) 292.98 400.37 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(C = \050<191> - <234>\051 Shift <232>) 292.98 384.37 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(40 = <500> + <501> - <150>) 292.98 368.37 T
+0 0 0 1 0 0 0 K
+287.32 360.67 446.05 428.71 R
+N
+0 0 0 1 0 0 0 K
+1 F
+(Fig. 7b: layout transformation) 292.98 349.34 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(Fetch 230) 460.59 493.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 194) 460.59 481.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Xor) 460.59 469.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 233) 460.59 457.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Add) 460.59 445.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 190) 460.59 433.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 193) 460.59 421.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 231) 460.59 409.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Shift) 460.59 397.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Multiply) 460.59 385.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 232) 460.59 373.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 191) 460.59 361.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 234) 460.59 349.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Sub) 460.59 337.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Shift) 460.59 325.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 500) 460.59 313.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 501) 460.59 301.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Add) 460.59 289.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Fetch 150) 460.59 277.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Sub) 460.59 265.69 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(Call) 460.59 253.69 T
+0 0 0 1 0 0 0 K
+455.55 245.24 517.91 506.03 R
+N
+0 0 0 1 0 0 0 K
+1 F
+(Fig. 7c: messed-up code) 345.83 255.49 T
+0 0 0 1 0 0 0 K
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "13" 13
+%%Page: "14" 14
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(14) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+(call parameter then. See Fig 8 for the pseudo code attack program.) 73.7 774.36 T
+0.22 (The first statement puts the numeric equivalent of the) 73.7 612.73 P
+2 F
+0.52 (Call 40) 335.27 612.73 P
+0 F
+0.22 ( statement on the stack. Then) 386.19 612.73 P
+-0.07 (the second stack element, which is the statement that was pushed by the attacker RASPS inter-) 73.7 598.73 P
+-0.48 (preter before the attack routine was called, is compared against the) 73.7 584.73 P
+2 F
+-1.16 (Call 40) 391.63 584.73 P
+0 F
+-0.48 ( value. If the com-) 440.87 584.73 P
+0.49 (pare operator of line 13 is true, then the attacker can use the electronic money value which is) 73.7 570.73 P
+0.12 (now on top of the stack since the equals operator removed the first two stack elements and the) 73.7 556.73 P
+-0.5 (if operator took the boolean value and since \050let us assume that\051 the parameter A is the first after) 73.7 542.73 P
+-0.62 (the) 73.7 528.73 P
+2 F
+-1.48 (Call 40) 90.75 528.73 P
+0 F
+-0.62 ( statement. Finally, line 20 restores the original statement values before the attack,) 139.67 528.73 P
+(the attack routine finishes and the statement is executed in the agent RASPS.) 73.7 514.73 T
+1 F
+(7.2) 73.7 488.73 T
+( Discussion of the model) 88.7 488.73 T
+0 F
+-0.59 (We will now examine whether the presented attack model fulfils the requirements stated before.) 73.7 469.73 P
+0.43 (Obviously, the attacker can read and modify the whole data and code part of the agent. It can) 73.7 455.73 P
+-0.05 (also read and modify the current state of the agent execution environment. The attacker cannot) 73.7 441.73 P
+0.95 (modify the way the agent is executed directly \050for that purpose, also the interpreting routine) 73.7 427.73 P
+0.73 (should be modifiable by the attacker\051, but the attacker can execute any code and modify any) 73.7 413.73 P
+0.09 (statement the agent is about to execute before the execution. On the one hand, this mechanism) 73.7 399.73 P
+-0.61 (allows the attacker to prevent the execution of any statement by the agent and to employ another) 73.7 385.73 P
+-0.57 (mechanism to execute the agent \050in this sense, the mechanism allows more than the requirement) 73.7 371.73 P
+-0.27 (wanted\051. On the other hand, this mechanism seems to be even more realistic since there are set-) 73.7 357.73 P
+0.09 (tings where the attacker cannot modify the overall interpreter. This is the case, when the agent) 73.7 343.73 P
+0.62 (consists of a machine program executed by the processor. The attacker can easily control the) 73.7 329.73 P
+0.2 (results of system calls, and it is able to control via this mechanism the interaction between the) 73.7 315.73 P
+0.04 (agent and other partners on the low communication level \050i.e. the attacker may see bytes flow-) 73.7 301.73 P
+-0.4 (ing, but not the cleartext value of these bytes\051. The attacker has even two possibilities to control) 73.7 287.73 P
+-0.16 (system calls: it can either use special code in the call routine provided by the attack program or) 73.7 273.73 P
+0.62 (it can dynamically execute code when the attacker sees the upcoming system call as the next) 73.7 259.73 P
+0.33 (statement. The attacker consists of a program by construction and it can control the execution) 73.7 245.73 P
+(of the agent program.) 73.7 231.73 T
+0.69 (The model is applicable on almost every programming language as it is a \322smallest common) 73.7 212.73 P
+0.62 (denominator\323 of the features of a programming language. Every step of a program above the) 73.7 198.73 P
+0.51 (\322atomic\323 execution of single operations is explicitly modelled by the machine model and can) 73.7 184.73 P
+(be seen and modified.) 73.7 170.73 T
+(For the set of requirements, the presented machine model is adequate.) 73.7 151.73 T
+1 14 Q
+(8) 73.7 122.4 T
+( Conclusion & Futur) 87.87 122.4 T
+(e W) 211.69 122.4 T
+(ork) 234.35 122.4 T
+0 12 Q
+-0.63 (Driven by the need for a model of malicious hosts attacking mobile agents, a set of requirements) 73.7 101.73 P
+-0.74 (for such a model was derived. Using an existing machine model, namely Random Access Stored) 73.7 87.73 P
+91.24 627.73 509.7 770.36 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(# attack main routine) 98.33 756.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(10) 98.33 740.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(push \322Call 40\323) 140.85 740.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(# push numeric value of statement on stack) 310.93 740.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(13) 98.33 728.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(equals?) 140.85 728.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(# compare the two top stack values) 310.93 728.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(14) 98.33 716.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(if true goto 17) 140.85 716.38 T
+( else goto 20) 140.85 704.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(# if stack value is true..) 310.93 704.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(17) 98.33 692.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(...) 140.85 692.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(# the attack target value now is on the stack) 310.93 692.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(18) 98.33 680.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(...) 140.85 680.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(# money can now be spent) 310.93 680.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(20) 98.33 668.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(push \322Call 40\323) 140.85 668.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(# push numeric value of statement on stack) 310.93 668.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+(23) 98.33 656.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 F
+(return) 140.85 656.38 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 F
+(# end of main routine) 310.93 656.38 T
+0 0 0 1 0 0 0 K
+1 12 Q
+(Fig. 8: Attack program) 96.67 633.21 T
+95.83 648.56 505 766.89 R
+0.5 H
+2 Z
+N
+0 0 595.28 841.89 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "14" 14
+%%Page: "15" 15
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(15) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+-0.58 (Program machines \050or RASPS\051, an attack model was presented. This model is able to make eve-) 73.7 774.36 P
+0.73 (ry single execution step explicit. This was used by an attack machine that executes an attack) 73.7 760.36 P
+-0.36 (program to control the execution of an agent program. By fulfilling the requirements, the attack) 73.7 746.36 P
+(model seems to be adequate to the problem.) 73.7 732.36 T
+-0.05 (The attack model can be used for two main purposes. The first purpose is the demonstration of) 73.7 713.36 P
+0.66 (the problem of malicious hosts. Contrary to e.g. data encryption problems, mobile agents are) 73.7 699.36 P
+-0.37 (subject not only of a single, but a whole set of possible attacks by the host and it is currently not) 73.7 685.36 P
+0.33 (even clear whether all of these attacks are already identified. The attack model can be used to) 73.7 671.36 P
+0.15 (write an attack program that tries to do a certain attack. The second purpose of the model is to) 73.7 657.36 P
+-0.36 (offer a basis for proving the protection scheme of algorithms that try to protect agents from ma-) 73.7 643.36 P
+-0.41 (licious hosts. As we have seen, not only a protection algorithm needs to be secure, also the code) 73.7 629.36 P
+0.06 (it produces must be protected. Therefore, we will use the attack model to evaluate our own se-) 73.7 615.36 P
+0.56 (curity approach, Time Limited Blackbox Protections, which will be implemented as a part of) 73.7 601.36 P
+(the Mole [Mol98] system.) 73.7 587.36 T
+1 F
+(Acknowledgements) 73.7 568.36 T
+0 F
+0.16 (The author wishes to thank Holger Petersen of the Theoretical Computer Science group of the) 73.7 549.36 P
+-0.72 (University of Stuttgart, who is able to name unusual 30-year-old machine models from memory,) 73.7 535.36 P
+-0.15 (the department library that also contains books that are older than the library itself and the NC-) 73.7 521.36 P
+0.15 (STRL server of the department of computer sciences at Cornell University that offers easy-to-) 73.7 507.36 P
+(get electronic copies of 28-year-old type-written technical reports.) 73.7 493.36 T
+1 14 Q
+(Literature) 73.7 461.03 T
+0 12 Q
+([Eng73]) 73.7 436.36 T
+-0.63 (Engeler, Erwin: Introduction to the Theory of Computing, Academic Press, 1973) 144.57 436.36 P
+([ER64]) 73.7 417.36 T
+-0.27 (Elgot, Calvin; Robinson, Abraham: Random-Access Stored-Program Machines,) 144.57 417.36 P
+0.09 (an Approach to Programming Languages, in: Journal of the ACM, Vol. 11, No.) 144.57 403.36 P
+(4, October 1964) 144.57 389.36 T
+([FGS96]) 73.7 370.36 T
+4.05 (Farmer, William; Guttmann, Joshua; Swarup, Vipin: Security for Mobile) 144.57 370.36 P
+1.56 (Agents: Authentication and State Appraisal, in: Proceedings of the European) 144.57 356.36 P
+3.71 (Symposium on Research in Computer Security \050ESORICS\051, pp. 118-130,) 144.57 342.36 P
+(Springer LNCS 1146, 1996) 144.57 328.36 T
+([GM96]) 73.7 309.36 T
+7.16 (General Magic: The Telescript Reference Manual. 1996. http://www.) 144.57 309.36 P
+(genmagic.com/Telescript/Documentation/TRM/) 147.57 295.36 T
+([Har70]) 73.7 276.36 T
+-0.12 (Hartmanis, Juri: Computational Complexity of Random Access Stored Program) 144.57 276.36 P
+0.05 (Machines. Technical Report No. 70-70, Department of Computer Science, Cor-) 144.57 262.36 P
+(nell University, August 1970) 144.57 248.36 T
+([HCK95]) 73.7 229.36 T
+0.3 (Harrison, Colin; Chess, David; Kershenbaum, Aaron: Mobile Agents: Are they) 144.57 229.36 P
+(a good idea?, Research Report, IBM T.J. Watson Research Center, 1995) 144.57 215.36 T
+([Hoh97]) 73.7 196.36 T
+1 (Hohl, Fritz: An approach to solve the problem of malicious hosts. Universit\212t) 144.57 196.36 P
+10.73 (Stuttgart, Fakult\212t Informatik, Fakult\212tsbericht Nr. 1997/03, 1997.) 144.57 182.36 P
+(http://www.informatik.uni-stuttgart.de/cgi-bin/ncstrl_rep_view.pl?/inf/ftp/pub/) 144.57 168.36 T
+(library/ncstrl.ustuttgart_fi/TR-1997-03/TR-1997-03.bib) 144.57 154.36 T
+([Hoh98]) 73.7 135.36 T
+0.67 (Hohl, Fritz: Time Limited Blackbox Security: Protecting Mobile Agents From) 144.57 135.36 P
+3.45 (Malicious Hosts, in: Vigna, Giovanni \050Ed.\051: Mobile Agents and Security,) 144.57 121.36 P
+(Springer-Verlag, 1998.) 144.57 107.36 T
+([Mea97]) 73.7 88.36 T
+0.17 (Meadows, Catherine: Detecting Attacks on Mobile Agents. DARPA Workshop) 144.57 88.36 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "15" 15
+%%Page: "16" 16
+595.28 841.89 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+[ 0 0 0 1 0 0 0]
+ 8 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(16) 514.41 35.43 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+2.94 (on Foundations for Secure Mobile Code Workshop, 26 - 28 March 1997.) 144.57 774.36 P
+(http://www.cs.nps.navy.mil/research/languages/statements/meadows.ps) 144.57 760.36 T
+([Mol98]) 73.7 741.36 T
+7.45 (Mole project page. http://www.informatik.uni-stuttgart.de/ipvr/vs/projekte/) 144.57 741.36 P
+(mole.html) 144.57 727.36 T
+([Pal94]) 73.7 708.36 T
+-0.49 (Palmer, E.: An Introduction to Citadel - a secure crypto coprocessor for worksta-) 144.57 708.36 P
+(tions, in: Proceedings of the IFIP SEC\32594 Conference, 1994) 144.57 694.36 T
+([RJ96]) 73.7 675.36 T
+0.41 (Rasmusson, Lars; Jansson, Sverker: Simulated Social Control for Secure Inter-) 144.57 675.36 P
+(net Commerce, in: New Security Paradigms \32496, ACM Press, 1996) 144.57 661.36 T
+([R\232h97]) 73.7 642.36 T
+0.25 (R\232hrle, Klaus: Konzeption, Implementierung und Analyse von Verw\237rfelungs-) 144.57 642.36 P
+0.34 (mechanismen f\237r Quellcode, Diploma Thesis Nr. 1541, Faculty of Informatics,) 144.57 628.36 P
+(University of Stuttgart, Germany, 1997) 144.57 614.36 T
+([ST98a]) 73.7 595.36 T
+2.56 (Sander,Tomas; Tschudin,Christian: Protecting Mobile Agents Against Mali-) 144.57 595.36 P
+0.54 (cious Hosts, in: Vigna, Giovanni \050Ed.\051: Mobile Agents and Security, Springer-) 144.57 581.36 P
+-0.88 (Verlag, 1998.http://www.icsi.berkeley.edu/~sander/publications/MA-protect.ps) 144.57 567.36 P
+([ST97]) 73.7 548.36 T
+1.34 (Sander,Tomas; Tschudin,Christian: Towards Mobile Cryptography. Technical) 144.57 548.36 P
+4.25 (Report 97-049, International Computer Science Institute, Berkeley. 1997.) 144.57 534.36 P
+(http://www.icsi.berkeley.edu/~sander/publications/tr-97-049.ps) 147.57 520.36 T
+([ST98b]) 73.7 501.36 T
+-0.47 (Sander,Tomas; Tschudin,Christian: On Sofware Protection via Function Hiding.) 144.57 501.36 P
+-0.2 (Submitted to the 2nd International Workshop on Information Hiding, Dec 1998.) 144.57 487.36 P
+(http://www.icsi.berkeley.edu/~sander/publications/hiding.ps) 144.57 473.36 T
+([Vig97]) 73.7 454.36 T
+-0.18 (Vigna, Giovanni: Protecting Mobile Agents through Tracing, in: Proceedings of) 144.57 454.36 P
+0.64 (the  Third ECOOP Workshop on Operating System support for Mobile Object) 144.57 440.36 P
+(Systems, 1997. To appear.) 144.57 426.36 T
+([Yee94]) 73.7 407.36 T
+0.01 (Yee, Bennet: Using Secure Coprocessors. PhD thesis, Carnegie Mellon Univer-) 144.57 407.36 P
+(sity, 1994) 144.57 393.36 T
+([Yee97]) 73.7 374.36 T
+0.81 (Yee, Bennet: A Sanctuary for Mobile Agents. DARPA Workshop on Founda-) 144.57 374.36 P
+8.34 (tions for Secure Mobile Code Workshop, 26 - 28 March 1997.) 144.57 360.36 P
+(http://www.cs.nps.navy.mil/research/languages/statements/bsy.ps) 144.57 346.36 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "16" 16
+%%Trailer
+%%BoundingBox: 0 0 595.28 841.89
+%%PageOrder: Ascend
+%%Pages: 16
+%%DocumentFonts: Times-Roman
+%%+ Times-Bold
+%%+ Courier
+%%+ Times-Italic
+%%+ Courier-Bold
+%%+ Helvetica
+%%EOF

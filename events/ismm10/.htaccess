@@ -1,0 +1,2 @@
+AddHandler server-parsed html
+ErrorDocument 404 /ISMM10/notfound.html

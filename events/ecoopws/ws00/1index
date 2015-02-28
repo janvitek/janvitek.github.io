@@ -1,0 +1,132 @@
+<HTML>
+<HEAD>
+   <TITLE>6th ECOOP WORKSHOP ON MOBILE OBJECT SYSTEMS</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; SunOS 5.5 sun4m) [Netscape]">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#888888" ALINK="#222222">
+
+<H2 ALIGN=CENTER>6th ECOOP WORKSHOP ON MOBILE OBJECT SYSTEMS:<BR>
+<I>Operating System Support, Security and Programming Languages</B></I> </H2>
+
+<CENTER><P><B>June 12 or 13, Cannes, France. </BR></B></P></CENTER>
+
+<P>
+<P>
+<CENTER><P><B>In association with the 14th European Conference on Object-Oriented
+Programming (<A HREF="http://ecoop2000.unice.fr/">ECOOP 2000</A>)<BR>
+Cannes, France. </BR></B></P></CENTER>
+
+<UL>
+<CENTER><P>
+<HR WIDTH="100%"></P></CENTER>
+
+<CENTER><P><BLINK><FONT COLOR="#0000FF"><FONT SIZE=+1>Call for Papers</FONT></FONT></BLINK></P></CENTER>
+</UL>
+
+<P>Code and program mobility has become a fundamental element of Internet 
+programming, as seen from its use in application models such as active 
+networking and network computing. The object-oriented community has been to the 
+forefront of mobility, with technologies like Emerald through to Java. Despite 
+this success, hard questions remain, notably with respect to security, efficient 
+operating system support and mobile object application design and programming 
+techniques.</P>
+
+<P>The ECOOP Workshop On Mobile Object Systems was first held in 1995, and has been 
+held every year since. Its goal has been to bring together researchers and 
+practitioners working on mobility. 
+Recent editions of the workshop have treated operating system 
+support (1997), security (1998) and programming languages (1999). 
+This year's workshop is broadened in scope to include all of these 
+topics. Our primary aim is to foster discussion between researchers 
+working in these three intrinsically linked areas. 
+We are also interested in proposals that treat aspects of mobile 
+objects that have received relatively little attention, e.g., 
+operating system support for state capture mechanisms, resource control for 
+security, and agent program development techniques.</P>
+
+<P>The workshop will be held on June 12 or June 13 2000, in conjunction
+with the ECOOP 2000 conference taking place in Cannes, France. </P>
+
+<P><B><FONT SIZE=+1>Submission of papers</FONT></B></P>
+
+<P>Interested authors are invited to send position papers (of any
+length) to ecoopws@cui.unige.ch <B>in postscript form</B>
+by March 24. Papers will be accepted on the
+basis of their ability to stimulate discussion during the workshop.
+Accepted papers will be made available to the workshop's participants
+at the workshop's web site well in advance of the workshop.</P>
+
+
+Topics include, but are not restricted to:
+
+<UL>
+   <LI> Theoretical foundations of secure mobile computations,
+   <LI> Mobile object code verification techniques,
+   <LI> Integrity and availability issues in mobile object systems,
+   <LI> Language and system implementation techniques,
+   <LI> Execution environments for mobile code and objects,
+   <LI> Java security issues relevant to mobility and mobile code,
+   <LI> Mobility related experience reports,
+   <LI> Mobile object system applications,
+   <LI> Resource control and accounting for mobile object systems,
+   <LI> Mobile object application design techniques.
+</UL>
+
+<P><B><FONT SIZE=+1>Important Dates</FONT></B></P>
+
+<UL>
+<LI><B><BLINK><FONT COLOR="#FF0000">March 24</FONT></BLINK></B>: Deadline
+for submission of papers.</LI>
+
+<LI><B>April 20</B>: Notification to authors.</LI>
+
+<LI><B>May 1</B>: Final version of papers.</LI>
+
+<LI><B>June 12, or June 13</B>: ECOOP Workshop on Mobile Object Systems.</LI>
+
+</UL>
+
+<P><B><FONT SIZE=+1>Programme Committee</FONT></B> </P>
+
+<UL>
+<LI>Bob Gray (Dartmouth, USA)</LI>
+
+<LI>Eric Jul (CopenHagen Univ., Denmark)</LI>
+
+<LI>Doug Lea (OSWEGO, USA)</LI>
+
+<LI>Jochen Liedtke (Karlsruhe Univ. Germany)</LI>
+
+<LI>Manuel Serrano (Nice Univ. France)</LI>
+
+<LI>Peter Sewell (Cambridge Univ. UK)</LI>
+
+<LI>Christian Tschudin (Uppsala University, Sweden)</LI>
+
+<LI>Jan Vitek (Purdue Univ. USA)</LI>
+</UL>
+
+<P><B><FONT SIZE=+1>Organizers</FONT></B> </P>
+
+<UL>
+<LI><A HREF="http://cui.unige.ch/~bryce">Ciar&aacute;n Bryce</A>, Univ. of Geneva</LI>
+
+<LI><A HREF="http://cui.unige.ch/~razafima">Chrislain Razafimahefa</A>, Univ. of Geneva</LI>
+</UL>
+
+<P><B><FONT SIZE=+1>E-Mail</FONT></B></P>
+
+us at <A HREF=mailto:ecoopws@cui.unige.ch>E-mail</A></I>: ecoopws@cui.unige.ch
+
+
+<P><B><FONT SIZE=+1>Web addresses</FONT></B> </P>
+
+<UL>
+<LI><A HREF="http://cui.unige.ch/~ecoopws/ws00/index.html">Workshop home page</A></LI>
+
+<LI><A HREF="http://cui.unige.ch/~ecoopws">ECOOP Workshop on Mobile Object Systems</A> series home page</LI>
+
+</UL>
+
+</BODY>
+</HTML>

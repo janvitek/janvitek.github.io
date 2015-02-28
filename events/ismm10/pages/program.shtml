@@ -1,0 +1,76 @@
+<h1>Program</h1>
+
+<h2>Saturday June 5</h2>
+<p>
+    <b>08:50-09:00 Welcome.</b> <i>Chair Doug Lea (SUNY Oswego)</i>
+</p>
+<p>
+    <b>9:00-10:00 Memory safety.</b> <i>Chair Martin Hirzel (IBM)</i>
+    <blockquote>
+        <font color="#ff0000">CETS: Compiler Enforced Temporal Safety for C.</font><br/>
+        <i>Santosh Nagarakatte, Jianzhou Zhao, Milo Martin, and Steve Zdancewic (University of Pennsylvania)</i><br/>
+        <font color="#ff0000">Parallel Checking of Expressive Heap Assertions.</font><br/>
+        <i>Martin Vechev, Eran Yahav, and Greta Yorsh (IBM)</i><br/>
+     </blockquote>
+</p>
+<p>
+    <b>10:30-12:00 Parallel Garbage Collection.</b> <i>Chair Richard Jones (University of Kent)</i>
+    <blockquote>
+        <font color="#ff0000">Tracing Garbage Collection on Highly Parallel Platforms.</font><br/>
+        <i>Katherine Barabash and  Erez Petrank (Technion)</i><br/>
+        <font color="#ff0000">Concurrent, Parallel, Real-Time Garbage-Collection.</font><br/>
+        <i>Fridtjof Siebert (aicas)</i><br/>
+        <font color="#ff0000">Optimizations in a Private Nursery-based Garbage Collector.</font><br/>
+        <i>Todd Anderson (Intel)</i><br/>
+     </blockquote>
+</p>
+<p>
+    <b>13:30-15:00 Memory Management Techniques.</b> <i>Chair Christine Flood (Sun Labs, Oracle)</i>
+    <blockquote>
+        <font color="#ff0000">Collecting Hollywood's garbage: Avoiding space-leaks in composite events.</font><br/>
+        <i>Tomas Petricek (Charles University) and Don Syme (Microsoft)</i><br/>
+        <font color="#ff0000">Speculative Parallelization Using State Separation and Multiple Value Prediction.</font><br/>
+        <i>Chen Tian, Min Feng, and Rajiv Gupta (University of California at Riverside)</i><br/>
+        <font color="#ff0000">The Locality of Concurrent Write Barriers.</font><br/>
+        <i>Laurence Hellyer, Richard Jones (University of Kent) and Antony Hosking (Purdue)</i><br/>
+     </blockquote>
+</p>
+<p>
+    <b>15:30-16:30 Invited talk.</b> <i>Chair Jan Vitek (Purdue)</i>
+    <blockquote>
+        <font color="#ff0000">Memory, an Elusive Abstraction.</font><br/>
+        <i>Peter Sewell (Cambridge University)</i><br/>
+    </blockquote>
+</p>
+<h2>Sunday June 6</h2>
+<p>
+    <b>09:00-10:00 Instrumentation and Evaluation.</b> <i>Chair Martin Vechev (IBM)</i>
+    <blockquote>
+        <font color="#ff0000">Improved Replication-Based incremental Garbage Collection for Embedded Systems.</font><br/>
+        <i>Tomoharu Ugawa, Hideya Iwasaki (The University of Electro-Communications), and Taiichi Yuasa (Kyoto University)</i><br/>
+        <font color="#ff0000">Efficient Memory Shadowing for 64-bit Architecture.</font><br/>
+        <i>Qin Zhao (MIT), Derek Bruening (VMWare), and Saman Amarasinghe (MIT)</i><br/>
+    </blockquote>
+</p>
+<p>
+    <b>10:30-12:00 Wild And Crazy Ideas.</b> <i>Chair Filip Pizlo (Fiji Systems)</i>
+    <blockquote>
+        This session is a fun and informal forum for discussion of interesting
+        ideas in the area of memory management. Presenters are given just 4
+        minutes in which to present their idea and 1 minute to take
+        questions. Prizes are awarded for the idea most crazy and the one most
+        worthy of implementation. Contact <a href="mailto:pizlo@mac.com">pizlo@mac.com</a> to reserve a slot.
+    </blockquote>
+</p>
+<p>
+    <b>13:30-15:00 Analysis.</b> <i>Chair Matthew Hertz (Canisius College)</i>
+    <blockquote>
+        <font color="#ff0000">Parametric Inference of Memory Requirements for Garbage Collected Languages.</font><br/>
+        <i>Elvira Albert, Samir Genaim, and Miguel Gomez-Zamalloa (Complutense University of Madrid)</i><br/>
+        <font color="#ff0000">A Graph Theoretic Approach to Cache-Conscious Placement of Data for Direct Mapped Caches.</font><br/>
+        <i>Mirza Beg and Peter van Beek (University of Waterloo)</i><br/>
+        <font color="#ff0000">The Economics of Garbage Collection.</font><br/>
+        <i>Jeremy Singer (University of Manchester), Richard Jones (University of Kent), Gavin Brown, and Mikel Lujan (University of Manchester).</i><br/>
+    </blockquote>
+</p>
+

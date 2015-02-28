@@ -1,0 +1,140 @@
+html, body {
+  background-color:#fff;
+  color:#000;
+}
+
+table#maintab {
+  margin:0px;
+  padding:0px;
+  border-spacing:0px;
+  float: left;
+  width:750px; 
+  border-color:black; 
+  border-width:3px;
+}
+
+.topnavbar {
+  background-color: #99a9c0;
+  font-family:sans-serif;
+  font-size:11pt;
+  color:white;
+  text-decoration:none;
+  width: 750px;
+}
+
+.sidenavbar {
+   background-color:white; 
+   width:180px;
+   font: 10pt sans-serif; 
+   padding-top:10px;
+   padding-bottom:10px;
+   
+}
+
+.mainbody {
+   background-color:white;
+   width:600px;
+   font-family:sans-serif;
+   font-size:12pt;
+   
+}
+.mainbodytable {
+   background-color:white;
+   font-family:sans-serif;
+   font-size:10pt;
+}
+
+
+.main {
+  font:10pt sans-serif;
+  text-align:justify;
+  padding:10px 0px;
+}
+
+.main .titlebar, .main .bigtitlebar, .main .mediumtitlebar {
+  text-align:center;
+  color:white;
+  font:11pt Arial;
+  font-weight:bold;
+  background-color:#99a9c0;
+}
+
+
+a {
+  font-weight:bold;
+  text-decoration:none;
+}
+
+a:link {
+  color:#00f;
+}
+
+a:visited {
+  color:#14a;
+}
+
+a:hover {
+  background-color:inherit;
+  text-decoration:underline;
+}
+
+
+a.menulink {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+a.menulink:link {
+  color:#fff;
+}
+
+a.menulink:visited {
+  color:#eee;
+}
+
+a.menulink:visited:hover {
+  color:#fff;
+}
+
+
+.rcsid hr {
+  width:100%;
+  margin:0px;
+}
+
+.rcsid {
+  width:100%;
+  border-top:1px solid #bbb;
+  font:10pt sans-serif;
+  text-align:right;
+  padding:0px;
+  margin:1px;
+  white-space:pre;
+  color:#fff;
+  white-space:nowrap;
+  font-weight:bold;
+  margin-top: 10px
+}
+
+
+ul {
+  list-style:square outside;
+}
+
+.titlebar,.bigtitlebar,.mediumtitlebar {
+  text-align:center;
+  color:white;
+  font:11pt Arial;
+  font-weight:bold;
+  background-color:#99a9c0;
+}
+
+
+.mediumtitlebar {
+  font:12pt Arial;
+}
+
+.bigtitlebar {
+  font:16pt Arial;
+}
+

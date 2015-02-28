@@ -1,0 +1,22 @@
+<h1>Submissions</h1>
+<p>Submitted papers must be in English and formatted to print on US Letter (8.5 x 11 inches) paper. Submissions must contain an abstract and postal and electronic mailing addresses for at least one contact author. All papers must be submitted on-line, preferably in Portable Document Format (PDF), although the submission system will also accept PostScript.  Submissions should be no more than 10 pages (including bibliography, excluding well marked appendices) in standard ACM SIGPLAN conference format: two columns, nine-point font (or larger) on a ten-point baseline (or larger), with columns 20pc (3.33in) wide and 54pc (9in) tall, and a column gutter of 2pc (0.33in). <a href="http://www.acm.org/sigs/sigplan/authorInformation.htm">Detailed formatting guidelines</a> are available at the URL below, along with formatting templates or style files for LaTeX. Papers that violate these guidelines will be rejected by the program chair. Program committee members are not required to read appendices, and so a paper should be intelligible without them. All accepted papers will appear in the published proceedings.</p>
+<p><a href=http://www.acm.org/sigs/sigplan/authorInformation.htm">http://www.acm.org/sigs/sigplan/authorInformation.htm</a></p>
+
+<h2>Double-blind reviewing</h2> 
+<p>Authors are anonymous to the reviewers, just as reviewers are anonymous to the authors. Authors must take reasonable efforts not to disclose their identities to reviewers: Do not give your names nor mention your institution, research group or project name. Where necessary for flow, a stand-in name such as "XYZ", may be used, with a footnote explaining that the actual name is withheld. Discuss your own prior work in the third person, as you would other related work. You may also provide reviewers with anonymous auxiliary material such as proofs and source code via the PC Chair (see below). Reviewers, for their part, will be honor-bound not to try to discover authors' identities until their initial reviews are complete. Authors' identities will be revealed at a later point in the program committee's deliberations, but will be known only to the program chair until that point.</p>
+
+<h2>Review committee</h2>
+<!--#include file="inc-reviewcommittee.shtml" -->
+
+<h2>Rebuttal</h2>
+<p>The rebuttal process will occur in early March 2010, and will give the authors opportunity to respond succinctly to factual errors in reviews, before the program committee meets to make its decisions. The committee may, but need not, respond to rebuttals or revise reviews at or after the committee meeting.</p>
+
+<h2>Auxiliary Material</h2>
+<p>Authors may provide the PC Chair with a URL for upload of auxiliary material. The URL itself will not be seen by reviewers. The authors may reference such material in their paper, noting that the material has been made available to the PC Chair. This facility may be used by authors to provide reviewers with useful information beyond the scope of the submitted paper, such as technical reports, proofs, and source code, without disclosing the authors' identity. Authors are obliged to make reasonable efforts to make all auxiliary material suitably anonymous. Authors are reminded that reviewers are under no obligation to read any auxiliary material.</p>
+<p>Papers accompanied by or based on open-source implementations are especially welcome. However, if the authors are primary contributors to such a project, they should provide source URLs separately to the Program Chair for validation, and not list them in the submission proper.</p>
+
+<h2>Proceedings</h2>
+<p>The proceedings will be published by the ACM. Authors should read the ACM Author Guidelines and related information. Authors of accepted papers must guarantee that their paper will be presented at the conference. For additional information please feel free to contact the Program Chair.</p>
+
+<!--#include file="inc-dates.shtml" -->
+ 

@@ -1,0 +1,118 @@
+                                   
+
+                   4th WORKSHOP ON MOBILE OBJECT SYSTEMS:
+                    Secure Internet Mobile Computations
+
+     In association with the 12th European Conference on Object-Oriented
+                           Programming (ECOOP'98)
+                                     and
+              The ECOOP Workshop on Distributed Object Security
+
+                      21 July 1998, Brussels, Belgium.
+                       http://cuiwww.unige.ch/~ecoopws
+
+     -----------------------------------------------------------------------
+
+                              Call for Participation
+
+Keywords: security, protection, mobile computation formalisms, mobile object
+systems, mobile code, programming languages, mobile agents, java.
+
+Applications executing over the Internet are currently of major interest to
+academe and industry. Mobility of code, and of running computations and
+objects, is widely regarded as an attractive paradigm for programming these
+applications. Yet, in order for the mobile object technology to be more
+widely accepted, innovative security solutions that provide solid security
+guarantees to clients and service providers have to be developed.
+
+The 4th Workshop in the ECOOP series on Mobile Object Systems aims to bring
+together mobile object system and language designers, security experts, and
+generally people interested in discussing the current state and future
+direction of security research in the mobile object system context. The
+workshop will be a forum to learn about the latest research, and also to
+discuss and exchange ideas concerning on-going theoretical and
+implementation work.
+
+It is our goal to bring you together with people from different research and
+development communities working towards the same goal as you!
+
+The workshop will be held on the 21th of July 1998, just prior to the
+ECOOP'98 conference taking place in Brussels, Belgium.
+
+Topics covered
+
+This year's workshop focuses on the security aspects of mobile computations.
+The list of topics includes, but is not limited to, the following:
+
+   * Theoretical foundations of secure mobile computations,
+   * Mobile object code verification techniques,
+   * Security policy modeling for mobile object systems,
+   * Security protocols for agent authentication,
+   * Integrity and availability issues in mobile object systems,
+   * Secure language and system implementation techniques,
+   * Java security issues relevant to mobility and mobile code,
+   * Mobility related experience reports and horror stories,
+   * Secure mobile object system applications.
+
+The workshop is being organized as part of a "double bill" with the ECOOP
+workshop on Distributed Object Security. Thus, authors wishing to submit
+papers on general security issues are invited to submit that workshop; its
+call for papers can be found http://sirac.inrialpes.fr/~jensen/ewdos.html
+
+Submission of papers
+
+Both full papers (maximum 15 pages) and position papers (1 page) are
+welcome. Authors wishing to submit a paper should send the paper in
+postscript form to the e-mail address ecoopws@cui.unige.ch by April 13,
+1998. Along with the submitted paper, authors are requested to send a brief
+biography, 6 to 7 lines maximum, which should include a description of their
+current research activities.
+
+We encourage not only submissions presenting original research results, but
+also papers that attempt to establish links between different approaches to
+mobile object system development, and/or papers that include survey
+material. Original research results should be clearly described, and their
+usefulness to practitioners outlined.
+
+The best full papers will be published in the workshop proceedings.
+
+Furthermore, in view of the cooperation with the ECOOP workshop on
+distributed object security, papers received that seem better suited for
+that workshop will be forwarded to its organizers.
+
+Workshop format
+
+Paper selection will be based on the quality of the submitted material. The
+number of participants will be limited, and attendance will be by invitation
+only. Authors whose papers are accepted will be invited to give a
+presentation.
+
+An e-mail forum will be set up before the workshop to foster exchange and
+prepare for the discussion topics.
+
+Important Dates
+
+   * April 13: Deadline for submission of papers.
+   * May 15: Notification to authors.
+   * June 15: Final version of papers.
+   * July 20: Distributed Object Security Workshop.
+   * July 21: Secure Internet Mobile Computations Workshop.
+
+Programme Committee
+
+   * Martin Abadi, DEC SRC
+   * Brian Bershad, Univ. of Washington
+   * Luca Cardelli, Microsoft Research
+   * Giuseppe Castagna, ENS
+   * Robert Gray, Dartmouth College
+   * Dag Johansen, Univ. of Tromso
+   * Eric Jul, DIKU Univ. Copenhagen
+   * Doug Lea, SUNY Oswego
+   * Christian Tschudin, Univ. Zurich
+   * Dennis Volpano, NSP
+
+Organizers
+
+   * Ciaran Bryce, Univ. of Geneva
+   * Leila Ismail, INRIA Rhone-Alpes
+   * Jan Vitek, Univ. of Geneva
