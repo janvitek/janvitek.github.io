@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jan Vitek @ NEU</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom css -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+    <!--[if IE]><link rel="shortcut icon" href="./img/favicon.ico"><![endif]-->
+
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+                                                                                                               
+<script language="JavaScript" type="text/JavaScript"><!--                                                                           
+                                                                                                                                    
+function MM_swapImgRestore() { var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc; }               
+function MM_preloadImages() {                                                                                                       
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();                                                                     
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)                                                   
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}                                                         
+}                                                                                                                                   
+function MM_findObj(n, d) {                                                                                                         
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {                                                   
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}                                                                
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];                                              
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);                                                
+  if(!x && d.getElementById) x=d.getElementById(n); return x;                                                                       
+  }                                                                                                                                 
+function MM_swapImage() {                                                                                                           
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)                                      
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}                                  
+}                                                                                                                                   
+                                                                                                                                    
+function swaptabs (showthis,hidethis) {                                                                                             
+  var style2 = document.getElementById(showthis).style;style2.display = "block";                                                    
+  var style3 = document.getElementById(hidethis).style;style3.display ="none";                                                      
+}                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+//--></script>   
+
+
+  </head>
+  <body id="pn-top">
+    <div class="container">
+      
+      <div class="header">
+
+        <div class="row">
+          <nav>
+            <ul class="nav navbar-nav">
+              <li role="presentation"><a href="#pn-anchor-home">[jv]</a></li>
+              <li role="presentation"><a href="#pn-anchor-news">[news]</a></li>
+              <li role="presentation"><a href="#pn-anchor-service">[service]</a></li>
+              <li role="presentation"><a href="#pn-anchor-projects">[projects]</a></li>
+              <li role="presentation"><a href="#pn-anchor-publications">[publications]</a></li>
+              <li role="presentation"><a href="#pn-anchor-teaching">[teaching]</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+      
+      <div class="content">
+        
+        <div class="row pn-white-bg">  
+          <div class="col-md-12">
+            <h2 id="pn-anchor-home" class="pn-courier-bold">[me]</h2>  
+          </div>      
+          <div class="col-md-4">
+            <p>My research focus on <em>design and implementation of programming abstractions in areas</em> that have included real-time embedded systems, concurrent and distributed systems and more recently scalable data analytics.</p>
+            <p>I have published in venues that specialize in Programming Languages, Virtual Machines, Compilers, Software Engineering, Real-time Computing, and Bioinformatics.</p>
+            <p>I enjoy beautiful code that solves real-world problems.</p>
+            <p>Software & papers should be free. <a href="http://en.wikipedia.org/wiki/Open_access" target="_blank"><img class="pn-inline-link" src="img/open_access.jpg" alt="Open access" /></a></p>
+            <p>Research should be repeatable and replicated. <a href="http://cacm.acm.org/magazines/2015/3/183593-the-real-software-crisis/fulltext" target="_blank"><img class="pn-inline-link" src="img/real_software.jpg" alt="The real software crisis" /></a></p>
+            <p style="text-align: right">A short biography could read like so:</p>
+
+
+	    <p> 
+	     <a href="http://ccs.neu.edu" target="_blank"><img src="img/neu.png" width=50></a>
+	     <a href="http://www.ccs.neu.edu/research/prl/" target="_blank"> <img src="img/prl.png" width=50></a>
+<br>
+	     <a href="http://fiji-systems.com" target="_blank"> <img src="img/fiji.gif" width=50></a>
+<br>
+	     <a href="http://sigplan.org" target="_blank"><img src="images/sigplan.jpg" width=150></a>
+	    </p>
+          </div>
+          <div class="col-md-4 pn-grey-font">
+            <p>Jan Vitek is a Professor of Computer Science at Northeastern University. He holds degrees from the University of Geneva (PhD'99, BS'89) and University of Victoria (MS'95). Professor Vitek works on topics related to the design and implementation of programming languages. In the <em>Ovm project</em>, he led the implementation of the first real-time Java virtual machine to be successfully flight-tested. Together with Nobel and Potter, he proposed a concept that became known as <em>Ownership Types</em>. Prof Vitek was one of the designers of the Thorn language. He work on gaining a better understanding of the JavaScript language and is now looking at supporting scalable data analysis in R. Prof Vitek chairs ACM SIGPLAN; he is the Chief Scientist at Fiji Systems, a vice chair of AITO and of IFIP WG 2.4. He chaired PLDI, ISMM and LCTES and was program chair of ESOP, ECOOP, VEE, Coordination, and TOOLS. Vitek has started a number of successful workshop series, including MOS on Mobile Objects, IWACO, on aliasing and confinement, and TRANSACT on transactional memory. He is on the steering committees of ECOOP, JTRES, TRANSACT, ICFP, OOPSLA, POPL, PLDI and LCTES.</p>
+          </div>
+          <div class="col-md-4" style="top: -40px">
+            <img src="img/me_small.jpg" alt="Jan Vitek" />
+            <h3>Jan Vitek</h3> 
+            <p><em>Professor of Computer Science</em></p>
+            <address>
+              <p class="pn-grey-font">College of Computer & <br />
+                Information Science<br />
+                Northeastern University<br />
+                440 Huntington Ave,<br />
+                Boston, MA 02115</p>            
+              <p>
+                <span class="pn-grey-font pn-contact-span">Skype:</span> <span class="pn-courier-bold">vitek_jan</span><br />
+                <span class="pn-grey-font pn-contact-span">Email:</span> <span class="pn-courier-bold"><a class="pn-dark" href="mailto:j.vitek@neu.edu?subject=Jan%20Vitek%20website%20inquiry">j.vitek@neu.edu</a></span><br />
+                <span class="pn-grey-font pn-contact-span">Office:</span> <span class="pn-courier-bold">Yes</span><br />
+                <span class="pn-grey-font pn-contact-span">CV:</span> <a href="pubs/cv.pdf" target="_blank" class="pn-dark"><span class="pn-courier-bold">PDF</span></a><br />
+                <span class="pn-grey-font pn-contact-span">H-index:</span> <a href="https://scholar.google.com/citations?user=Ws0GjboAAAAJ&hl=en&oi=ao" target="_blank" class="pn-dark"><span class="pn-courier-bold">41</span></a><br />
+                <span class="pn-grey-font pn-contact-span">DBLP:</span> <a href="http://dblp.uni-trier.de/pers/hd/v/Vitek:Jan" target="_blank" class="pn-dark"><span class="pn-courier-bold">Here</span></a><br>
+                <span class="pn-grey-font pn-contact-span">Ln:</span> <a href="http://www.linkedin.com/ln/jvitek" target="_blank" class="pn-dark"><span class="pn-courier-bold">Here</span></a>
+                <span class="pn-grey-font pn-contact-span">FB:</span> <a href="https://www.facebook.com/jvitekjr" target="_blank" class="pn-dark"><span class="pn-courier-bold">Here</span></a>
+              </p>
+            </address>
+          </div>
+        </div>
+        
+        <div class="row pn-grey-bg">
+          <div class="col-md-12">
+            <h2 id="pn-anchor-news" class="pn-courier-bold">[news]</h2>
+          </div>
+          <div class="col-md-12">
+	    <table>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"><li><span class="pn-news-span"><strong><a href="http://2015.ecoop.org"
+	       target="_blank">ECOOP</a></strong></span></li></ul></td>
+	       <td>I'm ECOOP's Comfy Chair and Summer School Czar, it is happening  July 5-10 in Prague, CZ </td>
+	       <td> <a href="http://www.ecoop.org/" target="_blank"> <img class="pn-inline-link" src="img/ecoop-logo.png" alt="European Conference on Object-Oriented Programming" /></a></td>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"><li><span class="pn-news-span"><strong><a href="http://www.curry-on.org" target="_blank">Curry On</a></strong></span></li></ul>
+	       </td>
+	       <td>
+		 <a href="http://heather.miller.am" target="_blank">Heather Miller</a> and I are oganized the first Curry On event, a mixer to get academia to meet the real world, July 6-7 in Prague.
+	       </td>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"> <li><span class="pn-news-span"><strong><a href="http://2015.ecoop.org/track/RIOT-2015-papers" target="_blank">RIOT</a></strong></span></li></ul></td>
+	       <td><a href="http://www.adamwelc.org" target="_blank">Adam Welc</a> and I are running the RIOT workshop on tools and implementation techniques for the R language, July 5th in Prague.</td>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"> <li><span class="pn-news-span"><strong><a href="http://2015.ecoop.org/track/MLM4PL2015" target="_blank">ML4PL</a></strong></span></li></ul></td>
+	       <td><a href="http://www.ittc.ku.edu/~kulkarni/" target="_blank">Prasad Kulkarni</a> and I have created the ML4PL workshop on machine learning meets programming languages, July 6th in Prague.</td>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"> <li><span class="pn-news-span"><strong><a href="http://www.dagstuhl.de/en/publications/lipics" target="_blank">OA</a></strong></span></li></ul></td>
+	       <td>The ECOOP community has voted for OPEN ACCESS: the majority of authors and unanimity of the AITO Exec and AITO members are in favor. The ECOOP proceedings will now published by Dagstuhl Schloss.</td>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"><li><span class="pn-news-span"><strong><a href="http://cacm.acm.org/magazines/2015/3/183593-the-real-software-crisis/fulltext" target="_blank">Artifacts</a></strong></span></li></ul></td>
+	       <td>A paper with <a href="http://cs.brown.edu/~sk/" target="_blank">Shriram Krishnamurthi</a> arguing for artifact evaluation is in now <a CACM.</td>
+	       <td> <a href="http://cacm.acm.org/magazines/2015/3/183593-the-real-software-crisis/fulltext" target="_blank"><img class="pn-inline-link" width=30 src="img/real_software.jpg" alt="The real software crisis" /></a></td>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"><li><span class="pn-news-span"><strong><a href="http://googleresearch.blogspot.com/2015/02/google-faculty-research-awards-winter.html" target="_blank">Google Award</a></strong></span></li></ul></td>
+	       <td>Our work on implemnentations of the R language was recognized by  a 2015 Google Faculty Research Award</td>
+	       <td><img src="img/rgicontransparent.png" width=30>
+	     </tr>
+	     <tr>
+	       <td><ul class="pn-ul-triangle"><li><span class="pn-news-span"><strong><a href="https://docs.google.com/document/d/1WH2zVpPAZxJEfzItAUq3f67Y_xRXpIh4It8HZWkeMXI/edit?usp=sharing" target="_blank">Positions</a></strong></span></li></ul></td>
+	       <td>I am looking for students and postdocs</td>
+	     </tr>       
+	    </table>
+          </div>
+        </div>
+        
+        <div class="row pn-white-bg">
+          <div class="col-md-12">
+            <h2 id="pn-anchor-service" class="pn-courier-bold">[service]</h2>
+          </div>
+          <div class="col-md-4">
+            <h3>Conference Chair</h3>  
+            <table>
+              <tr>
+                <td class="pn-first-td"><a href="http://2015.ecoop.org" target="_blank">ECOOP'15</a></td>
+                <td>Comfy Chair</td>
+              </tr> 
+              <tr>
+                <td class="pn-first-td"><a href="http://conf.researchr.org/home/esop-2015" target="_blank">ESOP'15</a></td>
+                <td>Program Chair</td>
+              </tr> 
+              <tr>
+                <td><a href="http://pldi12.cs.purdue.edu" target="_blank">PLDI'12</a></td>
+                <td>General Chair</td>
+              </tr>
+              <tr>
+                <td><a href="http://lctes2011.elis.ugent.be/?file=kop1.php" target="_blank">LCTES'11</a></td>
+                <td>General Chair</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cs.purdue.edu/ISMM10/" target="_blank">ISMM'10</a></td>
+                <td>General Chair</td>
+              </tr>
+              <tr>
+                <td><a href="http://malaga2010.lcc.uma.es/" target="_blank">TOOLS'10</a></td>
+                <td>Program Chair</td>
+              </tr>
+              <tr>
+                <td><a href="http://d3s.mff.cuni.cz/conferences/jtres2010/" target="_blank">JTRES'10</a></td>
+                <td>Program Chair</td>
+              </tr>
+              <tr>
+                <td><a href="https://ecoop08.cs.ucy.ac.cy/" target="_blank">ECOOP'08</a></td>
+                <td>Program Chair</td>                
+              </tr>
+              <tr>
+                <td><a href="events/COORD07/" target="_blank">COORD'07</a></td>
+                <td>Program Chair</td>                
+              </tr>
+              <tr>
+                <td><a href="http://janvitek.github.io/events/TRANSACT" target="_blank">TRANSACT'06</a></td>
+                <td>General Chair</td>                
+              </tr>
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/VEE/" target="_blank">VEE'05</a></td>
+                <td>Program Chair</td>                
+              </tr>
+              <tr>
+                <td><a href="http://janvitek.github.io/plditut" target="_blank">PLDI'05</a></td>
+                <td>Tutorial Chair</td>                
+              </tr>
+
+
+            </table>          
+            <h3>Event Organizer</h3>
+            <table>
+              <tr>
+                <td><a href="http://splashcon.org/2013/program/splash-i" target="_blank">SPLASH-I</a></td>
+                <td>SPLASH-I track: 2013, 2015</td>                
+              </tr>
+              <tr>
+                <td><a href="http://www.dynali.org/" target="_blank">DALI'13</a></td>
+                <td>NSF Workshop on Dynamic Languages for Scalable Data Analytics</td>                
+              </tr>
+              <tr>
+                <td><a href="events/PBD13/" target="_blank">PDB'13</a></td>
+                <td>NSF Workshop on Programming with Big Data</td>                
+              </tr>
+              <tr>
+                <td><a href="https://www.cs.purdue.edu/sss/projects/veesc/2010/" target="_blank">VEESC'10</a></td>
+                <td>Workshop on Dynamic Languages for Scientific Computing</td>                
+              </tr>
+              <tr>
+                <td><a href="vitekj/TIC10/Welcome.html" target="_blank">TiC</a></td>
+                <td>Trends in Concurrency: <a href="vitekj/TIC10/Welcome.html" target="_blank">2010</a>, <a href="events/TiC08" target="_blank">2008</a>, <a href="events/TiC06" target="_blank">2006</a></td>                
+              </tr>
+              <tr>
+                <td><a href="vitekj/ESS10/Welcome.html" target="_blank">ESS</a></td>
+                <td>ECOOP Summer School: 2010, 2011, 2012, 2013, <a href="http://ecoop14.it.uu.se/programme/ecoop-school.php" target="_blank">2014</a>, 2015.</td>                
+              </tr>
+              <tr>
+                <td><a href="https://www.cs.purdue.edu/sss/projects/tm/tmw2010/Welcome.html" target="_blank">TMW'10</a></td>
+                <td>NSF Transactional Memory Workshop</td>                
+              </tr>
+              <tr>
+                <td><a href="events/IFIP08/" target="_blank">WG2.4</a></td>
+                <td>IFIP WG2.4 meeting in Bormio</td>                
+              </tr>
+              <tr>
+                <td><a href="http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=05251" target="_blank">TfT'05</a></td>
+                <td>Dagstuhl Workshop on Types for Tools</td>                
+              </tr>
+            </table>         
+            <h3>Activities</h3>
+            <table>
+              <tr>
+                <td><a href="http://www.sigplan.org/" target="_blank">SIGPLAN</a></td>
+                <td>Chair, 2012--2015</td>
+              </tr> 
+              <tr>
+                <td><a href="http://www.aito.org/" target="_blank">AITO</a></td>
+                <td>Vice President, 2010-- </td>
+              </tr> 
+              <tr>
+                <td><a href="http://wg24.cs.uvic.ca/ContentWG24.shtml" target="_blank">IFIP WG2.4</a></td>
+                <td>Vice Chair, 2011-- </td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cominlabs.ueb.eu/" target="_blank">Comin Labs</a></td>
+                <td>Member, Advisory Board, 2011--</td>
+              </tr> 
+              <tr>
+                <td><a href="https://jcp.org/en/jsr/detail?id=302" target="_blank">JSR-302</a></td>
+                <td>Member, Expert Group, 2008--2013</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/lctes/main" target="_blank">LCTES</a></td>
+                <td>Member, SC, 2011--</td>
+              </tr> 
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/icfp/main" target="_blank">ICFP</a></td>
+                <td>Member, SC, 2012--</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/oopslas/main" target="_blank">OOPSLA</a></td>
+                <td>Member, SC, 2012--</td>
+              </tr> 
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/pldi/main" target="_blank">PLDI</a></td>
+                <td>Member SC, 2012--;  Chair SC, 2014--</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/popl/main" target="_blank">POPL</a></td>
+                <td>Member, SC, 2012--</td>
+              </tr> 
+              <tr>
+                <td><a href="http://www.sigplan.org/Conferences/ismm/main" target="_blank">ISMM</a></td>
+                <td>Member, SC, 2010--</td>
+              </tr>
+              <tr>
+                <td><a href="http://d3s.mff.cuni.cz/conferences/jtres2010/cfp.html" target="_blank">JTRES</a></td>
+                <td>Member, SC, 2010-- </td>
+              </tr> 
+              <tr>
+                <td><a href="http://janvitek.github.io/events/TRANSACT" target="_blank">TRANSACT</a></td>
+                <td>Founding Member, SC, 2006-- </td>
+              </tr>
+              <tr>
+                <td><a href="http://wrigstad.com/stop11/" target="_blank">STOP</a></td>
+                <td>Founding Member, SC, 2011--</td>
+              </tr>
+              <tr>
+                <td class="pn-first-td"><a href="http://www.jot.fm/index.html" target="_blank">JOT</a></td>
+                <td>Editor in Chief, 2013--2014</td>
+              </tr> 
+            </table>            
+            <h3>Honors</h3>
+            <table>
+              <tr>
+		<td>2011</td>
+                <td>Purdue University Faculty Scholar</td>                
+              </tr>
+              <tr>
+		<td>2011</td>
+                <td>Purdue Undergraduate Advising Award</td>                
+              </tr>
+              <tr>
+		<td>2011</td>
+                <td>Microsoft SEIF Research Award</td>                
+              </tr>
+              <tr>
+		<td>2006</td>
+                <td><a href="http://download.boulder.ibm.com/ibmdl/pub/software/dw/university/facultyawards/2006_faculty_recipients.pdf" target="_blank">IBM Faculty Award</a></td>                
+              </tr>
+              <tr>
+		<td>2001</td>
+                <td>NSF CAREER Award</td>                
+              </tr>
+
+            </table>            
+
+          </div>
+          <div class="col-md-4">
+            <h3>Invited Talks</h3>
+            <table>
+	     <tr>
+	       <td><a href="http://plmw15.iisc-seal.net/program">PLMW'15</a></td>
+	       <td> Repeatability, reproducibility and rigor in CS research. Programming Language Mentoring Workshop, Mumbai</td>
+	      <tr>
+		<td>VEE'14</td>
+		<td> The Case for the Three Rs of Systems Research: Repeatability, Reproducibility and Rigor</td>
+	      </tr>
+	      <tr>
+		<td>SCR'13</td>
+		<td>JavaScript Programmers Hate You: An ode to dynamic languages. Workshop on Software Correctness and Reliability, Zurich</td>
+	      </tr>
+	      <tr>
+		<td>PLMW'13</td>
+		<td>Planet Dynamic or: How I Learned to Stop Worrying and Love Reflection. SIGPLAN Programming Languages Mentoring Workshop, Rome</td>
+	      </tr>
+	      <tr>
+		<td>FTFJP'13</td>
+		<td>JavaScript Programmers Hate You.  Formal Techniques for Java-like Programs, Montpellier</td>
+	      </tr>
+	      <tr>
+		<td>APLAS'12</td>
+		<td>Planet Dynamic or: How I Learned to Stop Worrying and Love Reflection.  Asian Symposium on Programming Languages and Systems, Kyoto</td>
+	      </tr>
+	      <tr>
+		<td>Yonezawa'12</td>
+		<td>Thorn: Objects, Scripts and more...  Concurrent Objects and Beyond Symposium in Honor of Professor Akinori Yonezawa’s 65th Birthday, Kobe</td>
+	      </tr>
+              <tr>
+		<td>MSR'11</td>
+                <td>The Rise of Dynamic Languages for Scientific Computing, MSR Faculty Summit <a href="http://research.microsoft.com/apps/video/?id=152280" target="_blank">Video</a></td>                
+              </tr>
+              <tr>
+		<td><a href="http://goedel.cs.uiowa.edu/MVD/" target="_blank">MVD 10</a></td>
+                <td>Is Java Ready for Real-time?  <a href="http://goedel.cs.uiowa.edu/MVD/talks/Vitek.pdf" target="_blank">PDF</a></td>   
+              </tr>
+              <tr>
+		<td> <a href="http://research.microsoft.com/en-us/um/redmond/events/APLWACA2010/program.htm" target="_blank">APLWA'10</a></td>
+                <td>Of Scripts and Programs Tall tales, Urban Legends and Future Prospects  <a href="talks/dls09.pdf" target="_blank">PDF</a></td>                
+              </tr>
+              <tr>
+		<td><a href="http://www.dynamic-languages-symposium.org/dls-09/" target="_blank">DLS'09</a></td>
+                <td>Of Scripts and Programs Tall tales, Urban Legends and Future Prospects  <a href="talks/dls09.pdf" target="_blank">PDF</a></td>                
+              </tr>
+              <tr>
+		<td><a href="http://tools.ethz.ch/tools2009/" target="_blank">TOOLS'09</a></td>
+                <td>Programming models for Real-time and Concurrency. <a href="talks/tools09.pdf" target="_blank">PDF</a></td>   
+              </tr>
+              <tr>
+		<td>FCS'05</td>
+                <td>Language-based Intrusion Detection, Foundations of Computer Security</td>                
+              </tr>
+              <tr>
+		<td> <a href="http://www.sti.uniurb.it/events/fosad04/" target="_blank">FOSAD'04</a></td>
+                <td>Coordination and Security, School on Foundations of Security Analysis and Design <a href="http://www.sti.uniurb.it/events/fosad04/fosad04-coordination.pdf" target="_blank">PDF</a></td>                
+              </tr>
+            </table>
+            <h3>Program Committees</h3>
+            <table>
+              <tr>
+               <td class="pn-first-td"><a href="http://www.math.nagoya-u.ac.jp/~garrigue/APLAS2014/" target="_blank">APLAS</a></td>
+                <td>Asian Symp. on Programming Languages and Systems, 2014</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sable.mcgill.ca/array/" target="_blank">ARRAY</a></td>
+                <td>Workshop on Libraries, Languages, and Compilers for Array Programming, <a href="http://www.sable.mcgill.ca/array/" target="_blank">2014</a>, <a href="http://conf.researchr.org/track/pldi2015/ARRAY-2015-papers" target="_blank">2015</a></td>
+              </tr>
+
+              <tr>
+                <td><a href="http://www.stix.polytechnique.fr/~logozzo/WEB/Aiool.html" target="_blank">AIOOL</a></td>
+                <td>Workshop on Abstract Interpretation of Object-oriented Languages, 2005</td>
+              </tr>
+              <tr>
+                <td><a href="http://webhome.cs.uvic.ca/~ycoady/acp4is04/pc.html" target="_blank">ACP4IS</a></td>
+                <td>Workshop on Aspects, Components, and Patterns for Infrastructure Software, 2003, 2004</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cs.dartmouth.edu/ASA-MA/" target="_blank">ASA/MA</a></td>
+                <td>Agent Systems and Applications/ Mobile Agents, 2001</td>
+              </tr>
+              <tr>
+                <td><a href="http://users.ecs.soton.ac.uk/lavm/aisb/cfp.html" target="_blank">AISB</a></td>
+                <td>Symposium on Software mobility and adaptive behaviour, 2001</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sci.univr.it/~spoto/Bytecode07/" target="_blank">Bytecode</a></td>
+                <td>Workshop on Bytecode Semantics, Verification, Analysis and Transformation, 2007, 2008</td>
+              </tr>
+              <tr>
+                <td><a href="http://etaps08.mit.bme.hu/" target="_blank">CC</a></td>
+                <td>Conference on Compiler Construction, 2003, 2008, <a href="http://www.etaps.org/2012/cc" target="_blank">2012</a>,
+<a href="http://www.etaps.org/index.php/2014/cc" target="_blank">2014</a></td> 
+              </tr>
+              <tr>
+                <td><a href="http://www.cse.chalmers.se/~andrei/" target="_blank">CSF</a></td>
+                <td>IEEE Computer Security Foundations Symposium, 2008</td>
+              </tr>
+              <tr>
+                <td><a href="http://www-users.cs.york.ac.uk/~paige/cordie06.htm" target="_blank">CORDIE</a></td>
+                <td>Workshop on Concurrency, Real-Time and Distribution in Eiffel, 2006</td>
+              </tr>
+              <tr>
+                <td><a href="http://discotec09.di.fc.ul.pt/index.php?title=Coordination" target="_blank">COORD</a></td>
+                <td>Conference on Coordination Models and Languages, 2005, 2009</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cs.mcgill.ca/~xueliu/Confs/WCPS2009/" target="_blank">CPS</a></td>
+                <td>Workshop on Cyber-Physical Systems, 2008, 2009</td>
+              </tr>
+              <tr>
+                <td><a href="http://cd04.cs.ucl.ac.uk/" target="_blank">CD</a></td>
+                <td>Component Deployment, 2002, 2004</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.podc.org/data/podc2004/JavaWorkshop-cfp.txt" target="_blank">CSJP</a></td>
+                <td>Workshop on Concurrency and Synchronization in Java Programs, 2004</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.date-conference.com/" target="_blank">DATE</a></td>
+                <td>DATE Conference, Model Based Design of Embedded Systems track, 2010</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.dynamic-languages-symposium.org/dls-10/" target="_blank">DLS</a></td>
+                <td>Dynamic Language Symposium Conference, <a href="http://www.dynamic-languages-symposium.org/dls-10/" target="_blank">2010</a>,
+                <a href="http://www.dynamic-languages-symposium.org/dls-14/index.html" target="_blank">2014</a></td>
+              </tr>
+              <tr>
+                <td><a href="events/dosws.html" target="_blank">DOSW</a></td>
+                <td>Distributed Object Security Workshop, 1999</td>
+              </tr>
+              <tr>
+                <td class="pn-first-td"><a href="https://ecoop08.cs.ucy.ac.cy/" target="_blank">ECOOP</a></td>
+                <td>European Conference on Object-Oriented Programming, 1998, 2000, 2001, 2002, 2003, 2007, 2008, 2009, 2010, <a href="http://www.lirmm.fr/ecoop13/" target="_blank">2013</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://esop09.pps.jussieu.fr/" target="_blank">ESOP</a></td>
+                <td>European Symposium on Programming, 2002, 2007, 2009, 2011</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.emsoft.org/" target="_blank">EMSOFT</a></td>
+                <td>Conference on Embedded Software, 2011.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-4">
+            <p class="pn-h3-like">&nbsp;</p>
+            <table>
+              <tr>
+                <td><a href="http://cse.stfx.ca/~euc09/" target="_blank">EUC</a></td>
+                <td>Conference on Embedded and Ubiquitous Computing, 2009, 2010</td>
+              </tr>
+              <tr>
+                <td><a href="http://foclasa07.lcc.uma.es/" target="_blank">FOCLASA</a></td>
+                <td>Foundations of Coordination Languages and Software Architectures, 2007</td>
+              </tr>
+              <tr>
+                <td><a href="http://fool2013.cs.brown.edu/" target="_blank">FOOL</a></td>
+                <td>Foundations of Object-Oriented Languages, 2013</td>
+              </tr>
+              <tr>
+                <td><a href="http://proton.inrialpes.fr/~depalma/GCM11/" target="_blank">GCM</a></td>
+                <td>Workshop on Green Computing Middleware, 2011.</td>
+              </tr>
+              <tr>
+                <td><a href="http://program-transformation.org/GPCE13" target="_blank">GPCE</a></td>
+                <td>Generative Programming: Concepts & Experiences, 2013</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank">MASS</a></td>
+                <td>Symposium on Multi-Agent Security and Survivability, 2004</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cs.ru.nl/~erikpoll/ftfjp/cfp.html" target="_blank">FTfJP</a></td>
+                <td>Workshop on Formal Techniques for Java-like Programs, 2005</td>
+              </tr>
+              <tr>
+                <td><a href="http://w3.isis.vanderbilt.edu/HCSP-CPS/" target="_blank">HCSP</a></td>
+                <td>Workshop on High Confidence Software Platforms for Cyber-Physical Systems, 2006</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.usenix.org/conference/hotpar13" target="_blank">HotPar</a></td>
+                <td>Topics in Parallelism, 2013</td>
+              </tr>
+              <tr>
+                <td><a href="http://soft-dev.org/events/icooolps14/" target="_blank">ICOOOLPS</a></td>
+                <td>Implementation, Compilation, Optimization of Object-Oriented Languages, Programs and Systems, 2006,
+<a href="http://soft-dev.org/events/icooolps14/" target="_blank">2013</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.cs.purdue.edu/homes/jv/var/icalp.html" target="_blank">ICALP</a></td>
+                <td>International Conference on Automata, Languages and Programming, 2000</td>
+              </tr>
+              <tr>
+                <td><a href="http://cs.au.dk/~danvy/icfp05/" target="_blank">ICFP</a></td>
+                <td>International Functional Programming Conference, 2005</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank">ISORC</a></td>
+                <td>International Symposium on Object and componentoriented Real-time Computing, 2012.</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.multicore-systems.org/iwmse2010" target="_blank">IWMSE</a></td>
+                <td>International Workshop on Multicore Software Engineering, 2010</td>
+              </tr>
+              <tr>
+                <td><a href="http://people.dsv.su.se/~tobias/iwaco2007.html" target="_blank">IWACO</a></td>
+                <td>International Workshop on Aliasing, Confinement and Ownership, 2003, 2007, <a href="http://ecs.victoria.ac.nz/Events/IWACO2011/WebHome" target="_blank">2014</a></td>
+              </tr>
+              <tr>
+                <td><a href="events/ecoopws/iwaoos" target="_blank">IWAOOS</a></td>
+                <td>Intercontinental Workshop on Aliasing in Object- Oriented Systems, 1999</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank">JTRes</a></td>
+                <td>Workshop on Java Technologies for Real-Time and Embedded Systems, 2008, 2007, 2006, 2005, 2004, 2003, 2008, 2009, 2010</td>
+              </tr>
+              <tr>
+                <td><a href="#" target="_blank">JFLA</a></td>
+                <td>Journes Francophones des Langages Applicatifs, 2000, 1998, 1995</td>
+              </tr>
+              <tr>
+               
+		<td><a href="events/ecoopws/ws00" target="_blank">MOS</a></td>
+                <td>Mobile Objects Systems Workshop, 2004, 2003, 2002, 2001, <a href="events/ecoopws/ws00" target="_blank">2000</a>, <a href="events/ecoopws/ws99" target="_blank">1999</a>, <a href="events/ecoopws/ws98" target="_blank">1998</a>, <a href="events/ecoopws/ws97" target="_blank">1997</a>, <a href="events/ecoopws/ws996" target="_blank">1996</a>, <a href="events/ecoopws/ws95" target="_blank">1995</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://places09.di.fc.ul.pt/" target="_blank">PLACES</a></td>
+                <td>Programming Language Approaches to Concurrency and Communication-cEntric Software, 2009, 2010, <a href="http://places11.di.fc.ul.pt/" target="_blank">2011</a>, <a href="http://places12.di.fc.ul.pt/" target="_blank">2012</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cs.umd.edu/~mwh/PLAS07/" target="_blank">PLAS</a></td>
+                <td>Workshop on Programming Languages and Analysis for Security, 2007</td>
+              </tr>
+              <tr>
+                <td><a href="http://unavailable.adobe.com/" target="_blank">PLASTIC</a></td>
+                <td>Workshop on Programming Language And Systems Technologies for Internet Clients, 2011</td>
+              </tr>
+              <tr>
+                <td><a href="http://cs.stanford.edu/pldi10/" target="_blank">PLDI</a></td>
+                <td>Programming Language Design and Implementation, 2002, 2010, <a href="http://pldi2013.ucombinator.org/" target="_blank">2013</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.podc.org/podc2010/" target="_blank">PODC</a></td>
+                <td>Symposium on Principles of Distributed Computing, 2010</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cse.psu.edu/popl/11/" target="_blank">POPL</a></td>
+                <td>Principles of Programming Languages, 2001, 2008, 2011.</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.wifo.uni-mannheim.de/pppj2006/" target="_blank">PPPJ</a></td>
+                <td>conference on Principles and Practice of Programming in Java, 2006</td>
+              </tr>
+              <tr>
+                <td><a href="http://2015.rtas.org/" target="_blank">RTAS</a></td>
+                <td>Real-Time and Embedded Technology and Applications Symposium, 2011.</td>
+              </tr>
+              <tr>
+                <td><a href="http://2014.rtss.org/" target="_blank">RTSS</a></td>
+                <td>IEEE Real-Time System Symposium, 2009, 2010, 2011.</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.sigsac.org/sacmat2001.html" target="_blank">SACMAT</a></td>
+                <td>Symposium on Access Control Models and Technologies, 2001</td>
+              </tr>
+              <tr>
+                <td><a href="http://popl-obt-2014.cs.brown.edu/" target="_blank">OBT</a></td>
+                <td>Off-the Beaten Track, 2014</td>
+              </tr>
+              <tr>
+                <td><a href="http://oops.disi.unige.it/" target="_blank">OOPS</a></td>
+                <td>Object Oriented Programming Languages and Systems 2005, 2004</td>
+              </tr>
+              <tr>
+                <td><a href="http://2015.splashcon.org/" target="_blank">OOPSLA</a></td>
+                <td>Object-Oriented Programming Systems, Languages, and Applications, 2000, 2004, 2007, 2008, 2016</td>
+              </tr>
+              <tr>
+                <td><a href="http://cs.unibo.it/~zavattar/secco04/" target="_blank">SecCo</a></td>
+                <td>Workshop on Security Issues in Concurrency, 2003, 2004, 2007</td>
+              </tr>
+              <tr>
+                <td><a href="http://ctuning.org/cm/wiki/index.php?title=Events:TRUST2014" target="_blank">TRUST</a></td>
+                <td>Workshop on Reproducible Research Methodologies and New Publication Models, 2014</td>
+              </tr>
+              <tr>
+                <td><a href="http://www.cs.technion.ac.il/~erez/vee11/VEE_2011/Home_Page.html" target="_blank">VEE</a></td>
+                <td>Conference on Virtual Execution Environments, <a href="http://www.cs.technion.ac.il/~erez/vee11/VEE_2011/Home_Page.html" target="_blank">2011</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://design.cs.iastate.edu/vmil/2013/" target="_blank">VMIL</a></td>
+                <td>Workshop on Virtual Machines and Intermediate Languages, 2009</td>
+              </tr>
+              <tr>
+                <td><a href="http://wasdett.org/2013/" target="_blank">WASDeTT</a></td>
+                <td>Workshop on Academic Software Development Tools and Techniques, 2013</td>
+              </tr>
+            </table>
+          </div>          
+        </div>
+        <div class="row pn-grey-bg">
+          <div class="col-md-12">         
+            <h2 id="pn-anchor-projects" class="pn-courier-bold">[projects]</h2>
+          </div>
+          <div class="col-md-4">
+            <h3>Active</h3>
+	    <table>
+	      <tr>
+		<td><a href="https://www.cs.purdue.edu/sss/projects/dynjs/" target="_blank"><img src="img/dynjs.png" alt="Dynjs"></a></td>
+		<td>This project intends to analyze the dynamic behavior of
+		JavaScript programs and its implications on analyses and
+		security. Code available for JSBench and JSLocker. Data
+		available for our analysis papers.</td>
+	      </tr>
+	      <tr>
+		<td><a href="http://www.fiji-systems.com/" target="_blank"><img src="img/fiji.gif" width=70 alt="Fiji"></a></td>
+		<td> The Fiji real-time JVM and Fiji C1 compiler  run on  on a broad range of HW/OS (ARM and ERC32 to PowerPC and x86/x86_64, from RTEMS to Linux or Darwin), execute Java with deterministic garbage collection, or safe GC-less allocation. Allow to create mixed-criticality systems with isolation and partitioning. </td>
+	      </tr>
+	      <tr>
+		<td><a href="https://github.com/allr/" target="_blank">AllR</a></td>
+		<td>Tools related to the R programming language including the Purdue implementation of the FastR virtual machine (Completed 2014), timeR, testR and benchR. Code and data available. (Note that FastR has been transitionned to Oracle.)</td>
+	      </tr>
+	    </table>
+          </div>
+
+          <div class="col-md-4">
+            <h3>History</h3>
+	    <table>
+	      <tr>
+		<td><a href="https://www.cs.purdue.edu/sss/projects/aj/">AJ</a></td>
+		<td>Data-centric concurrency control for Java using atomic-sets. Project completed in 2013 in collaboration with IBM research. Data available.</td>
+	      </tr>
+	      <tr>
+		<td><a href="http://sourceforge.net/projects/flexotask/">FlexoTasks</a></td>
+		<td>Very low latency real-time streaming in Java. Project completed in 2010 in collaboration with IBM research. Code and data available.</td>
+	      </tr>
+
+	      <tr>
+		<td><a href="http://thorn-lang.org" target="_blank"><img src="img/thorn_logo3.png" width=60 alt="Thorn"></a></td>
+		<td>Thorn is a dynamically-typed concurrent language in
+		which lightweight isolated processes communicate by message
+		passing. Thorn includes powerful aggregate data types, a
+		class-based object system, first-class functions, an
+		expressive module system, and a variety of features
+		supporting the gradual evolution of prototype scripts into
+		robust programs.  Completed in 2010 in collaboraation with
+		IBM Research and INRIA. Code available.</td>
+	      </tr>
+	      <tr>
+		<td><a href="soft/ovm/" target="_blank"><img src="img/ovm.png" alt="Ovm" width=60></a></td>
+		<td>The Ovm project aims to develop a customizable framework
+		for research in virtual machines and object-oriented
+		programming language runtime systems. Completed in
+		2009. Code available.</td>
+	      </tr>
+	    </table>
+          </div>
+          <div class="col-md-4">
+	    <table>
+	      <tr>
+		<td><a href="https://www.cs.purdue.edu/sss/projects/oscj/" target="_blank"><img src="img/oscj.jpg" alt="oSCJ" width=60></a></td>
+		<td>An open-source implementation of a subset of Safety-Critical Java. Completed in 2010. Code available.</td>
+	      </tr>
+	      <tr>
+		<td><a href="https://www.cs.purdue.edu/sss/projects/cdx/" target="_blank">CDx</a></td>
+		<td>CDx  is an open source application benchmark suite that targets hard and soft real-time Java virtual machines. Completed in 2009. Code and data available.</td>
+	      </tr>
+	      <tr>
+		<td><a href="https://www.cs.purdue.edu/news/1-12-06scaneagle.htm" target="_blank"><img src="img/jaop.png" width=45 alt="Prismj"> </a></td>
+		<td>Real-time Java controls for a ScanEagle UAV. Winner of the DUKE's Choice award. Completed in 2005 in collaboration with Boeing.</td>
+	      </tr>
+	      <tr>
+		<td><a href="http://lpd.epfl.ch/transactions/wiki/doku.php?id=stmbench7" target="_blank">stmbench7</a></td>
+		<td> A benchmark for evaluating sfotware transactional memory implementations. The benchmark aims at providing a workload that is both realistic and non-trivial to scale. Code available. Completed in 2007 in collaboration with EPFL.</td>
+	      </tr>
+	      <tr>
+		<td><a href="soft/mba/mba.html"><img src="soft/mba/mba.png" alt="MBA" width=60></a></td>
+		<td>MBA is a Java program for automated assignment and assessment of uncertainty of protein backbone NMR. It is based on a statistical model for NMR spectra, and employs a tree-based algorithm of stochastic optimization. Project completed in 2006. Code and data available.</td>
+	      </tr>
+	    </table>
+          </div>
+
+        </div>
+        <div class="row pn-transparent-bg">
+          <div class="col-md-12">
+            <h2  id="pn-anchor-publications" class="pn-courier-bold">[publications]</h2>
+          </div>
+
+          <div class="col-md-12">
+            <div>
+              <div class="pn-publications">
+                <a class="pn-link"><strong>CACM'15</strong> |&nbsp;&nbsp;&nbsp; The Real Software Crisis: Repeatability as a Core Value </a>
+                <div class="pn-readmore">
+                  <strong>Authors</strong>: Shriram Krishnamurthi, Jan Vitek <br />
+                  <strong>Abstract</strong>: Where is the software in
+                  programming language research? In our field, software
+                  artifacts play a central role: they are the embodiments of
+                  our ideas and contributions. Yet when we publish, we are
+                  evaluated on our ability to describe informally those
+                  artifacts in prose. Often, such prose gives only a
+                  partial, and sometimes overly rosy, view of the
+                  work. Especially so when the object of discourse is made
+                  up of tens of thousands of lines of code that interact in
+                  subtle ways with different parts of the software and
+                  hardware stack on which it is deployed. Over the years,
+                  our community's culture has evolved to value originality
+                  above everything else, and our main conferences and
+                  journals deny software its rightful place.<br />
+		  <strong>Venue</strong>: Communications of the ACM, Vol. 58 No. 3, Pages 34-36<br />
+		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2658987" target="_blank">10.1145/2658987</a><br />
+                  <a href="pubs/cacm15.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                </div>
+              </div>
+            </div>       
+
+
+            <div>
+              <div class="pn-publications">
+                <a class="pn-link"><strong>TOPLAS'14</strong> |&nbsp;&nbsp;&nbsp; Atomicity Refinement for Verified Compilation</a>
+                <div class="pn-readmore">
+                  <strong>Authors</strong>: Suresh Jagannathan, Vincent Laporte, Gustavo Petri, David Pichardie, Jan Vitek <br />
+                  <strong>Abstract</strong>: We consider the verified
+		  compilation of high-level managed languages like Java or
+		  C# whose intermediate representations provide support for
+		  shared-memory synchronization and automatic memory
+		  management. Our development is framed in the context of
+		  the Total Store Order relaxed memory model. Ensuring
+		  complier correctness is challenging because high-level
+		  actions are translated into sequences of nonatomic actions
+		  with compiler-injected snippets of racy code; the behavior
+		  of this code depends not only on the actions of other
+		  threads but also on out-of-order executions performed by
+		  the processor. A naïve proof of correctness would require
+		  reasoning over all possible thread interleavings. In this
+		  article, we propose a refinement-based proof methodology
+		  that precisely relates concurrent code expressed at
+		  different abstraction levels, cognizant throughout of the
+		  relaxed memory semantics of the underlying processor. Our
+		  technique allows the compiler writer to reason
+		  compositionally about the atomicity of low-level
+		  concurrent code used to implement managed services. We
+		  illustrate our approach with examples taken from the
+		  verification of a concurrent garbage collector.  <br />
+		  <strong>Venue</strong>:  ACM Transactions on Programming Languages and Systems (TOPLAS), Volume 36 Issue 2, July 2014, Article No. 6 <br />
+		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2601339" target="_blank">10.1145/2601339</a><br />
+                  <a href="pubs/toplas14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                </div>
+              </div>
+            </div>       
+	   
+ 
+            <div>
+              <div class="pn-publications">
+                <a class="pn-link"><strong>VEE'14</strong> |&nbsp;&nbsp;&nbsp; A Fast Abstract Syntax  Tree Interpteter for R</a>
+                <div class="pn-readmore">
+                  <strong>Authors</strong>: 	Tomas Kalibera	Petr Maj, Floreal Morandat, Jan Vitek <br />
+                  <strong>Abstract</strong>:Dynamic languages have been gaining popularity to the point that their performance is starting to matter. The effort required to develop a production-quality, high-performance runtime is, however, staggering and the expertise required to do so is often out of reach of the community maintaining a particular language. Many domain specific languages remain stuck with naive implementations, as they are easy to write and simple to maintain for domain scientists. In this paper, we try to see how far one can push a naive implementation while remaining portable and not requiring expertise in compilers and runtime systems. We choose the R language, a dynamic language used in statistics, as the target of our experiment and adopt the simplest possible implementation strategy, one based on evaluation of abstract syntax trees. We build our interpreter on top of a Java virtual machine and use only facilities available to all Java programmers. We compare our results to other implementations of R.  <br />
+		  <strong>Venue</strong>: Proceedings of the 10th ACM SIGPLAN/SIGOPS international conference on Virtual execution environments (VEE) Pages 89-102<br>
+		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2674025.2576205" target="_blank">10.1145/2674025.2576205</a><br />
+                  <a href="pubs/vee14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                </div>
+              </div>
+            </div>       
+
+	  
+
+
+            <div>
+              <div class="pn-publications">
+                <a class="pn-link"><strong>ISMM'14</strong> |&nbsp;&nbsp;&nbsp; M3: high-performance memory management from off-the-shelf components<br />
+                <div class="pn-readmore">
+                  <strong>Authors</strong>:  	David Terei, Alex Aiken, Jan Vitek <br />
+                  <strong>Abstract</strong>: Real-world garbage collectors in managed languages are complex. We investigate whether this complexity is really necessary and show that by having a different (but wider) interface between the collector and the developer, we can achieve high performance with off-the-shelf components for real applications. We propose to assemble a memory manager out of multiple, simple collection strategies and to expose the choice of where to use those strategies in the program to the developer. We describe and evaluate an instantiation of our design for C. Our prototype allows developers to choose on a per-type basis whether data should be reference counted or reclaimed by a tracing collector. While neither strategy is optimised, our empirical data shows that we can achieve performance that is competitive with hand-tuned C code for real-world applications.<br />
+		  <strong>Venue</strong>: Proceedings of the 2014 international symposium on Memory management (ISMM) Pages 3-13 <br>
+		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2602988.2602995" target="_blank">10.1145/2602988.2602995</a><br />
+                  <a href="pubs/ismm14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                </div>
+              </div>
+            </div>       
+
+	  Older publication list still to be ported is <a href="yearly.htm">here</a>.
+	  </div>
+
+
+
+      </div>
+
+
+
+        <div class="row pn-grey-bg">
+          <div class="col-md-12">
+            <h2  id="pn-anchor-teaching" class="pn-courier-bold">[teaching]</h2>
+          </div>
+
+
+          <div class="col-md-4">
+            <h3>Active</h3>
+	    <table>
+	      <tr>
+		<td><a href="https://sites.google.com/site/mapreduce15s/" target="_blank">CS 6240</a></td>
+		<td>Parallel Data Processing in MapReduce, Winter 2015, 48 students.</td>
+	      </tr>
+	      <tr>
+		<td><a href="http://www.ccs.neu.edu/course/cs5010f14/" target="_blank">CS 5010</a></td>
+		<td>Program Design Paradigms, Fall 2014, 52 students.</td>
+	      </tr>
+	    </table>
+          </div>
+
+          <div class="col-md-4">
+            <h3>History</h3>
+	    <table>
+	      <tr>
+		<td><a href="https://sites.google.com/site/scalabledataanalytics/" target="_blank">CS 590</a></td>
+		<td>Scalable Data Analytics Reading Group, Winter 2014, 12 students.</td>
+	      </tr>
+	      <tr>
+		<td><a href="https://sites.google.com/site/pucs240s14/" target="_blank">CS 240</a></td>
+		<td>Programming in C, Winter 2014, 240 students.</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/240s12/" target="_blank">CS 240</a></td>
+		<td>Programming in C, Winter 2012</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/490s12/" target="_blank">CS 490</a></td>
+		<td>Software for Embedded Systems, Winter 2012</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/240f11/" target="_blank">CS 240</a></td>
+		<td>Programming in C, Fall 2011</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/490s11/" target="_blank">CS 490</a></td>
+		<td>Sofware for Embedded Systems, Winter 2011</td>
+	      </tr>
+
+	      <tr>
+		<td><a href="vitekj/590vf09/" target="_blank">CS 590</a></td>
+		<td>Embedded Computer Systems, Fall 2009</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/590vf08/" target="_blank">CS 590</a></td>
+		<td>Programming Languags Seminar, Fall 2008</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/590v08/" target="_blank">CS 590</a></td>
+		<td>Programming Languags Seminar, Fall 2008</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/565f08/" target="_blank">CS 456</a></td>
+		<td>Programming Language Seminar, Winter 2008</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/456-07/" target="_blank">CS 456</a></td>
+		<td>Programming  Languages, Fall 2007</td>
+	      </tr>
+	      <tr>
+		<td><a href="vitekj/510s06/" target="_blank">CS 510</a></td>
+		<td>Software Engineering, Winter 2006</td>
+	      </tr>
+	    </table>
+          </div>
+          <div class="col-md-4">
+            <h3>Students</h3>
+	    <table>
+	      <tr>
+		<td><strong>PhDs</strong></td>
+		<td><a href="http://the.gregor.institute" target="_blank">Gregor Richards</a> (2014),
+<a href="http://www.filpizlo.com" target="_blank">                    Filip Pizlo</a> (2012), 
+<a href="https://www.linkedin.com/profile/view?id=2882282&authType=NAME_SEARCH&authToken=s56e&locale=en_US&trk=tyah2&trkInfo=idx%3A1-1-1%2CtarId%3A1425161580687%2Ctas%3Ajacques+t" target="_blank">                    Jacques Thomas</a> (2011),  
+<a href="https://www.linkedin.com/in/jhspring" target="_blank">                    Jesper H. Sporing</a> (2008 EPFL),
+<a href="https://www.linkedin.com/in/rajeevgopalakrishna" target="_blank">                    Rajeev Gopalakrishna</a> (2006),
+<a href="http://users.cis.fiu.edu/~carbunar/" target="_blank">                    Bogdan Carbunar</a> (2005), 
+<a href="https://www.linkedin.com/in/krzysztofpalacz" target="_blank">                    Krzystof Palacz</a> (2004) </td>
+	      </tr>
+	      <tr>
+		<td><strong>MScs</strong></td>
+		<td> Nadya Ortiz (2012),
+		     Fadi Meawad  (2013),
+<a href="http://0xdata.com" target="_blank"> 		     Brandon Hill</a> (2013),
+<a href="https://www.linkedin.com/profile/view?id=55662768" target="_blank"> 		     Petr Maj</a> (2011),
+	<a href="https://www.linkedin.com/profile/view?id=10911852&authType=NAME_SEARCH&authToken=1YcK&locale=en_US&srchid=133758541425161840298&srchindex=1&srchtotal=427&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A133758541425161840298%2CVSRPtargetId%3A10911852%2CVSRPcmpt%3Aprimary" target="_blank">	     Daniel Tang </a> (2011),
+<a href="http://user.it.uu.se/~johos902/" target="_blank"> 		     Johan Ostlund</a> (2010),
+		     Jason Baker (2007),
+		     Hiroshi Yamauchi (2007),
+<a href="http://grothoff.org/christian/" target="_blank"> 		     Christian Grothoff</a> (2005),
+		     Andrey Madan (2004),
+<a href="https://www.linkedin.com/profile/view?id=3041899&authType=NAME_SEARCH&authToken=eveN&locale=en_US&srchid=133758541425161989514&srchindex=1&srchtotal=17&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A133758541425161989514%2CVSRPtargetId%3A3041899%2CVSRPcmpt%3Aprimary" target="_blank"> 		     Gergana Markova</a> (2003),
+		     Jason M. Fox (2003),
+                  James Liang (2002) </td>
+	      </tr>
+	      <tr><td><strong>BScs</strong>
+		  <td>  <a href="http://brrian.org" target="_blank"> Brian Burg</a> (2010),
+                          Brett Mravec (2010),
+                          Jason Ward (2010), 
+                           Chris Abernathy (2010),
+                          Rob Gevers (2009),
+                          Daniel Tang (2008),
+<a href="http://www.cc.gatech.edu/~wharris/" target="_blank">                          William Harris</a> (2007), 
+                         Andrew McClure (2006),
+                         Zacchary Wiggins (2005),
+                         Paul Kuliniewicz (2004),
+                        Wenchang Liu (2004),
+                        Filip Pizlo (2004),
+                       Chris Willmore (2003),
+                       Andrey Madan (2002),
+                       Ben Titzer (2003), 
+                       Adam Lugowski (2002),
+                       Josh Moore (200),
+                       Gergana Markova (2001),
+                       Theodore Witkamp (2003),
+                       Javed Siddique (2003)
+                        Alen Montz (2004).
+		    </td>
+	      </tr>
+	      <tr>
+		<td><strong>PostDocs</strong></td>
+		<td> <a href="https://www.cs.purdue.edu/homes/gpetri/" target="_blank"> Gustavo Petri</a>,
+		    Rafal Kolanski (2013-–2014),
+<a href="http://0xdata.com/team/michal-malohlava/" target="_blank"> 		    Michal Malohlava</a> (2012--2013),
+<a href="http://www.labri.fr/perso/fmoranda/" target="_blank"> 		    Floreal Morandat</a> (2011-–2012),
+<a href="http://pages.cs.wisc.edu/~kidd/" target="_blank">                     Nicholas Kidd</a> (2009-–2010),
+<a href="http://csl.cs.uni-saarland.de/people/hammer/" target="_blank">                     Christian Hammer</a> (2009-–2011),
+                    Ales Plsek (2009-–2011),
+                    Sylvain Lebresne (2008-2009),
+<a href="https://www.cs.purdue.edu/homes/tkaliber/" target="_blank">                     Tomas Kalibera</a> (2007-–2009),
+<a href="http://wrigstad.com" target="_blank">                     Tobias Wrigstad</a>  (2007-–2009),
+<a href="http://www.cunei.com" target="_blank">                     Antonio Cunei</a>  (2003 – 2008),
+<a href="http://www.cunei.com" target="_blank">                     Jean Privat</a> (2006-–2007),
+                    Marek Prochazka (2003-–2005),
+                    Jeremy Manson (2003-–2005),
+                    Michael Richmond  (2002-–2003)
+		</td>
+	      </tr>
+	    </table>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+        
+        <div class="row pn-transparent-bg">
+          <div class="col-md-12">
+            <h2  id="pn-anchor-publications" class="pn-courier-bold">[varia]</h2>
+          </div>
+
+          <div class="col-md-4">
+	    <table>
+	      <tr>
+              <td width="10%"><p><a  target="_blank" href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image21','','images\
+/before_0001.jpg',1)"><img src="images/after_0001.jpg" name="Image21" width="100" border="0" id="Image21"></a><br>
+		<p align="center">After / Before</p> </td>                 
+	      <td width="90%"><div >                                                                                             
+		  <p  class="pn-grey-font"  >Is there any risk of brain damage? <br>      
+		    <br>                                                                
+		    Well, technically speaking, the operation is brain damage,                                                              
+		    but it's on a par with a night of heavy drinking. Nothing you'll                                                        
+		    miss. </p>                                                                                                              
+		  <p class="style2"><em>Eternal Sunshine of the Spotless Mind</em></p>                                                             
+	      </div></td>                                                                                                                   
+	      </tr>       
+	    </table>
+          </div>
+
+          <div class="col-md-4">
+	    <table>
+	      <tr>
+		<p align="center"><a  target="_blank" href="http://www.onion.com"><img src="images/onion.gif" height="25" border="0"></a></P>
+		<p align="center"><a  target="_blank" href="http://web.engr.illinois.edu/~taoxie/sefamily.htm"><img src="images/tree.jpg" height=80 border="0"></a></p>   	
+	      </tr>
+	    </table>
+          </div>
+          <div class="col-md-4">
+              <p align="left" class="pn-grey-font" >&quot;I understand radiation better and                                                      
+		feel like I could survive an atomic explosion somewhere on the planet,                                                    
+		if it wasn't, of course, really close to me.&quot; </p>                                                                   
+              <p ><em>Amazon.com review of 'All About Radiation' by L.                                                      
+		  Ron Hubbard.</em></p>                                                                                                   
+	      <p align="left" class="pn-grey-font" >&quot;DOS computers manufactured                                                 
+		by companies such as IBM, Compaq, Tandy, and millions of others are by                                                      
+        far the most popular, with about 70 million machines in use worldwide.                                                      
+        Macintosh fans, on the other hand, may note that cockroaches are far                                                        
+        more numerous than humans, and that numbers alone do not denote a higher                                                    
+        life form.&quot;</p>                                                                                                        
+      <p align="right" ><em>-- New York Times, November 26, 1991.</em></p>                                            
+      <p align="left" class="pn-grey-font" >&quot;Dad, do you say the Pledge of Allegiance                                                 
+        at work? ... Ah.  Maybe you should, you know... to be a little                                                              
+        bit part of this country.&quot;</p>                                                                                         
+       <p align="right"><em>-- Nadia Marie Vitek, Age 8.</em></p>
+
+
+	    </table>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+      
+      <footer class="footer">
+        <p><a href="http://www.catchexception.cz/" target="_blank">© Catchexception s.r.o.</a></p>
+        <a class="pn-top pn-dark" href="#pn-top">top</a>
+      </footer>      
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Custom scripts -->
+      <script src="js/custom.js"></script>
+
+    </div>
+  </body>
+</html>
