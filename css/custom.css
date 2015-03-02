@@ -74,6 +74,21 @@ ul.pn-ul-triangle li.pn-red:before
   border-color: transparent red;
 }
 
+ul.pn-ul-triangle li.pn-green .pn-publications-span
+{
+  color: green;
+}
+
+ul.pn-ul-triangle li.pn-blue .pn-publications-span
+{
+  color: blue;
+}
+
+ul.pn-ul-triangle li.pn-red .pn-publications-span
+{
+  color: red;
+}
+
 /* Bootstrap overrides */
 .row.pn-grey-bg, .row.pn-white-bg, .row.pn-transparent-bg
 {
