@@ -768,107 +768,112 @@ function swaptabs (showthis,hidethis) {
           </div>
 
         </div>
-        <div class="row pn-transparent-bg">
+             <div class="row pn-transparent-bg">
           <div class="col-md-12">
             <h2  id="pn-anchor-publications" class="pn-courier-bold">[publications]</h2>
           </div>
 
           <div class="col-md-12">
-            <div>
-              <div class="pn-publications">
-                <a class="pn-link"><strong>CACM'15</strong> |&nbsp;&nbsp;&nbsp; The Real Software Crisis: Repeatability as a Core Value </a>
-                <div class="pn-readmore">
-                  <strong>Authors</strong>: Shriram Krishnamurthi, Jan Vitek <br />
-                  <strong>Abstract</strong>: Where is the software in
-                  programming language research? In our field, software
-                  artifacts play a central role: they are the embodiments of
-                  our ideas and contributions. Yet when we publish, we are
-                  evaluated on our ability to describe informally those
-                  artifacts in prose. Often, such prose gives only a
-                  partial, and sometimes overly rosy, view of the
-                  work. Especially so when the object of discourse is made
-                  up of tens of thousands of lines of code that interact in
-                  subtle ways with different parts of the software and
-                  hardware stack on which it is deployed. Over the years,
-                  our community's culture has evolved to value originality
-                  above everything else, and our main conferences and
-                  journals deny software its rightful place.<br />
-		  <strong>Venue</strong>: Communications of the ACM, Vol. 58 No. 3, Pages 34-36<br />
-		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2658987" target="_blank">10.1145/2658987</a><br />
-                  <a href="pubs/cacm15.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
-                </div>
-              </div>
-            </div>       
+            <ul class="pn-ul-triangle">
+              <li class="pn-green">
+                <div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span"><strong>CACM'15</strong></span>The Real Software Crisis: Repeatability as a Core Value </a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Shriram Krishnamurthi, Jan Vitek <br />
+                      <strong>Abstract</strong>: Where is the software in
+                      programming language research? In our field, software
+                      artifacts play a central role: they are the embodiments of
+                      our ideas and contributions. Yet when we publish, we are
+                      evaluated on our ability to describe informally those
+                      artifacts in prose. Often, such prose gives only a
+                      partial, and sometimes overly rosy, view of the
+                      work. Especially so when the object of discourse is made
+                      up of tens of thousands of lines of code that interact in
+                      subtle ways with different parts of the software and
+                      hardware stack on which it is deployed. Over the years,
+                      our community's culture has evolved to value originality
+                      above everything else, and our main conferences and
+                      journals deny software its rightful place.<br />
+                      <strong>Venue</strong>: Communications of the ACM, Vol. 58 No. 3, Pages 34-36<br />
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2658987" target="_blank">10.1145/2658987</a><br />
+                      <a href="pubs/cacm15.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
+              <li class="pn-blue"> 
+                <div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span"><strong>TOPLAS'14</strong></span>Atomicity Refinement for Verified Compilation</a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Suresh Jagannathan, Vincent Laporte, Gustavo Petri, David Pichardie, Jan Vitek <br />
+                      <strong>Abstract</strong>: We consider the verified
+                      compilation of high-level managed languages like Java or
+                      C# whose intermediate representations provide support for
+                      shared-memory synchronization and automatic memory
+                      management. Our development is framed in the context of
+                      the Total Store Order relaxed memory model. Ensuring
+                      complier correctness is challenging because high-level
+                      actions are translated into sequences of nonatomic actions
+                      with compiler-injected snippets of racy code; the behavior
+                      of this code depends not only on the actions of other
+                      threads but also on out-of-order executions performed by
+                      the processor. A naïve proof of correctness would require
+                      reasoning over all possible thread interleavings. In this
+                      article, we propose a refinement-based proof methodology
+                      that precisely relates concurrent code expressed at
+                      different abstraction levels, cognizant throughout of the
+                      relaxed memory semantics of the underlying processor. Our
+                      technique allows the compiler writer to reason
+                      compositionally about the atomicity of low-level
+                      concurrent code used to implement managed services. We
+                      illustrate our approach with examples taken from the
+                      verification of a concurrent garbage collector.  <br />
+                      <strong>Venue</strong>:  ACM Transactions on Programming Languages and Systems (TOPLAS), Volume 36 Issue 2, July 2014, Article No. 6 <br />
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2601339" target="_blank">10.1145/2601339</a><br />
+                      <a href="pubs/toplas14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div>       
+              </li>      
+              <li class="pn-red"> 
+                <div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span"><strong>VEE'14</strong></span>A Fast Abstract Syntax  Tree Interpteter for R</a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>:   Tomas Kalibera  Petr Maj, Floreal Morandat, Jan Vitek <br />
+                      <strong>Abstract</strong>:Dynamic languages have been gaining popularity to the point that their performance is starting to matter. The effort required to develop a production-quality, high-performance runtime is, however, staggering and the expertise required to do so is often out of reach of the community maintaining a particular language. Many domain specific languages remain stuck with naive implementations, as they are easy to write and simple to maintain for domain scientists. In this paper, we try to see how far one can push a naive implementation while remaining portable and not requiring expertise in compilers and runtime systems. We choose the R language, a dynamic language used in statistics, as the target of our experiment and adopt the simplest possible implementation strategy, one based on evaluation of abstract syntax trees. We build our interpreter on top of a Java virtual machine and use only facilities available to all Java programmers. We compare our results to other implementations of R.  <br />
+                      <strong>Venue</strong>: Proceedings of the 10th ACM SIGPLAN/SIGOPS international conference on Virtual execution environments (VEE) Pages 89-102<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2674025.2576205" target="_blank">10.1145/2674025.2576205</a><br />
+                      <a href="pubs/vee14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div>       
+              </li>      
+              <li>
+                <div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span"><strong>ISMM'14</strong></span>M3: high-performance memory management from off-the-shelf components</a>
 
-
-            <div>
-              <div class="pn-publications">
-                <a class="pn-link"><strong>TOPLAS'14</strong> |&nbsp;&nbsp;&nbsp; Atomicity Refinement for Verified Compilation</a>
-                <div class="pn-readmore">
-                  <strong>Authors</strong>: Suresh Jagannathan, Vincent Laporte, Gustavo Petri, David Pichardie, Jan Vitek <br />
-                  <strong>Abstract</strong>: We consider the verified
-		  compilation of high-level managed languages like Java or
-		  C# whose intermediate representations provide support for
-		  shared-memory synchronization and automatic memory
-		  management. Our development is framed in the context of
-		  the Total Store Order relaxed memory model. Ensuring
-		  complier correctness is challenging because high-level
-		  actions are translated into sequences of nonatomic actions
-		  with compiler-injected snippets of racy code; the behavior
-		  of this code depends not only on the actions of other
-		  threads but also on out-of-order executions performed by
-		  the processor. A naïve proof of correctness would require
-		  reasoning over all possible thread interleavings. In this
-		  article, we propose a refinement-based proof methodology
-		  that precisely relates concurrent code expressed at
-		  different abstraction levels, cognizant throughout of the
-		  relaxed memory semantics of the underlying processor. Our
-		  technique allows the compiler writer to reason
-		  compositionally about the atomicity of low-level
-		  concurrent code used to implement managed services. We
-		  illustrate our approach with examples taken from the
-		  verification of a concurrent garbage collector.  <br />
-		  <strong>Venue</strong>:  ACM Transactions on Programming Languages and Systems (TOPLAS), Volume 36 Issue 2, July 2014, Article No. 6 <br />
-		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2601339" target="_blank">10.1145/2601339</a><br />
-                  <a href="pubs/toplas14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
-                </div>
-              </div>
-            </div>       
-	   
- 
-            <div>
-              <div class="pn-publications">
-                <a class="pn-link"><strong>VEE'14</strong> |&nbsp;&nbsp;&nbsp; A Fast Abstract Syntax  Tree Interpteter for R</a>
-                <div class="pn-readmore">
-                  <strong>Authors</strong>: 	Tomas Kalibera	Petr Maj, Floreal Morandat, Jan Vitek <br />
-                  <strong>Abstract</strong>:Dynamic languages have been gaining popularity to the point that their performance is starting to matter. The effort required to develop a production-quality, high-performance runtime is, however, staggering and the expertise required to do so is often out of reach of the community maintaining a particular language. Many domain specific languages remain stuck with naive implementations, as they are easy to write and simple to maintain for domain scientists. In this paper, we try to see how far one can push a naive implementation while remaining portable and not requiring expertise in compilers and runtime systems. We choose the R language, a dynamic language used in statistics, as the target of our experiment and adopt the simplest possible implementation strategy, one based on evaluation of abstract syntax trees. We build our interpreter on top of a Java virtual machine and use only facilities available to all Java programmers. We compare our results to other implementations of R.  <br />
-		  <strong>Venue</strong>: Proceedings of the 10th ACM SIGPLAN/SIGOPS international conference on Virtual execution environments (VEE) Pages 89-102<br>
-		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2674025.2576205" target="_blank">10.1145/2674025.2576205</a><br />
-                  <a href="pubs/vee14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
-                </div>
-              </div>
-            </div>       
-
-            <div>
-              <div class="pn-publications">
-                <a class="pn-link"><strong>ISMM'14</strong> |&nbsp;&nbsp;&nbsp; M3: high-performance memory management from off-the-shelf components</a>
-
-                <div class="pn-readmore">
-                  <strong>Authors</strong>:  	David Terei, Alex Aiken, Jan Vitek <br />
-                  <strong>Abstract</strong>: Real-world garbage collectors in managed languages are complex. We investigate whether this complexity is really necessary and show that by having a different (but wider) interface between the collector and the developer, we can achieve high performance with off-the-shelf components for real applications. We propose to assemble a memory manager out of multiple, simple collection strategies and to expose the choice of where to use those strategies in the program to the developer. We describe and evaluate an instantiation of our design for C. Our prototype allows developers to choose on a per-type basis whether data should be reference counted or reclaimed by a tracing collector. While neither strategy is optimised, our empirical data shows that we can achieve performance that is competitive with hand-tuned C code for real-world applications.<br />
-		  <strong>Venue</strong>: Proceedings of the 2014 international symposium on Memory management (ISMM) Pages 3-13 <br>
-		  <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2602988.2602995" target="_blank">10.1145/2602988.2602995</a><br />
-                  <a href="pubs/ismm14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
-                </div>
-              </div>
-            </div>       
-
-	  Older publication list still to be ported is <a href="yearly.htm">here</a>.
-	  </div>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>:   David Terei, Alex Aiken, Jan Vitek <br />
+                      <strong>Abstract</strong>: Real-world garbage collectors in managed languages are complex. We investigate whether this complexity is really necessary and show that by having a different (but wider) interface between the collector and the developer, we can achieve high performance with off-the-shelf components for real applications. We propose to assemble a memory manager out of multiple, simple collection strategies and to expose the choice of where to use those strategies in the program to the developer. We describe and evaluate an instantiation of our design for C. Our prototype allows developers to choose on a per-type basis whether data should be reference counted or reclaimed by a tracing collector. While neither strategy is optimised, our empirical data shows that we can achieve performance that is competitive with hand-tuned C code for real-world applications.<br />
+                      <strong>Venue</strong>: Proceedings of the 2014 international symposium on Memory management (ISMM) Pages 3-13 <br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/2602988.2602995" target="_blank">10.1145/2602988.2602995</a><br />
+                      <a href="pubs/ismm14.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div>       
+              </li>
+            </ul>
+    Older publication list still to be ported is <a href="yearly.htm">here</a>.
+    </div>
 
 
 
       </div>
+
 
 
 
