@@ -35,7 +35,17 @@ h3, .pn-h3-like
 
 table tr td:first-child, table tr th:first-child
 {
-  padding: 5px 20px 5px 0;
+  padding-right: 20px;
+}
+
+table tr td, table tr th
+{
+  padding: 5px 0px 5px 0;
+}
+
+table ul
+{
+  margin: 0 !important;
 }
 
 ul.pn-ul-triangle 
@@ -59,34 +69,34 @@ ul.pn-ul-triangle li:before
   position: relative;
 }
 
-ul.pn-ul-triangle li.pn-green:before 
+ul.pn-ul-triangle li.pn-journals:before 
 { 
-  border-color: transparent green;
+  border-color: transparent black;
 }
 
-ul.pn-ul-triangle li.pn-blue:before 
+ul.pn-ul-triangle li.pn-conferences:before 
 { 
-  border-color: transparent blue;
+  border-color: transparent lightblue;
 }
 
-ul.pn-ul-triangle li.pn-red:before 
+ul.pn-ul-triangle li.pn-other:before 
 { 
-  border-color: transparent red;
+  border-color: transparent #B6B6B6;
 }
 
-ul.pn-ul-triangle li.pn-green .pn-publications-span
+ul.pn-ul-triangle li.pn-journals .pn-publications-span
 {
-  color: green;
+  color: black;
 }
 
-ul.pn-ul-triangle li.pn-blue .pn-publications-span
+ul.pn-ul-triangle li.pn-conferences .pn-publications-span
 {
-  color: blue;
+  color: lightblue;
 }
 
-ul.pn-ul-triangle li.pn-red .pn-publications-span
+ul.pn-ul-triangle li.pn-other .pn-publications-span
 {
-  color: red;
+  color: #B6B6B6;
 }
 
 /* Bootstrap overrides */
@@ -197,6 +207,11 @@ ul.pn-ul-triangle li.pn-red .pn-publications-span
 .pn-publications
 {
   margin-bottom: 5px;
+}
+
+.pn-publications a, .pn-publications a:hover
+{
+  color: #333;
 }
 
 .pn-publications-span
