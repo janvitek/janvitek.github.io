@@ -1,0 +1,16 @@
+/*
+ * © Catch Exception s.r.o. 2015
+ */
+
+/* IE7 fixes */
+.header .row
+{
+  min-height: 50px;
+  width: auto;
+}
+
+.container .row
+{
+  width: 100%;
+  min-height: 10px;
+}
