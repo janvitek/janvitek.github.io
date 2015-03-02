@@ -76,7 +76,7 @@ ul.pn-ul-triangle li.pn-journals:before
 
 ul.pn-ul-triangle li.pn-conferences:before 
 { 
-  border-color: transparent lightblue;
+  border-color: transparent #87CFE7;
 }
 
 ul.pn-ul-triangle li.pn-other:before 
@@ -91,7 +91,7 @@ ul.pn-ul-triangle li.pn-journals .pn-publications-span
 
 ul.pn-ul-triangle li.pn-conferences .pn-publications-span
 {
-  color: lightblue;
+  color: #87CFE7;
 }
 
 ul.pn-ul-triangle li.pn-other .pn-publications-span
