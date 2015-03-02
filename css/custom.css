@@ -33,7 +33,7 @@ h3, .pn-h3-like
   line-height: 1.1;
 }
 
-table tr td, table tr th
+table tr td:first-child, table tr th:first-child
 {
   padding: 5px 20px 5px 0;
 }
@@ -57,6 +57,21 @@ ul.pn-ul-triangle li:before
   left: -1em;
   top: 0.9em;
   position: relative;
+}
+
+ul.pn-ul-triangle li.pn-green:before 
+{ 
+  border-color: transparent green;
+}
+
+ul.pn-ul-triangle li.pn-blue:before 
+{ 
+  border-color: transparent blue;
+}
+
+ul.pn-ul-triangle li.pn-red:before 
+{ 
+  border-color: transparent red;
 }
 
 /* Bootstrap overrides */
@@ -169,6 +184,12 @@ ul.pn-ul-triangle li:before
   margin-bottom: 5px;
 }
 
+.pn-publications-span
+{
+  width: 100px;
+  display: inline-block;  
+}
+
 .pn-publications a.pn-link
 {
   cursor: pointer;
@@ -193,4 +214,3 @@ ul.pn-ul-triangle li:before
 {
   top: -40px;
 }
-
