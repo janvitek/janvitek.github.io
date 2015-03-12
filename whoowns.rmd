@@ -1,0 +1,247 @@
+---
+title: "Who Owns Your Research: A Survey"
+author: "Jan Vitek"
+date: "March 12, 2015"
+output: html_document
+---
+
+```{r, echo=FALSE}
+data = read.csv("Who.csv")
+ colnames(data)<- c("Times", "OA_is", "OA_influence",  "Fund_OA", "Max_price", "Scaling_down", "ACM_role", "Switch",  "Copyright", "OA_comments", "Where_results", "Pub_in_journal", "Read_journal", "Pub_in_conf", "Why_journal", "Conf_as_journal", "Comment_journal", "DL_is_portal", "DL_make_easy", "DL_search", "DL_arch", "DL_comments", "Academia", "Age", "Member", "SIG", "Origin")
+
+usa = data$Origin=="North America"
+eu  = data$Origin=="Europe"
+world = (!usa) & (!eu)
+all = usa|eu|world
+senior = data$Age == "20+ years ago"
+middle = data$Age == "10+ years ago"
+junior = data$Age == "<10 years ago"
+rest =  (!senior) & (!middle) & (!junior)
+academe = data$Academia == "academia"
+industry = !academe
+acm = data$Member == "yes"
+notacm = !acm
+pubinjournal = data$Pub_in_journal == "yes"
+pubinconfer = data$Pub_in_conf == "yes"
+expected = grepl("it is expected by your employer", data$Why_journal)
+reg = data$Fund_OA == "through increased conference registration costs (or attendance)"
+pac = data$Fund_OA == "through author processing charges"
+
+data$Fund_OA <- as.character( data$Fund_OA )
+fund_oa_comments <- data$Fund_OA[! (reg|pac) ]
+data$Fund_OA[reg] <- "Registration"
+data$Fund_OA[pac] <- "Author Charges"
+data$Fund_OA[! (reg|pac) ] <- "Other"
+data$Fund_OA <- as.factor(data$Fund_OA)
+
+one = data$DL_is_portal == 1
+two = data$DL_is_portal == 2
+three = data$DL_is_portal == 3
+four = data$DL_is_portal == 4
+five = data$DL_is_portal == 5
+na = is.na(data$DL_is_portal)
+
+data$DL_is_portal <- as.character(data$DL_is_portal)
+data$DL_is_portal[one|two] <- "No"
+data$DL_is_portal[three|na] <- "Neutral"
+data$DL_is_portal[four|five] <- "Yes"
+data$DL_is_portal <- as.factor(data$DL_is_portal)
+
+one = data$DL_make_easy == 1
+two = data$DL_make_easy == 2
+three = data$DL_make_easy == 3
+four = data$DL_make_easy == 4
+five = data$DL_make_easy == 5
+na = is.na(data$DL_make_easy)
+
+data$DL_make_easy <- as.character(data$DL_make_easy)
+data$DL_make_easy[one|two] <- "No"
+data$DL_make_easy[three|na] <- "Neutral"
+data$DL_make_easy[four|five] <- "Yes"
+data$DL_make_easy <- as.factor(data$DL_make_easy)
+
+one = data$DL_search == 1
+two = data$DL_search == 2
+three = data$DL_search == 3
+four = data$DL_search == 4
+five = data$DL_search == 5
+na = is.na(data$DL_search)
+
+data$DL_search <- as.character(data$DL_search)
+data$DL_search[one|two] <- "No"
+data$DL_search[three|na] <- "Neutral"
+data$DL_search[four|five] <- "Yes"
+data$DL_search <- as.factor(data$DL_search)
+
+one = data$DL_arch == 1
+two = data$DL_arch == 2
+three = data$DL_arch == 3
+four = data$DL_arch == 4
+five = data$DL_arch == 5
+na = is.na(data$DL_arch)
+
+data$DL_arch <- as.character(data$DL_arch)
+data$DL_arch[one|two] <- "No"
+data$DL_arch[three|na] <- "Neutral"
+data$DL_arch[four|five] <- "Yes"
+data$DL_arch <- as.factor(data$DL_arch)
+
+total <- length(data$Times)
+summary_acm <- summary(acm)
+prop <- function( sum , tot) { yes=as.integer(sum[3]); as.integer(yes/tot*100) }
+summary_acm_usa <- summary(acm & usa)
+summary_acm_eu <- summary(acm & !usa)
+summary_eu <- summary( eu )
+total_eu <- as.integer(summary_eu[3])
+summary_us <- summary( usa )
+total_us <- as.integer(summary_us[3])
+perc <- function( n, t ) {  paste0( as.integer(n/t*100),"%") }
+t_orig <- table(data$Origin)
+t_acad <- table(data$Academia)
+
+
+#stack overflow
+newpie <- pie
+
+# Tweak the label positions - changed 1.1 to 0.7
+# also commented out the lines function - so that the  
+# small lines next to the labels are not plot
+newlbs <- quote(if (!is.na(lab) && nzchar(lab)) {
+                   #lines(c(1, 1.05) * P$x, c(1, 1.05) * P$y)
+                   #text(0.7 * P$x, 0.7 * P$y, labels[i], xpd = TRUE, 
+                    text(0.1 * P$x, 0.1 * P$y, labels[i], xpd = TRUE, 
+                                 adj = ifelse(P$x < 0, 1, 0), cex=1.3, col="white", ...)
+})
+
+# add in the new lines of code - trial and error found the right position
+body(newpie)[[22]][[4]][[7]] <- newlbs
+
+
+DOA <- function( d , l ) {  cDOA( d$OA_is, d , l) }
+
+cDOA = function( column,  d , l ) {
+   d2 = data[ d , ]$OA_is
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[2] / total *100)
+   ps = paste0(prop,"%")
+   f = table(d2)
+   newpie(f,  col=c("lightgrey","black","white"), main=l, labe=c("",ps,""), col.lab="white")
+   text(0,1, cex=.8 , paste0("(",total,")"))
+}
+
+pDOA <- function( d ) {
+   d2 = data[ d , ]$OA_is
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[2] / total *100)
+   paste0(prop,"%")
+}
+
+
+```
+
+There were `r total` responses with `r prop(summary_acm, total)`% of respondents being members of the ACM. Membership is higher in North America (`r prop(summary_acm_usa, total_us)`%) and lower in the rest of the world  (`r prop(summary_acm_eu, total_eu)`%). The majority of respondents is from Europe (`r perc(t_orig["Europe"],total)`) with the other biggest chunk being from the USA and Canada (`r perc(t_orig["North America"],total)`). The geographic distribution is shown in the following pie chart.
+
+```{r,echo=FALSE}
+pie(summary(data$Origin),main="Origin")
+```
+
+The respondent are split between academia (`r perc(t_acad["academia"], total)`) and industry (`r perc(t_acad["industry"],total)`). Lastly, the relative seniority of respondents as measured by the time from their first publication is summarized in the following pie chart.
+```{r,echo=FALSE}
+pie(summary(data$Age),main="Time since first publication")
+```
+
+In the rest of this document we will use the following shortcuts:  **USA** to mean responses from North America, **EU** for responses that come from Europe, **Senior** for respondent who have published their first paper more than 20 years ago, **Middle** for those who have first published ten years ago, and **Junior** for authors who have published less than 10 years ago. **ACM** will denote respondent who are members of the ACM.
+
+# Open Access is a Moral Imperative
+
+
+On the question asking if open access (OA) was a "moral imperative" the vast majority of respondents agreed (`r pDOA(all)`). The other responses where a "a desirable features" and "not essential".  The proportion of respondents who believe that adopting OA is a necessity is different depending on origin and seniority. The following table shows the most significant differences. Respondents outside of the **USA** were  slightly more favorable to OA (`r pDOA(!usa)`). Seniority seemed to play a big role in attitudes, with more junior respondents having stronger feelings (`r pDOA(junior|rest)`). The most striking difference is between **Senior USA Academics** and **Junior USA Academics** the former favoring OA at `r pDOA(academe & senior & usa)` and the latter at a whopping `r pDOA( academe & (junior|rest) & usa )`.
+
+In all groups the majority views open access as a moral imperative.
+<br><br>
+<center>
+```{r,echo=FALSE}
+
+par(mfrow=c(4,3), mar=c(1, 1, 1, 0))
+DOA( all , "All" )  
+DOA( usa , "USA" )
+DOA( !usa , "World" )
+DOA( senior , "Senior" )
+DOA( middle , "Mid" )
+DOA( junior|rest, "Junior" )
+DOA( academe & senior & usa, "Sr. US Acad." )
+DOA( academe & middle & usa, "Mid. US Acad." )
+DOA( academe & (junior|rest) & usa , "Jr. US Acad." )
+```
+</center>
+
+The question about how to fund OA divides respondents: `r perc(table(data$Fund_OA)["Author Charges"], total)` are in favor of author processing charges while 
+`r perc(table(data$Fund_OA)["Registration"], total)` argue for increased conference registrations. 
+
+
+```{r,echo=FALSE}
+pie(summary(data$Fund_OA), main="Possible funding models")
+```
+
+The remaining suggestions for funding OA are listed next.  A number of comments suggest that a Green OA model shoud be considered. Other suggest models based on voluntary donnations similar to Wikipedia, on governmental and industry support, by increased ACM membership fees. Several comments point to arXiv as an example to follow. Lastly, some suggest cutting ACM's expenses.
+
+```{r,echo=FALSE}
+fund_oa_comments
+```
+
+
+
+In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  The following pie chart breaks the price down.
+
+```{r,echo=FALSE}
+pie(table(data$Max_price), main="Reasonable author processing charges ($)")
+```
+
+The majority of respondents, `r perc(table(data$Max_price)[1]+table(data$Max_price)[2],total)` to be precise, is willing to pay no more than $100 per paper. An additional `r perc(table(data$Max_price)[3],total)` is willing to pay $200.
+
+
+The issue of copyrights is fairly clear cut with `r perc(table(data$Copyright)[4],total)` saying that leaving copyrights with the authors is essential.
+
+```{r,echo=FALSE}
+pie(summary(data$Copyright),main="Should authors retain copyrights to their work?")
+```
+
+The last question was wether it would be reasonable to look for another publisher if an open access option was not available within the ACM by 2017. The marhority of respondents, `r perc(table(data$Switch)[2],total)` was in favor of such a switch.
+
+```{r,echo=FALSE}
+
+
+S = function(  d , l ) {
+   d2 = data[ d , ]$Switch
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[2] / total *100)
+   ps = paste0(prop,"%")
+   f = table(d2)
+   newpie(f,  col=c("lightgrey","black"), main=l, labe=c("",ps,""), col.lab="white")
+   text(0,1, cex=.8 , paste0("(",total,")"))
+}
+
+
+pie(table(data$Switch),main="Publish in OA by 2071")
+```
+
+Looking closer reveals some interesting distinctions. The majority ACM members are in favor of looking for an open access publisher by 2017, as with the other results sentiments for OA are stronger in Europe.
+
+The biggest difference in opinion is between the **Senior USA ACM** members who are almost evenly split (slight majority in favor) and the **Junior** respondents who are strongly in favor of doing what it takes to get OA.
+
+<center>
+```{r,echo=FALSE}
+par(mfrow=c(2,2), mar=c(1, 1, 1, 1))
+S(acm, "ACM members")
+S(eu, "EU")
+S(senior & usa & acm, "Senior USA ACM")
+S(!senior&!middle, "Junior")
+
+```
+</center>
+
+# Visions of ACM
+
+```{r,echo=FALSE}
+data$ACM_role[ data$ACM_role !=""]
+```
