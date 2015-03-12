@@ -189,6 +189,11 @@ The remaining suggestions for funding OA are listed next.  A number of comments 
 fund_oa_comments
 ```
 
+More comments about OA include.
+
+```{r,echo=FALSE}
+data$OA_comments[data$OA_comments != ""]
+```
 
 
 In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  The following pie chart breaks the price down.
@@ -242,6 +247,167 @@ S(!senior&!middle, "Junior")
 
 # Visions of ACM
 
+The respondent provided comments about what they believed the ACM's role should be. These comments show high levels of frustration with the organization and a disconnect between how the ACM views itself and what its members want it to be.
+
+(more detailed analyis)
+
+
 ```{r,echo=FALSE}
 data$ACM_role[ data$ACM_role !=""]
 ```
+
+
+# The Place of Journals
+
+When asked where important results appear the majority of respondents (`r perc(table(data$Where_results)[3],total)`) choose conferences.
+
+```{r,echo=FALSE}
+pie(summary(data$Where_results),main="Where do important results appear?")
+```
+
+When asked wether they have published at least one paper in a journal in three years,  `r perc(table(data$Pub_in_journal)[2],total)` answer that they did not.
+
+```{r,echo=FALSE}
+pie(summary(data$Pub_in_journal),main="Have you published in a journal since 2012?")
+```
+
+There is an interesting difference between authors of different seniority levels. Junior authors are much more likely to have published a journal paper in the last three years. Why could that be?
+<br><br>
+<center>
+```{r,echo=FALSE}
+
+S = function(  d , l ) {
+   d2 = data[ d , ]$Pub_in_journal
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[3] / total *100)
+   ps = paste0(prop,"%")
+   f = table(d2)
+   newpie(f,  col=c("white","grey","black"), main=l, labe=c("","",ps), col.lab="white")
+   text(0,1, cex=.8 , paste0("(",total,")"))
+}
+
+par(mfrow=c(2  ,3), mar=c(.5, .5, .5, .1))
+S(senior, "Senior")
+S(middle, "Middle")
+S(junior, "Junior")
+
+
+```
+</center>
+
+
+```{r,echo=FALSE}
+pie(summary(data$Read_journal),main="Have you read a journal paper since 2014?")
+```
+
+<br><br>
+<center>
+```{r,echo=FALSE}
+
+S = function(  d , l ) {
+   d2 = data[ d , ]$Read_journal
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[3] / total *100)
+   ps = paste0(prop,"%")
+   f = table(d2)
+   newpie(f,  col=c("white","grey","black"), main=l, labe=c("","",ps), col.lab="white")
+   text(0,1, cex=.8 , paste0("(",total,")"))
+}
+
+par(mfrow=c(2  ,3), mar=c(1, 1, 1, 1))
+S(senior, "Senior")
+S(middle, "Middle")
+S(junior, "Junior")
+
+
+```
+</center>
+
+
+```{r,echo=FALSE}
+pie(summary(data$Pub_in_conf),main="Have you published in a conference since 2013?")
+```
+
+
+
+<br><br>
+<center>
+```{r,echo=FALSE}
+
+S = function(  d , l ) {
+   d2 = data[ d , ]$Pub_in_conf
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[3] / total *100)
+   ps = paste0(prop,"%")
+   f = table(d2)
+   newpie(f,  col=c("white","grey","black"), main=l, labe=c("","",ps), col.lab="white")
+   text(0,1, cex=.8 , paste0("(",total,")"))
+}
+
+par(mfrow=c(2  ,3), mar=c(1, 1, 1, 1))
+S(senior, "Senior")
+S(middle, "Middle")
+S(junior, "Junior")
+
+
+```
+</center>
+
+The next question tried to understand what were the factors that influenced authors to publish in journal (especially since the majority do not believe it is the place for the most important work in the field).
+
+
+```{r,echo=FALSE}
+long <- grepl("they allow long", data$Why_journal)
+complete <- grepl("they allow one to present completed research", data$Why_journal)
+reviews <- grepl("they provide better reviews", data$Why_journal)
+prestige <- grepl("they are more prestigious", data$Why_journal)
+expect <- grepl("it is expected by your employer", data$Why_journal)
+
+c_long <- table(long)[2]
+c_complete <- table(complete)[2]
+c_reviews <- table(reviews)[2]
+c_prestige <- table(prestige)[2]
+c_expect <- table(expect)[2]
+
+pie(c(c_long,c_complete,c_reviews,c_prestige,c_expect), label=c("allow long form", "allow completed research", "better reviews", "more prestigious",
+                                                                 "expected by employer"), main="Why publish in journals?")
+```
+
+
+
+The next set of pie charts shows the importance of the emplpoyer's expectation. Overall, 38% of senior authors believe that employers require journal papers while only 26% of junior authors believe the same.  
+
+If we focus on respondents from the EU these numbers increase to 47% and 33% respectively.
+
+If we further focus on European respondents who are authors of journal papers we find that 50% of senior authors and 42% of junior authors believe they have to publish journal papers for career reasons.
+
+<br><br>
+<center>
+```{r,echo=FALSE}
+
+S = function(  d , l ) {
+   d2 = expect[ d  ]
+   total= sum(table(d2))
+   prop = as.integer(table(d2)[2] / total *100)
+   ps = paste0(prop,"%")
+   f = table(d2)
+   newpie(f,  col=c("white", "black","grey"), main=l, labe=c("",ps,""), col.lab="white")
+   text(0,1, cex=.8 , paste0("(",total,")"))
+}
+
+par(mfrow=c(3  ,3), mar=c(1, 1, 1, 1))
+S(senior , "Senior")
+S(middle , "Middle")
+S(!senior & !middle, "Junior")
+
+S(senior & eu, "Senior EU")
+S(middle & eu, "Middle EU")
+S((!senior & !middle) & eu, "Junior EU")
+
+S(senior & eu & pubinjournal, "Senior EU Pub. in Journal")
+S(middle & eu &pubinjournal, "Middle EU Pub in Journal")
+S((!senior & !middle) & eu &pubinjournal, "Junior EU Pub. in Journal")
+```
+</center>
+
+
