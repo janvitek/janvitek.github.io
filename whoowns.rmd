@@ -163,11 +163,12 @@ more important there._
 
 # Open Access is a Moral Imperative
 
+On the question wether open access (OA) is a "moral imperative", `r pDOA(all)` of respondents agreed. The other responses where a "desirable features" and "not essential".  
 
-On the question asking if open access (OA) was a "moral imperative" the vast majority of respondents agreed (`r pDOA(all)`). The other responses where a "a desirable features" and "not essential".  The proportion of respondents who believe that adopting OA is a necessity is different depending on origin and seniority. The following table shows the most significant differences. Respondents outside of the **USA** were  slightly more favorable to OA (`r pDOA(!usa)`). Seniority seemed to play a big role in attitudes, with more junior respondents having stronger feelings (`r pDOA(junior|rest)`). The most striking difference is between **Senior USA Academics** and **Junior USA Academics** the former favoring OA at `r pDOA(academe & senior & usa)` and the latter at a whopping `r pDOA( academe & (junior|rest) & usa )`.
+The proportion of respondents who believe that adopting OA is a necessity depends on origin and seniority. The following table highlights the differences. Respondents outside of the **USA** were  slightly more favorable to OA (`r pDOA(!usa)`). Seniority seemed to play a big role in attitudes, with more junior respondents having stronger feelings (`r pDOA(junior|rest)`). The most striking difference is between **Senior USA Academics** and **Junior USA Academics** the former favoring OA at `r pDOA(academe & senior & usa)` and the latter at a whopping `r pDOA( academe & (junior|rest) & usa )`.
 
 In all groups the majority views open access as a moral imperative.
-<br><br>
+<br><br><br>
 <center>
 ```{r,echo=FALSE}
 
@@ -184,7 +185,11 @@ DOA( academe & (junior|rest) & usa , "Jr. US Acad." )
 ```
 </center>
 
-The question about how to fund OA divides respondents: `r perc(table(data$Fund_OA)["Author Charges"], total)` are in favor of author processing charges while 
+**Observation:** _There seems to be little question that OA is a shared value for the community. The survey argued in favor of "Gold OA" because SIGPLAN feels that it is
+important that all paper be accessible. While "Green OA" allows authors to share their
+papers, it relies on authors to do so, and to make sure that OA links remain accessible. This can't be guaranteed and won't be true for older work of authors who do not have a web presence. The fact that junior authors are strongly in favor of OA is encouraging for going forward._
+
+The question of how to fund OA divides respondents: `r perc(table(data$Fund_OA)["Author Charges"], total)` are in favor of author processing charges while 
 `r perc(table(data$Fund_OA)["Registration"], total)` argue for increased conference registrations. 
 
 
@@ -194,15 +199,9 @@ pie(summary(data$Fund_OA), main="Possible funding models")
 
 The remaining suggestions for funding OA are listed next.  A number of comments suggest that a Green OA model shoud be considered. Other suggest models based on voluntary donnations similar to Wikipedia, on governmental and industry support, by increased ACM membership fees. Several comments point to arXiv as an example to follow. Lastly, some suggest cutting ACM's expenses.
 
-```{r,echo=FALSE}
-fund_oa_comments
-```
+**Observations:** _It is our belief that whichever model is chosen, it is crucial to prevent cases where authors would be priced out of publishing.  This can be achieved by setting the price of OA to be low enough and ensuring that exemption be available for authors unable to pay._
 
-More comments about OA include.
 
-```{r,echo=FALSE}
-data$OA_comments[data$OA_comments != ""]
-```
 
 
 In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  The following pie chart breaks the price down.
@@ -260,10 +259,6 @@ The respondent provided comments about what they believed the ACM's role should 
 
 (more detailed analyis)
 
-
-```{r,echo=FALSE}
-data$ACM_role[ data$ACM_role !=""]
-```
 
 
 # The Place of Journals
@@ -450,6 +445,29 @@ pie(summary(data$DL_arch), main="The DL’s archiving facility should be replace
 
 
 The textual comments suggest quite some frustration with the DL, it's functionality and the fact that it is behind a paywall.
+
+
+# ACM's role Comments
+
+
+```{r,echo=FALSE}
+data$ACM_role[ data$ACM_role !=""]
+```
+
+
+
+# OA Funding Comments
+
+```{r,echo=FALSE}
+fund_oa_comments
+```
+
+# OA General Comments
+```{r,echo=FALSE}
+data$OA_comments[data$OA_comments != ""]
+```
+
+# DL Comments
 
 ```{r,echo=FALSE}
 
