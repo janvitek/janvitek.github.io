@@ -269,11 +269,19 @@ The respondent provided comments about what they believed the ACM's role should 
 
 # The Place of Journals
 
-When asked where important results appear the majority of respondents (`r perc(table(data$Where_results)[3],total)`) choose conferences.
+**Observation:** _Conferences have a natural means of raising money: they can ask for industrial sponsorship and they charge their attendees registration fees. It is thus conceivable that conferences may be self sufficient. Journals, on the other hand, don't
+have a clear funding model. It is unlikely that subscriptions would be sufficient to
+cover their costs. The question is thus what is their place in an OA world?_
+
+When asked where important results appear `r perc(table(data$Where_results)[3],total)` of respondents indicate that important results are first published in conferences.
 
 ```{r,echo=FALSE}
 pie(summary(data$Where_results),main="Where do important results appear?")
 ```
+
+**Observation:** _In this respect CS seems quite different from other scientific 
+disciplines. The selectivity, quality of reviews, and even length of  CS conference
+papers are on par with what other disciplines would call journal articles._
 
 When asked wether they have published at least one paper in a journal in three years,  `r perc(table(data$Pub_in_journal)[2],total)` answer that they did not.
 
@@ -305,10 +313,17 @@ S(junior, "Junior")
 ```
 </center>
 
+**Observation:** _The fact that many respondent do not publish regularly in journals is not sufficient to conclude that journals are not relevant, but it does at least suggest that they are not essential to a career in CS._
+
+In fact, `r perc(table(data$Read_journal)[2],total)` of the respondent have not even read a single journal paper in 2014.
+
 
 ```{r,echo=FALSE}
 pie(summary(data$Read_journal),main="Have you read a journal paper since 2014?")
 ```
+
+It is interesting to observe that while 51% of **Junior** authors have published a journal
+paper in the last three year, the chances that they will read a journal paper are no signifciantly  different from other age groups. 
 
 <br><br>
 <center>
@@ -333,12 +348,15 @@ S(junior, "Junior")
 ```
 </center>
 
+In comparison, `r perc(table(data$Pub_in_conf)[1],total)` of respondent have published
+in a conference in the last two years.
 
 ```{r,echo=FALSE}
 pie(summary(data$Pub_in_conf),main="Have you published in a conference since 2013?")
 ```
 
 
+These numbers are remarkable stable accross age groups.
 
 <br><br>
 <center>
@@ -363,7 +381,7 @@ S(junior, "Junior")
 ```
 </center>
 
-The next question tried to understand what were the factors that influenced authors to publish in journal (especially since the majority do not believe it is the place for the most important work in the field).
+Considering that most authors do not believe that journals are where important results appear, why do they publish in journal?  The following pie chart gives the main reasons: journals are favored because they allow long form results and because they publish completed research. It is also the case that respondent felt that their employer expects them to publish in journals.
 
 
 ```{r,echo=FALSE}
@@ -408,17 +426,23 @@ S = function(  d , l ) {
 par(mfrow=c(3  ,3), mar=c(1, 1, 1, 1))
 S(senior , "Senior")
 S(middle , "Middle")
-S(!senior & !middle, "Junior")
+S(junior, "Junior")
 
 S(senior & eu, "Senior EU")
 S(middle & eu, "Middle EU")
-S((!senior & !middle) & eu, "Junior EU")
+S(junior & eu, "Junior EU")
 
 S(senior & eu & pubinjournal, "Senior EU Pub. in Journal")
 S(middle & eu &pubinjournal, "Middle EU Pub in Journal")
-S((!senior & !middle) & eu &pubinjournal, "Junior EU Pub. in Journal")
+S(junior & eu &pubinjournal, "Junior EU Pub. in Journal")
 ```
 </center>
+
+**Observation:** _While some have claimed that their employer has been educated to 
+treat journals and conferences as equally valuable contributions. This seems to be
+less true in Europe. The fact that senior European authors, who know the requirements 
+of tenure,  believe so strongly that journals are needed for a succsessful career
+suggests that there is still a bias towards journal publications._
 
 
 # State of the DL
