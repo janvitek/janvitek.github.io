@@ -204,22 +204,24 @@ The remaining suggestions for funding OA are listed next.  A number of comments 
 
 
 
-In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  The following pie chart breaks the price down.
+In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  The majority of respondents, `r perc(table(data$Max_price)[1]+table(data$Max_price)[2],total)` to be precise, is willing to pay no more than $100 per paper. An additional `r perc(table(data$Max_price)[3],total)` is willing to pay $200. The following pie chart breaks the price down.
 
 ```{r,echo=FALSE}
 pie(table(data$Max_price), main="Reasonable author processing charges ($)")
 ```
 
-The majority of respondents, `r perc(table(data$Max_price)[1]+table(data$Max_price)[2],total)` to be precise, is willing to pay no more than $100 per paper. An additional `r perc(table(data$Max_price)[3],total)` is willing to pay $200.
+**Observation:** _A commercial publisher has offered to create a journal 
+at $200 per paper. If a commercial publisher can make a profit at that price
+point, it stands to reason that ACM should be able to match that price._
 
+The issue of copyrights is fairly clear cut with `r perc(table(data$Copyright)[4],total)` in favor of  leaving copyrights with the authors.
 
-The issue of copyrights is fairly clear cut with `r perc(table(data$Copyright)[4],total)` saying that leaving copyrights with the authors is essential.
 
 ```{r,echo=FALSE}
 pie(summary(data$Copyright),main="Should authors retain copyrights to their work?")
 ```
 
-The last question was wether it would be reasonable to look for another publisher if an open access option was not available within the ACM by 2017. The marhority of respondents, `r perc(table(data$Switch)[2],total)` was in favor of such a switch.
+The last question was wether to look for another publisher if an open access option was not available within the ACM by 2017: `r perc(table(data$Switch)[2],total)` of respondents were in favor.
 
 ```{r,echo=FALSE}
 
@@ -235,10 +237,10 @@ S = function(  d , l ) {
 }
 
 
-pie(table(data$Switch),main="Publish in OA by 2071")
+pie(table(data$Switch),main="Publish in OA by 2017")
 ```
 
-Looking closer reveals some interesting distinctions. The majority ACM members are in favor of looking for an open access publisher by 2017, as with the other results sentiments for OA are stronger in Europe.
+Looking closer reveals some interesting distinctions. The majority ACM members are in favor but sentiments are stronger in Europe.
 
 The biggest difference in opinion is between the **Senior USA ACM** members who are almost evenly split (slight majority in favor) and the **Junior** respondents who are strongly in favor of doing what it takes to get OA.
 
@@ -252,6 +254,10 @@ S(!senior&!middle, "Junior")
 
 ```
 </center>
+
+**Observation:** _The ECOOP conference was able to switch to an open access publisher
+that leaves copyright to authors within two months. Two years should be feasible, or
+at least there should be a clear plan for the transition._
 
 # Visions of ACM
 
