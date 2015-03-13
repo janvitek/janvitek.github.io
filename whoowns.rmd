@@ -411,3 +411,39 @@ S((!senior & !middle) & eu &pubinjournal, "Junior EU Pub. in Journal")
 </center>
 
 
+# State of the DL
+
+The ACM Digital Library splits respondents approximately as many feel that it makes it 
+easy to find articles.
+
+
+```{r,echo=FALSE}
+pie(summary(data$DL_make_easy), main="The DL makes it easy to find articles?")
+
+```
+
+
+The opinions are similarly split as to whether the search facility that is part
+of the DL should be replaced by a commercial search engine.
+
+```{r,echo=FALSE}
+pie(summary(data$DL_search), main="DL’s search should be replaced by a commercial search engine?")
+
+```
+
+More respondents are in favor of using a system such as arXiv to archive 
+the ACM's paper rather than maintaining a dedicated one.
+
+```{r,echo=FALSE}
+pie(summary(data$DL_arch), main="The DL’s archiving facility should be replaced with ArXiv?")
+
+```
+
+
+The textual comments suggest quite some frustration with the DL, it's functionality and the fact that it is behind a paywall.
+
+```{r,echo=FALSE}
+
+data$DL_comments[ data$DL_comments != ""]
+```
+
