@@ -445,6 +445,26 @@ of tenure,  believe so strongly that journals are needed for a succsessful caree
 suggests that there is still a bias towards journal publications._
 
 
+```{r,echo=FALSE}
+caj = as.character(data$Conf_as_journal)
+caj[ caj != "yes" & caj != "no"] <- "other"
+data$Conf_as_journal <- as.factor(caj)
+```
+
+`r perc(table(caj)[3],total)` of the respondent are in favor of publishing some of
+out conferences as special issues of journals.
+
+```{r,echo=FALSE}
+pie(summary(data$Conf_as_journal), main="Publish our best conferences as journals?")
+```
+
+**Observations:**  _SIGPLAN proposed to the ACM  to publish the proceedings of the 
+PLDI conference as a special issue of the TOPLAS. The proposal includes a beefed up
+reviewing model and the assurance that long version of PLDI papers can be submitted
+to another journal (even TOPLAS)._
+
+
+
 # State of the DL
 
 The ACM Digital Library splits respondents approximately as many feel that it makes it 
