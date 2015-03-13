@@ -139,18 +139,27 @@ pDOA <- function( d ) {
 
 ```
 
-There were `r total` responses with `r prop(summary_acm, total)`% of respondents being members of the ACM. Membership is higher in North America (`r prop(summary_acm_usa, total_us)`%) and lower in the rest of the world  (`r prop(summary_acm_eu, total_eu)`%). The majority of respondents is from Europe (`r perc(t_orig["Europe"],total)`) with the other biggest chunk being from the USA and Canada (`r perc(t_orig["North America"],total)`). The geographic distribution is shown in the following pie chart.
+There were `r total` responses with `r prop(summary_acm, total)`% respondents being members of the ACM. Membership is higher in North America (`r prop(summary_acm_usa, total_us)`%) and lower in the rest of the world  (`r prop(summary_acm_eu, total_eu)`%). The majority of respondents are from Europe (`r perc(t_orig["Europe"],total)`) followed by the USA and Canada (`r perc(t_orig["North America"],total)`). The geographic distribution of responses is shown in the following pie chart.
 
 ```{r,echo=FALSE}
 pie(summary(data$Origin),main="Origin")
 ```
 
-The respondent are split between academia (`r perc(t_acad["academia"], total)`) and industry (`r perc(t_acad["industry"],total)`). Lastly, the relative seniority of respondents as measured by the time from their first publication is summarized in the following pie chart.
+The respondent are divided between academia (`r perc(t_acad["academia"], total)`) and industry (`r perc(t_acad["industry"],total)`). 
+
+The relative seniority of respondents as measured by the time from their first publication is summarized in the following pie chart. 
+
 ```{r,echo=FALSE}
 pie(summary(data$Age),main="Time since first publication")
 ```
 
-In the rest of this document we will use the following shortcuts:  **USA** to mean responses from North America, **EU** for responses that come from Europe, **Senior** for respondent who have published their first paper more than 20 years ago, **Middle** for those who have first published ten years ago, and **Junior** for authors who have published less than 10 years ago. **ACM** will denote respondent who are members of the ACM.
+We use the following shortcuts:  **USA** to mean responses from North America, **EU** for responses that come from Europe, **Senior** for respondent who have published their first paper more than 20 years ago, **Middle** for those who have first published ten years ago, and **Junior** for authors who have published less than 10 years ago. **ACM** will denote respondent who are members of the ACM.
+
+**Observations:** _The survey was publicized by email to SIGPLAN and SIGPOPS members, and 
+then virally through social media and personnal connections. One possible explanation for
+the higher response rate from Europe is that the issues of open access are considered
+more important there._
+
 
 # Open Access is a Moral Imperative
 
