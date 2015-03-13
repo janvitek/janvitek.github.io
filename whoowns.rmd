@@ -461,11 +461,15 @@ pie(summary(data$Conf_as_journal), main="Publish our best conferences as journal
 **Observations:**  _SIGPLAN proposed to the ACM  to publish the proceedings of the 
 PLDI conference as a special issue of the TOPLAS. The proposal includes a beefed up
 reviewing model and the assurance that long version of PLDI papers can be submitted
-to another journal (even TOPLAS)._
+to another journal (even TOPLAS). SIGPLAN believes that this proposal would reinvigorate journals and erase the artificial boundary between our best work and what the rest of
+the scientific community thinks of as the norm._
 
 
 
 # State of the DL
+
+**Observations:** _Since the DL is one big cost center for the ACM, it is reasonable 
+to ask if the ACM should be in the business of search and storage._
 
 The ACM Digital Library splits respondents approximately as many feel that it makes it 
 easy to find articles.
@@ -522,5 +526,12 @@ data$OA_comments[data$OA_comments != ""]
 ```{r,echo=FALSE}
 
 data$DL_comments[ data$DL_comments != ""]
+```
+
+# Journal Comments
+
+```{r,echo=FALSE}
+
+data$Comment_journal[ data$Comment_journal != ""]
 ```
 
