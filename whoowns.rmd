@@ -1,7 +1,7 @@
 ---
 title: "Who Owns Your Research: A Survey"
-author: "J. Vitek, J. Gibbons, ..."
-date: "March 12, 2015"
+author: "J. Vitek, J. Gibbons for the SIGPLAN Executive Committee"
+date: "March 15, 2015"
 output: html_document
 ---
 
@@ -130,12 +130,15 @@ cDOA = function( column,  d , l ) {
 }
 
 pDOA <- function( d ) {
-   d2 = data[ d , ]$OA_is
-   total= sum(summary(d2))
-   prop = as.integer(summary(d2)[2] / total *100)
-   paste0(prop,"%")
+  pDOA2( d, total)
 }
 
+pDOA2 <- function( d , t) {
+   d2 = data[ d , ]$OA_is
+   total= sum(summary(d2))
+   prop = as.integer(summary(d2)[2] / t *100)
+   paste0(prop,"%")
+}
 
 ```
 
@@ -145,6 +148,8 @@ There were `r total` responses with `r prop(summary_acm, total)`% respondents be
 pie(summary(data$Origin),main="Origin")
 ```
 
+`r perc(length(data$Times[acm]), total)` of respondents were members of the ACM.
+
 The respondent are divided between academia (`r perc(t_acad["academia"], total)`) and industry (`r perc(t_acad["industry"],total)`). 
 
 The relative seniority of respondents as measured by the time from their first publication is summarized in the following pie chart. 
@@ -153,7 +158,7 @@ The relative seniority of respondents as measured by the time from their first p
 pie(summary(data$Age),main="Time since first publication")
 ```
 
-We use the following shortcuts:  **USA** to mean responses from North America, **EU** for responses that come from Europe, **Senior** for respondent who have published their first paper more than 20 years ago, **Middle** for those who have first published ten years ago, and **Junior** for authors who have published less than 10 years ago. **ACM** will denote respondent who are members of the ACM.
+The following shortcuts appear in this document:  **USA** to mean responses from North America, **EU** for responses that come from Europe, **Senior** for respondent who have published their first paper more than 20 years ago, **Middle** for those who have first published ten years ago, and **Junior** for authors who have published less than 10 years ago. **ACM** will denote respondent who are members of the ACM.
 
 **Observations:** _The survey was publicized by email to SIGPLAN and SIGPOPS members, and 
 then virally through social media and personnal connections. One possible explanation for
@@ -165,7 +170,11 @@ more important there._
 
 On the question wether open access (OA) is a "moral imperative", `r pDOA(all)` of respondents agreed. The other responses where a "desirable features" and "not essential".  
 
-The proportion of respondents who believe that adopting OA is a necessity depends on origin and seniority. The following table highlights the differences. Respondents outside of the **USA** were  slightly more favorable to OA (`r pDOA(!usa)`). Seniority seemed to play a big role in attitudes, with more junior respondents having stronger feelings (`r pDOA(junior|rest)`). The most striking difference is between **Senior USA Academics** and **Junior USA Academics** the former favoring OA at `r pDOA(academe & senior & usa)` and the latter at a whopping `r pDOA( academe & (junior|rest) & usa )`.
+The proportion of respondents who believe that adopting OA is a necessity depends on origin and seniority. The following table highlights the differences. Respondents outside of the **USA** were  slightly more favorable to OA (`r pDOA(!usa)`). Seniority seemed to play a big role in attitudes, with more junior respondents having stronger feelings (`r pDOA(junior|rest)`). The most striking difference is between **Senior USA Academics** and **Junior USA Academics** the former favoring OA at `r pDOA(academe & senior & usa)` and the latter at 
+`r pDOA( academe & (junior|rest) & usa )`.
+
+Focusing only on ACM members the propotion in favor is 
+`r pDOA2( acm ,  length(data$Times[acm]))`.
 
 In all groups the majority views open access as a moral imperative.
 <br><br><br>
@@ -199,17 +208,13 @@ pie(summary(data$Fund_OA), main="Possible funding models")
 
 The remaining suggestions for funding OA are listed at the end of this document.  A number of comments suggest that a Green OA model shoud be considered. Other suggest models based on voluntary donnations similar to Wikipedia, on governmental and industry support, by increased ACM membership fees. Several comments point to arXiv as an example to follow. Lastly, some suggest cutting ACM's expenses.
 
-**Observations:** _It is our belief that whichever model is chosen, it is crucial to prevent cases where authors would be priced out of publishing.  This can be achieved by setting the price of OA to be low enough and ensuring that exemption be available for authors unable to pay._
+**Observations:** _Many respondents feel strongly that authors should not be priced out of publishing.  This can be achieved by setting the price of OA to be low enough and ensuring that exemption be available for authors unable to pay._
 
 In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  `r perc(table(data$Max_price)[1]+table(data$Max_price)[2],total)` of respondents is willing to pay no more than $100 per paper. An additional `r perc(table(data$Max_price)[3],total)` is willing to pay $200. The following pie chart breaks the price down.
 
 ```{r,echo=FALSE}
 pie(table(data$Max_price), main="Reasonable author processing charges ($)")
 ```
-
-**Observation:** _A commercial publisher has offered to create a journal 
-at $200 per paper. If a commercial publisher can make a profit at that price
-point, it stands to reason that ACM should be able to match that price._
 
 The issue of copyrights is fairly clear cut with `r perc(table(data$Copyright)[4],total)` in favor of  leaving copyrights with the authors.
 
@@ -422,8 +427,8 @@ will survive.
 # The Place of Journals
 
 **Observation:** _Conferences have a natural means of raising money: they can ask for industrial sponsorship and they charge their attendees registration fees. It is thus conceivable that conferences may be self sufficient. Journals, on the other hand, don't
-have a clear funding model. It is unlikely that subscriptions would be sufficient to
-cover their costs. The question is thus what is their place in an OA world?_
+have a clear funding model. Can subscriptions be sufficient to
+cover their costs?_
 
 When asked where important results appear, `r perc(table(data$Where_results)[3],total)` of respondents indicate that important results are first published in conferences.
 
@@ -433,7 +438,7 @@ pie(summary(data$Where_results),main="Where do important results appear?")
 
 **Observation:** _In this respect CS seems quite different from other scientific 
 disciplines. The selectivity, quality of reviews, and even length of  CS conference
-papers are on par with what other disciplines would call journal articles._
+papers are often on par with what other disciplines would call journal articles._
 
 When asked wether they have published at least one paper in a journal in three years,  `r perc(table(data$Pub_in_journal)[2],total)` answer that they did not.
 
@@ -466,7 +471,7 @@ S(junior, "Junior")
 ```
 </center>
 
-**Observation:** _The fact that many respondent do not publish regularly in journals is not sufficient to conclude that journals are not relevant, but it does at least suggest that they are not essential to a career in CS._
+**Observation:** _The fact that many respondent do not publish regularly in journals is not sufficient to conclude that journals are not relevant. But it does raise the question of their importance to a career in CS._
 
 `r perc(table(data$Read_journal)[2],total)` of respondents did not read a single journal paper in 2014.
 
@@ -556,9 +561,9 @@ pie(c(c_long,c_complete,c_reviews,c_prestige,c_expect), label=c("allow long form
 
 The next set of pie charts shows the importance of the empployer's expectation. Overall, 37% of senior authors believe that employers require journal papers while only 28% of junior authors believe the same.  
 
-If we focus on respondents from the EU these numbers increase to 47% and 34% respectively.
+Focusing on respondents from the EU these numbers increase to 47% and 34% respectively.
 
-If we further focus on European respondents who are authors of journal papers we find that 50% of senior authors and 41% of junior authors believe they have to publish journal papers for career reasons.
+Further focusing on European respondents who are authors of journal papers, 50% of senior authors and 41% of junior authors believe they have to publish journal papers for career reasons.
 
 <br><br>
 <center>
@@ -589,11 +594,7 @@ S(junior & eu &pubinjournal, "Junior EU Pub. in Journal")
 ```
 </center>
 
-**Observation:** _While some have claimed that their employer has been educated to 
-treat journals and conferences as equally valuable contributions. This seems to be
-less true in Europe. The fact that senior European authors, who know the requirements 
-of tenure,  believe so strongly that journals are needed for a succsessful career
-suggests that there is still a bias towards journal publications._
+**Observation:** _While some researchers are confident that their employer has been educated to  treat journals and conferences as equally valuable contributions. This seems to be less  true in Europe. The fact that senior European authors, who know the requirements  of tenure,  believe so strongly that journals are needed for a succsessful career suggests that there is still a bias towards journal publications._
 
 
 ```{r,echo=FALSE}
@@ -606,21 +607,29 @@ data$Conf_as_journal <- as.factor(caj)
 out conferences as special issues of journals.
 
 ```{r,echo=FALSE}
+cajacm <- table(caj[acm])
+```
+
+Focusing only on ACM members the propotion in favor is 
+`r perc(cajacm[3], (cajacm[1]+cajacm[2]+cajacm[3]))`.
+
+```{r,echo=FALSE}
 pie(summary(data$Conf_as_journal), main="Publish our best conferences as journals?")
 ```
+
+
 
 **Observations:**  _SIGPLAN proposed to the ACM  to publish the proceedings of the 
 PLDI conference as a special issue of the TOPLAS. The proposal includes a beefed up
 reviewing model and the assurance that long version of PLDI papers can be submitted
-to another journal (even TOPLAS). SIGPLAN believes that this proposal would reinvigorate journals and erase the artificial boundary between our best work and what the rest of
-the scientific community thinks of as the norm._
+to another journal (even TOPLAS). SIGPLAN's hope is that this proposal would reinvigorate journals and erase the artificial boundary between what most respondent believe is the venue where the most important results appear and what the rest of the scientific community thinks of as the norm._
 
 
 
 # State of the DL
 
-**Observations:** _Since the DL is one big cost center for the ACM, it is reasonable 
-to ask if the ACM should be in the business of search and storage._
+**Observations:** _Since the DL is a big cost center for the ACM, the following question probe the respondents feelings towards the ACM developing and maintaining its own storage and search solutions._
+
 
 The ACM Digital Library splits respondents approximately as many feel that it makes it 
 easy to find articles.
