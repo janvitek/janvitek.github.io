@@ -1,7 +1,7 @@
 ---
 title: "Who Owns Your Research: A Survey"
 author: "J. Vitek, J. Gibbons for the SIGPLAN Executive Committee"
-date: "March 15, 2015"
+date: "March 17, 2015"
 output: html_document
 ---
 
@@ -147,8 +147,6 @@ There were `r total` responses with `r prop(summary_acm, total)`% respondents be
 ```{r,echo=FALSE}
 pie(summary(data$Origin),main="Origin")
 ```
-
-`r perc(length(data$Times[acm]), total)` of respondents were members of the ACM.
 
 The respondent are divided between academia (`r perc(t_acad["academia"], total)`) and industry (`r perc(t_acad["industry"],total)`). 
 
@@ -446,7 +444,7 @@ When asked wether they have published at least one paper in a journal in three y
 pie(summary(data$Pub_in_journal),main="Have you published in a journal since 2012?")
 ```
 
-There is an interesting difference between authors of different seniority levels. **Junior** authors are much less likely to have published a journal paper in the last three years than **Senior** or *Middle** authors. 
+There is an interesting difference between authors of different seniority levels. **Junior** authors are much less likely to have published a journal paper in the last three years than **Senior** or **Middle** authors. 
 
 <br><br>
 <center>
