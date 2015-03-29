@@ -3,6 +3,8 @@ title: "A Quator of Surveys on Open Access and Publishing Models"
 output: html_document
 ---
 
+Between June 2014 and February 2015, SIGPLAN (the ACM Special Interest Group on Programming Languages) and AITO (the "Association Internationale pour les Technologies Objets", a non-profit organization set up to support the ECOOP conference) conducted for surveys of members and authors.
+
 This page contains information about the survey run by ACM SIGPLAN in March 2015 on issues related to open access.
 
 The survey is a Google form with a summary of responses available [here](https://docs.google.com/forms/d/1Jl3UvFX9zae9F9vvjK6HfCWjJV2ZF6RWSX78O6Eee94/viewanalytics#start=publishanalytics).
