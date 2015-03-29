@@ -1,5 +1,5 @@
 ---
-title: "A Quatuor of Surveys on Open Access and Publishing Models"
+title: "A Quartet of Surveys on Open Access and Publishing Models"
 output: html_document
 ---
 
