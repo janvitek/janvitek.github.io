@@ -3,21 +3,27 @@ title: "A Quator of Surveys on Open Access and Publishing Models"
 output: html_document
 ---
 
+### Background
+
 Between June 2014 and February 2015, SIGPLAN (the ACM Special Interest Group on Programming Languages) and AITO (the "Association Internationale pour les Technologies Objets", a non-profit organization set up to support the ECOOP conference) conducted for surveys of members and authors.
 
-This page contains information about the survey run by ACM SIGPLAN in March 2015 on issues related to open access.
+In 2013 SIGPLAN had started to explore the possibility of publishing some of its conference proceedings as issues of journals. That move was blocked by the ACM's Publication Board. SIGPLAN was asked to demonstrate a need for this proposal and a strong support for the community.
 
-The survey is a Google form with a summary of responses available [here](https://docs.google.com/forms/d/1Jl3UvFX9zae9F9vvjK6HfCWjJV2ZF6RWSX78O6Eee94/viewanalytics#start=publishanalytics).
+At the same time, both SIGPLAN and AITO received requests to dispense with the respective paywalls (SIGPLAN published in the ACM Digital Library and AITO publishes with Springer).
 
-The survey was introduced with the following document intended to provide context [here](http://goo.gl/vlCtn2).
+### The Surveys
 
-The raw data in CSV format is [here](http://janvitek.org/who/Who.csv).
+[The PLDI 2014 survey](http://janvitek.org/who/pldi/) was sent to all attendees of the PLDI conference in Edinburgh, UK, as well as attendees of workshops and co-located conferences (ISMM and LCTES).
+
+[The POPL 2015 survey](http://janvitek.org/who/popl/) was sent to all attendees of the POPL conference in Mumbai, India,  as well as attendees of workshops and co-located conferences (CAV and PLMW).
+
+[The ECOOP 2015 survey](http://janvitek.org/who/ecoop/) was sent in Februrary 2015 to all authors of paper submitted to the ECOOP conference.
+
+[The SIGPLAN survey](http://janvitek.org/whoowns.html) was shared with SIGPLAN members and advertised on social media in March 2015.
+
+
 
 The summary of the results prepared by SIGPLAN is [here](http://janvitek.org/whoowns.html).
 
 The R Mardown code that produced the summary (including the statistics) is [here](http://janvitek.org/who/whoowns.rmd).
-
-
-### Acknoweledgments
-
-The survey was prepared by Jan Vitek for the SIGPLAN EC with input from Jeremy Gibbons, Mike Hicks, Shriram Krishnamurthi and Alex Wolf.
+ 
