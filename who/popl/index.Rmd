@@ -1,0 +1,75 @@
+---
+title: "POPL 2015 Survey"
+author: "Jan Vitek, for the SIGPLAN Executive Committee"
+date: "March 29, 2015"
+output: html_document
+---
+
+<br><br>
+
+```{r, echo=FALSE}
+data = read.csv("data.csv")
+ colnames(data)<- c("Timestamp","i1","i2","i3","i4","i5","i6","i7","i8","i9","i10","i11","i12","i13","i14","i15","i16","i17","i18","i19"
+                   , "j1","j2","j3","j4","j5","j6","j7","j8","j9","j10","j11","j12","j13","j14","j15","j16","j17","j18","j19",
+                   "k1","k2","OA_important","APC","POPL_as_TOPLAS")
+
+## Timestamp,My registration number is (required to be eligible for raffle prize),I am primarily associated with,The technical quality of papers was high,The papers presented interesting material,The talks were well presented,The presented papers in my area of work were relevant,"Even with parallel sessions, I was able to attend most of the talks I was interested in",The number of papers accepted was,The length of POPL presentations (including questions) should be,What type of proceedings do you find most useful during the conference?,What type of proceedings do you find least useful during the conference?,Have you viewed any POPL  video online?,POPL should have a best presentation award,"In addition to the 10-year Most Influential Paper award, POPL should give out distinguished paper awards",I am a (co)-author of a paper accepted to POPL,I am a (co)-author of a POPL  submission,The reviews I received were thorough and fair,I was happy with the double blind reviewing process used for POPL ,The author rebuttal process used for POPL was,What did you like about the reviewing process used for POPL?,What did you dislike about the reviewing process used for POPL?,I would not be attending POPL if I were not also attending a co-located event,"If yes, which event(s)?",The location of POPL  played a role in my decision to attend,"Given a choice of an “interesting/higher cost” location or a “less interesting/lower cost” location, I would prefer:","Regardless of the location, I will not attend POPL if the nightly hotel costs are above","Regardless of location, I will not attend POPL if the early registration costs for POPL are above","If POPL were held in the Pacific Rim area (China, Korea, Japan, Australia, etc.) how would this affect your likelihood of attending?","If POPL were held in Israel, how would this affect your likelihood of attending?",Which week of January do you prefer to hold POPL?,Future POPLs should have more opportunities for socializing and fun,"Future POPLs should have an outing/social event, even if it increases the registration cost by $85",What other factors would increase the likelihood that you would attend future POPLs as a non-author?,What other factors would decrease the likelihood that you would attend future POPLs as a non-author?,I stayed at one of the conference hotels,The meals and break food met my needs,"The conference facilities (internet, location, etc.) met my needs",What did you like best about POPL '15?,What about POPL '15 were you most unhappy about?,Any comments on the facilities?,Is open access important to you?,"If open access required author processing fees, how much would you agree to pay?",Would you support publishing the proceedings of POPL as a special issue of TOPLAS?
+
+
+# OA important
+Yep <-data$OA_important == 4  | data$OA_important == 5
+DontCare <-data$OA_important == 3
+Nope <-data$OA_important == 1  | data$OA_important == 2
+data$OA_important <- as.character(data$OA_important)
+data$OA_important[Yep] <- "Yes"
+data$OA_important[DontCare] <- "Neutral"
+data$OA_important[Nope] <- "No"
+data$OA_important<- as.factor(data$OA_important)
+
+
+# APC
+one <-data$APC == "$100"
+more <-data$APC == "$250"  | data$APC == "$500" | data$APC== "$1,000"
+data$APC <- as.character(data$APC)
+data$APC[!more] <- "=< $100"
+data$APC[more] <- "> $100"
+data$APC<- as.factor(data$APC)
+perc <- function( n, t ) {  paste0( as.integer(n/t*100),"%") }
+
+##
+total <- length(data$APC)
+```
+
+This poll was conducted in January 2015. Invitations were sent to attendees of the POPL'15 conference in Mumbai. There were <b>`r length(data$APC)`</b> responses. The last three of the questions were related to open access and publishing.
+
+When asked whether open access is important  to them `r perc( length(Yep[Yep==TRUE]), total)` agreed. The definition of open access 
+for that question was: "_Anyone should be able to download papers from the ACM digital library with no fee or membership requirement._"
+
+```{r,echo=FALSE}
+pie(table(data$OA_important),col=c("lightgrey","white","black"),main="Is Open Access important to you?")
+```
+
+When asked what would be acceptable author processing charges, `r perc( length(data$APC[ !more ]),total)` chose $100 or less.
+
+```{r,echo=FALSE}
+pie(summary(data$APC),col=c("black","white","black"),main="How much would pay to publish a paper?")
+```
+
+The last question ask if the respondents would support publishing the proceedings of POPL as a special issue of TOPLAS?
+The question explained that: "_A similar proposal is being considered for PLDI. This would not prevent long form papers from being submitted to TOPLAS, but would mean that POPL papers could be listed as journal publications._" 
+There were `r perc( length(data$POPL_as_TOPLAS[data$POPL_as_TOPLAS=="Yes"]),total)` of the respondents in favor.
+
+
+```{r,echo=FALSE}
+pie(summary(data$POPL_as_TOPLAS),col=c("lightgrey","white","black"),main="Should we publish POPL as a special issue of TOPLAS?")
+```
+
+### Repeatability
+
+A PDF file with questions asked in this poll is  [here](http://janvitek.org/who/popl/survey.pdf).
+
+A CSV file with answers is [here](http://janvitek.org/who/popl/data.csv).
+
+A PDF file with the Google Form overview of the responses is [here](http://janvitek.org/who/popl/results.pdf).
+
+The R Markdown code for this document is [here](http://janvitek.org/who/popl/index.Rmd).

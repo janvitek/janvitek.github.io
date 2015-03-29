@@ -695,3 +695,18 @@ data$DL_comments[ data$DL_comments != ""]
 data$Comment_journal[ data$Comment_journal != ""]
 ```
 
+
+
+### Repeatability
+
+The survey is a Google form with a summary of responses available [here](https://docs.google.com/forms/d/1Jl3UvFX9zae9F9vvjK6HfCWjJV2ZF6RWSX78O6Eee94/viewanalytics#start=publishanalytics).
+
+The survey was introduced with the following document intended to provide context [here](http://goo.gl/vlCtn2).
+
+The raw data in CSV format is [here](http://janvitek.org/who/Who.csv).
+
+The R Mardown code that produced the summary (including the statistics) is [here](http://janvitek.org/who/whoowns.rmd).
+
+### Acknowledgments 
+
+The survey was prepared by Jan Vitek for the SIGPLAN EC with input from Jeremy Gibbons, Mike Hicks, Shriram Krishnamurthi and Alex Wolf.

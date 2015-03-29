@@ -1,0 +1,150 @@
+---
+title: "ECOOP 2015 Author Survey"
+author: "J. Vitek, for the AITO Steering  Committee"
+date: "March 29, 2015"
+output: html_document
+---
+
+<br>
+
+
+```{r, echo=FALSE}
+data = read.csv("data.csv")
+ colnames(data)<- c("Timestamp","Time_Submit","Like_LNCS","Switch_OA","Like_LIPIcs", "Switch_16", "Comments", "OA_helps_Academe", "Know_rules", "Ignore_rules", "OA_helps_Industry", "OA_helps_Society", "AITO", "Switch_15", "OA_important")
+
+## Timestamp,How many times have you submitted to ECOOP?, The use of LNCS determines my submitting to ECOOP:,Would you support ECOOP switching to a proper Open Access publisher?,Would you support publishing ECOOP with Dagstuhl LIPIcs?,Would you support switching next year (2016)?,Comments,Do you think having free copies of papers available online helps other academics?, I know the rules that govern posting copies of LNCS papers on personal or institutional sites., I post copies of papers on my personal or institutional site:,Do you think having free copies of papers available online helps people in industry?,Do you think having free copies of papers available online helps society as a whole?,Are you an AITO member?,Would you support switching this year (2015)?,How important is open access to you?
+
+# Times Submit
+first <- grepl("First",data$Time_Submit)
+few <- grepl("A few",data$Time_Submit)
+regular <- grepl("Consider",data$Time_Submit)
+
+data$Time_Submit<- as.character(data$Time_Submit)
+data$Time_Submit[few | regular] <- "Yes"
+data$Time_Submit[first] <- "No"
+data$Time_Submit<- as.factor(data$Time_Submit)
+
+
+# Like LNCS
+Yes <- grepl("Lightly in favor",data$Like_LNCS)  | grepl("Heavily in favor",data$Like_LNCS)
+DontCare <- grepl("No real difference",data$Like_LNCS)
+No <- grepl("Heavily against",data$Like_LNCS) | grepl("Slightly against",data$Like_LNCS)
+
+data$Like_LNCS<- as.character(data$Like_LNCS)
+data$Like_LNCS[Yes] <- "A positive"
+data$Like_LNCS[DontCare] <- "Neutral"
+data$Like_LNCS[No] <- "A negative"
+data$Like_LNCS<- as.factor(data$Like_LNCS)
+
+
+# Like LIPIcs
+Yep <-data$Like_LIPIcs == 3  | data$Like_LIPIcs == 4
+Nope <-data$Like_LIPIcs == 1  | data$Like_LIPIcs == 2
+data$Like_LIPIcs <- as.character(data$Like_LIPIcs)
+data$Like_LIPIcs[Yep] <- "In favor"
+data$Like_LIPIcs[Nope] <- "Opposed"
+data$Like_LIPIcs<- as.factor(data$Like_LIPIcs)
+
+# Helps
+
+Yep <-data$OA_helps_Academe == 3  | data$OA_helps_Academe == 4
+Nope <-data$OA_helps_Academe == 1  | data$OA_helps_Academe == 2
+data$OA_helps_Academe <- as.character(data$OA_helps_Academe)
+data$OA_helps_Academe[Yep] <- "Yes"
+data$OA_helps_Academe[Nope] <- "No"
+data$OA_helps_Academe<- as.factor(data$OA_helps_Academe)
+
+
+Yep <-data$OA_helps_Industry == 3  | data$OA_helps_Industry == 4
+Nope <-data$OA_helps_Industry == 1  | data$OA_helps_Industry == 2
+data$OA_helps_Industry <- as.character(data$OA_helps_Industry)
+data$OA_helps_Industry[Yep] <- "Yes"
+data$OA_helps_Industry[Nope] <- "No"
+data$OA_helps_Industry<- as.factor(data$OA_helps_Industry)
+
+
+Yep <-data$OA_helps_Society == 3  | data$OA_helps_Society == 4
+Nope <-data$OA_helps_Society == 1  | data$OA_helps_Society == 2
+data$OA_helps_Society <- as.character(data$OA_helps_Society)
+data$OA_helps_Society[Yep] <- "Yes"
+data$OA_helps_Society[Nope] <- "No"
+data$OA_helps_Society<- as.factor(data$OA_helps_Society)
+
+##
+total <- length(data$Time_Submit)
+
+
+perc <- function( n, t ) {  paste0( as.integer(n/t*100),"%") }
+
+```
+
+## Population
+
+This survey was sent to all authors of submission to the ECOOP conference in February 2015 during the reviewing period (i.e. before decisions were made).  There were <b>`r total`</b> responses.  The majority, `r perc(length(data$Time_Submit[ data$Time_Submit == "Yes"]),total)`, were authors of previous ECOOP publications.
+
+```{r,echo=FALSE}
+ pie(table(data$Time_Submit),col=c("white","black","white"),main="Have you published at ECOOP before this year?")
+```
+
+
+## Publisher
+
+When asked their opinion of LNCS the majority of respondent is neutral or negative. There was a majority, 
+`r perc(length(data$Like_LIPIcs[data$Like_LIPIcs=="In favor"]),total)` in favor of using LIPIcs.
+
+<br>
+
+```{r,echo=FALSE}
+
+par(mfrow=c(1,2),mar=c(1, 1, 1, 0)) 
+pie(table(data$Like_LNCS),col=c("white","black","lightgrey"),main="Is publishing with LNCS desirable?")
+ pie(table(data$Like_LIPIcs),col=c("black","white","white"),main="Should we publish with LIPIcs?")
+```
+
+## View of Open Access
+
+When asked about their view of open access the majority of respondent felt that it is in the best interest of Acdemia, Industry and Society at large.
+
+```{r,echo=FALSE}
+
+par(mfrow=c(1,3),mar=c(1, 1, 1, 0)) 
+ pie(table(data$OA_helps_Academe),col=c("white","black"),main="OA helps Academe")
+ pie(table(data$OA_helps_Industry),col=c("white","black"),main="OA helps Industry")
+ pie(table(data$OA_helps_Society),col=c("white","black"),main="OA helps Society")
+```
+
+## Switching to OA 
+
+When asked if they would support ECOOP moving to an open access publishing model (in the abstract), `r perc(length(data$Switch_OA[data$Switch_OA=="Yes"]), total)` of respondent answered "Yes".
+
+A switch to LIPIcs in 2016 was supported by `r perc(length(data$Switch_OA[data$Switch_16=="Yes"]), total)` of respondents, while
+a switch in 2015 was supported by `r perc(length(data$Switch_OA[data$Switch_15=="Yes"]), total)` of the authors.
+
+<br>
+
+```{r,echo=FALSE}
+par(mfrow=c(1,3),mar=c(1, 1, 1, 0)) 
+ pie(table(data$Switch_OA),col=c("lightgrey","white","black"),main="Support switching to OA")
+ pie(table(data$Switch_16),col=c("lightgrey","white","black"),main="Support switching in '16")
+pie(table(data$Switch_15),col=c("lightgrey","white","black"),main="Support switching in '15")
+```
+
+
+## Comments
+
+The respondents were asked to provide textual comments about OA.
+
+```{r,echo=FALSE}
+data$Comments[ data$Comments != ""]
+```
+
+
+### Repeatability
+
+A PDF file with questions asked in this poll is  [here](http://janvitek.org/who/ecoop/survey.pdf).
+
+A CSV file with answers is [here](http://janvitek.org/who/ecoop/data.csv)
+
+A PDF file with the Google Form overview of the responses is [here](http://janvitek.org/who/ecoop/results.pdf).
+
+The R Markdown code for this document is [here](http://janvitek.org/who/ecoop/index.Rmd).
