@@ -210,6 +210,13 @@ The remaining suggestions for funding OA are listed at the end of this document.
 
 Many respondents feel strongly that authors should not be priced out of publishing.  Some respondents have suggested that this can be achieved by setting the price of OA to be low enough or allowing exemptions for authors unable to pay.
 
+When asked whether they would you support ACM reducing expenses and possibly scaling back on the “Good Works” to fund OA, 
+`r perc(table(data$Scaling_down)["yes"],total)` were in favor.
+
+```{r,echo=FALSE}
+pie(summary(data$Scaling_down), main="Scaling down ACM expenses including 'Good Works'")
+```
+
 In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper?  `r perc(table(data$Max_price)[1]+table(data$Max_price)[2],total)` of respondents is willing to pay no more than $100 per paper. An additional `r perc(table(data$Max_price)[3],total)` is willing to pay $200. The following pie chart breaks the price down.
 
 ```{r,echo=FALSE}
@@ -709,4 +716,4 @@ The R Mardown code that produced the summary (including the statistics) is [here
 
 ### Acknowledgments 
 
-The survey was prepared by Jan Vitek for the SIGPLAN EC with input from Jeremy Gibbons, Mike Hicks, Shriram Krishnamurthi and Alex Wolf.
+The survey was prepared by Jan Vitek for the SIGPLAN EC with input from Mike Hicks, Shriram Krishnamurthi and Alex Wolf.

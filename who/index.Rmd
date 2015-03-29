@@ -1,5 +1,5 @@
 ---
-title: "A Quator of Surveys on Open Access and Publishing Models"
+title: "A Quatuor of Surveys on Open Access and Publishing Models"
 output: html_document
 ---
 
@@ -15,23 +15,48 @@ The following four surveys garnered <b>`r 860 + 275 + 163 + 78`</b> responses:
 
   * [The PLDI 2014 survey](http://janvitek.org/who/pldi/): sent to  attendees of the PLDI conference in Edinburgh, UK.  (_275 responses_)
   * [The POPL 2015 survey](http://janvitek.org/who/popl/): sent to  attendees of the POPL conference in Mumbai, India. (_163 responses_)
-  * [The ECOOP 2015 survey](http://janvitek.org/who/ecoop/): sent in Februrary 2015 to  authors of paper submitted to the ECOOP conference.  (_78 responses_)
+  * [The ECOOP 2015 survey](http://janvitek.org/who/ecoop/): sent in February 2015 to  authors of paper submitted to the ECOOP conference.  (_78 responses_)
   * [The SIGPLAN survey](http://janvitek.org/whoowns.html): shared with SIGPLAN members and social media in March 2015. (_860 responses_)
 
-In terms of population the PLDI and POPL survey target _attendees_ of the respective events (and co-located events) whilest the ECOOP survey target _authors of submitted papers_. All three survey mostly captured the feeling of members of the programming language community. 
+In terms of population the PLDI and POPL survey target _attendees_ of the respective events (and co-located events) whilst the ECOOP survey target _authors of submitted papers_. All three survey mostly captured the feeling of members of the programming language community. 
 The SIGPLAN survey, due to the viral nature of social media (twitter, G+, FB, LinkedIn) had a broader reach. Responses from members of other SIGs as unaffiliated researchers were included.  A slight majority of the responses was from outside the USA.
 
 ### The Myth of the Irrelevance of Journal Publishing
 
-SIGPLAN held a number of town hall meetings (POPL 2014, PLDI 2014, POPL 2015) in which members of our community strenously argued against attempt to conflate journals and conferences.  Their argument was that the battle had been won and that everyone outside CS understood that our conferences are just as prestigious as journals.
+SIGPLAN held a number of town hall meetings (POPL 2014, PLDI 2014, POPL 2015) in which members of our community strenuously argued against attempt to conflate journals and conferences.  Their argument was that the battle had been won and that everyone outside CS understood that our conferences are just as prestigious as journals.
 
 The results of the PLDI and the SIGPLAN survey debunk that myth: __60%__ of PLDI respondents feel that their employer requires journals publications. Textual comments indicate that journals are needed for promotion, tenure, and even attached to end-of-year bonuses. 
-There is __30%__ difference between the USA and the rest of world in this respect. Many US institutions (but not all!) have abolished the requierement to publish journal papers, but this is clearly not the case outside of that country.
+There is __30%__ difference between the USA and the rest of world in this respect. Many US institutions (but not all!) have abolished the requirement to publish journal papers, but this is clearly not the case outside of that country.
 
 The PLDI survey shows that authors who don't have to do journals for career advancement, publish fewer journal papers. 77% of the SIGPLAN respondents believe conferences publish most of the important results in the field. 15% of the SIGPLAN respondents did not read a single journal paper in 2014.
 
 Beside career advancement, the main reason people do publish in journal, according to the SIGPLAN poll, is for long form results that summarizes a completed research direction.
 
+SIGPLAN's position in this respect is to improve the conference reviewing process to better match the journal process and effectively alpha-convert our top "conferences" into "journals". The hope is to relieve researchers from the pressure to produce artificial journal papers to satisfy administrative requirements without discouraging authors who truly have a long form result from publishing it.
+
+The community seems to supportive. __74%__ of SIGPLAN respondents are in favor.  __70%__ of PLDI respondents are in favor.  __79%__ of POPL respondents are in favor.
+
+### Against the Kaleidoscope of Open Access Colors
+
+Open access is a complex issue as it involves long term sustainability questions for any solution. The issue is further muddled by the attempts from publisher to confuse authors with a number of seemingly appealing choices.  But in any conversation with our member the __meaning of open access__ is clear: for them open access means no paywalls. 
+
+If we get rid of paywalls, the question becomes how to fund the storage of the research results. SIGPLAN and AITO have tried to elicit opinions from their respective communities about how to replace the existing financial model based on publishers charging readers.
+
+There is strong agreement across the board about the desirability of OA in the abstract:  __81%__ of POPL respondents find OA important, __85%__ of PLDI respondents want OA for their papers, __73%__ of SIGPLAN call OA a moral imperative. It is worth to note that in the SIGPLAN survey only 51% of senior US academics agreed while 87% of junior academic and 75% of respondents from outside the US agreed. 
+
+The question of how to fund OA divides SIGPLAN respondents: 28% are in favor of author processing charges while 41% argue for increased conference registrations, the remainder want us to find other means.  In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper? 63% of respondents is willing to pay no more than $100 per paper. In the POPL survey,  83% chose $100 or less.
+
+The ECOOP survey was more concrete when authors of submitted papers were asked if they would support publishing in OA with Dagstuhl's LIPIcs  in 2016, __84%__ were in favor, a switch in 2015 gained __73%__ support.  AITO decided to switch in 2015.  There will be no additional cost to authors as the 15 Euros per papers will be covered by registration costs.   When asked about a similar move away from the ACM to an unspecified OA publisher by 2017, __70%__ of SIGPLAN respondents were in favor.
+
+The textual comments in the SIGPLAN survey suggested little support for ACM's current operating model. Multiple respondents mentioned arXiv and LIPIcs as examples to follow.
+
+### The ACM Disconnect
+
+Reading the textual comments in the SIGPLAN survey does suggest that there is a disconnect between what respondent expect from the ACM and what the Association views as its own role.  This is reflected by the __74%__ of SIGPLAN respondent in favor of scaling down ACM expenses, include the so-called GoodWorks, to fund OA.
+
+Most respondent seem unaware of many of the activities of the ACM, instead they repeatedly emphasize the core missions of _organizing scientific meetings_ and _making scientific results broadly available_.  The comment suggest that there is some unhappiness about how the association fulfills those twin missions.
+
+In addition, the ACM's DL is widely criticized as being inefficient, unwieldy, overpriced, and generally subpar. The respondents value the DL's meta data more than anything else it provides.
 
 
 
