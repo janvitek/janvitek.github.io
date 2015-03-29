@@ -148,3 +148,9 @@ A CSV file with answers is [here](http://janvitek.org/who/ecoop/data.csv)
 A PDF file with the Google Form overview of the responses is [here](http://janvitek.org/who/ecoop/results.pdf).
 
 The R Markdown code for this document is [here](http://janvitek.org/who/ecoop/index.Rmd).
+
+
+
+### Acknowledgments 
+
+Shriram Krishnamurthi provided the impetus for this poll, thanks!
