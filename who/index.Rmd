@@ -32,7 +32,7 @@ The PLDI survey shows that authors who don't have to do journals for career adva
 
 Beside career advancement, the main reason people do publish in journals, according to the SIGPLAN poll, is for long form results that summarizes a completed research direction.
 
-SIGPLAN's position in this respect is to improve the conference reviewing process to better match the journal process and effectively alpha-convert our top "conferences" into "journals". The hope is to relieve researchers from the pressure to produce artificial journal papers to satisfy administrative requirements without discouraging authors who truly have a long form result from publishing it.
+SIGPLAN's position in this respect is to improve the conference reviewing process to better match the journal process and effectively alpha-convert our top "conferences" into "journals". The hope is to relieve researchers from the pressure to produce artificial journal papers to satisfy administrative requirements without discouraging authors who truly have a long form result from publishing it. The current proposal is to have TOPLAS publish both conference versions of papers and suitably extended long form papers.
 
 The community seems to supportive. __74%__ of SIGPLAN respondents are in favor.  __70%__ of PLDI respondents are in favor.  __79%__ of POPL respondents are in favor.
 
@@ -42,7 +42,7 @@ Open access is a complex issue as it involves long term sustainability questions
 
 If we get rid of paywalls, the question becomes how to fund the storage of the research results. SIGPLAN and AITO have tried to elicit opinions from their respective communities about how to replace the existing financial model based on publishers charging readers.
 
-There is strong agreement across the board about the desirability of OA in the abstract:  __81%__ of POPL respondents find OA important, __85%__ of PLDI respondents want OA for their papers, __73%__ of SIGPLAN call OA a moral imperative. It is worth to note that in the SIGPLAN survey only 51% of senior US academics agreed while 87% of junior academic and 75% of respondents from outside the US agreed. 
+There is strong agreement across the board about the desirability of OA in the abstract:  __81%__ of POPL respondents find OA important, __85%__ of PLDI respondents want OA for their papers, __73%__ of SIGPLAN call OA a moral imperative.  
 
 The question of how to fund OA divides SIGPLAN respondents: 28% are in favor of author processing charges while 41% argue for increased conference registrations, the remainder want us to find other means.  In the case an author processing charge was selected, how much would be a reasonable price (in USD) for a paper? 63% of respondents are willing to pay no more than $100 per paper. In the POPL survey,  83% chose $100 or less.
 
