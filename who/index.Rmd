@@ -38,7 +38,7 @@ The community seems to supportive. __74%__ of SIGPLAN respondents are in favor. 
 
 ### Against the Kaleidoscope of Open Access Colors
 
-Open access is a complex issue as it involves long term sustainability questions. The issue is further muddled by the attempts from publisher to confuse authors with a number of seemingly appealing choices.  But in any conversation with our member the _meaning of open access_ is clear, for them open access means no paywalls between papers and readers. 
+Open access is a complex issue as it involves long term sustainability questions. The issue is further muddled by the attempts from publishers to confuse authors with a number of seemingly appealing choices.  But in any conversation with our member the _meaning of open access_ is clear, for most of them open access means no paywalls between papers and readers. 
 
 If we get rid of paywalls, the question becomes how to fund the storage of the research results. SIGPLAN and AITO have tried to elicit opinions from their respective communities about how to replace the existing financial model based on publishers charging readers.
 
@@ -60,6 +60,6 @@ In addition, the ACM's DL is widely criticized as being inefficient, unwieldy, o
 
 <br>
 <br>
-_Please send comments to [Jan Vitek](http://janvitek.org)._
+_Please send comments to [Jan Vitek](http://janvitek.org)._  Boston, March 29th, 2015.
 
 
