@@ -36,6 +36,8 @@ SIGPLAN's position in this respect is to improve the conference reviewing proces
 
 The community seems to supportive. __74%__ of SIGPLAN respondents are in favor.  __70%__ of PLDI respondents are in favor.  __79%__ of POPL respondents are in favor.
 
+Another approach has been put forward, namely to ensure that conferences are properly index by major bibliometric databases. In the long term, this will reduce the bias against CS publication as their impact factor will be fully taken into account. Nothing prevents the community from pursuing both paths as they not mutually exclusive.
+
 ### Against the Kaleidoscope of Open Access Colors
 
 Open access is a complex issue as it involves long term sustainability questions. The issue is further muddled by the attempts from publishers to confuse authors with a number of seemingly appealing choices.  But in any conversation with our member the _meaning of open access_ is clear, for most of them open access means no paywalls between papers and readers. 
