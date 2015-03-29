@@ -23,21 +23,14 @@ The SIGPLAN survey, due to the viral nature of social media (twitter, G+, FB, Li
 
 ### The Myth of the Irrelevance of Journal Publishing
 
-SIGPLAN held a number of town hall meetings (POPL 2014, PLDI 2014, POPL 2015) in which members of our community strenously argued against attempt to conflate journals and conferences.  Their argument was that the battle had been won, and that everyone outside CS understood that in computer science, conferences are just as prestigious as journals.
+SIGPLAN held a number of town hall meetings (POPL 2014, PLDI 2014, POPL 2015) in which members of our community strenously argued against attempt to conflate journals and conferences.  Their argument was that the battle had been won and that everyone outside CS understood that our conferences are just as prestigious as journals.
 
-The results of the PLDI and the SIGPLAN survey should debunk that myth.
+The results of the PLDI and the SIGPLAN survey debunk that myth: __60%__ of PLDI respondents feel that their employer requires journals publications. Textual comments indicate that journals are needed for promotion, tenure, and even attached to end-of-year bonuses. 
+There is __30%__ difference between the USA and the rest of world in this respect. Many US institutions (but not all!) have abolished the requierement to publish journal papers, but this is clearly not the case outside of that country.
 
-Overall 60% of the PLDI respondent feel that publishing in journals is required by their employer. Textual comments indicate that journals are needed for promotion, tenure, and even attached to end-of-year bonuses.
+The PLDI survey shows that authors who don't have to do journals for career advancement, publish fewer journal papers. 77% of the SIGPLAN respondents believe conferences publish most of the important results in the field. 15% of the SIGPLAN respondents did not read a single journal paper in 2014.
 
-The PLDI survey also show that there is a 30% difference between the USA and the rest of the world about the need to publish in journals. So it may well be that many US institutions (but not all!) have abolished that requirement. But it is clearly not the case outside of the that country.
-
-The PLDI survey also shows that authors who do not feel the need to publish in journal for career advancement, publish less frequently.
-
-77% of the SIGPLAN respondents believe conferences publish most of the important results in the field.
-
-15% of the SIGPLAN respondents did not read a single journal paper in 2014.
-
-Beside career advancement, the main reason people do publish in journal, according to the SIGPLAN poll, is because journals allow long form results that summarizes a completed research direction.
+Beside career advancement, the main reason people do publish in journal, according to the SIGPLAN poll, is for long form results that summarizes a completed research direction.
 
 
 
