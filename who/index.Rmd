@@ -5,25 +5,40 @@ output: html_document
 
 ### Background
 
-Between June 2014 and February 2015, SIGPLAN (the ACM Special Interest Group on Programming Languages) and AITO (the "Association Internationale pour les Technologies Objets", a non-profit organization set up to support the ECOOP conference) conducted for surveys of members and authors.
+Between June '14 and February '15, [SIGPLAN](http://sigplan.org) (the ACM Special Interest Group on Programming Languages) and [AITO](http://www.aito.org) (the "Association Internationale pour les Technologies Objets", a non-profit organization set up to support the [ECOOP](http://2015.ecoop.org) conference) conducted four surveys of their members and authors.
 
-In 2013 SIGPLAN had started to explore the possibility of publishing some of its conference proceedings as issues of journals. That move was blocked by the ACM's Publication Board. SIGPLAN was asked to demonstrate a need for this proposal and a strong support for the community.
+In 2013 SIGPLAN had started to explore the possibility of publishing some of its conference proceedings as issues of journals. That move was blocked by the ACM's Publication Board. SIGPLAN was asked to demonstrate need and support from the community. At the same time, both SIGPLAN and AITO were asked by members to find a way to dispense with their respective paywalls (SIGPLAN publishes in the ACM Digital Library and AITO publishes with Springer).
 
-At the same time, both SIGPLAN and AITO received requests to dispense with the respective paywalls (SIGPLAN published in the ACM Digital Library and AITO publishes with Springer).
+### The Four Surveys
 
-### The Surveys
+The following four surveys garnered <b>`r 860 + 275 + 163 + 78`</b> responses:
 
-[The PLDI 2014 survey](http://janvitek.org/who/pldi/) was sent to all attendees of the PLDI conference in Edinburgh, UK, as well as attendees of workshops and co-located conferences (ISMM and LCTES).
+  * [The PLDI 2014 survey](http://janvitek.org/who/pldi/): sent to  attendees of the PLDI conference in Edinburgh, UK.  (_275 responses_)
+  * [The POPL 2015 survey](http://janvitek.org/who/popl/): sent to  attendees of the POPL conference in Mumbai, India. (_163 responses_)
+  * [The ECOOP 2015 survey](http://janvitek.org/who/ecoop/): sent in Februrary 2015 to  authors of paper submitted to the ECOOP conference.  (_78 responses_)
+  * [The SIGPLAN survey](http://janvitek.org/whoowns.html): shared with SIGPLAN members and social media in March 2015. (_860 responses_)
 
-[The POPL 2015 survey](http://janvitek.org/who/popl/) was sent to all attendees of the POPL conference in Mumbai, India,  as well as attendees of workshops and co-located conferences (CAV and PLMW).
+In terms of population the PLDI and POPL survey target _attendees_ of the respective events (and co-located events) whilest the ECOOP survey target _authors of submitted papers_. All three survey mostly captured the feeling of members of the programming language community. 
+The SIGPLAN survey, due to the viral nature of social media (twitter, G+, FB, LinkedIn) had a broader reach. Responses from members of other SIGs as unaffiliated researchers were included.  A slight majority of the responses was from outside the USA.
 
-[The ECOOP 2015 survey](http://janvitek.org/who/ecoop/) was sent in Februrary 2015 to all authors of paper submitted to the ECOOP conference.
+### The Myth of the Irrelevance of Journal Publishing
 
-[The SIGPLAN survey](http://janvitek.org/whoowns.html) was shared with SIGPLAN members and advertised on social media in March 2015.
+SIGPLAN held a number of town hall meetings (POPL 2014, PLDI 2014, POPL 2015) in which members of our community strenously argued against attempt to conflate journals and conferences.  Their argument was that the battle had been won, and that everyone outside CS understood that in computer science, conferences are just as prestigious as journals.
+
+The results of the PLDI and the SIGPLAN survey should debunk that myth.
+
+Overall 60% of the PLDI respondent feel that publishing in journals is required by their employer. Textual comments indicate that journals are needed for promotion, tenure, and even attached to end-of-year bonuses.
+
+The PLDI survey also show that there is a 30% difference between the USA and the rest of the world about the need to publish in journals. So it may well be that many US institutions (but not all!) have abolished that requirement. But it is clearly not the case outside of the that country.
+
+The PLDI survey also shows that authors who do not feel the need to publish in journal for career advancement, publish less frequently.
+
+77% of the SIGPLAN respondents believe conferences publish most of the important results in the field.
+
+15% of the SIGPLAN respondents did not read a single journal paper in 2014.
+
+Beside career advancement, the main reason people do publish in journal, according to the SIGPLAN poll, is because journals allow long form results that summarizes a completed research direction.
 
 
 
-The summary of the results prepared by SIGPLAN is [here](http://janvitek.org/whoowns.html).
 
-The R Mardown code that produced the summary (including the statistics) is [here](http://janvitek.org/who/whoowns.rmd).
- 
