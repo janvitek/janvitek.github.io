@@ -9,7 +9,10 @@ _Additional information and raw data available from [http://janvitek.org/who](ht
 
 ```{r, echo=FALSE}
 data = read.csv("Who.csv")
- colnames(data)<- c("Times", "OA_is", "OA_influence",  "Fund_OA", "Max_price", "Scaling_down", "ACM_role", "Switch",  "Copyright", "OA_comments", "Where_results", "Pub_in_journal", "Read_journal", "Pub_in_conf", "Why_journal", "Conf_as_journal", "Comment_journal", "DL_is_portal", "DL_make_easy", "DL_search", "DL_arch", "DL_comments", "Academia", "Age", "Member", "SIG", "Origin")
+ colnames(data)<- c("Times", "OA_is", "OA_influence",  "Fund_OA", "Max_price", "Scaling_down", "ACM_role", "Switch",  "Copyright", "OA_comments", "Where_results", "Pub_in_journal", "Read_journal", "Pub_in_conf", "Why_journal", "Conf_as_journal", "Comment_journal", "DL_is_portal", "DL_make_easy", "DL_search", "DL_arch", "DL_comments", "Academia", "Age", "Member", "SIG", "Origin",
+                    "Conferences", "Publications", "Unsure", "Policy", "Lobby", "Goodworks", "Community", "Negative", "Standards")
+
+## Timestamp,Open access to scientific results is...,Would having open access at a reasonable price influence your decision to submit an article to a venue?,How would you propose to fund the archival of papers under an OA model?,What would be highest acceptable author processing charges per article (in $)?,Would you support ACM reducing expenses and possibly scaling back on the â€œGood Worksâ€ù to fund OA?,"What is, in your view, the primary role of the ACM?",Would you consider changing publishers if OA were not available at an acceptable price from the ACM within two years?,Should authors retain copyright of their work?,Comments on Open Access,"In your field, where do important results first appear?",Have you published in a journal in the last three years?,Have you read a paper published in a journal in the last year?,Have you published in a conference in the last two years?,You publish in journals mainly because ,Would you support publishing our best conferences as special issues of a journal?,Comments on the importance of Journals in CS,The DL fulfill its role of being a convenient portal to find CS research results,The DL makes it easy to find articles,The DLâ€™s search facility should be replaced by a commercial search engine,The DLâ€™s archiving facility should be replaced with ArXiv,Comments about the DL,Do you work,How long ago was your first published scientific paper?,Are you a member of the ACM?,Which SIG (if any) do identify with?,Where do you spend most of your time?,Support CS Conferences,Make Knowledge widely available,Unsure,"Set policy goals, interface with governments",Lobbying on the behalf of CS,Good works,"Build, Organize, support a Community of Computing Professionals ",Negative,Set and maintain quality and ethical standards
 
 usa = data$Origin=="North America"
 eu  = data$Origin=="Europe"
@@ -143,6 +146,8 @@ pDOA2 <- function( d , t) {
 }
 
 ```
+
+
 
 There were `r total` responses with `r prop(summary_acm, total)`% respondents being members of the ACM. Membership is higher in North America (`r prop(summary_acm_usa, total_us)`%) and lower in the rest of the world  (`r prop(summary_acm_eu, total_eu)`%). The majority of respondents are from Europe (`r perc(t_orig["Europe"],total)`) followed by the USA and Canada (`r perc(t_orig["North America"],total)`). The geographic distribution of responses is shown in the following pie chart.
 
@@ -340,10 +345,40 @@ The respondent provided comments about what they believed the ACM's role should 
 
 **To support and advocate for Computer Science** is clearly understood as being a role for the ACM, but agreement is harder to find on what this exactly means.
 
-Many respondents  identify the two main activities of the ACM as: **to organize conferences** and to **make research results broadly available**.
+Most respondents  identify the two main activities of the ACM as: **to organize conferences** and to **make research results broadly available**.
 
 Interestingly very few of the respondents seem aware of the Good Works.
 Few respondents seemed interested in the professional outreach efforts of the ACM.
+
+
+
+```{r,echo=FALSE}
+ s <- function( d ) { sum(d[ !is.na(d)])}
+ v <- c(   
+   s(data$Policy), 
+   s(data$Goodworks), 
+   s(data$Lobby), 
+   s(data$Unsure), 
+   s(data$Standards),
+   s(data$Negative), 
+   s(data$Community), 
+   s(data$Conferences), 
+   s(data$Publications)
+)
+par(las=2) 
+barplot(v, horiz=TRUE, names.arg=c(
+   "Policy",
+   "Good W.",
+   "Lobby",
+   "Unsure",
+   "Standards",
+   "Negative",
+   "Community",
+   "Meetings",
+   "Publish"),cex.names=0.7)
+
+```
+
 
 The comments show high levels of frustration with the organization and a disconnect between how the ACM views itself and what its members want it to be. Some representative 
 comments are listed next, the complete list is at the bottom of this page.
