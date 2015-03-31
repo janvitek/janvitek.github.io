@@ -16,3 +16,5 @@
 *.db
 
 who/.RData
+
+who/.Rhistory
