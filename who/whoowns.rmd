@@ -1,7 +1,7 @@
 ---
 title: "Who Owns Your Research: A Survey"
 author: "J. Vitek, J. Gibbons for the SIGPLAN Executive Committee"
-date: "March 19, 2015"
+date: "March 30, 2015"
 output: html_document
 ---
 
@@ -341,18 +341,10 @@ Some of the comments on OA. All of them at the bottom of the file.
 
 # Visions of ACM
 
-The respondent provided comments about what they believed the ACM's role should be. 
-
-**To support and advocate for Computer Science** is clearly understood as being a role for the ACM, but agreement is harder to find on what this exactly means.
-
-Most respondents  identify the two main activities of the ACM as: **to organize conferences** and to **make research results broadly available**.
-
-Interestingly very few of the respondents seem aware of the Good Works.
-Few respondents seemed interested in the professional outreach efforts of the ACM.
-
-
-
 ```{r,echo=FALSE}
+
+role_comments_count <- length(data$ACM_role[ data$ACM_role == ""])
+
  s <- function( d ) { sum(d[ !is.na(d)])}
  v <- c(   
    s(data$Policy), 
@@ -363,8 +355,32 @@ Few respondents seemed interested in the professional outreach efforts of the AC
    s(data$Negative), 
    s(data$Community), 
    s(data$Conferences), 
-   s(data$Publications)
-)
+   s(data$Publications)) / role_comments_count * 100
+w <- as.integer(v)
+policy <-w[1]
+goodworks <- w[2]
+lobby <- w[3]
+unsure <- w[4]
+negative <- w[5]
+community <- w[6]
+conference <- w[7]
+publish <-w[8]
+
+x <- data$ACM_role[acm]
+l <- length(x[ x != "" ])
+perc_acm <- as.integer( l / role_comments_count * 100)
+```
+
+The respondents provided `r role_comments_count` textual comments about what they believed the ACM's role should be. `r perc_acm`% of these responses were from members of the ACM. `r community`% of the textual response indicate that they expect the ACM to _avocate for Computer Science as well as support the community of computing researchers and practitioners_. This broad goal does not seem controversial, but what are the specific ways to reach that goal?
+
+For most respondents the main activities of the ACM should be to **facilitate the organization of scientific meetings** (`r conference`% of responses), and to **disseminate knowledge broadly and effectively** (`r publish`% of responses). Some of the comments suggest that ACM could do more to support the volunteers who organize conferences and should strive to reduce registration costs. As for knowledge dissemination, respondent often equate this to dispensing with the paywall that limits access to the DL.
+
+A number of the response indicated that the role of the ACM is unclear (`r unsure`%) or expressed frustration with the association (`r negative`%). The respondents seemed to either feel that ACM was not fullfiling its role (often this was linked with complaints about the use of DL funds), or that the many of the traditional functions of an association like the ACM could be better performed by other means.  There were also comments about the US-centric of policy efforts and the good works.
+
+`r lobby`% of commentors mentionned that lobbying governmental agencies is an important role of the association. `r policy`% mentionned working on policy matter and `r goodworks`% mentioned the "Good Works".
+
+
+```{r,echo=FALSE}
 par(las=2) 
 barplot(v, horiz=TRUE, names.arg=c(
    "Policy",
