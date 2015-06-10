@@ -384,16 +384,23 @@ function swaptabs (showthis,hidethis) {
           <div class="col-md-4">
             <h3>Invited Talks</h3>
             <table>
-	     <tr>
+	      <tr>
+	       <td><a href="http://http://mloc-js.com/2015/">MLOC.JS'15</a></td> 
+	       <td>Benchmarks killed the beast: Understanding JS performance
+		  for fun and profit. International Large Scale JavaScript
+		  Conference, Budapest</td>
+	       </tr>
+             <tr>
 	       <td><a href="http://plmw15.iisc-seal.net/program">PLMW'15</a></td>
 	       <td> Repeatability, reproducibility and rigor in CS research. Programming Language Mentoring Workshop, Mumbai</td>
+	     </tr>
 	      <tr>
 		<td><a href="http://vee2014.cs.technion.ac.il" target="_blank">VEE'14</a></td>
 		<td> The Case for the Three Rs of Systems Research: Repeatability, Reproducibility and Rigor</td>
 	      </tr>
 	      <tr>
 		<td><a href="http://www.srl.inf.ethz.ch/workshop2013.php" target="_blank">SCR'13</a></td>
-		<td>JavaScript Programmers Hate You: An ode to dynamic languages. Workshop on Software Correctness and Reliability, Zurich <a href="http://www.srl.inf.ethz.ch/workshop2013/eth-vitek.pdf" target="_blank">PDF</a> <a href="http://www.youtube.com/watch?v=t3GzCwoQfb4" target="_blank">VIDEO<a/></td>
+		<td>JavaScript Programmers Hate You: An ode to dynamic languages. Workshop on Software Correctness and Reliability, Zurich <a href="http://www.srl.inf.ethz.ch/workshop2013/eth-vitek.pdf" target="_blank">PDF</a> <a href="http://www.youtube.com/watch?v=t3GzCwoQfb4" target="_blank">Video<a/></td>
 	      </tr>
 	      <tr>
 		<td><a href="http://www.doc.ic.ac.uk/~gds/PLMW/" target="_blank">PLMW'13</a></td>
@@ -507,7 +514,9 @@ function swaptabs (showthis,hidethis) {
               <tr>
                 <td><a href="http://www.dynamic-languages-symposium.org/dls-10/" target="_blank">DLS</a></td>
                 <td>Dynamic Language Symposium Conference, <a href="http://www.dynamic-languages-symposium.org/dls-10/" target="_blank">2010</a>,
-                <a href="http://www.dynamic-languages-symposium.org/dls-14/index.html" target="_blank">2014</a></td>
+                <a href="http://www.dynamic-languages-symposium.org/dls-14/index.html" target="_blank">2014</a>
+                <a href="http://www.dynamic-languages-symposium.org/dls-15/index.html" target="_blank">2015</a>
+		</td>
               </tr>
               <tr>
                 <td><a href="events/dosws.html" target="_blank">DOSW</a></td>
@@ -783,6 +792,88 @@ function swaptabs (showthis,hidethis) {
 
           <div class="col-md-12">
             <ul class="pn-ul-triangle">
+
+              <li class="pn-conferences">
+                <div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span"><strong>ECOOP'15</strong></span>Concrete Types for TypeScript </a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Gregor Richards, Francesco Zappa Nardelli, and Jan Vitek <br />
+                      <strong>Abstract</strong>: TypeScript extends
+                      JavaScript with optional type annotations that are, by
+                      design, unsound and, that the TypeScript compiler
+                      discards as it emits code. This design point preserves
+                      programming idioms developers are familiar with, and
+                      allows them to leave their legacy code unchanged,
+                      while offering a measure of static error checking in
+                      annotated parts of the program. We present an
+                      alternative design for TypeScript that supports the
+                      same degree of dynamism but that also allows types to
+                      be strengthened to provide correctness guarantees. We
+                      report on an implementation, called StrongScript, that
+                      improves runtime performance of typed programs when
+                      run on a modified version of the V8 JavaScript
+                      engine.<br />
+                      <strong>Venue</strong>: European Conference on Object Oriented Programming (ECOOP)<br />
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.4230/LIPIcs.ECOOP.2015.999" target="_blank">10.4230/LIPIcs.ECOOP.2015.999</a><br />
+                      <strong>Artifact</strong>: <a href="http://plg.uwaterloo.ca/~dynjs/strongscript/" target="_blank">http://plg.uwaterloo.ca/~dynjs/strongscript</a><br />
+                      <a href="pubs/ecoop15a.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
+
+
+
+              <li class="pn-conferences">
+                <div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span"><strong>ECOOP'15</strong></span>Cooking the Books: Formalizing JMM Implementation Recipes</a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Gustavo Petri, Jan Vitek and Suresh Jagannathan<br />
+                      <strong>Abstract</strong>: The Java Memory Model (JMM)
+		      is intended to characterize the meaning of concurrent
+		      Java programs. Because of the model's complexity,
+		      however, its definition cannot be easily transplanted
+		      within an optimizing Java compiler, even though an
+		      important rationale for its design was to ensure Java
+		      compiler optimizations are not unduly hampered because
+		      of the language's concurrency features. In response,
+		      the JSR-133 Cookbook for Compiler Writers, an informal
+		      guide to realizing the principles underlying the JMM
+		      on different (relaxed-memory) platforms was
+		      developed. The goal of the cookbook is to give
+		      compiler writers a relatively simple, yet reasonably
+		      efficient, set of reordering-based recipes that
+		      satisfy JMM constraints. We present the first
+		      formalization of the cookbook, providing a semantic
+		      basis upon which the relationship between the recipes
+		      defined by the cookbook and the guarantees enforced by
+		      the JMM can be rigorously established. Notably, one
+		      artifact of our investigation is that the rules
+		      defined by the cookbook for compiling Java onto Power
+		      are inconsistent with the requirements of the JMM, a
+		      surprising result, and one which justifies our belief
+		      in the need for formally provable definitions to
+		      reason about sophisticated (and racy) concurrency
+		      patterns in Java, and their implementation on
+		      modern-day relaxed-memory hardware. Our formalization
+		      enables simulation arguments between an
+		      architecture-independent intermediate representation
+		      of the kind suggested by the Cookbook with machine
+		      abstractions for Power and x86. Moreover, we provide
+		      fixes for cookbook recipes that are inconsistent with
+		      the behaviors admitted by the target platform, and
+		      prove the correctness of these repairs.  <br />
+                      <strong>Venue</strong>: European Conference on Object-Oriented Programming, 2015<br />
+                      <strong>DOI</strong>: <a href="http://dx.doi.org/10.4230/LIPIcs.ECOOP.2015.999" target="_blank">10.4230/LIPIcs.ECOOP.2015.999</a><br />
+                      <a href="pubs/ecoop15b.pdf" target="_blank"><button type="button" class="btn btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
+
+
               <li class="pn-journals">
                 <div>
                   <div class="pn-publications">
@@ -1059,7 +1150,22 @@ function swaptabs (showthis,hidethis) {
 		  <p class="style2"><em>Eternal Sunshine of the Spotless Mind</em></p>                                                             
 	      </div></td>                                                                                                                   
 	      </tr>       
+
+	      <tr>
+		<td>
+		  <b>Comfy Chair</b><br><br>
+		  \'kəm(p)-fē 'cher\</td>
+		<td>
+		  <b>Definition </b><br>
+		  a :  a position of authority, state, or dignity<br>
+		  b : he who makes things happen<br>
+		</td>
+	      </tr>
 	    </table>
+	    <b>Examples</b><br>
+	    <a href="images/cactus-sofa.jpg"><img src="images/cactus-sofa.jpg" height=100></a> 
+	    <a href="images/comfyChairRomanStyle.jpg"><img src="images/comfyChairRomanStyle.jpg"  height=100></a><br>
+	    <p class="pn-grey-font">With thanks to Camil and Irene.</p>
           </div>
 
           <div class="col-md-4">
