@@ -18,3 +18,19 @@
 who/.RData
 
 who/.Rhistory
+
+*.html~
+
+events/.DS_Store
+
+images/.DS_Store
+
+vitekj/Family/.DS_Store
+
+who/.DS_Store
+
+vitekj/.DS_Store
+
+img/.DS_Store
+
+.DS_Store
