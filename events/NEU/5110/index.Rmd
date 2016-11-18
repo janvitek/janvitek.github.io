@@ -1,5 +1,5 @@
 ---
-title: "DS 5110"
+title: "DS5110"
 author: "Jan Vitek"
 navlink: "[jv](http://janvitek.org/)"
 og:
@@ -18,10 +18,13 @@ output: markdowntemplates::skeleton
  Schedule   Wednesdays 6-9PM
  Location   TBA
     Staff   Jan Vitek, Filip Krikava, Aviral Goel
-  Contact   j.vitek@neu.edu
+  Contact   Use [Piazza](https://piazza.com/class/ivo6jwdccw617v) for all communication
  Textbook   [R for Data science](http://r4ds.had.co.nz)
 ---------   --------------------------------------
 
+#### Syllabus
+
+This  course discusses  the  practical  issues  and techniques  for  data  importing,  tidying, transforming,  and  modeling. The  course  will  offer  a  gentle introduction to  techniques  for processing big data. Programming is  a cross-cutting aspect of the course.  Students  will  gain experience  with  data  science  tools  through short  assignments.  The  course  work includes a term project based on real-world data.  Required topics include: Data management and processing: definition & background; Data transformation; Data import; Data cleaning; Data modeling; Relational and analytic databases; Basics of SQL; Programming in R and/or Python; MapReduce fundamentals and distributed data management; Data processing pipelines, connecting multiple data management and analysis components; Interaction between the capabilities and requirements of  data analysis methods (data structures, algorithms, memory requirements) and the choice of data storage and management tools; Repeatable and reproducible data analysis.
 
 #### Overview
 
