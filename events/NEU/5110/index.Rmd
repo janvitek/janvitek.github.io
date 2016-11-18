@@ -1,0 +1,60 @@
+---
+title: "DS 5110"
+author: "Jan Vitek"
+navlink: "[jv](http://janvitek.org/)"
+og:
+  type: "article"
+  title: "opengraph title"
+  url: "optional opengraph url"
+  image: "optional opengraph image link"
+footer:
+  - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
+  - content: 'Copyright Northeastern University, 2017'
+date: "`r Sys.Date()`"
+output: markdowntemplates::skeleton
+---
+
+---------   --------------------------------------
+ Schedule   Wednesdays 6-9PM
+ Location   TBA
+    Staff   Jan Vitek, Filip Krikava, Aviral Goel
+  Contact   j.vitek@neu.edu
+ Textbook   [R for Data science](http://r4ds.had.co.nz)
+---------   --------------------------------------
+
+
+#### Overview
+
+Data Science is a discipline that combines computing with statistics. A data analysis problem is solved in a series of data-centric steps: data acquistion, data representation, data cleaning, data modelling and data visualization.  This class will teach you how to approach such problems in a systematic manner. We will emphasize that elegant code leads to reproducible science.
+
+Along the way you will pick up a number of skills.  You will become proefficient in the R programming language, you will learn how to use the grammar of graphics, literate programming, and be exposed to big data problems.
+
+The class will use several small project and will lead to a group project in which you will deliver a solution to a real-world data analysis challenge.
+
+
+#### Schedule
+
+TBA
+
+#### Grading
+
+TBA
+
+
+#### Other resources
+ * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis)
+The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
+ * [R Programming](https://www.coursera.org/learn/r-programming)
+The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
+ * [Advanced R Programming](https://www.coursera.org/learn/advanced-r)
+Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
+ * [Facebook: Data Analysis with R](https://www.udacity.com/course/data-analysis-with-r--ud651)
+ * [Harvard: Statistics and R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x)
+ * [UT Austin: Foundations of Data analysis](https://www.edx.org/course/foundations-data-analysis-part-1-utaustinx-ut-7-11x)
+ * [Microsoft: Programming with R for Data Science](https://www.edx.org/course/programming-r-data-science-microsoft-dat209x-1)
+ * [Microsoft: Introduction to R for Data Science](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x-2)
+ * [Microsoft: Analyzing Big Data with Microsoft R Server](https://www.edx.org/course/analyzing-big-data-microsoft-r-server-microsoft-dat213x)
+
+```{r bib, include=FALSE}
+knitr::write_bib(sub("^package:", "", grep("package", search(), value=TRUE)), file='skeleton.bib')
+```
