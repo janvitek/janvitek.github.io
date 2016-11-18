@@ -45,11 +45,11 @@ TBA
 
 
 #### Other resources
- * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis)
+ * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis):
 The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
- * [R Programming](https://www.coursera.org/learn/r-programming)
+ * [R Programming](https://www.coursera.org/learn/r-programming):
 The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
- * [Advanced R Programming](https://www.coursera.org/learn/advanced-r)
+ * [Advanced R Programming](https://www.coursera.org/learn/advanced-r): 
 Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
  * [Facebook: Data Analysis with R](https://www.udacity.com/course/data-analysis-with-r--ud651)
  * [Harvard: Statistics and R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x)
