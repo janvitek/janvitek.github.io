@@ -37,11 +37,26 @@ The class will use several small project and will lead to a group project in whi
 
 #### Schedule
 
-TBA
+| Date  | Topic                              |                                | Deliverable 
+|-------|------------------------------------|--------------------------------|---------------------------------------------|
+| 01.11 | **Introduction to Data Science** Case study: Computer performance.  | Exo set 1 (basics of R, vectors, ggplot2).  |
+| 01.18 | **Designing Data Pipelines** Case study: Computer performance       | Exo set 2 (data frames) . |
+| 01.25 | **Vizualizing and Presenting Data** Case study: Airline OTP data    | Exo set 3. |
+| 02.01 | | Exo set 4. |
+| 02.08 | | Exo set 5. |
+| 02.15 | | Exo set 6. |
+| 02.22 | | Exo set 7. |
+| 03.01 | | Exo set 8. |
+| 03.08 |  **No Class** - Spring break                  | |
+| 03.15 | | |
+| 03.22 | | |
+| 03.29 | **Performance| |
+| 04.05 |  **No Class** - Rehersal Week                                       | Project reports |
+| 04.12 |  **Data Presentation Sprints Week**                                 | Project slides |
 
 #### Grading
 
-TBA
+The grade in this class will be based on (a) final project presentation (30%), (b) final project report (30%), exercise sets (20%), in class participation (20%). 
 
 
 #### Other resources
