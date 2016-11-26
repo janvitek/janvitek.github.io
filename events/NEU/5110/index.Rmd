@@ -14,13 +14,13 @@ date: "`r Sys.Date()`"
 output: markdowntemplates::skeleton
 ---
 
----------   --------------------------------------
- Schedule   Wednesdays 6-9PM
- Location   TBA
-    Staff   Jan Vitek, Filip Krikava, Aviral Goel
-  Contact   Use [Piazza](https://piazza.com/class/ivo6jwdccw617v) for all communication
- Textbook   [R for Data science](http://r4ds.had.co.nz)
----------   --------------------------------------
+--------------   --------------------------------------
+ **Schedule**    W/18-21
+  **Location**   TBA
+    **Staff**    Jan Vitek, Filip Krikava, Aviral Goel
+  **Contact**    [Piazza](https://piazza.com/class/ivo6jwdccw617v) for all communication. Registeration is open; sensitive questions by private notes.
+ **Textbook**    [R for Data science](http://r4ds.had.co.nz) ![](http://r4ds.had.co.nz/cover.png){height=80px}
+------------   --------------------------------------
 
 #### Syllabus
 
@@ -28,31 +28,41 @@ This  course discusses  the  practical  issues  and techniques  for  data  impor
 
 #### Overview
 
-Data Science is a discipline that combines computing with statistics. A data analysis problem is solved in a series of data-centric steps: data acquistion, data representation, data cleaning, data modelling and data visualization.  This class will teach you how to approach such problems in a systematic manner. We will emphasize that elegant code leads to reproducible science.
+Data Science is a discipline that combines computing with statistics. A data analysis problem is solved in a series of data-centric steps: data acquistion and representation (Import), data cleaning (Tidy), and an iterative sequence of data transformation (Transform), data modelling (Model) and data visualization (Vsiualize).  The end result of the process is to communicate insights obtained from the data (Communicate). This class will take you through all the steps in the process and will teach you how to approach such problems in a systematic manner. You will learn how to _design data analysis pipelines_ as well as how to implement them in a widely used language. The class will emphasize how elegant code leads to reproducible science.
 
-Along the way you will pick up a number of skills.  You will become proefficient in the R programming language, you will learn how to use the grammar of graphics, literate programming, and be exposed to big data problems.
+  ![](http://r4ds.had.co.nz/diagrams/data-science.png)
 
-The class will use several small project and will lead to a group project in which you will deliver a solution to a real-world data analysis challenge.
+Along the way you will pick up a number of skills.  You will become proefficient in the R programming language and concepts such as as data frames, vectorized computation and lazy functional and object-oriented programming; you will learn how to use the grammar of graphics, literate programming, and be exposed to big data problems.
+
+The class The class will use several small project and will lead to a group project in which you will deliver a solution to a real-world data analysis challenge.
 
 
 #### Schedule
 
-| Date  | Topic                              |                                | Deliverable 
-|-------|------------------------------------|--------------------------------|---------------------------------------------|
-| 01.11 | **Introduction to Data Science** Case study: Computer performance.  | Exo set 1 (basics of R, vectors, ggplot2).  |
-| 01.18 | **Designing Data Pipelines** Case study: Computer performance       | Exo set 2 (data frames) . |
-| 01.25 | **Vizualizing and Presenting Data** Case study: Airline OTP data    | Exo set 3. |
-| 02.01 | | Exo set 4. |
-| 02.08 | | Exo set 5. |
-| 02.15 | | Exo set 6. |
-| 02.22 | | Exo set 7. |
-| 03.01 | | Exo set 8. |
-| 03.08 |  **No Class** - Spring break                  | |
-| 03.15 | | |
-| 03.22 | | |
-| 03.29 | **Performance| |
-| 04.05 |  **No Class** - Rehersal Week                                       | Project reports |
-| 04.12 |  **Data Presentation Sprints Week**                                 | Project slides |
+| Date  | Topic                                                              | Deliverable 
+|-------|--------------------------------------------------------------------|---------------------------------------------|
+| 01.11 | **Introduction to Data Science** Case study: Computer performance  | Exo set 1 (basics of R, vectors, ggplot2)   |
+| 01.18 | **Designing Data Pipelines (I)** Case study: Computer performance  | Exo set 2 (data frames, testthat)           |
+| 01.25 | **Vizualizing and Presenting Data** Case study: Airline OTP        | Exo set 3 (ggplot2)                         |
+| 02.01 | **Designing Data Pipelines (II)**                                  | Exo set 4 (tidyr)                           |
+| 02.08 | **Relational Data**                                                | Exo set 5 (plyr, SQL)                       |
+| 02.15 | **Programming Paradigms for Data Science**                         | Exo set 6 (substitute, objects, HO functions, environments) |
+| 02.22 | **Big Data**  Case study: Github API                               | Exo set 7 (hadoop)                          |
+| 03.01 | **Modelling**                                                      | Exo set 8 (spark)                           |
+| 03.08 | **No Class** - Spring break                                        |                                             |
+| 03.15 | **Advanced R programming**                                         | Exo set 9  (packages)                       |
+| 03.22 | **Graphics and Interaction**  Markdown and Shiny                   |                                             |
+| 03.29 | **Performance, profiling and Debugging**                           | Exo set 10 (rprof)                          |
+| 04.05 | **No Class** - Rehersal Week                                       | Project report                              |
+| 04.12 | **Data Sprints Week**                                              | Project slides                              |
+
+#### Exercises
+
+The class will feature 10 exercise sets. Exo sets are due, electronically, before class. Students are required to complete them as they reinforce the material discussed in class.  Four randomly selected exo sets will be graded, the best three scores will be retained for the final grade. 
+
+#### InClass Participation
+
+Each student will get at least 5 in-class participation grades. These grades are based on answers to questions about assigned reading, codewalks, and presentations. Students are selected randomly for in-class participation. The four best grades are retained.
 
 #### Grading
 
@@ -60,12 +70,12 @@ The grade in this class will be based on (a) final project presentation (30%), (
 
 
 #### Other resources
- * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis):
-The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
- * [R Programming](https://www.coursera.org/learn/r-programming):
-The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
- * [Advanced R Programming](https://www.coursera.org/learn/advanced-r): 
-Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
+
+The following links are online classes, some may be open:
+
+ * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis): The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
+ * [R Programming](https://www.coursera.org/learn/r-programming): The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
+ * [Advanced R Programming](https://www.coursera.org/learn/advanced-r):  Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
  * [Facebook: Data Analysis with R](https://www.udacity.com/course/data-analysis-with-r--ud651)
  * [Harvard: Statistics and R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x)
  * [UT Austin: Foundations of Data analysis](https://www.edx.org/course/foundations-data-analysis-part-1-utaustinx-ut-7-11x)
