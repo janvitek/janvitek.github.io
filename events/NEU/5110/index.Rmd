@@ -34,7 +34,7 @@ Data Science is a discipline that combines computing with statistics. A data ana
 
 Along the way you will pick up a number of skills.  You will become proefficient in the R programming language and concepts such as as data frames, vectorized computation and lazy functional and object-oriented programming; you will learn how to use the grammar of graphics, literate programming, and be exposed to big data problems.
 
-The class The class will use several small project and will lead to a group project in which you will deliver a solution to a real-world data analysis challenge.
+The class will use several small project and will lead to a group project in which you will deliver a solution to a real-world data analysis challenge.
 
 
 #### Schedule
@@ -68,6 +68,21 @@ Each student will get at least 5 in-class participation grades. These grades are
 
 The grade in this class will be based on (a) final project presentation (30%), (b) final project report (30%), exercise sets (20%), in class participation (20%). 
 
+#### Why R?
+
+The following is excerpted from the [Revolution blog](http://blog.revolutionanalytics.com/popularity/).
+
+<em>O'Reilly has released the results of the 2016 Data Science Salary Survey. [...] The median salary reported in the survey was US$87,000; amongst data scientists in the US, the median salary was US$106,000. [...] The survey also reports on use of tools, and the top 3 in each category were as follows (respondents could select multiple tools in each category):
+
+ * Operating Systems: Windows 74%; Linux 49%; Mac OS X 42%
+ * Databases: MySQL 37%; Microsoft SQL Server 33%; Oracle 23%
+ * Programming languages: SQL 70%; R 57%; Python 54%
+ 
+Interestingly, the survey also reported on the tasks that data scientists perform: over 90% reported some kind of coding in their day-to-day work. 
+
+
+IEEE Spectrum has just published its third annual ranking with its 2016 Top Programming Languages, and the R Language is once again near the top of the list, moving up one place to fifth position.
+As I said last year (when R moved up to take sixth place), this is an extraordinary result for a domain-specific language. The other four languages in the top 5 (C, Java, Python amd C++) are all general-purpose languages, suitable for just about any programming task. R by contrast is a language specifically for data science, and its high ranking here reflects both the critical importance of data science as a discipline today, and of R as the language of choice for data scientists.</em>
 
 #### Other resources
 
