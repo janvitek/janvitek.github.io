@@ -139,33 +139,6 @@ As I said last year (when R moved up to take sixth place), this is an extraordin
 
 ##### Video Tutorials
 
-
-The following are books on R:
-
-- [Introduction to Statistical Thinking (With R, Without Calculus)](http://pluto.huji.ac.il/~msby/StatThink/IntroStat.pdf)
-
-
-- [Exploratory Data Analysis with R](https://leanpub.com/exdata)
-
-- [A Beginner's Guide to R](http://www.springer.com/us/book/9780387938363)
-
-- [A Data Visualization with R](http://www.springer.com/us/book/9783319497501)
-
-- [R Programming](https://en.wikibooks.org/wiki/R_Programming)
-
-- [Introduction to Probability and Statistics Using R](http://git.savannah.gnu.org/cgit/ipsur.git/plain/IPSUR.pdf)
-
-- [R tips](http://pj.freefaculty.org/R/Rtips.pdf)
-
-- [R for Beginners](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf)
-
-- [Efficient R Programming](https://csgillespie.github.io/efficientR/)
-
-- [R for Data Science](http://www.cs.upc.edu/~robert/teaching/estadistica/rprogramming.pdf)
-
-
-The following links are online classes, some may be open:
-
  * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis): The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
  * [R Programming](https://www.coursera.org/learn/r-programming): The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
  * [Advanced R Programming](https://www.coursera.org/learn/advanced-r):  Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
