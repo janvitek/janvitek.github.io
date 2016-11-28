@@ -18,7 +18,7 @@ output: markdowntemplates::skeleton
  **Schedule**    W/18-21
   **Location**   TBA
     **Staff**    Jan Vitek, Filip Krikava, Aviral Goel
-  **Contact**    [Piazza](https://piazza.com/class/ivo6jwdccw617v) for all communication. Registeration is open; sensitive questions by private notes.
+  **Contact**    [Piazza](https://piazza.com/class/ivo6jwdccw617v) for all communication. Registration is open; sensitive questions by private notes.
  **Textbook**    [R for Data science](http://r4ds.had.co.nz) ![](http://r4ds.had.co.nz/cover.png){height=80px}
 ------------   --------------------------------------
 
@@ -28,11 +28,11 @@ This  course discusses  the  practical  issues  and techniques  for  data  impor
 
 #### Overview
 
-Data Science is a discipline that combines computing with statistics. A data analysis problem is solved in a series of data-centric steps: data acquistion and representation (Import), data cleaning (Tidy), and an iterative sequence of data transformation (Transform), data modelling (Model) and data visualization (Vsiualize).  The end result of the process is to communicate insights obtained from the data (Communicate). This class will take you through all the steps in the process and will teach you how to approach such problems in a systematic manner. You will learn how to _design data analysis pipelines_ as well as how to implement them in a widely used language. The class will emphasize how elegant code leads to reproducible science.
+Data Science is a discipline that combines computing with statistics. A data analysis problem is solved in a series of data-centric steps: data acquisition and representation (Import), data cleaning (Tidy), and an iterative sequence of data transformation (Transform), data modelling (Model) and data visualization (Visualize).  The end result of the process is to communicate insights obtained from the data (Communicate). This class will take you through all the steps in the process and will teach you how to approach such problems in a systematic manner. You will learn how to _design data analysis pipelines_ as well as how to implement them in a widely used language. The class will emphasize how elegant code leads to reproducible science.
 
   ![](http://r4ds.had.co.nz/diagrams/data-science.png)
 
-Along the way you will pick up a number of skills.  You will become proefficient in the R programming language and concepts such as as data frames, vectorized computation and lazy functional and object-oriented programming; you will learn how to use the grammar of graphics, literate programming, and be exposed to big data problems.
+Along the way you will pick up a number of skills.  You will become proficient in the R programming language and concepts such as as data frames, vectorized computation and lazy functional and object-oriented programming; you will learn how to use the grammar of graphics, literate programming, and be exposed to big data problems.
 
 The class will use several small project and will lead to a group project in which you will deliver a solution to a real-world data analysis challenge.
 
@@ -53,7 +53,7 @@ The class will use several small project and will lead to a group project in whi
 | 03.15 | **Advanced R programming**                                         | Exo set 9  (packages)                       |
 | 03.22 | **Graphics and Interaction**  Markdown and Shiny                   |                                             |
 | 03.29 | **Performance, profiling and Debugging**                           | Exo set 10 (rprof)                          |
-| 04.05 | **No Class** - Rehersal Week                                       | Project report                              |
+| 04.05 | **No Class** - Rehearsal Week                                       | Project report                              |
 | 04.12 | **Data Sprints Week**                                              | Project slides                              |
 
 #### Exercises
@@ -82,7 +82,7 @@ Interestingly, the survey also reported on the tasks that data scientists perfor
 
 
 IEEE Spectrum has just published its third annual ranking with its 2016 Top Programming Languages, and the R Language is once again near the top of the list, moving up one place to fifth position.
-As I said last year (when R moved up to take sixth place), this is an extraordinary result for a domain-specific language. The other four languages in the top 5 (C, Java, Python amd C++) are all general-purpose languages, suitable for just about any programming task. R by contrast is a language specifically for data science, and its high ranking here reflects both the critical importance of data science as a discipline today, and of R as the language of choice for data scientists.</em>
+As I said last year (when R moved up to take sixth place), this is an extraordinary result for a domain-specific language. The other four languages in the top 5 (C, Java, Python and C++) are all general-purpose languages, suitable for just about any programming task. R by contrast is a language specifically for data science, and its high ranking here reflects both the critical importance of data science as a discipline today, and of R as the language of choice for data scientists.</em>
 
 #### Other resources
 
