@@ -1,17 +1,29 @@
-@inproceedings{tba15,
-  author = "Max New and Matthew Felheisen and 
-           Asumu Takikawa  and Benjamin Greenman 
-           and  Dan Feltey and Jan Vitek",
-  title = "The Performance of Gradual Typing in Racket",
-  booktitle = "Technical Report Norheastern University",
-  year = 2015}
+@string{OOPSLA = "Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA)"}
+@string{ECOOP  = {European Conference on Object-Oriented Programming (ECOOP)}}
+@string{POPL  = {Symposium on Principles of Programming Languages (POPL)}}
+
+
+@inproceedings{popl16,
+  author    = {Asumu Takikawa and
+               Daniel Feltey and
+               Ben Greenman and
+               Max  New and
+               Jan Vitek and
+               Matthias Felleisen},
+  title     = {Is sound gradual typing dead?},
+  booktitle = POPL,
+  year      = {2016},
+  doi       = {10.1145/2837614.2837630},
+}
 
 @inproceedings{ecoop15,
- author = "Gregor Richards and Francesco {Zappa Nardelli} 
-           and Jan Vitek",
- title = "Concrete Types for TypeScript",
- booktitle = "European Conference on Object Oriented Programming (ECOOP), to appear",
- year = 2015}
+ author     = "Gregor Richards and Francesco {Zappa Nardelli} 
+               and Jan Vitek",
+ title      = "Concrete Types for {TypeScript}",
+ booktitle  = ECOOP,
+  year      = {2015},
+  doi       = {10.4230/LIPIcs.ECOOP.2015.76},
+}
 
 
 @article{cacm15,
@@ -72,11 +84,10 @@
 }
 
 @inproceedings{vee14,
-author = 
-"T. Kalibera  and  P. Maj and F. Morandat and J. Vitek",
-title = "A Fast Abstract Syntax Tree Interpreter for {R}", 
-booktitle ="Conference on Virtual Execution Environments (VEE)",
-year= 2014}
+   author = "T. Kalibera  and  P. Maj and F. Morandat and J. Vitek",
+   title = "A Fast Abstract Syntax Tree Interpreter for {R}", 
+   booktitle ="Conference on Virtual Execution Environments (VEE)",
+   year= 2014}
 
 @inproceedings{icse13,
   author =      {Daniel Marino and Christian Hammer and  Julian Dolby
@@ -97,19 +108,15 @@ year= 2014}
                Jan Vitek},
   title     = {Plan B: a buffered memory model for Java},
   year      = {2013},
-  pages     = {329-342},
-  ee        = {http://doi.acm.org/10.1145/2429069.2429110},
-  booktitle     = {Symposium on Principles
-               of Programming Languages (POPL)}}
+  doi       = {10.1145/2429069.2429110},
+  booktitle  = POPL}
 
 @inproceedings{oopsla13,
   title = "Flexible Access Control Policies with Delimited Histories and
                   Revocation",
   author = {Gregor Richards and Christian Hammer and Francesco {Zappa Nardelli}
             and Suresh Jagannathan and Jan Vitek},
-  booktitle = "Conference on Object-Oriented
-               Programming Systems, Languages and Applications (OOPSLA)",
-  mon= oct,
+  booktitle = OOPSLA,
   year = 2013}
 
 @inproceedings{pldi13,
@@ -133,7 +140,7 @@ year= 2014}
   editor =	{Robert Hirschfeld and Shriram Krishnamurthi and Jan Vitek},
   publisher =	{Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik},
   address =	{Dagstuhl, Germany},
-  doi =		{http://dx.doi.org/10.4230/DagRep.2.1.1},
+  doi =		{10.4230/DagRep.2.1.1},
 }
 
 @inproceedings{ecoop12,
@@ -141,7 +148,7 @@ year= 2014}
   author = "Flor\'eal Morandat and Brandon Hill and Leo Osvald 
             and Jan Vitek",
   year = 2012,
-  booktitle = "European Conference on Object-Oriented Programming (ECOOP)"}
+  booktitle = ECOOP} 
 
 @inproceedings{user12,
   title = "TraceR: A framework for understanding R performance",
@@ -155,7 +162,6 @@ year= 2014}
   booktitle = {Distributed, Embedded and Real-time Java Systems},
   publisher = {Springer},
   year = {2012},
-  isbn = {978-1-4419-8157-8},
   author = "Daniel Tang and Ales Plsek and Jan Vitek",
   title = "Memory Safety for Safety Critical Java",
   pages = "235--254"}
@@ -182,17 +188,15 @@ year= 2014}
   author    = {Jan Vitek},
   title     = {Virtualizing real-time embedded systems with Java},
   year      = {2011},
-  pages     = {906-911},
-  ee        = {http://doi.acm.org/10.1145/2024724.2024926},
-  booktitle     = {Proceedings of the  Design Automation Conference (DAC)}}
+  doi       = {10.1145/2024724.2024926},
+  booktitle = {Proceedings of the  Design Automation Conference (DAC)}}
 
 @inproceedings{tools11,
   author    = {Ana Milanova and
                Jan Vitek},
   title     = {Static Dominance Inference},
   year      = {2011},
-  pages     = {211-227},
-  ee        = {http://dx.doi.org/10.1007/978-3-642-21952-8_16},
+  doi       = {10.1007/978-3-642-21952-8_16},
   booktitle = {International Conference on Objects, 
                 Models, Components, Patterns  (TOOLS'49)},
 }
@@ -203,8 +207,7 @@ year= 2014}
   title     = {Repeatability, reproducibility, and rigor in systems research},
   booktitle = {EMSOFT},
   year      = {2011},
-  pages     = {33-38},
-  ee        = {http://doi.acm.org/10.1145/2038642.2038650},
+  doi       = {10.1145/2038642.2038650},
   booktitle = {Conference on Embedded Software (EMSOFT)},
 }
 
@@ -227,18 +230,15 @@ year= 2014}
   title = "Automated Construction of {JavaScript} Benchmarks",
   author = "Gregor Richards and Andreas Gal and Brendan Eich and Jan Vitek",
   year = 2011,
-  booktitle = "Conference on Object-Oriented
-               Programming Systems, Languages and Applications (OOPSLA)",
-  pages     = {677-694},
-  ee        = {http://doi.acm.org/10.1145/2048066.2048119}}
+  booktitle = OOPSLA,
+  doi       = {10.1145/2048066.2048119}}
 
 @inproceedings{ecoop11,
   title = "The Eval that Men Do: A Large-scale Study of the Use of Eval in {JavaScript} Applications",
   author = "Gregor Richards and	Christian Hammer and Brian Burg and Jan Vitek",
   year = 2011,
-  booktitle = "European Conference on Object-Oriented Programming (ECOOP)",
-  pages     = {52--78},
-  ee        = {http://dx.doi.org/10.1007/978-3-642-22655-7_4} }
+  booktitle = ECOOP,
+  doi       = {10.1007/978-3-642-22655-7_4} }
 
 
 @inproceedings{ecoop10,
@@ -248,11 +248,9 @@ year= 2014}
                Christian Hammer and
                Jan Vitek},
   title     = {A Type System for Data-Centric Synchronization},
-  booktitle = "Proceedings of the European Conference on Object Oriented 
-                Programming (ECOOP)", 
+  booktitle = ECOOP,
   year      = {2010},
-  pages     = {304-328},
-  ee        = {http://dx.doi.org/10.1007/978-3-642-14107-2_15},
+  doi       = {10.1007/978-3-642-14107-2_15},
 }
 
 @inproceedings{sac10,
@@ -261,7 +259,7 @@ year= 2014}
   booktitle = {Symposium on Applied Computing (SAC)},
   year = {2010},
   pages = {326--333},
-  doi = {http://dx.doi.org/10.1145/1774088.1774158}}
+  doi = {10.1145/1774088.1774158}}
 					
 
 @article {CPE10,
@@ -304,8 +302,8 @@ year = 2011
                Jan Vitek},
   title     = {Integrating typed and untyped code in a scripting language},
   year      = 2010,
-  pages     = {377-388},
-  booktitle = {Symposium on Principles of Programming Languages (POPL)}}
+  doi       = {10.1145/1706299.1706343},
+  booktitle = POPL}
 
 @inproceedings{plpv10,
   author    = {Tom{\'a}s Kalibera and
@@ -358,8 +356,7 @@ year = 2011
 @InProceedings{ecoop09intro,
   title = "Introduction to: The Myths of Object-Orientation",
   author = "Jan Vitek",
-  booktitle = "Proceedings of the European Conference on Object Oriented 
-                Programming (ECOOP)", 
+  booktitle = ECOOP,
    year  = 2009,
    month = "July",
    pages = 618}
@@ -418,13 +415,12 @@ year = 2011
 
 
 @InProceedings{oopsla09,
-  title = "Thorn---Robust, Concurrent, Extensible Scripting on the {JVM}",
+  title = "Thorn: Robust, Concurrent, Extensible Scripting on the {JVM}",
   author = {Bard Bloom and John Field and  Nathaniel Nystrom and  Johan 
             \"Ostlund and Gregor Richards and Rok Strnisa and Jan Vitek
             and Tobias Wrigstad},
-   booktitle = "Conference on Object-Oriented
-                Programming Systems, Languages and Applications (OOPSLA)",
-   month     = oct,
+   booktitle = OOPSLA,
+  doi       = {10.1145/1639950.1640016},
    year = 2009}
 
 @InProceedings{safecert09,
@@ -465,10 +461,8 @@ and Languages (COORDINATION)",
   author = "Tobias Wrigstad and  Filip Pizlo and Fadi Meawad
             and  Lei Zhao and Jan Vitek",
    title = "Loci: Simple Thread-Locality for {Java}",
-   booktitle = "Proceedings of the European Conference on Object Oriented 
-                Programming (ECOOP)", 
-   year  = 2009,
-   month = "July"}
+   booktitle = ECOOP,
+   year  = 2009}
 
 @inproceedings{lctes08,
   author    = {Joshua S. Auerbach and
@@ -490,7 +484,6 @@ and Languages (COORDINATION)",
   title     = {Proceedings of the 22nd European Conference On Object Oriented Programming, Paphos, Cyprus},
   month     =  {July},
   date      = {7-11},
-  booktitle = {ECOOP},
   publisher = {Springer},
   series    = {Lecture Notes in Computer Science},
   volume    = {5142},
@@ -553,10 +546,7 @@ and Languages (COORDINATION)",
    title     = "{StreamFlex}: High-throughput Stream Programming in {Java}",
    author    = "Jesper H. Spring and Jean Privat  and
                 Rachid Guerraoui  and Jan Vitek",
-   booktitle = "Proceedings of the {ACM} {SIGPLAN} Conference on
-                Object-Oriented Programming Systems, Languages and
-                Applications (OOPSLA)",
-   month     = oct,
+   booktitle = OOPSLA,
   year       = 2007} 
 
 @article{spe07,
@@ -656,11 +646,8 @@ Programming Languages and Systems (APLAS)",
 @InProceedings{ecoop06,
  author =   "Chris Andreae and Yvonne Coady and Celina Gibbs and James Noble and Jan Vitek and Tian Zhao",
  title =     "{Scoped Types and Aspects for Real-Time {Java}}",
- booktitle     = "Proceedings of the European Conference on Object-Oriented Programming (ECOOP)",
-  address = "Nantes, France",
-  month = jul,
+ booktitle     = ECOOP,
   year      = {2006},
- pages =     "124--147",
 }
 
 
@@ -827,13 +814,8 @@ Programming Languages and Systems (APLAS)",
 @inproceedings{Cunei:2005:PFD,
   author =	"Antonio Cunei and Jan Vitek",
   title =	"{PolyD}: a flexible dispatching framework",
-  booktitle =    "Proceedings of the {ACM} {SIGPLAN} Conference on
-                 Object-Oriented Programming Systems, Languages and
-                 Applications (OOPSLA)",
-  pages =	"487--503",
-  month =	oct,
-  year = 	"2005",
-}
+  booktitle =   OOPSLA,
+  year = 	"2005"}
 
 @article{scool04,
    author = "Mark Moir and Nir Shavit and Jan Vitek",
@@ -992,24 +974,17 @@ Programming Languages and Systems (APLAS)",
 @InProceedings{vitek.zhao:03,
  author   = "Tian Zhao and Jens Palsberg and Jan Vitek",
  title    = "Lightweight Confinement for Featherweight {Java}",
-    booktitle =    "Proceedings of the {ACM} {SIGPLAN} Conference on
-               Object-Oriented Programming Systems, Languages and
-                 Applications ({OOPSLA})",
-     year =       {2003},
-   isbn =       {1-58113-712-5},
-   location =    {Anaheim, California, USA},
-   month   =   oct,
- pages    = {135--148}}
+ booktitle = OOPSLA,
+ year =       {2003},
+}
 
 @InProceedings{vitek.palacz:03,
   author =    "Krzysztof Palacz  and Jan Vitek",
   title =     "{Java} Subtype Tests in Real-Time",
-  booktitle  = "Proceedings of the European Conference on 
-                Object-Oriented Programming (ECOOP)",
+  booktitle  = ECOOP,
   address = "Darmstadt, Germany",
-  month = jul,
   year      = {2003},
- pages =     "378--404"}
+}
 
 @InProceedings{ovmir03,
   author    = "Krzysztof Palacz and Jason Baker and Chapman Flack and
@@ -1075,13 +1050,9 @@ Programming Languages and Systems (APLAS)",
    pages =        {135-188}}
 
 @InProceedings{palacz.vitek02,
-     author   = "Krzysztof Palacz and Grzegorz Czakowski and Laurent Daynes and Jan Vitek",
-     title    = "Incommunicado: Fast Communication for Isolates",
-      booktitle =    "Proceedings of the {ACM} {SIGPLAN} Conference on
-                 Object-Oriented Programming Systems, Languages and
-                 Applications ({OOPSLA})",
-  pages =	"262--274",
-  month =	nov # " ~4--8",
+   author   = "Krzysztof Palacz and Grzegorz Czakowski and Laurent Daynes and Jan Vitek",
+   title    = "Incommunicado: Fast Communication for Isolates",
+    booktitle =  OOPSLA,
   year = 	2002}
 
 @InProceedings{czajkowski.vitek:2002:RMS,
@@ -1096,13 +1067,9 @@ Programming Languages and Systems (APLAS)",
 @InProceedings{grothoff.vitek:2001:EOC,
   author   =   "Christian Grothoff and Jens Palsberg and Jan Vitek",
   title    =   "Encapsulating objects with confined types",
-  booktitle =    "Proceedings of the {ACM} {SIGPLAN} Conference on
-                 Object-Oriented Programming Systems, Languages and
-                 Applications ({OOPSLA})",
-    year =       {2001},
-   city =       {Tampa Bay, Florida,United States},
-     month =      {Nov},
-  pages    =   "241--255"}
+  booktitle =  OOPSLA,
+   year =       {2001},
+}
 
 
 @InProceedings{carbunar.vitek01,
@@ -1192,12 +1159,9 @@ Programming Languages and Systems (APLAS)",
 @InProceedings{bokowski.vitek:oopsla99,
  author    = "Boris Bokowski and Jan Vitek",
  title     = "{Confined Types}",
- booktitle = "Proceedings 14th Annual ACM SIGPLAN Conference on Object-Oriented
-              Programming Systems, Languages, and Applications (OOPSLA)",
- month     = "November",
+ booktitle = OOPSLA,
  year      = 1999,
- date      = "1--5",
- address   = "Denver, Colorado, USA"}
+}
 
 
 @InProceedings{ViCa99,
@@ -1235,10 +1199,7 @@ Programming Languages and Systems (APLAS)",
 @InProceedings{flex98,
   author =       "James Noble and John Potter and Jan Vitek",
   title =        "Flexible Alias Protection",
-  booktitle =    "Proceedings of the 12th European 
-                  Conference on Object-Oriented Programming (ECOOP)",
-  address =      "Brussels, Belgium",
-  month =        jul,
+  booktitle =    ECOOP,
   year =         1998,
 }
 
@@ -1272,10 +1233,7 @@ Programming Languages and Systems (APLAS)",
 @InProceedings{vitek.horspool:ecoop97,
   author =       "Andreas Krall and Jan Vitek and Nigel R. Horspool",
   title =        "Near Optimal Hierarchical Encoding of Types",
-  booktitle =    "Proceedings of the European Conference on
-                 Object-Oriented Programming (ECOOP)",
-  address =      "Jyvaskyla, Finland",
-  month =        jun,
+  booktitle =    ECOOP,
   year =         1997}
 
 
@@ -1284,10 +1242,7 @@ Programming Languages and Systems (APLAS)",
   author =       "Jan Vitek and Nigel Horspool and Andreas Krall",
   title =        "Efficient Type Inclusion Tests",
   pages =        "142--157",
-  booktitle =    "Proceedings of the {ACM} {SIGPLAN} Conference on
-                 Object-Oriented Programming Systems, Languages and
-                 Applications ({OOPSLA})",
-  month =        oct # "~5--9",
+  booktitle =    OOPSLA,
   year =         1997}
 
 @InProceedings{vitek.97b,
@@ -1373,10 +1328,7 @@ Programming Languages and Systems (APLAS)",
   author =       "Karel Driesen and Urs H{\"o}lzle and Jan Vitek",
   pages =        "253--282",
   editor =       "Walter G. Olthoff",
-  booktitle =    "Proceedings of the 9th European 
-                  Conference of Object-Oriented Programming  (ECOOP)",
-  address =      "{\AA}arhus, Denmark",
-  month =        "7--11~" # aug,
+  booktitle =    ECOOP,
   year =         "1995"}
 
 
@@ -1386,10 +1338,7 @@ Programming Languages and Systems (APLAS)",
   author =       "Jan Vitek and R. Nigel Horspool",
   pages =        "432--449",
   editor =       "Mario Tokoro and Remo Pareschi",
-  booktitle =    "Proceedings of the 8th European Conference of 
-                  Object-Oriented Programming (ECOOP)",
-  address =      "Bologna, Italy",
-  month =        "4--8~" # jul,
+  booktitle =    ECOOP,
   year =         "1994"}
 
 
