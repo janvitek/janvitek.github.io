@@ -38,20 +38,20 @@ The class will feature several small projects and will lead to a larger group pr
 
 #### Schedule
 
-| Date  | Topic                                                              | Deliverable 
+| Date  | Topic                                                              | Deliverable
 |-------|--------------------------------------------------------------------|---------------------------------------------|
-| 01.11 | **Introduction to Data Science** Case study: Computer performance  | Exoset 1 (basics of R, vectors, ggplot2)   |
-| 01.18 | **Designing Data Pipelines (I)** Case study: Computer performance  | Exoset 2 (data frames, testthat)           |
-| 01.25 | **Vizualizing and Presenting Data** Case study: Airline OTP        | Exoset 3 (ggplot2)                         |
-| 02.01 | **Designing Data Pipelines (II)**  Case study: Google Play         | Exoset 4 (tidyr)                           |
-| 02.08 | **Relational Data**   Case study: Google Play                      | Exoset 5 (plyr, SQL)                       |
+| 01.11 | **Introduction to Data Science** Case study: Computer performance  | Exoset 1 (basics of R, vectors)             |
+| 01.18 | **Designing Data Pipelines (I)** Case study: Computer performance  | Exoset 2 (matrices, basic plots)            |
+| 01.25 | **Vizualizing and Presenting Data** Case study: Airline OTP        | Exoset 3 (data frames, ggplot2)             |
+| 02.01 | **Relational Data** Case study: Google Play Store                  | Exoset 4 (relational databases, SQL)        |
+| 02.08 | **Designing Data Pipelines (II)** Case study: Google Play Store    | Exoset 5 (dplyr, tidytext, topic modeling)  |
 | 02.15 | **Programming Paradigms for Data Science**                         | Exoset 6 (substitute, objects, HO functions, environments) |
-| 02.22 | **Big Data**  Case study: Github API                               | Exoset 7 (hadoop)                          |
-| 03.01 | **Modelling**      Case study: Github API                          | Exoset 8 (spark)                           |
+| 02.22 | **Big Data**  Case study: Github API                               | Exoset 7 (hadoop)                           |
+| 03.01 | **Modelling** Case study: Github API                               | Exoset 8 (REST, spark)                      |
 | 03.08 | **No Class** - Spring break                                        |                                             |
-| 03.15 | **Advanced R programming**                                         | Exoset 9  (packages)                       |
-| 03.22 | **Graphics and Interaction**  Markdown and Shiny                   |                                             |
-| 03.29 | **Performance, profiling and Debugging**                           | Exoset 10 (rprof)                          |
+| 03.15 | **Advanced R programming**                                         | Exoset 9  (packages)                        |
+| 03.22 | **Graphics and Interaction**                                       | Exoset 10 (shiny)                           |
+| 03.29 | **Performance, profiling and Debugging**                           | Exoset 11 (rprof)                           |
 | 04.05 | **No Class** - Rehearsal Week                                      | Project report                              |
 | 04.12 | **Data Sprints Week**                                              | Project slides                              |
 
