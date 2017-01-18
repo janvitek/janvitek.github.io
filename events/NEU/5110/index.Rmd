@@ -2,11 +2,6 @@
 title: "DS5110"
 author: "Jan Vitek"
 navlink: "[jv](http://janvitek.org/)"
-og:
-  type: "article"
-  title: "opengraph title"
-  url: "optional opengraph url"
-  image: "optional opengraph image link"
 footer:
   - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
   - content: 'Copyright Northeastern University, 2017'
@@ -16,10 +11,10 @@ output: markdowntemplates::skeleton
 
 --------------   --------------------------------------
  **Schedule**    W/18-21
-  **Location**   TBA
+  **Location**   Ryder Hall 124
     **Staff**    Jan Vitek, Filip Krikava, Aviral Goel
   **Contact**    [Piazza](https://piazza.com/class/ivo6jwdccw617v) for all communication. Registration is open; sensitive questions by private notes.
- **Textbook**    [R for Data science](http://r4ds.had.co.nz) ![](http://r4ds.had.co.nz/cover.png){height=80px}
+ **Textbook**    RfDS [R for Data Science](http://r4ds.had.co.nz) ![](http://r4ds.had.co.nz/cover.png){height=80px} by Wickham and Grolemund,  AR [Advanced R](http://adv-r.had.co.nz) by Wickham.
 ------------   --------------------------------------
 
 #### Syllabus
@@ -32,40 +27,46 @@ Data Science is a discipline that combines computing with statistics. A data ana
 
   ![](http://r4ds.had.co.nz/diagrams/data-science.png)
 
-Along the way you will pick up a number of skills:  You will become proficient in the R programming language and concepts such as as data frames, vectorized computation and lazy functional and object-oriented programming; you will learn how to use the grammar of graphics, literate programming, and will be exposed to big data problems.
+Along the way you will pick up a number of skills:  You will become proficient in the R programming language and concepts such as as data frames, vectorized computation and lazy functional and object-oriented programming; you will learn how to use the grammar of graphics, literate programming, and will be exposed to big data problems.  We will also look at distributed processing with Spark and, time permitting, discuss other data processing languages such as Python.
 
 The class will feature several small projects and will lead to a larger group project in which you will deliver a solution to a real-world data analysis challenge.
+
+#### Case Studies
+
+The class will be structured around four case studies. The first will focus on analyzing data coming from computer benchmarks (Computer Performance Evaluation), the second will look at the Airline On-Time Performance data (OTP), the third will have the student access a database containing Google Play data (Play), and the last will feature the student obtaining data directly from GitHub (Git).
 
 #### Schedule
 
 | Date  | Topic                                                              | Deliverable
 |-------|--------------------------------------------------------------------|---------------------------------------------|
-| 01.11 | **Introduction to Data Science** Case study: Computer performance  | Exoset 1 (basics of R, vectors)             |
-| 01.18 | **Designing Data Pipelines (I)** Case study: Computer performance  | Exoset 2 (matrices, basic plots)            |
-| 01.25 | **Vizualizing and Presenting Data** Case study: Airline OTP        | Exoset 3 (data frames, ggplot2)             |
-| 02.01 | **Relational Data** Case study: Google Play Store                  | Exoset 4 (relational databases, SQL)        |
-| 02.08 | **Designing Data Pipelines (II)** Case study: Google Play Store    | Exoset 5 (dplyr, tidytext, topic modeling)  |
-| 02.15 | **Programming Paradigms for Data Science**                         | Exoset 6 (substitute, objects, HO functions, environments) |
-| 02.22 | **Big Data**  Case study: Github API                               | Exoset 7 (hadoop)                           |
-| 03.01 | **Modelling** Case study: Github API                               | Exoset 8 (REST, spark)                      |
+| 01.11 | **Introduction to Data Science** *Case study*: Computer performance. *ToT*: R, Markdown.| |
+| 01.18 | **Designing Data Pipelines (I)** *Case study*: Computer performance. *ToT*: ggplot, dataframes. **Read**: RfDS "Functions", RfDS "Vectors", RfDS "RMarkdown", [R3](http://janvitek.org/pubs/r3.pdf)  | Exoset 1 (Simple R, performance data) |
+| 01.25 | **Vizualizing and Presenting Data** *Case study*: Airline OTP. *ToT*: dataframes **Read**: AR "Data Structures", AR "Style Guide", AR "Subsetting"  | Exoset 2 (ggplot, simple R, performance data) |
+| 02.01 | **Designing Data Pipelines (II)**  *Case study*: Airline OTP, *ToT*: | Exoset 3 (tidyr, OTP)                            |
+| 02.08 | **Relational Data**   Case study: Google Play. *ToT*: SQL and Databases | Exoset 4 (OTP)|
+| 02.15 | **Programming Paradigms for Data Science**             | Exoset 5 (Play) |
+| 02.22 | **Big Data**  *Case study*: Github API. *ToT*: Spark.                             | Exoset 6 (Play)                                   |
+| 03.01 | **Modelling**      *Case study*: Github API                          | Exoset 7 (Spark, OTP)  |
 | 03.08 | **No Class** - Spring break                                        |                                             |
-| 03.15 | **Advanced R programming**                                         | Exoset 9  (packages)                        |
-| 03.22 | **Graphics and Interaction**                                       | Exoset 10 (shiny)                           |
-| 03.29 | **Performance, profiling and Debugging**                           | Exoset 11 (rprof)                           |
+| 03.15 | **Advanced R programming**                                         | Exoset 8  (Git)                        |
+| 03.22 | **Graphics and Interaction**  Markdown and Shiny                   | Exoset 9 (Python, Git)                           |
+| 03.29 | **Performance, profiling and Debugging**  *ToT*: Python | Exoset 10 (rprof) |
 | 04.05 | **No Class** - Rehearsal Week                                      | Project report                              |
 | 04.12 | **Data Sprints Week**                                              | Project slides                              |
 
-#### Exercises
-
-The class will feature 10 exercise sets. Exosets are due before class the week they appear on the schedule. Students are _required_ to complete them as they reinforce the material discussed in class.  Four randomly selected exosets will be graded, the best three scores will be retained for the final grade. 
-
-#### InClass Participation
-
-Each student will get at least 5 in-class participation grades. These grades are based on answers to questions about assigned reading, codewalks, and presentations. Students are selected randomly for in-class participation. The four best grades are retained.
 
 #### Grading
 
-The grade in this class will be based on (a) final project presentation (30%), (b) final project report (30%), exercise sets (20%), in class participation (20%). 
+The grade in this class will be based on (a) final exam (20%), (b) the project presentation (20%), (c) final project report (20%), (d) exercise sets (20%), and  (e) in class participation (20%). Grades range from A, A-, B+, B, B-, C, D and F.  Cheating is discouraged. Students involved in a cheating case will be given an F, expelled from class and reported.
+
+##### Exercise sets
+
+The class will feature 10 exercise sets. Exosets are due before class the week they appear on the schedule. Students are _required_ to complete them as they reinforce the material discussed in class.  Four randomly selected exosets will be graded, the best three scores will be retained.
+
+##### In-class participation
+
+Each student will get at least 5 in-class participation grades. These grades are based on answers to questions about assigned reading, codewalks, and presentations. Students are selected randomly for in-class participation. The four best grades are retained.
+
 
 #### Why R?
 
