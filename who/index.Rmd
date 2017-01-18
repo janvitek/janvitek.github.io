@@ -60,7 +60,7 @@ Many respondent seem unaware of many of the activities of the ACM, instead they 
 
 In addition, the ACM's DL is widely criticized as being inefficient, unwieldy, overpriced, and generally subpar. The respondents value the DL's meta data more than anything else it provides.
 
-Certainly communication and transparency could be improved.  Some repsondent asked what the "Good Works" are, other were surprised by the use of funds outlined in introduction to the SIGPLAN survey.  But a more profound realignment of the ACM's activities may be worth considering.
+Certainly communication and transparency could be improved.  Some respondents asked what the "Good Works" are, other were surprised by the use of funds outlined in introduction to the SIGPLAN survey.  But a more profound realignment of the ACM's activities may be worth considering.
 
 <br>
 <br>
