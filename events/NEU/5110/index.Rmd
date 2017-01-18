@@ -37,7 +37,7 @@ The class will be structured around four case studies. The first will focus on a
 
 #### Schedule
 
-| Date  | Topic                                                              | Deliverable 
+| Date  | Topic                                                              | Deliverable
 |-------|--------------------------------------------------------------------|---------------------------------------------|
 | 01.11 | **Introduction to Data Science** *Case study*: Computer performance. *ToT*: R, Markdown.| |
 | 01.18 | **Designing Data Pipelines (I)** *Case study*: Computer performance. *ToT*: ggplot, dataframes. **Read**: RfDS "Functions", RfDS "Vectors", RfDS "RMarkdown", [R3](http://janvitek.org/pubs/r3.pdf)  | Exoset 1 (Simple R, performance data) |
@@ -88,62 +88,48 @@ As I said last year (when R moved up to take sixth place), this is an extraordin
 
 ##### Official R Resources
 
- * [The R Project](https://www.r-project.org/about.html)
- 
- * [R Manuals](https://cran.r-project.org/manuals.html)
- 
- * [R Packages](https://cran.r-project.org/web/packages/available_packages_by_name.html)
- 
- * [The R Journal](https://journal.r-project.org/)
- 
- 
+- [The R Project](https://www.r-project.org/about.html)
+- [R Manuals](https://cran.r-project.org/manuals.html)
+- [R Packages](https://cran.r-project.org/web/packages/available_packages_by_name.html)
+- [The R Journal](https://journal.r-project.org/)
+
+
 ##### R Blogs
 
- * [Quick-R](http://www.statmethods.net/) 
-
- * [R-Bloggers](https://www.r-bloggers.com/)
+- [Quick-R](http://www.statmethods.net/)
+- [R-Bloggers](https://www.r-bloggers.com/)
 
 
 ##### Style Guide
- 
- * [Advanced R - Style Guide](http://adv-r.had.co.nz/Style.html)
+
+- [Advanced R - Style Guide](http://adv-r.had.co.nz/Style.html)
 
 
 ##### E-Books
 
- * [Advanced R](http://adv-r.had.co.nz/) 
- 
- * [R Packages](http://r-pkgs.had.co.nz/)
-
- * [Introduction to Statistical Thinking](http://pluto.huji.ac.il/~msby/StatThink/IntroStat.pdf)
-
- * [Exploratory Data Analysis with R](https://leanpub.com/exdata)
-
- * [A Data Visualization with R](http://www.springer.com/us/book/9783319497501)
-
- * [R Programming](https://en.wikibooks.org/wiki/R_Programming)
-
- * [Introduction to Probability and Statistics Using R](http://git.savannah.gnu.org/cgit/ipsur.git/plain/IPSUR.pdf)
-
- * [R tips](http://pj.freefaculty.org/R/Rtips.pdf)
-
- * [R for Beginners](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf)
-
- * [Efficient R Programming](https://csgillespie.github.io/efficientR/)
-
- * [R for Data Science](http://www.cs.upc.edu/~robert/teaching/estadistica/rprogramming.pdf)
+- [Advanced R](http://adv-r.had.co.nz/)
+- [R Packages](http://r-pkgs.had.co.nz/)
+- [Introduction to Statistical Thinking](http://pluto.huji.ac.il/~msby/StatThink/IntroStat.pdf)
+- [Exploratory Data Analysis with R](https://leanpub.com/exdata)
+- [A Data Visualization with R](http://www.springer.com/us/book/9783319497501)
+- [R Programming](https://en.wikibooks.org/wiki/R_Programming)
+- [Introduction to Probability and Statistics Using R](http://git.savannah.gnu.org/cgit/ipsur.git/plain/IPSUR.pdf)
+- [R tips](http://pj.freefaculty.org/R/Rtips.pdf)
+- [R for Beginners](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf)
+- [Efficient R Programming](https://csgillespie.github.io/efficientR/)
+- [R for Data Science](http://www.cs.upc.edu/~robert/teaching/estadistica/rprogramming.pdf)
 
 ##### Video Tutorials
 
- * [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis): The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
- * [R Programming](https://www.coursera.org/learn/r-programming): The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
- * [Advanced R Programming](https://www.coursera.org/learn/advanced-r):  Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
- * [Facebook: Data Analysis with R](https://www.udacity.com/course/data-analysis-with-r--ud651)
- * [Harvard: Statistics and R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x)
- * [UT Austin: Foundations of Data analysis](https://www.edx.org/course/foundations-data-analysis-part-1-utaustinx-ut-7-11x)
- * [Microsoft: Programming with R for Data Science](https://www.edx.org/course/programming-r-data-science-microsoft-dat209x-1)
- * [Microsoft: Introduction to R for Data Science](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x-2)
- * [Microsoft: Analyzing Big Data with Microsoft R Server](https://www.edx.org/course/analyzing-big-data-microsoft-r-server-microsoft-dat213x)
+- [Exploratory Data Analysis](https://www.coursera.org/learn/exploratory-data-analysis): The basics of analytic graphics and the base plotting system in R. More advanced graphing systems available in R: the Lattice system and the ggplot2 system. Statistical methods for exploratory analysis - clustering, dimension reduction. Two case studies in exploratory data analysis.
+- [R Programming](https://www.coursera.org/learn/r-programming): The history of R and S, go over the basic data types in R, and describe the functions for reading and writing data. Key topics like control structures and functions, loop functions and the debugging tools in R, simulate data in R, which serves as the basis for doing simulation studies, profiler in R which lets you collect detailed information on how your R functions are running and to identify bottlenecks.
+- [Advanced R Programming](https://www.coursera.org/learn/advanced-r):  Functional programming in R, robust error handling, object oriented programming, profiling and benchmarking, debugging, and proper design of functions, debugging and profiling, OOP.
+- [Facebook: Data Analysis with R](https://www.udacity.com/course/data-analysis-with-r--ud651)
+- [Harvard: Statistics and R](https://www.edx.org/course/statistics-r-harvardx-ph525-1x)
+- [UT Austin: Foundations of Data analysis](https://www.edx.org/course/foundations-data-analysis-part-1-utaustinx-ut-7-11x)
+- [Microsoft: Programming with R for Data Science](https://www.edx.org/course/programming-r-data-science-microsoft-dat209x-1)
+- [Microsoft: Introduction to R for Data Science](https://www.edx.org/course/introduction-r-data-science-microsoft-dat204x-2)
+- [Microsoft: Analyzing Big Data with Microsoft R Server](https://www.edx.org/course/analyzing-big-data-microsoft-r-server-microsoft-dat213x)
 
 ```{r bib, include=FALSE}
 knitr::write_bib(sub("^package:", "", grep("package", search(), value=TRUE)), file='skeleton.bib')
