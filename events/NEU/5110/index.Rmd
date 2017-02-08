@@ -43,16 +43,16 @@ The class will be structured around four case studies. The first will focus on a
 | 01.18 | **Designing Data Pipelines (I)** *Case study*: Computer performance. *ToT*: ggplot, dataframes. **Read**: RfDS "Functions", RfDS "Vectors", RfDS "RMarkdown", [R3](http://janvitek.org/pubs/r3.pdf)  | Exoset 1 (Simple R, performance data) |
 | 01.25 | **Vizualizing and Presenting Data** *Case study*: Airline OTP. *ToT*: dataframes **Read**: AR "Data Structures", AR "Style Guide", AR "Subsetting"  | Exoset 2 (ggplot, simple R, performance data) |
 | 02.01 | **Designing Data Pipelines (II)**  *Case study*: Airline OTP, *ToT*: dplyr **Read**: RfDS "Data visualization with ggplot" RfDS "Workflow Basics" RfDS "Data Transformation with dplyr" | Exoset 3 (data.frames, OTP) |
-| 02.08 | **Relational Data**   Case study: Google Play.  *ToT*: SQL and Databases  **Read**: RfDS "Exploratory Data Analysis", RfDS "Relational Data with dplyr" | Exoset 4 (OTP)|
-| 02.15 | **Programming Paradigms for Data Science**             | Exoset 5 (Play) |
-| 02.22 | **Big Data**  *Case study*: Github API. *ToT*: Spark.                             | Exoset 6 (Play)                                   |
-| 03.01 | **Modelling**      *Case study*: Github API                          | Exoset 7 (Spark, OTP)  |
-| 03.08 | **No Class** - Spring break                                        |                                             |
-| 03.15 | **Advanced R programming**                                         | Exoset 8  (Git)                        |
-| 03.22 | **Graphics and Interaction**  Markdown and Shiny                   | Exoset 9 (Python, Git)                           |
+| 02.08 | **Relational Data**   Case study: Airline OTP.  *ToT*: readr  **Read**: RfDS "Exploratory Data Analysis", RfDS "Relational Data with dplyr" | Exoset 4 (OTP)|
+| 02.15 | **Programming Paradigms for Data Science**   Cast stude: Google Play. *ToT*: SQL.  **Read**: RfDS "Tibbles", RfDS "Data Import", RfDS "Tidy data"    | Exoset 5 (OTP) |
+| 02.22 | **Big Data**  *Case study*: Google Play. ToT*: Spark.              | Exoset 6 (Play)        |
+| 03.01 | **Modelling**      *Case study*: Google Play                       | Exoset 7 (Spark, OTP)  |
+| 03.08 | **No Class** - Spring break                                        |                        |
+| 03.15 | **Advanced R programming**  *Case study*: Github API               | Exoset 8  (Git)        |
+| 03.22 | **Graphics and Interaction**  Markdown and Shiny                   | Exoset 9 (Python, Git) |
 | 03.29 | **Performance, profiling and Debugging**  *ToT*: Python | Exoset 10 (rprof) |
-| 04.05 | **No Class** - Rehearsal Week                                      | Project report                              |
-| 04.12 | **Data Sprints Week**                                              | Project slides                              |
+| 04.05 | **No Class** - Rehearsal Week                                      | Project report         |
+| 04.12 | **Data Sprints Week**                                              | Project slides                   |
 
 
 #### Grading
