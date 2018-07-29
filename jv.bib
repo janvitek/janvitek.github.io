@@ -1,29 +1,108 @@
 @string{OOPSLA = "Conference on Object-Oriented Programming Systems, Languages and Applications (OOPSLA)"}
 @string{ECOOP  = {European Conference on Object-Oriented Programming (ECOOP)}}
 @string{POPL  = {Symposium on Principles of Programming Languages (POPL)}}
+@string{PACMPL = {Proc. ACM Program. Lang.}}
 
-@inproceedings{vitek17,
-  author    = {Todd A. Anderson and
-               Hai Liu and
-               Lindsey Kuper and
-               Ehsan Totoni and
-               Jan Vitek and
-               Tatiana Shpeisman},
+@article{popl18,
+  author    = {Olivier Fl{\"{u}}ckiger and
+               Gabriel Scherer and Ming{-}Ho Yee and
+               Aviral Goel and Amal Ahmed and
+               Jan Vitek},
+  title     = {Correctness of speculative optimizations with 
+                dynamic deoptimization},
+ journal = PACMPL,
+ number    = {{POPL}},
+  volume    = {2},
+  year      = {2018},
+  doi       = {10.1145/3158137}}
+
+@inproceedings{ecoop18,
+  author    = {Benjamin Chung and Paley Li and
+               Francesco Zappa Nardelli and Jan Vitek},
+  title     = {KafKa: Gradual Typing for Objects},
+  booktitle = ECOOP,
+  year      = {2018},
+  doi       = {10.4230/LIPIcs.ECOOP.2018.12}}
+                  
+@inproceedings{etaps18,
+  author    = {Juliana Franco and Sylvan Clebsch and
+               Sophia Drossopoulou and Jan Vitek and
+               Tobias Wrigstad},
+  title     = {Correctness of a Concurrent Object Collector for 
+                Actor Languages},
+  booktitle = {European Symposium on Programming (ESOP)},
+  year      = {2018},
+  doi       = {10.1007/978-3-319-89884-1\_31}}
+
+@inproceedings{issta18,
+  author    = {Filip Krikava and  Jan Vitek},
+  title     = {Tests from traces: automated unit test extraction 
+               for {R}},
+  booktitle = {International Symposium on
+               Software Testing and Analysis (ISSTA)},
+  year      = {2018},
+  doi       = {10.1145/3213846.3213863}}
+
+%%%%%%%%%%%%% 17
+
+@article{oopsla17b,
+ author = "Sylvan Clebsch and Juliana Franco
+          and  Sophia Drossopoulou and Albert Mingkun Yang
+          and  Tobias Wrigstad and Jan Vitek",
+ title = "Orca: {GC} and type system co-design for actor languages",
+ year = 2017,
+ journal = {Proc. ACM Program. Lang.},
+ volume    = {1},
+ number    = {{OOPSLA}},
+ doi       = {10.1145/3133896}}
+
+@article{oopsla17a,
+  author = {Crista Lopes and  Petr Maj and Pedro Martins
+           and  Di Yang and  Jakub Zitny and Hitesh Sajnani 
+           and Jan Vitek},
+  title = {{D\'ej\`a  Vu}: A Map of Code Duplicates on {GitHub}},
+ journal = {Proc. ACM Program. Lang.},
+ number    = {{OOPSLA}},
+ year = 2017,
+  doi = {10.1145/3133908}}
+
+
+@inproceedings{ecoop17,
+  author    = {Todd A. Anderson and  Hai Liu and
+               Lindsey Kuper and Ehsan Totoni and
+               Jan Vitek and Tatiana Shpeisman},
   title     = {Parallelizing Julia with a Non-Invasive {DSL}},
-  booktitle = {European Conference on Object-Oriented Programming (ECOOP)},
-  year      = {2017},
+  booktitle = ECOOP,                  
+  year      = 2017,
   doi       = {10.4230/LIPIcs.ECOOP.2017.4},
 }
 
+@inproceedings{itp17,
+  author = "Yannick Zakowski and David Cachera and
+            Delphine Demange and  Gustavo Petri and
+            David Pichardie and Suresh Jagannathan
+            and Jan Vitek",
+  title = "Verifying a Concurrent Garbage Collector 
+              Using a Rely-Guarantee Methodology",
+   booktitle = {Interactive Theorem Proving  (ITP)},
+  year      = {2017},
+  doi       = {10.1007/978-3-319-66107-0\_31}}
 
-@journal{oopsla17a,
-  author = {Crista Lopes and  Petr Maj and Pedro Martins
-           and  Di Yang and  Jakub Zitny and Hitesh Sajnani and Jan Vitek},
-  title = {{D\'ej\`a  Vu}: A Map of Code Duplicates on {GitHub}},
-  journal= {PACM PL (OOPSLA)},
-  year = 2017,
-  doi = {10.1145/3133908}
-}
+
+@inproceedings{rtas17,
+  author    = {Yin Yan and
+               Karthik Dantu and
+               Steven Y. Ko and
+               Jan Vitek and
+               Lukasz Ziarek},
+  title     = {Making {Android} Run on Time},
+  booktitle = {Real-Time and Embedded Technology and Applications Symposium (RTAS)},
+  year      = {2017},
+  doi       = {10.1109/RTAS.2017.38}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 16
 
 @inproceedings{popl16,
   author    = {Asumu Takikawa and
@@ -36,15 +115,6 @@
   booktitle = POPL,
   year      = {2016},
   doi       = {10.1145/2837614.2837630},
-}
-
-@inproceedings{ecoop15,
- author     = "Gregor Richards and Francesco {Zappa Nardelli} 
-               and Jan Vitek",
- title      = "Concrete Types for {TypeScript}",
- booktitle  = ECOOP,
-  year      = {2015},
-  doi       = {10.4230/LIPIcs.ECOOP.2015.76},
 }
 
 
@@ -60,6 +130,27 @@
   url       = {http://doi.acm.org/10.1145/2658987},
   doi       = {10.1145/2658987},
 }
+
+
+
+@inproceedings{ecoop15,
+ author     = "Gregor Richards and Francesco {Zappa Nardelli} 
+               and Jan Vitek",
+ title      = "Concrete Types for {TypeScript}",
+ booktitle  = ECOOP,
+  year      = {2015},
+  doi       = {10.4230/LIPIcs.ECOOP.2015.76},
+}
+
+
+@inproceedings{ecoop15b,
+ author = "Gustavo Petri and Jan Vitek
+           and Suresh Jagannathan",
+ title = "Cooking the Books: Formalizing {JMM}
+           Implementation Recipes",
+ booktitle  = ECOOP,
+ year = 2015,
+ doi = {10.4230/LIPIcs.ECOOP.2015.445}}
 
 @article{toplas14,
   author    = {Suresh Jagannathan and
