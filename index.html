@@ -1015,7 +1015,8 @@ target="blank">Video</a>
                 <td><a href="http://conf.researchr.org/home/vee-2018" target="_blank">VEE</a></td>
                 <td>Conference on Virtual Execution  Environments,
 		  <a href="http://www.cs.technion.ac.il/~erez/vee11/VEE_2011/Home_Page.html" target="_blank">2011</a>,
-		  <a href="http://conf.researchr.org/home/vee-2018" target="_blank">2018</a>
+		  <a href="http://conf.researchr.org/home/vee-2018" target="_blank">2018</a>,
+		  <a href="http://conf.researchr.org/home/vee-2019" target="_blank">2019</a>
 		</td>
               </tr>
               <tr>
@@ -1189,6 +1190,8 @@ target="blank">Video</a>
                 </div> 
               </li>      
 
+
+
               <li class="pn-journals">
                 <div>
                   <div class="pn-publications">
@@ -1231,7 +1234,79 @@ target="blank">Video</a>
                 </div> 
               </li>      
 
+              <li class="pn-conferences"><div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span">
+			<strong>DLS'18</strong></span>Self-Contained
+			Development Environments                 </a>
+                    <div class="pn-readmore"> <br>
+                      <strong>Authors</strong>:  Guido Chari, Javeier Pimas,
+		      Olivier Fluckiger, Jan Vitek<br>
+                      <strong>Abstract</strong>: Operating systems are
+traditionally implemented in low-level, performance-oriented programming
+languages. These languages typically rely on minimal runtime support and
+provide unfettered access to the underlying hardware. Tradition has
+benefits: developers control the resources that the operating system manages
+and few performance bottle-necks cannot be overcome with clever feats of
+programming. On the other hand, this makes operating systems harder to
+understand and maintain. Furthermore, those languages have few built-in
+barriers against bugs. This paper is an experiment in side-stepping
+operating systems, and pushing functionality into the runtime of high-level
+programming languages. The question we try to answer is how much support
+is needed to run an application written in, say, Smalltalk or Python on bare
+metal, that is, with no underlying operating system. We present a
+framework named NopSys that allows this, and we validate it with the
+implementation of CogNos a Smalltalk virtual machine running on bare x86
+hardware. Experimental results suggest that this approach is promising.
+<br>
+                      <strong>Venue</strong>: Dynamic Language Symposium (DLS)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/"
+                      target="_blank">TBD</a>
+                      <a href="pubs/dls18.pdf"
+                      target="_blank"><button type="button" class="btn
+                      btn-default btn-xs pn-download">PDF</button></a><br>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
 
+
+              <li class="pn-journal"><div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span">
+			<strong>TOPLAS'18</strong></span>Feature-Specific
+			Profiling</a>
+                    <div class="pn-readmore"> <br>
+                      <strong>Authors</strong>: Leif Andersen, Vincent
+                      St-Amour, Jan Vitek, Matthias Felleisen. <br>
+                      <strong>Abstract</strong>: While high-level languages
+		      come with significant readability and maintainability
+		      benefits, their performance remains difficult to
+		      predict. For example, programmers may unknowingly use
+		      language features inappropriately, which cause their
+		      programs to run slower than expected. To address this
+		      issue, we introduce feature-specific profiling, a
+		      technique that reports performance costs in terms of
+		      linguistic constructs. Festure-specific profilers help
+		      programmers find expensive uses of specific features
+		      of their language. We describe the architecture of a
+		      profiler that implements our approach, explain
+		      prototypes of the profiler for two languages with
+		      different characteristics and implementation
+		      strategies, and provide empirical evidence for the
+		      approach’s general usefulness as a performance
+		      debugging tool.<br>
+                      <strong>Venue</strong>: ACM Tansactions on Programming
+		      Languages (TOPLAS)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/"
+                      target="_blank">TBD</a>
+                      <a href="pubs/toplas18.pdf"
+                      target="_blank"><button type="button" class="btn
+                      btn-default btn-xs pn-download">PDF</button></a><br>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
 
               <li class="pn-conferences"><div>
                   <div class="pn-publications">
@@ -1273,6 +1348,7 @@ target="blank">Video</a>
                   </div>
                 </div> 
               </li>      
+
 
               <li class="pn-conferences"><div>
                   <div class="pn-publications">
@@ -1454,7 +1530,7 @@ target="blank">Video</a>
                       Tobias Wrigstad, Jan Vitek<br>
                       <strong>Abstract</strong>: Orca is a concurrent and
                       parallel garbage collector for actor programs, which
-                      does not require any stop-the- world steps, or
+                      does not require any stop-the-world steps, or
                       synchronisation mechanisms, and which has been
                       designed to support zero-copy message passing and
                       sharing of mutable data. Orca is part of the runtime
