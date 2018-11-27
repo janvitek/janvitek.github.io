@@ -10,7 +10,8 @@ output: markdowntemplates::skeleton
 ---
 
 --------------   --------------------------------------
- **Schedule**    TBD
+ **Schedule**    Thursdays, 6pm to 9pm
+  **Where**  	   West Village H 110
     **Staff**    Prof. Jan Vitek
   **Contact**    [Piazza](https://piazza.com/class/jnm6laxpxlq3yq) for all communication. Registration is open. 
 ------------   --------------------------------------
@@ -33,9 +34,20 @@ Data Science is a discipline that combines computing with statistics. A data ana
 
 The class will feature a couple small starter projects and one class project in which students will deliver a solution to a real-world data analysis challenge.  All projects will be done individually.  Starter projects will be done in the R programming language, the class project can be done using any language or tool, but class staff will only be able to provide detailed support for technologies they are familiar with.
 
+#### Philosophy
+
+The goal of this class is to reinforce the Data Science practices that were discussed in previous classes. These are summarized by the six activities listed next (adapted from "The levels of data science class" by Jeff Leek).
+
+   * _Asking_: How to define a question, turn that question into a statement about data, identify data sets that may be applicable, and design the experiment.
+   * _Telling_: How to write about data science, express models qualitatively and in mathematical notation, interpret results of models and make figures.
+   * _Practicing_: Learn the basic tools of R, load data of various types, read data, plot data.
+   * _Scaling_: Manipulate different file formats, work with "messy" data, organize multiple data sets into one data set, deal with real-world large datasets.
+   * _Solving_: Use real data examples, but work them through from start to finish as case studies, with a clear path from the beginning of the problem to the end.
+   * _Science_: Formulate your own questions, and try to solve them, at scale, using the tools your are familar with, and communicate your conclusions effectively. 
+
 #### Lectures
 
-Lectures will reviews basics of data science, reproducibility and depending on student interest and need, topics in machine learning, and programming.
+Lectures will reviews basics of data science, reproducibility and depending on student interest and need, topics in machine learning, and programming: R, Markdown, dataframes, ggplot, tidyverse, Shiny.
 
 #### Grading
 
