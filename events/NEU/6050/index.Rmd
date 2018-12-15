@@ -1,31 +1,25 @@
 ---
 title: "DS 6050 -- Expeditions in Data Science"
-author: "Jan Vitek"
 navlink: "[jv](http://janvitek.org/)"
 footer:
   - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
   - content: 'Copyright Northeastern University, 2018'
-date: "`r Sys.Date()`"
 output: markdowntemplates::skeleton
 ---
 
 --------------   --------------------------------------
- **Schedule**    Thursdays, 6pm to 9pm
-  **Where**  	   West Village H 110
-    **Staff**    Prof. Jan Vitek
-  **Contact**    [Piazza](https://piazza.com/class/jnm6laxpxlq3yq) for all communication. Registration is open. 
-------------   --------------------------------------
+ **Schedule**    Thur, 6--9pm @ WVH110
+    **Staff**    [Jan Vitek](http://janvitek.org)
+  **Contact**    [Piazza](https://piazza.com/class/jnm6laxpxlq3yq) for all communication.
+  **Experts**    John Tristan (ML Lead, **Oracle Labs**),  Jiahao Chen (DS Manager, **CapitalOne**) 
+  ------------   --------------------------------------
 
-_Do you want to_
-
-   * _create an impressive machine learning portfolio?_
-   * _solve real data science problems?_
-   * _improve your programming skills?_
+_Do you want to:_ _Build a machine learning portfolio?_  _Solve real data science problems?_  _Improve your programming skills?_ _Meet data science experts?_
 
 
 #### Syllabus
 
-This course encourages student to solve real-world data science problems by applying the skills they obtained in previous classes of the CCIS Data Science program.  Students will gain practical experience with the key steps of any data science project, namely, data import, data tyding and transformation, statistical modelling, and communication.  The course combines a programming component (in either R or Python) with a machine learning  and statistical modelling component. Repeatability and reproducibility of results will be emphasized.
+This course encourages student to solve **real-world data science problems** by applying the skills they obtained in previous classes of their Data Science program.  Students will gain practical experience with the key steps of any data science project, namely, _data import, data tyding_ and _transformation_, _statistical modelling_, and _visusualization_.  The course combines a programming component in R with a machine learning component. Repeatability and reproducibility of results will be emphasized.
 
 #### Overview
 
@@ -55,6 +49,16 @@ The grade in this class will be entirely based on the final deliverables that co
 
 Projects are individual.
 
+#### Expert panel
+
+Projects will be presented to a pannel of experts in data science. Currently two experts are confirmed: John Tristan and Jiahao Chen.
+
+------------------------------------    ------------------------
+![](Figs/chen.jpg){height=50px}         Jiahao was one of the developers of the Julia programming language at MIT before joinging CapitalOne where he leads their data science team.
+![](Figs/trsitan.jpg){height=50px}      John had a Phd in computer science (in the theory of programming languages) before joining Oracle. He know leads the Machine Learning group in Boston.
+------------------------------------    ---------------------------
+ 
+ 
 #### Sample projects
 
 To give an idea of what a final project could look like, consider the following projects (from other sources):
