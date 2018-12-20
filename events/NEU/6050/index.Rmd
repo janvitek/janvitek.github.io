@@ -43,6 +43,14 @@ The goal of this class is to reinforce the Data Science practices that were disc
    * _Solving_: Use real data examples, but work them through from start to finish as case studies, with a clear path from the beginning of the problem to the end.
    * _Science_: Formulate your own questions, and try to solve them, at scale, using the tools your are familar with, and communicate your conclusions effectively. 
 
+#### Projects
+
+The projects will focus on analyzing large dataset extracted from GitHub. The challenges that will have to be overcome will include large scale data acquistion (the target is 1 million projects), data cleaning (the data is not guaranteed to be clean, to the contrary it is know to be messy), data representation (how do we model the data), data storage (define a storage format, e.g. a relational database), how to analyze the data, choose machine learning techniques (NLP, clustering, etc.), and vizualize the results.  
+
+One paper that is an example of an analysis of GitHub data is "A large-scale study of programming languages and code quality in GitHub" by Ray et al. [html](https://cacm.acm.org/magazines/2017/10/221326-a-large-scale-study-of-programming-languages-and-code-quality-in-github/abstract).  
+
+
+
 #### Lectures
 
 Lectures will reviews basics of data science, reproducibility and depending on student interest and need, topics in machine learning, and programming: R, Markdown, dataframes, ggplot, tidyverse, Shiny.
