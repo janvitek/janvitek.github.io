@@ -17,6 +17,11 @@ output: markdowntemplates::skeleton
 _Do you want to:_ _Build a machine learning portfolio?_  _Solve real data science problems?_  _Improve your programming skills?_ _Meet data science experts?_
 
 
+#### Pre-requisites 
+
+The class has the following data science pre-requisites:  DS5110, DS5220 and DS5230.
+
+
 #### Syllabus
 
 This course encourages student to solve **real-world data science problems** by applying the skills they obtained in previous classes of their Data Science program.  Students will gain practical experience with the key steps of any data science project, namely, _data import, data tyding_ and _transformation_, _statistical modelling_, and _visusualization_.  The course combines a programming component in R with a machine learning component. Repeatability and reproducibility of results will be emphasized.
@@ -24,7 +29,6 @@ This course encourages student to solve **real-world data science problems** by 
 #### Overview
 
 Data Science is a discipline that combines computing with statistics. A data analysis problem is solved in a series of data-centric steps: data acquisition and representation (Import), data cleaning (Tidy), and an iterative sequence of data transformation (Transform), data modelling (Model) and data visualization (Visualize).  The end result of the process is to communicate insights obtained from the data (Communicate). This class will take you through all the steps in the process and will teach you how to approach such problems in a systematic manner. You will learn how to _design data analysis pipelines_ as well as how to _implement data analysis pipelines_. The class will also emphasize how elegant code leads to reproducible science.
-
 
 The class will feature a couple small starter projects and one class project in which students will deliver a solution to a real-world data analysis challenge.  All projects will be done individually.  Starter projects will be done in the R programming language, the class project can be done using any language or tool, but class staff will only be able to provide detailed support for technologies they are familiar with.
 
