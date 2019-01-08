@@ -9,7 +9,7 @@ output: markdowntemplates::skeleton
 
 --------------   --------------------------------------
  **Schedule**    Thur, 6--9pm @ WVH110
-    **Staff**    [Jan Vitek](http://janvitek.org)
+    **Staff**    [Jan Vitek](http://janvitek.org) and invited lectures by Konrad Seik.
   **Contact**    [Piazza](https://piazza.com/class/jnm6laxpxlq3yq) for all communication.
   **Experts**    John Tristan (ML Lead, **Oracle Labs**),  Jiahao Chen (DS Manager, **CapitalOne**) 
   ------------   --------------------------------------
