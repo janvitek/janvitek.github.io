@@ -1,0 +1,71 @@
+---
+title: "A1"
+navlink: "[jv](http://janvitek.org/)"
+footer:
+  - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
+  - content: 'Copyright Northeastern University, 2018'
+output: markdowntemplates::skeleton
+---
+
+
+# Data Acquisition
+
+A large part of every data science project is getting your hands on a dataset. In this assignment you'll do just that using [GitHub](https://github.com/) as a source of your data. 
+
+There are two objectives to this assignment:
+
+- implement an automated system that retrieves data from GitHub, and 
+- use that system to generate a dataset that can be used for research.
+
+## System specification
+
+Experimental work should strive for reproducibility.  Because of this, your system must be **completely automated**. This means that the system 
+extracts the data and formats it into the desired output schema all on its own, without user input during run-time.
+
+Since you may be required to re-run the data collection, the automated system has to be able to run the data collection from start to finish in less than  **24 hours**.
+
+The system can be implemented using **any technology**. Given the amount of system calls the implementation is likely to require, we recommend using **bash** (but anything else that does the job is fine too).
+
+Research implementations have a tendency to expand and increase in complexity as the researchers explore the problem. You will likely need to change the output format of the data you gather and download additional data to meet the requirements of future research questions. Keep this in mind while implementing the current system.
+
+## Dataset specification
+
+The output dataset should consist of **commit histories of main branches** of repositories specified [here](repos.list). Format the dataset to match the following **schema**:
+
+- `commits.csv` collects basic information about commits and contains the following columns:
+
+    - `hash`
+    - `author`
+    - `author email`
+    - `author timestamp`
+    - `committer`
+    - `committer email`
+    - `committer timestamp`
+
+- `messages.csv` collects commit messages and their subject as follows:
+
+    - `hash`
+    - `subject`
+    - `message`
+
+- `files.csv` informs which files were modified by commits. If a commit modifies multiple files, `files.csv` will contain multiple lines referencing that commit's hash (one per modified file).
+
+    - `hash`
+    - `file path`
+
+## Deliverables
+
+Write a short report that describes the architecture of your solution. In addition report on the following:
+
+- the time it took your system to generate the required dataset, and
+- the total disk space the dataset takes up.
+
+Create a repository on GitHub called `EDS19` to host the report and the source code of your solution. The repository should have the following structure and contents:
+
+- `01-data-acqu/` - the source code for your system
+- `01-data-acqu/README.md` - a brief instruction explaining how to install and run your system,
+- `01-data-acqu/report.rmd` - the report for this assignment.
+
+Due to its size, do not commit the dataset you generated.
+
+The work should be completed Thursday January 24th.  If you get stuck or have difficulties with any part of this, do not hesitate to ask the course staff or colleagues.  

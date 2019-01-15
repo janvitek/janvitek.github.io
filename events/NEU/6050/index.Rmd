@@ -49,7 +49,9 @@ The projects will focus on analyzing large dataset extracted from GitHub. The ch
 
 One paper that is an example of an analysis of GitHub data is "A large-scale study of programming languages and code quality in GitHub" by Ray et al. [html](https://cacm.acm.org/magazines/2017/10/221326-a-large-scale-study-of-programming-languages-and-code-quality-in-github/abstract).  
 
+### Assignments
 
+ * [Assignment 1: data acquisition](a1.html)
 
 #### Lectures
 
