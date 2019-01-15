@@ -1,0 +1,476 @@
+# GitHub repository data retrieval
+
+As a huge repository of source code and software-development--related data, GitHub is a natural subject for research scientists to study. However, GitHub is by no means a pre-prepared dataset that one can just download and start playing with. As with most real-life systems, data must be extracted and it's not all that easy.
+
+There are four basic methods of retrieving data, especially metadata, from repositories hosted on GitHub. One can use the GitHub RESTful API, as indicated at [the GitHub developer website](https://developer.github.com/v3/). Alternatively, one can clone individual repositories and use the git toolchain to extract information that way. There is also a periodically updated collection of metadata from GitHub projects known as [GHTorrent](http://ghtorrent.org/) that one can download and analyze. One can also scrape the GitHub website. This short tutorial will cover the first three methods, give an example of their usage, and explain the pros and cons of all of them.
+
+## GitHub API
+
+The first and correct method is to use the GitHub RESTful API. The API allows a programmer to issue queries requesting specific data. Through queries one can limit the requested data to only the subset one needs. For instance, one can request only the commit history of a repo without downloading anything else. One can also issue queries searching through the entirety of the service rather than single repos. 
+
+The API method comes with some serious drawbacks though. First, it is designed to aid app developers rather than to provide data for research. Thus, the API employs pagination. That is, a query returning more than 30 items will split the result into chunks and these chunks will have to be retrieved separately by individual queries. The number of items per page can be adjusted in some queries, but does not exceed 100. Thus, in order to retrieve the commit history of a repo such as `torvalds/linux` one needs to issue more than 8000 requests.
+
+The problem is compounded by the number of requests an individual user is allowed to issue. GitHub is rate limited: an anonymous user can issue up to 60 requests per hour, while an authenticated user can issue up to 5000. If the limit is exceeded, the API returns 403 errors instead of results. This means that the aforementioned `torvalds/linux` commit history will take no less than close to two hours to download (by a single user).
+
+### Usage
+
+Given that the API is a RESTful interface, it is implemented using HTTP and returns results in the form of JSON structures. This means that it can be accessed using just about any programming language, as well as with commandline tools like `curl`. The documentation at [developer.github.com](https://developer.github.com/v3) provides detailed examples using `curl`. This tutorial will concentrate on using the API in the R language.
+
+#### Installing packages
+
+In order to run HTTP queries in R one needs to install `httr` and `httpuv`. The tutorial also makes use of `stringr` for string processing.
+
+``` {r, eval=FALSE}
+install.packages(c("httr", "httpuv", "stringr"))
+```
+
+Then load the packages.
+
+``` {r, eval=FALSE}
+library(httr)
+```
+
+#### Authentication
+
+Since the rate limit for unauthorized users is so low, it's best to start with authentication to get that 5000 per hour rate. In order to authenticate one needs a `Client ID` and `Client Secret` for the GitHub account. This can be obtained from the developer settings tab in account settings on the GitHub website. There register a new OAuth app (website and callback can be set to `http://github.com/`). Then use the pre-existing GitHub configuration for `httr`:
+
+``` {r, eval=FALSE}
+oauth_endpoints("github")
+```
+
+Afterwards, use the `Client ID` as `key` and `Client Secret` as `secret` to authenticate with GitHub.
+
+```{r, eval=FALSE}
+myapp <- oauth_app("github",
+  key = "XXXXXXXXXXXXXXXXXXXX",
+  secret = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+```
+
+This should cause the browser to open and ask for authentication.
+
+#### Making a simple request
+
+Let's issue a simple request to the github API asking about our rate limit. To do that one needs to simply issue a `HTTP GET` request to the resource at `https://api.github.com/users/USERNAME`.
+
+The `httr` package provides a helpful function to do that called `GET` that takes the URL as an argument:
+
+``` {r, eval=FALSE}
+req <- GET("https://api.github.com/users/kondziu")
+```
+
+The `GET` function returns a promise-like object that can be used to read the results of the query after it was evaluated. Thus, first one must wait for the results.
+
+``` {r, eval=FALSE}
+stop_for_status(req)
+```
+
+Then one can retrieve the status, headers and the contents of the request using appropriate functions:
+
+``` {r, eval=FALSE}
+status_code(req)
+headers(req)
+content(req)
+```
+
+One can see that the header informs of the rate limit the query is subject to. 
+
+```
+headers(req)`x-ratelimit-limit`
+```
+
+Currently it is `60`, because the query was executed without authentication. In order to authenticate the query, one must pass the OAuth configuration object along with the query like so:
+
+``` {r, eval=FALSE}
+gtoken <- config(token=github_token)
+req <- GET("https://api.github.com/users/kondziu", config=gtoken)
+
+stop_for_status(req)
+
+headers(req)$`x-ratelimit-limit`
+```
+
+Now the rate is at `5000`. Now we're ready for serious business.
+
+#### Paginated queries
+
+Let's issue a slightly more complex query. Let's try to get the commit history of that `torvalds/linux` repo one heard so much about. The GitHub documentation instructs that to do so, one must make a HTTP GET request to `https://api.github.com/repos/USER/PROJECT/commits`. That sounds simple enough.
+
+``` {r, eval=FALSE}
+req <- GET("https://api.github.com/repos/torvalds/linux/commits", config=gtoken)
+
+stop_for_status(req)
+
+content(req)
+```
+
+The contents contain a list of 30 records containing commit information. Let's iterate through the results and print out some of the more interesting information.
+
+``` {r, eval=FALSE}
+lapply(content(req), function(item) {
+  cat(paste0("hash: ", item$sha))
+  cat(paste0("author name: ", item$commit$author$name, "\n"))
+  cat(paste0("author email: ", item$commit$author$email, "\n"))
+  cat(paste0("author date: ", item$commit$author$date, "\n"))
+  cat(paste0("committer name: ", item$commit$committer$name, "\n"))
+  cat(paste0("committer email: ", item$commit$committer$email, "\n"))
+  cat(paste0("committer date: ", item$commit$committer$date, "\n"))
+  cat(paste0("commit message: ", item$commit$message, "\n"))
+  cat("----------------------------------------------\n\n")
+})
+```
+
+We can also stick this data into a dataframe for later analysis!
+
+``` {r, eval=FALSE}
+df <- do.call(rbind, lapply(content(req), function(item) {
+  data.frame(`hash` = item$sha,
+             `author name` = item$commit$author$name,
+             `author email` = item$commit$author$email,
+             `author date` = item$commit$author$date,
+             `committer name` = item$commit$committer$name,
+             `committer email` = item$commit$committer$email,
+             `committer date` = item$commit$committer$date,
+             `commit message` = item$commit$message)
+}))
+
+View(df)
+```
+
+These records contain a lot of useful things, but why are there only 30? The results are paginated and the results only contain the first page of the results. So how does one get more? The answer lies in the header:
+
+``` {r, eval=FALSE}
+headers(req)$link
+```
+
+Here one can see two links, one to the next page and one to the last page of results. That latter number is of particular interest: if one knows how many pages there are, one is able to ask for every single one of them in succession. 
+
+A few judiciously applied string operation can recover that number from the headers:
+
+``` {r, eval=FALSE}
+library(stringr)
+
+read_page_count<- function(req) {
+  # Get the commit-specific link header
+  git_header <- headers(req)$link
+  
+  # Split the header into individual lines and select the reference to last page
+  references <- unlist(str_split(git_header, ","))
+  last_reference <- references[grepl("rel=\"last\"", references)]
+  
+  # Extract last page number and convert to int
+  as.integer(str_extract(str_extract(last_reference, pattern="[&?]page=[0-9]+"), pattern="[0-9]+"))
+}
+
+read_page_count(req)
+```
+
+There is one more thing worth paying attention to here though. Each page contains only 30 results. If one is to consult with the documentation, a page can be made to contain up to 100 results. One should modify one's query to achieve that. This requires one to add a parameter to one's query like so:
+
+``` {r, eval=FALSE}
+req <- GET("https://api.github.com/repos/torvalds/linux/commits?per_page=100", config=gtoken)
+
+stop_for_status(req)
+
+length(content(req))
+read_page_count(req)
+```
+
+Now one can see one hundred items in the result page and 8103 pages. So how does one iterate over these pages? The query may ask for a specific page. One can request every specific page in sequence and aggregate the results. (This takes forever, BTW).
+
+``` {r, eval=FALSE}
+# Our essential query:
+query <- "https://api.github.com/repos/torvalds/linux/commits?per_page=100"
+
+# Grab headers returned by the query and use them to figure out how many pages of results there will be.
+req <- GET(query, config=gtoken)
+stop_for_status(req)
+pages <- read_page_count(req)
+  
+# Iterate over all pages and make a request.
+data_from_pages <- lapply(1:pages, function(page) {
+  
+  # Create a request URL by appending a page specification.
+  paginated_query <- paste0(query, '&page=', page)
+  
+  # Issue the request.
+  req <- GET(paginated_query, config=gtoken)
+  stop_for_status(req)
+  
+  cat(paste0("Downloading page ", page, "\n"), file=stderr())
+  
+  # Process the data.
+  do.call(rbind, lapply(content(req), function(item) {
+  data.frame(`hash` = item$sha,
+             `author name` = item$commit$author$name,
+             `author email` = item$commit$author$email,
+             `author date` = item$commit$author$date,
+             `committer name` = item$commit$committer$name,
+             `committer email` = item$commit$committer$email,
+             `committer date` = item$commit$committer$date,
+             `commit message` = item$commit$message)
+  }))
+})
+
+# Aggregate the results from all pages.
+data <- do.call(rbind, data_from_pages)
+```
+
+#### Summary
+
+And there you have it. In summary, while the GitHub RESTful API is definitely the way GitHub wants people to interact with GitHub, it has pros and cons.
+
+Pros
+
+- relatively low bandwidth usage
+- flexible queries (see documentation)
+
+Cons
+
+- rate limitation on queries
+- result pagination pagination
+- generally requires authentication to work
+- fiddly
+ 
+So what's the other choice?
+
+## Cloning repositories
+
+Another method of getting data out of GitHub is simply to clone repositories and analyze them locally. This will download the entirety of these repositories, meaning that one not only has access to data like commit histories, but also one can access the raw source files to analyze them further. The down side of that is that this data takes a lot of time to download and takes up a lot of disk space as well. On the other hand, there is no hard limit on cloning repositories, so one can gather specific information at a quicker pace than with the API. In addition, given that the cloning itself, as well as the extraction of data afterwards are done using the git toolchain, retrieving data from a cloned repository is much less fiddly than using the API.
+
+### Usage
+
+Given that the git toolchain consists of commandline tools, this part of the tutorial is presented in `bash`.
+
+In order to clone a repository one needs to know the username and project name of the repository to construct its URL. The URL has the form `https://github.com/USER/REPO.git`. So for the `torvalds/linux` repo we would use: `https://github.com/torvalds/linux.git`. Thus we clone it using the command (this will take a moment):
+
+``` {bash, eval=FALSE}
+git clone https://github.com/torvalds/linux.git
+cd linux
+```
+
+#### Commit metadata
+
+Afterwards, one can proceed to data extraction. Let's start by getting the commit history as with the API. One can retrieve it by using `git log`. 
+
+``` {bash, eval=FALSE}
+git log
+```
+
+When executed, `git log` will produce a human-readable history. But human-readable is not very useful for the purposes of data science. Instead, let's reconfigure `git log` to return information in a more computer-friendly format instead. Let's make it return a CSV file containing information about the author, committer, and timestamps.
+
+``` {bash, eval=FALSE}
+echo '"hash","author name","author email","author timestamp","committer name","committer email","committer timestamp"' > commits.csv
+git log --pretty=format:'"%H","%an","%ae","%ad","%cn","%ce","%ct"' >> commits.csv
+```
+
+This will return the commit history in the current branch. One can expand the log to all branches by setting the flag `--all` in the `git log` command.
+
+``` {bash, eval=FALSE}
+echo '"hash","author name","author email","author timestamp","committer name","committer email","committer timestamp"' > commits.csv
+git log --pretty=format:'"%H","%an","%ae","%ad","%cn","%ce","%ct"' --all >> commits.csv
+```
+
+More information about formatting the log can be found by executing the command `git log --help`.
+
+#### Commit messages
+
+The information one got this far is pretty boring and clinical though. Let's instead look at the files the commits modify. One can also use `git log` to extract them, but unfortunately, the pretty printer will not make the data as machine-friendly as one would wish. Let's look at it by printing the hash of each commit and the list of files it modifies:
+
+``` {bash, eval=FALSE}
+git log --pretty=format:%H --numstat
+```
+
+The in the results one can see that modified files are listed below each hash along with the numbers of added and removed lines, respectively. This format is not regular, so let's add a new line before the hashes to make it more regular:
+
+``` {bash, eval=FALSE}
+git log --pretty=format:%n%H --numstat
+```
+
+Now the commits are separated by an empty line, so one can write a fairly simple script to read it in one's language of choice.
+
+For instance, one can write a Python script that reads the output of git log, saves it to a buffer, and writes out the results when it encounters a new line:
+
+``` python
+#!/usr/bin/env python3
+
+import sys
+
+if __name__ == '__main__':
+    buffer = []
+    for line in sys.stdin:
+        if line.strip() == '':
+            if not buffer:
+                continue
+            hash = buffer[0]
+            for statline in buffer[1:]:
+                added, deleted, path = statline.split(maxsplit=2)
+                print('%s,%s,"%s"' % (added, deleted, path))
+            buffer.clear()
+        else:
+            buffer.append(line.strip())
+```
+
+One can then run `git log` and this script in a pipeline:
+
+``` {bash, eval=FALSE}
+git log --pretty=format:%n%H --numstat | python3 numstat_to_csv.py > commit_files.csv
+```
+
+#### Commit messages
+
+A similar technique can be employed to get commit subject lines and messages. This is simple, as one can simply ask the pretty printer to produce these:
+
+``` {bash, eval=FALSE}
+git log --pretty=format:"%H %s %B"
+```
+
+Again, the problem here is to somehow convert this into a machine friendly output. It is enough to figure out a way to distinguish between fields and records. For instance, one can terminate a record by adding an atypical character to the format like so:
+
+``` {bash, eval=FALSE}
+git log --pretty=format:"%H %s %B🐱"
+```
+
+Then all that is left is to write a small script in one's language of choice again.
+
+``` python
+#!/usr/bin/env python3
+
+import sys
+
+if __name__ == '__main__':
+    buffer = []
+    for line in sys.stdin:
+        if line.strip() == u'🐱':
+            if not buffer:
+                continue
+            hash, subject = buffer[0].split(maxsplit=1)
+            message = '\n'.join(buffer[1:])
+            
+            subject = repr(subject).replace('"', r'\"')
+            message = repr(message).replace('"', r'\"')
+            
+            print('%s,"%s","%s"' % (hash, subject, message))
+            buffer.clear()
+        else:
+            buffer.append(line.strip())
+```
+
+Finally, one pipes the commands together:
+
+``` {bash, eval=FALSE}
+git log --pretty=format:"%H %s %B🐱" | python3 messages_to_csv.py > commit_messages.csv
+```
+
+(In case of encoding woes, try `iconv -t utf-8//IGNORE` to forcibly convert everything to UTF-8.)
+
+### Summary
+
+On the whole cloning GitHub repositories is a pretty decent, if expensive way to collect data from the service.
+
+Pros
+
+- complete information about a project, including sources
+- ability to use the git toolchain
+
+Cons
+
+- bandwidth intensive
+- large on-disk footprint
+
+## GHTorrent
+
+The third alternative is to use the data gathered by GHTorrent available from [http://ghtorrent.org](http://ghtorrent.org/). GHTorrent observes the public events generated on GitHub and logs them into a database. The database is a relational MySQL database whose schema contains the following interconnected tables:
+
+- users 
+- followers
+- projects
+- project members
+- project languages
+- commits
+- commit comments
+- commit parents
+- pull request comments
+- pull request history
+- pull request commits
+- repo labels
+- repo milestones
+- issues
+- issue labels
+- issue events
+- issue comments
+- watchers
+- organization members
+
+One can then download a snapshot of the database to use in research. *In that case,* I hear you ask, *why aren't we just using this database?* That's because the database is stored as monthly or daily compressed snapshots. These snapshots have the breadth of the entire database schema, but only contain the events from that month. This means if one wants to observe, say, just a few repos, one must download the entire database and extract just the interesting information therein. Given that each snapshot tends to be between 50GB and 100GB of data, and there are 43 of them, this in itself is tricky. Of course, if one wants to observe the entire activity of GitHub since 2014 and has both the bandwidth and the disk space to download and store all that information, this is not a bad way of obtaining this data.
+
+The GHTorrent project also allows people to query their complete database through an online interface at [http://ghtorrent.org/dblite/](http://ghtorrent.org/dblite/), but to the best of my knowledge, getting big data out of that is not possible. 
+
+What the database is good for though, is getting the data about a particular month's activity on GitHub.
+
+### Extracting data
+
+Just as an example, let's extract commit information for all projects from one of the snapshots on GHTorrent. To do that, first download a snapshot.
+
+``` {bash, eval=FALSE}
+curl https://ghtstorage.blob.core.windows.net/downloads/mysql-2017-01-19.tar.gz -o snapshot.tar.gz
+```
+
+After the snapshot is downloaded, one can then extract specific tables in the form of CSV files:
+
+``` {bash, eval=FALSE}
+tar --extract --file=snapshot.tar.gz mysql-2017-01-19/projects.csv
+tar --extract --file=snapshot.tar.gz mysql-2017-01-19/project_commits.csv
+```
+
+That is simple enough.
+
+### Summary
+
+In summary, the GHTorrent database is a good approach for getting comprehensive data about all of GitHub or monthly activity snapshots. However, getting deep data about specific projects raises issues.
+
+Pros
+
+- A pre-extracted comprehensive database
+- Monthly snapshots for monitoring monthly activity
+
+Cons
+
+- A really big download
+- Need all of it to get full history of specific projects
+
+## Bonus: Getting a list of starred repositories
+
+In order to perform many sorts of analysis on GitHub, one needs a list of projects to analyze. One natural source of projects is the list of most popular repositories, as indicated by the amount of stars they have. How would one go about downloading that list?
+
+The easiest way to do so is to go through the GitHub API again. Let's download 1000 user-project pairs of repositories. Let's start by composing a search query through the API. The query should specify that we want **repositories** that all have **more than 0 stars**. We also want these repositories to be **sorted** in **descending** order. Let's ask for 100 repositories per page and grab the first 10 pages.
+
+``` {r, eval=FALSE}
+most_starred_query = 'https://api.github.com/search/repositories?q=stars:>0&sort=stars&order=desc&per_page=100'
+```
+
+Now, let us execute the query iteratively as usual:
+
+``` {r, eval=FALSE}
+req <- GET(most_starred_query, config=gtoken)
+stop_for_status(req)
+pages <- read_page_count(req)
+
+data_from_pages <- lapply(1:pages, function(page) {
+  paginated_query <- paste0(most_starred_query, '&page=', page)
+  req <- GET(paginated_query, config=gtoken)
+  stop_for_status(req)
+  
+  cat(paste0("Downloading page ", page, "\n"), file=stderr())
+  
+  do.call(rbind, lapply(content(req)$items, function(item) {
+    #print(item)
+    data.frame(repository=item$full_name)
+  }))
+})
+
+repositories <- do.call(rbind, data_from_pages)
+```
+
+Et voilà!

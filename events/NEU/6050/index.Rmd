@@ -58,7 +58,7 @@ One paper that is an example of an analysis of GitHub data is "A large-scale stu
  * [A Large Scale Study of Programming Languages and Code Quality in Github](Ps/FSE2014.pdf)
  * [An in-depth study of the promises and perils of mining GitHub](Ps/perils.pdf)
  * [ClassifyHub: An Algorithm to Classify GitHub Repositories](Ps/classifyhub.pdf)
- * [DéjàVu: A Map of Code Duplicates on GitHub](Ps/OOPSLA17b.pdf)
+ * [DéjàVu: A Map of Code Duplicates on GitHub](Ps/oopsla17b.pdf)
  * [Mining the Network of the Programmers: A Data-Driven Analysis of GitHub](Ps/network.pdf)
  * [What’s in a GitHub Star? Understanding Repository Starring Practices in a Social Coding Platform](Ps/star.pdf)
  * [What is the Truck Factor of Popular GitHub Applications? A First Assessment](Ps/truck.pdf)
@@ -66,6 +66,10 @@ One paper that is an example of an analysis of GitHub data is "A large-scale stu
 #### Lectures
 
 Lectures will reviews basics of data science, reproducibility and depending on student interest and need, topics in machine learning, and programming: R, Markdown, dataframes, ggplot, tidyverse, Shiny.
+
+ + Lecture 0: Introduction and placement exam.
+ + Lecture 1: GitHub; "Large Scale Study"; bash; exam review; [Git API notes](github_download.html)
+ + Lecture 2: Data management and databases
 
 #### Grading
 
