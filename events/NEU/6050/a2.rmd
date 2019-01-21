@@ -1,0 +1,119 @@
+---
+title: "A2"
+navlink: "[jv](http://janvitek.org/)"
+footer:
+  - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
+  - content: 'Copyright Northeastern University, 2019'
+output: markdowntemplates::skeleton
+---
+
+
+## Database Schemata
+
+We now know how to get data the data we need. But how do we store it? Choosing
+a schema for data will have wide-ranging implications down the line: it will
+inform how much disk space we need and how much work specific tasks will
+require (both in terms of programmer effort as well as computational power).
+The objective of the assignment is to **design** and **prototype** a relational
+database schema. The design should facilitate exploring commit histories in
+GitHub repositories.
+
+### Dataset specification
+
+The data contains the following information:
+
+  * the name of the owner and the project to which the commit belongs, 
+  * the hash of each commit,
+  * the parent commits of each commit,
+  * the name and email of the author of each commit,
+ * the name and email of the comitter of each commit,
+ * the date and time of when each commit was authored,
+ * the date and time of when each commit was committed (for lack of a better
+  word),
+ * the subject of each commit,
+ * the commit message of each commit,
+ * the list of modified files for each commit, along with the numbers of deleted
+  and added lines.
+
+### Schema
+
+Design a schema to contain all of this data:
+
+ * create an Entity-Relationship Model (ERM) for the schema,
+ * use the ERM to define all the tables required to model the data in a
+  relational database, including at minimum, for each table:
+    * the list of columns,
+    * the definitions of private keys,
+    * the definitions of foreign keys,
+    * data types of all columns,
+    * nullability of all columns,
+ * decide which columns of which tables will benefit from indices.
+
+As you design the schema you will need to make design decisions about how to
+model specific entities or relationships between them. Motivate each decision
+you make.
+
+### Prototyping
+
+Create an SQL script that creates an SQLite database implementing the schema
+you designed. This script should create the logical structure of the database
+without populating it, ie. it should not contain any `insert` statements.
+Make sure you comment the SQL script so that others can read it and understand
+it.
+
+Break in the prototype by populating it with data for the following projects (a
+random sample from `repos.list` from the previous assignment):
+
+```
+                                mochajs/mocha
+                      paularmstrong/normalizr
+                        php-fig/fig-standards
+                                 HubSpot/pace
+             spring-projects/spring-framework
+                               torvalds/linux
+          react-boilerplate/react-boilerplate
+                   magicalpanda/MagicalRecord
+googlesamples/android-architecture-components
+                           hammerjs/hammer.js
+```
+<!--
+commits               projects
+hundreds              3 
+thousands             5 
+tens of thousands     1 
+hundreds of thousands 1
+-->
+Make sure the process of populating the prototype is automated. That is, write
+scripts that do it from beginning to end.
+Note how long it takes to import the data into the database and how much the
+data weighs in terms of added rows and in terms of disk space. Project time
+necessary to import the data for the entirety of `repos.list` and the size of
+the database.
+
+### Deliverables
+
+Write a short report describing both the schema and the prototype. This should
+include:
+
+ * an ERM model of the database,
+ * the description of each table,
+ * the description of each design decision you made with reasons informing why
+  you made it and the projected impact,
+ * observations derived from populating the prototype.
+
+Add a new directory to your `EDS19` repository on GitHub with the following
+contents:
+
+ * `02-schema/report.rmd` - the report for this assignment,
+ * `02-schema/schema.sqlite` - the definition of the database,
+ * `02-schema/populate/` - a directory containing the script or collection of
+  scripts that were used to populate the prototype
+ * `02-schema/populate/README.md` - instructions about running the scripts that
+  populate the prototype.
+
+Due to its size, do not commit the prototype you generated.
+
+The work should be completed Thursday January 31st. If you get stuck or have
+difficulties with any part of this, do not hesitate to ask the course staff or
+colleagues.
+

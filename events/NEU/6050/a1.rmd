@@ -3,7 +3,7 @@ title: "A1"
 navlink: "[jv](http://janvitek.org/)"
 footer:
   - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
-  - content: 'Copyright Northeastern University, 2018'
+  - content: 'Copyright Northeastern University, 2019'
 output: markdowntemplates::skeleton
 ---
 
