@@ -1,0 +1,47 @@
+---
+title: "A3"
+navlink: "[jv](http://janvitek.org/)"
+footer:
+  - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
+  - content: 'Copyright Northeastern University, 2019'
+output: markdowntemplates::skeleton
+---
+
+
+## Data Acquision
+
+Let's get us some data.  The work this week is to acquire data on 1,000 projects
+from GitHub and store them in the database that you have designed in A2.
+
+### Which Projects?
+
+We leave it up to you decide on criteria for inclusion of projects that will
+be "interesting" to analyze in future assignments. Clearly, the projects 
+should be representative (ie. if they are all class assignments that is not
+likely the case), they should contain code (there are many repositories that
+do not), etc. 
+
+### Statistics
+
+To make sure that you have useable data in your database, run some queries
+to compute things like the size of the code (e.g. additions and deletions for
+each file), the number of developers, the lenght of time the project is active.
+Pick some simple way to present the results.
+
+### Deliverables
+
+Write a short report describing how you selected the projects and give some
+statistics on the projects (e.g. size or active duration).
+
+Add a new directory to your `EDS19` repository on GitHub with the following
+contents:
+
+ * `03-acquire/report.rmd` - the report for this assignment,
+ * `03-acquire/projs.txt` - the list of acquired projects
+
+Due to size, do not commit the projects or your databased.
+
+The work should be completed Thursday February 7th. If you get stuck or have
+difficulties with any part of this, do not hesitate to ask the course staff or
+colleagues.
+
