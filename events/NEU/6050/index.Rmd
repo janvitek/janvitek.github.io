@@ -71,15 +71,32 @@ Lectures will reviews basics of data science, reproducibility and depending on s
 
  + **Lecture 1/10:** Introduction and placement exam.
  + **Lecture 1/17:** GitHub; "Large Scale Study"; bash; exam review; [Git API notes](github_download.html)
- + **Lecture 1/24:** Data management and databases. Papers: _DéjàVu: A Map of Code Duplicates on GitHub_ by Alex Bender and _What is the Truck Factor of Popular GitHub Apps?_ by Nick Tyler.
- + **Lecture 1/31:**   Papers: _An Algorithm to Classify GitHub Repos_ by Justin Littman, _DéjàVu: A Map of Code Duplicates on GitHub_ by Alex Gomez, and _What is the Truck Factor of Popular GitHub Apps?_ by Noul Singla.
- + **Lecture 2/07:** Papers:  _Pomises and perils of mining GitHub_ by Tyler Brown, _Mining the Network of the Programmers_ by Jingci Wang, and _An Algorithm to Classify GitHub Repos_ by Troy Yang
- + **Lecture 2/14:** Papers:  _What’s in a GitHub Star?_ by Tajas Bala, _Pomises and perils of mining GitHub_ by Yijia Hao, and _Mining the Network of the Programmers_ by Tim Sauchuk.
- + **Lecture 2/28:** Guest Lecture on _Bias in Machine Learning_ by Tina Eliassi-Rad. Papers: _What’s in a GitHub Star?_ by Qinyu.
- + **Lecture 3/07:**
- + **Lecture 3/14:**
- + **Lecture 3/21:**
- + **Lecture 3/28:**
+ + **Lecture 1/24:** Data management and databases. 
+     Papers: _DéjàVu: A Map of Code Duplicates on GitHub_ by Alex Bender and 
+            _What is the Truck Factor of Popular GitHub Apps?_ by Nick Tyler.
+ + **Lecture 1/31:** Data wrangling with dplyr. 
+    Repeatable science with Rmd.  
+    Papers: _An Algorithm to Classify GitHub Repos_ by Justin Littman, 
+           _DéjàVu: A Map of Code Duplicates on GitHub_ by Alex Gomez, and 
+          _What is the Truck Factor of Popular GitHub Apps?_ by Noul Singla.
+ + **Lecture 2/07:** Vizualization with Ggplot and Shiny. 
+    Test-driven development for data science. 
+    Papers:  _Pomises and perils of mining GitHub_ by Tyler Brown, 
+            _Mining the Network of the Programmers_ by Jingci Wang, and 
+            _An Algorithm to Classify GitHub Repos_ by Troy Yang
+ + **Lecture 2/14:** No class
+ + **Lecture 2/28:** 
+     Guest Lecture on _Bias in Machine Learning_ by Tina Eliassi-Rad. 
+     Advanced R: Profiling and Debugging
+    Papers:  _What’s in a GitHub Star?_ by Tajas Bala, 
+            _Pomises and perils of mining GitHub_ by Yijia Hao, and 
+            _Mining the Network of the Programmers_ by Tim Sauchuk.
+ + **Lecture 3/07:** Spring break
+ + **Lecture 3/14:** Industry panel. Project pitches.
+ + **Lecture 3/21:** Guest Lecture on _Model interpretation_ by Olga Vitek. 
+   Advanced R: OOP, Packages, Scalability
+   Papers: _What’s in a GitHub Star?_ by Qinyu.
+ + **Lecture 3/28:** Julia and other data science languages and pipelines. Adoption. Security.
  + **Lecture 4/18:** Final projects due.
 
 #### Grading
