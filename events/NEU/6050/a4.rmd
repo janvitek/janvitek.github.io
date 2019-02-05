@@ -1,0 +1,63 @@
+---
+title: "A4"
+navlink: "[jv](http://janvitek.org/)"
+footer:
+  - content: '[PRL](http://prl.ccs.neu.edu/) • [CCIS](http://ccis.neu.edu/)<br/>'
+  - content: 'Copyright Northeastern University, 2019'
+output: markdowntemplates::skeleton
+---
+
+## Required Assignment
+
+This assignment is **not** optional.
+
+## Truck Factor
+
+Your goal is to compute the Truck Factor (TF) of 1,000 projects and to write a report on what you did. There are many choice points in this assignment where you can simplify your life, it is up to you to decide when to do so and to motivate each decision.
+
+For this project we are asking you for a complete, repeatable, data analysis pipeline. You report should be a Rmd file that, when run, will perform every step of analysis from acquisition, import, cleaning, modeling, and visualization.
+
+The project is split in a number of steps, each is describe next.
+
+### Step 1: Acquisition
+
+You are free to decide which projects to include as long as you argue that these projects are "interesting" (you should come up with a definition of that term that suits you, and explain it in the report).
+
+In order to find 1,000 interesting projects you may have to acquire more project and discard some. That process is part of the assignment.
+
+### Step 2: Import
+
+You should document the database schema that you have chosen for this assignment. We recommend that you keep as much data as possible as this will prove handy later.  It is easy to select a subset when you make queries.
+
+In this step, you should create a database and populate it with data obtained in Step 1. 
+
+Note that it is fine for the first two steps to be combined.
+
+### Step 3: User identification
+
+You should assign unique user identifiers. It is up to you to choose and document how this is done.
+
+### Step 4: Truck factors
+
+  * For each project, and each file, compute how many lines were added by each unique user. 
+  * For each project, and each file, find which user created the file.
+  * Given the above two results compute the ownership of each file.
+  * For each project, and each file pick an owner.
+  * For each project, rank the users by the number of files they own.
+  
+Given all of the above compute the Truck Factor as the smallest set of users such that they own more than half of the files in the project.
+
+Decide on how to vizualize your findings.
+
+### Deliverables
+
+Write a short report describing your work in Rmd format, the report should have options to run the entire pipeline as well as just parts (e.g. only run the modeling and vizualization, or perform the acquisition for different numbers of projects).
+
+Add a new directory to your `EDS19` repository on GitHub with the following
+contents:
+
+ * `04-truck/report.rmd` - the report for this assignment,
+ * `04-truck/report.html` - the compiled report
+
+Due to size, do not commit the projects or your databased.
+
