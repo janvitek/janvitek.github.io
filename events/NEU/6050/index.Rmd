@@ -54,6 +54,7 @@ One paper that is an example of an analysis of GitHub data is "A large-scale stu
  * [Assignment 1: data acquisition](a1.html)
  * [Assignment 2: database schema](a2.html)
  * [Assignment 3: data acquisition](a3.html)
+ * [Assignment 4: truck factors](a4.html)
  
 #### Readings
 
