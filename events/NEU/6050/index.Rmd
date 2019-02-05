@@ -65,6 +65,8 @@ One paper that is an example of an analysis of GitHub data is "A large-scale stu
  * [Mining the Network of the Programmers: A Data-Driven Analysis of GitHub](Ps/network.pdf)
  * [What’s in a GitHub Star? Understanding Repository Starring Practices in a Social Coding Platform](Ps/star.pdf)
  * [What is the Truck Factor of Popular GitHub Applications? A First Assessment](Ps/truck.pdf)
+ * [Topic modeling of public repositories at scale using names in source code](https://arxiv.org/pdf/1704.00135.pdf)
+ 
 
 #### Lectures
 
@@ -76,28 +78,32 @@ Lectures will reviews basics of data science, reproducibility and depending on s
      Papers: _DéjàVu: A Map of Code Duplicates on GitHub_ by Alex Bender and 
             _What is the Truck Factor of Popular GitHub Apps?_ by Nick Tyler.
  + **Lecture 1/31:** Data wrangling with dplyr. 
-    Repeatable science with Rmd.  
     Papers: _An Algorithm to Classify GitHub Repos_ by Justin Littman, 
            _DéjàVu: A Map of Code Duplicates on GitHub_ by Alex Gomez, and 
           _What is the Truck Factor of Popular GitHub Apps?_ by Noul Singla.
- + **Lecture 2/07:** Vizualization with Ggplot and Shiny. 
-    Test-driven development for data science. 
-    Papers:  _Pomises and perils of mining GitHub_ by Tyler Brown, 
+ + **Lecture 2/07:**
+      Repeatable science with Rmd.  
+      Vizualization with Ggplot and Shiny. 
+      Papers: _Pomises and perils of mining GitHub_ by Tyler Brown, 
             _Mining the Network of the Programmers_ by Jingci Wang, and 
             _An Algorithm to Classify GitHub Repos_ by Troy Yang
  + **Lecture 2/14:** No class
+ + **Lecture 2/21:**    Advanced R: Profiling and Debugging
+       Papers:  _What’s in a GitHub Star?_ by Tajas Bala, 
+                _Pomises and perils of mining GitHub_ by Yijia Hao, and 
+               _Mining the Network of the Programmers_ by Tim Sauchuk.
  + **Lecture 2/28:** 
      Guest Lecture on _Bias in Machine Learning_ by Tina Eliassi-Rad. 
-     Advanced R: Profiling and Debugging
-    Papers:  _What’s in a GitHub Star?_ by Tajas Bala, 
-            _Pomises and perils of mining GitHub_ by Yijia Hao, and 
-            _Mining the Network of the Programmers_ by Tim Sauchuk.
+     Test-driven development for data science. 
+        Papers: _What’s in a GitHub Star?_ by Qinyu.
+                _Topic modeling of repositories at scale using names_.
+                _A Large Scale Study of Programming Languages and Code Quality_.
  + **Lecture 3/07:** Spring break
  + **Lecture 3/14:** Industry panel. Project pitches.
  + **Lecture 3/21:** Guest Lecture on _Model interpretation_ by Olga Vitek. 
-   Advanced R: OOP, Packages, Scalability
-   Papers: _What’s in a GitHub Star?_ by Qinyu.
- + **Lecture 3/28:** Julia and other data science languages and pipelines. Adoption. Security.
+ + **Lecture 3/28:**    Advanced R: OOP, Packages, Scalability
+ + **Lecture 4/04: ** Julia and other data science languages and pipelines. Adoption. Security.
+ + **Lecture 4/11: ** No class
  + **Lecture 4/18:** Final projects due.
 
 #### Grading
