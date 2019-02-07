@@ -117,8 +117,8 @@ Projects are individual.
 Projects will be presented to a pannel of experts in data science. Currently two experts are confirmed: John Tristan and Jiahao Chen.
 
 ------------------------------------    ------------------------
-![](Figs/chen.jpg){height=50px}         Jiahao was one of the developers of the Julia programming language at MIT before joinging CapitalOne where he leads their data science team.
-![](Figs/trsitan.jpg){height=50px}      John had a Phd in computer science (in the theory of programming languages) before joining Oracle. He know leads the Machine Learning group in Boston.
+![](Figs/chen.jpg){height=50px}         Jiahao was one of the creators of the Julia programming language at MIT before joinging CapitalOne where he leads their data science team.
+![](Figs/trsitan.jpg){height=50px}      John obtained a Phd in computer science in  programming languages theory before joining Oracle. He now leads the Machine Learning group in Boston.
 ------------------------------------    ---------------------------
  
  
