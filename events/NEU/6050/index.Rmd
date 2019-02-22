@@ -89,15 +89,13 @@ Lectures will reviews basics of data science, reproducibility and depending on s
             _An Algorithm to Classify GitHub Repos_ by Troy Yang
  + **Lecture 2/14:** No class
  + **Lecture 2/21:**    Advanced R: Profiling and Debugging
-       Papers:  _What’s in a GitHub Star?_ by Tajas Bala, 
-                _Pomises and perils of mining GitHub_ by Yijia Hao, and 
+       Papers:  _What’s in a GitHub Star?_ by Tajas Bala and
                _Mining the Network of the Programmers_ by Tim Sauchuk.
- + **Lecture 2/28:** 
-     Guest Lecture on _Bias in Machine Learning_ by Tina Eliassi-Rad. 
+ + **Lecture 2/28:**  Guest Lecture on _Bias in Machine Learning_ by Tina Eliassi-Rad. 
      Test-driven development for data science. 
         Papers: _What’s in a GitHub Star?_ by Qinyu.
                 _Topic modeling of repositories at scale using names_.
-                _A Large Scale Study of Programming Languages and Code Quality_.
+                _A Large Scale Study of Programming Languages and Code Quality_ by Xubo Tang.
  + **Lecture 3/07:** Spring break
  + **Lecture 3/14:** Industry panel. Project pitches.
  + **Lecture 3/21:** Guest Lecture on _Model interpretation_ by Olga Vitek. 
@@ -116,9 +114,14 @@ Projects are individual.
 
 Projects will be presented to a pannel of experts in data science. Currently two experts are confirmed: John Tristan and Jiahao Chen.
 
-------------------------------------    ------------------------
-![](Figs/chen.jpg){height=50px}         Jiahao was one of the creators of the Julia programming language at MIT before joinging CapitalOne where he leads their data science team.
-![](Figs/trsitan.jpg){height=50px}      John obtained a Phd in computer science in  programming languages theory before joining Oracle. He now leads the Machine Learning group in Boston.
+--------------------------------    --------------------------------------------------------------------
+![](Figs/joe.jpeg){height=160px}         Joseph Goldbeck is a Data Engineer at Manifold, an artificial intelligence engineering services firm with offices in Boston and Silicon Valley. Prior to Manifold, Joe was a Senior Software Engineer at TetraScience, a life sciences data integration and analytics platform company. Joe earned his Master of Arts degree in Neuroscience from the University of California–Berkeley, supported by a National Science Foundation Graduate Research Fellowship, and his Bachelor of Science degree in Brain and Cognitive Science from the Massachusetts Institute of Technology (MIT), with awards for outstanding academics and research.
+
+
+![](Figs/shantam.png){height=180px}       Shantam Gupta earned a MSc in Data Science from Northeastern in 2018. He works as a Machine Learning Engineer at Quantiphi Inc. https://www.quantiphi.com/ He is aso a Data Analytics Recitation Instructor for  Higher-Level Education. He enjoys helping industry professionals learn and apply the concepts of Probability & Statistics, Business Intelligence, Data Mining, Data Visualization and Machine Learning by harnessing the power of analytical tools.
+
+
+![](Figs/trsitan.jpg){height=160px}      John Tristan obtained a Phd in Computer Science in Programming Languages Theory before joining Oracle. He now leads the Machine Learning group in Boston.
 ------------------------------------    ---------------------------
  
  
