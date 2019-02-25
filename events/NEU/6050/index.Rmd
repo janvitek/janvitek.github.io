@@ -94,7 +94,6 @@ Lectures will reviews basics of data science, reproducibility and depending on s
  + **Lecture 2/28:**  Guest Lecture on _Bias in Machine Learning_ by Tina Eliassi-Rad. 
      Test-driven development for data science. 
         Papers: _What’s in a GitHub Star?_ by Qinyu.
-                _Topic modeling of repositories at scale using names_.
                 _A Large Scale Study of Programming Languages and Code Quality_ by Xubo Tang.
  + **Lecture 3/07:** Spring break
  + **Lecture 3/14:** Industry panel. Project pitches.
@@ -121,7 +120,7 @@ Projects will be presented to a pannel of experts in data science. Currently two
 ![](Figs/shantam.png){height=180px}       Shantam Gupta earned a MSc in Data Science from Northeastern in 2018. He works as a Machine Learning Engineer at Quantiphi Inc. https://www.quantiphi.com/ He is aso a Data Analytics Recitation Instructor for  Higher-Level Education. He enjoys helping industry professionals learn and apply the concepts of Probability & Statistics, Business Intelligence, Data Mining, Data Visualization and Machine Learning by harnessing the power of analytical tools.
 
 
-![](Figs/trsitan.jpg){height=160px}      John Tristan obtained a Phd in Computer Science in Programming Languages Theory before joining Oracle. He now leads the Machine Learning group in Boston.
+![](Figs/trsitan.jpg){height=160px}      John Tristan leads a research team in the Machine Learning group at Oracle in Boston. He is interested in parallel and distributed computing, scalable machine learning, probabilistic modeling and inference, and language and compiler design for parallel architectures. He was a post-doctoral fellow at Harvard University, received a Ph.D. in computer science from university Denis Diderot (Paris 7) and a masters degree in computer science from the Ecole Normale Superieure of Paris.
 ------------------------------------    ---------------------------
  
  
