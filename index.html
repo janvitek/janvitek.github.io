@@ -60,9 +60,7 @@ function swaptabs (showthis,hidethis) {
   </head>
   <body id="pn-top">
     <div class="container">
-      
       <div class="header">
-
         <div class="row">
           <nav>
             <ul class="nav navbar-nav">
@@ -77,9 +75,7 @@ function swaptabs (showthis,hidethis) {
             </ul>
           </nav>
         </div>
-
       </div>
-      
       <div class="content">
         <div class="row pn-white-bg">  
           <div class="col-md-12">
@@ -119,25 +115,20 @@ function swaptabs (showthis,hidethis) {
 
           <div class="col-md-4 pn-grey-font">
             <p>Jan Vitek is a Professor of Computer Science at Northeastern
-            University. He holds degrees from the University of Geneva
-            (PhD'99, BS'89) and University of Victoria (MS'95). Professor
-            Vitek works on topics related to the design and implementation
-            of programming languages. In the <em>Ovm project</em>, he led
-            the implementation of the first real-time Java virtual machine
-            to be successfully flight-tested. Together with Noble and
-            Potter, he proposed a concept that became known as <em>Ownership
-            Types</em>. Prof Vitek was one of the designers of the Thorn
-            language. He works on gaining a better understanding of the
-            JavaScript language and is now looking at supporting scalable
-            data analysis in R. Prof. Vitek chaired ACM SIGPLAN; he was the
-            Chief Scientist at Fiji Systems and part of the founding team at
-	      H2O.ai, a vice chair of AITO;  a vice chair of IFIP WG 2.4. He chaired
-	      SPLASH, PLDI, ECOOP, ISMM and LCTES and
-            was program chair of ESOP, ECOOP, VEE, Coordination, and
-            TOOLS. Vitek has started a number of successful workshop series,
-            including MOS on Mobile Objects, IWACO, STOP, and TRANSACT. He
-            is/was on the steering committees of ECOOP, JTRES, TRANSACT, ICFP,
-            OOPSLA, POPL, PLDI and LCTES.</p>
+            University. He holds degrees from the University of Geneva andd
+            Victoria. He works on topics related to the design and
+            implementation of programming languages. In the <em>Ovm
+            project</em>, he led the implementation of the first real-time
+            Java virtual machine to be successfully flight-tested. Together
+            with Noble and Potter, he proposed a concept that became known
+            as <em>Ownership Types</em>. He was one of the designers of the
+            Thorn language. He worked on gaining a better understanding of
+            the JavaScript language and is looking at how to support
+            scalable data analysis in R. Prof. Vitek chaired ACM SIGPLAN; he
+            was the Chief Scientist at Fiji Systems and the founding team at
+            H2O.ai, a vice chair of AITO; a vice chair of IFIP WG 2.4, and
+            chaired SPLASH, PLDI, ECOOP, ISMM and LCTES and was program
+            chair of ESOP, ECOOP, VEE, Coordination, and TOOLS.</p>
           </div>
 
           <div class="col-md-4 pn-top--40px">
@@ -1155,12 +1146,104 @@ target="blank">Video</a>
           <div class="col-md-12">
             <ul class="pn-ul-triangle">
 
+              <li class="pn-conferences"><div>
+                  <div class="pn-publications">
+                    <a class="pn-link">
+		      <span class="pn-publications-span">
+			<strong>ECOOP'19</strong>
+		     </span>Julia's efficient algorithm for subtyping unions
+		     and covariant tuples</a>
+                    <div class="pn-readmore">  <br>
+                      <strong>Authors</strong>: Benjamin Chung, 
+                      Francesco Zappa Nardelli, Jan Vitek <br>
+                      <strong>Abstract</strong>: The Julia programming
+		      language supports multiple dispatch and provides a
+		      rich type annotation language to specify method
+		      applicability. When multiple methods are applicable
+		      for a given call, Julia relies on subtyping between
+		      method signatures to pick the correct method to
+		      invoke. Julia’s subtyping algorithm is surprisingly
+		      complex, and determining whether it is correct remains
+		      an open question. In this paper, we focus on one piece
+		      of this problem: the interaction between union types
+		      and covariant tuples. Previous work normalized unions
+		      inside tuples to disjunctive normal form. However,
+		      this strategy has two drawbacks: complex type
+		      signatures induce space explosion, and interference
+		      between normalization and other features of Julia’s
+		      type system. In this paper, we describe the algorithm
+		      that Julia uses to compute subtyping between tuples
+		      and unions—an algorithm that is immune to space
+		      explosion and plays well with other features of the
+		      language. We prove this algorithm correct and complete
+		      against a semantic-subtyping denotational model in
+		      Coq.<br>
+                      <strong>Venue</strong>: European Conference on
+                      Object-Oriented Programming (ECOOP)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/tbd"
+                      target="_blank">tbd</a>
+                      <a href="pubs/ecoop19.pdf"
+                      target="_blank"><button type="button" class="btn
+                      btn-default btn-xs pn-download">PDF</button></a><br>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
 
               <li class="pn-journal"><div>
                   <div class="pn-publications">
                     <a class="pn-link"><span class="pn-publications-span">
-			<strong>TECS'18</strong></span>Can Android Run on Time?
-		      Extending and Measuring the Android Platform's 
+			<strong>TOPLAS'19</strong></span>On the Impact of Programming Languages on Code Quality</a>
+                    <div class="pn-readmore"> <br>
+                      <strong>Authors</strong>: Emery D. Berger, Celeste Hollenbeck, Petr Maj, Olga Vitek, Jan Vitek. <br>
+                      <strong>Abstract</strong>: In a 2014 paper, Ray,
+		      Posnett, Devanbu, and Filkov claimed to have uncovered
+		      a statistically significant association between eleven
+		      programming languages and software defects in 729
+		      projects hosted on GitHub.  Specifically, their work
+		      answered four research questions relating to software
+		      defects and programming languages. With data and code
+		      provided by the authors, the present paper first
+		      attempts to conduct an experimental repetition of the
+		      original study. The repetition is only partially
+		      successful, due to missing code and issues with the
+		      classification of languages. The second part of this
+		      work focuses on their main claim, the association
+		      between bugs and languages, and performs a complete,
+		      independent reanalysis of the data and of the
+		      statistical modeling steps undertaken by Ray et al. in
+		      2014. This reanalysis uncovers a number of serious
+		      flaws which reduce the number of languages with an
+		      association with defects down from eleven to only
+		      four.  Moreover, the practical effect size is
+		      exceedingly small. These results thus undermine the
+		      conclusions of the original study. Correcting the
+		      record is important, as many subsequent works have
+		      cited the 2014 paper and have asserted, without
+		      evidence, a causal link between the choice of
+		      programming language for a given task and the number
+		      of software defects. Causation is not supported by the
+		      data at hand; and, in our opinion, even after fixing
+		      the methodological flaws we uncovered, too many
+		      unaccounted sources of bias remain to hope for a
+		      meaningful comparison of bug rates across languages.<br>
+                      <strong>Venue</strong>: ACM Tansactions on Programming
+		      Languages (TOPLAS)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/"
+                      target="_blank">TBD</a>
+                      <a href="pubs/toplas19.pdf"
+                      target="_blank"><button type="button" class="btn
+                      btn-default btn-xs pn-download">PDF</button></a><br>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
+
+              <li class="pn-journal"><div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span">
+			<strong>TECS'19</strong></span>Can Android Run on
+		      Time? Extending and Measuring the Android Platform's
 		      Timeliness</a>
                     <div class="pn-readmore"> <br>
                       <strong>Authors</strong>: 
@@ -1194,52 +1277,10 @@ target="blank">Video</a>
                 </div> 
               </li>      
 
-
-
               <li class="pn-journal"><div>
                   <div class="pn-publications">
                     <a class="pn-link"><span class="pn-publications-span">
-			<strong>JAR'18</strong></span>Verifying a Concurrent
-			Garbage Collector with a Rely-Guarantee
-			Methodology</a>
-                    <div class="pn-readmore"> <br>
-                      <strong>Authors</strong>: 
-		      Yannick Zakowski, David Cachera, Delphine Demange,
-		      Gustavo Petri, David Pichardie,
-		      Suresh Jagannathan and Jan Vitek. <br>
-                      <strong>Abstract</strong>: Concurrent garbage
-                      collection algorithms are a challenge for program
-                      verification. In this paper, we address this problem
-                      by proposing a mechanized proof methodology based on
-                      the Rely-Guarantee proof technique. We design a
-                      compiler intermediate representation with strong type
-                      guarantees, dedicated support for abstract concurrent
-                      data structures, and high-level iterators on runtime
-                      internals. In addition, we define an Rely-Guarantee
-                      program logic supporting an incremental proof
-                      methodology where annotations and invariants can be
-                      progressively enriched. We formalize the intermediate
-                      representation, the proof system, and prove the
-                      soundness of the methodology in the Coq proof
-                      assistant. Equipped with this, we prove a fully
-                      concurrent garbage collector where mutators never have
-                      to wait for the collector.<br>
-                      <strong>Venue</strong>: Journal of Automated
-		      Reasoning (JAR)<br>
-                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1007/978-3-319-66107-0_31"
-                      target="_blank">10.1007/978-3-319-66107-0_31</a>
-                      <a href="pubs/jar18.pdf"
-                      target="_blank"><button type="button" class="btn
-                      btn-default btn-xs pn-download">PDF</button></a><br>
-                    </div>
-                  </div>
-                </div> 
-              </li>      
-
-              <li class="pn-journal"><div>
-                  <div class="pn-publications">
-                    <a class="pn-link"><span class="pn-publications-span">
-			<strong>JFP'18</strong></span> How to Evaluate
+			<strong>JFP'19</strong></span> How to Evaluate
 			the Performance of Gradual Type Systems</a>
                     <div class="pn-readmore"> <br>
                       <strong>Authors</strong>: Ben Greenman, Asumu Takikawa,
@@ -1282,6 +1323,83 @@ target="blank">Video</a>
                 </div> 
               </li>      
 
+              <li class="pn-journal"><div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span">
+			<strong>TOPLAS'19</strong></span>Feature-Specific
+			Profiling</a>
+                    <div class="pn-readmore"> <br>
+                      <strong>Authors</strong>: Leif Andersen, Vincent
+                      St-Amour, Jan Vitek, Matthias Felleisen. <br>
+                      <strong>Abstract</strong>: While high-level languages
+		      come with significant readability and maintainability
+		      benefits, their performance remains difficult to
+		      predict. For example, programmers may unknowingly use
+		      language features inappropriately, which cause their
+		      programs to run slower than expected. To address this
+		      issue, we introduce feature-specific profiling, a
+		      technique that reports performance costs in terms of
+		      linguistic constructs. Festure-specific profilers help
+		      programmers find expensive uses of specific features
+		      of their language. We describe the architecture of a
+		      profiler that implements our approach, explain
+		      prototypes of the profiler for two languages with
+		      different characteristics and implementation
+		      strategies, and provide empirical evidence for the
+		      approach’s general usefulness as a performance
+		      debugging tool.<br>
+                      <strong>Venue</strong>: ACM Tansactions on Programming
+		      Languages (TOPLAS)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/3275519"
+                      target="_blank">10.1145/3275519</a>
+                      <a href="pubs/toplas18.pdf"
+                      target="_blank"><button type="button" class="btn
+                      btn-default btn-xs pn-download">PDF</button></a><br>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
+
+              <li class="pn-journal"><div>
+                  <div class="pn-publications">
+                    <a class="pn-link"><span class="pn-publications-span">
+			<strong>JAR'18</strong></span>Verifying a Concurrent
+			Garbage Collector with a Rely-Guarantee
+			Methodology</a>
+                    <div class="pn-readmore"> <br>
+                      <strong>Authors</strong>: 
+		      Yannick Zakowski, David Cachera, Delphine Demange,
+		      Gustavo Petri, David Pichardie,
+		      Suresh Jagannathan and Jan Vitek. <br>
+                      <strong>Abstract</strong>: Concurrent garbage
+                      collection algorithms are a challenge for program
+                      verification. In this paper, we address this problem
+                      by proposing a mechanized proof methodology based on
+                      the Rely-Guarantee proof technique. We design a
+                      compiler intermediate representation with strong type
+                      guarantees, dedicated support for abstract concurrent
+                      data structures, and high-level iterators on runtime
+                      internals. In addition, we define an Rely-Guarantee
+                      program logic supporting an incremental proof
+                      methodology where annotations and invariants can be
+                      progressively enriched. We formalize the intermediate
+                      representation, the proof system, and prove the
+                      soundness of the methodology in the Coq proof
+                      assistant. Equipped with this, we prove a fully
+                      concurrent garbage collector where mutators never have
+                      to wait for the collector.<br>
+                      <strong>Venue</strong>: Journal of Automated
+		      Reasoning (JAR)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1007/978-3-319-66107-0_31"
+                      target="_blank">10.1007/978-3-319-66107-0_31</a>
+                      <a href="pubs/jar18.pdf"
+                      target="_blank"><button type="button" class="btn
+                      btn-default btn-xs pn-download">PDF</button></a><br>
+                    </div>
+                  </div>
+                </div> 
+              </li>      
+
               <li class="pn-journals">
                 <div>
                   <div class="pn-publications">
@@ -1316,6 +1434,7 @@ target="blank">Video</a>
                   </div>
                 </div> 
               </li>      
+
               <li class="pn-journals">
                 <div>
                   <div class="pn-publications">
@@ -1400,44 +1519,6 @@ target="blank">Video</a>
                 </div> 
               </li>      
 
-
-              <li class="pn-journal"><div>
-                  <div class="pn-publications">
-                    <a class="pn-link"><span class="pn-publications-span">
-			<strong>TOPLAS'18</strong></span>Feature-Specific
-			Profiling</a>
-                    <div class="pn-readmore"> <br>
-                      <strong>Authors</strong>: Leif Andersen, Vincent
-                      St-Amour, Jan Vitek, Matthias Felleisen. <br>
-                      <strong>Abstract</strong>: While high-level languages
-		      come with significant readability and maintainability
-		      benefits, their performance remains difficult to
-		      predict. For example, programmers may unknowingly use
-		      language features inappropriately, which cause their
-		      programs to run slower than expected. To address this
-		      issue, we introduce feature-specific profiling, a
-		      technique that reports performance costs in terms of
-		      linguistic constructs. Festure-specific profilers help
-		      programmers find expensive uses of specific features
-		      of their language. We describe the architecture of a
-		      profiler that implements our approach, explain
-		      prototypes of the profiler for two languages with
-		      different characteristics and implementation
-		      strategies, and provide empirical evidence for the
-		      approach’s general usefulness as a performance
-		      debugging tool.<br>
-                      <strong>Venue</strong>: ACM Tansactions on Programming
-		      Languages (TOPLAS)<br>
-                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/3275519"
-                      target="_blank">10.1145/3275519</a>
-                      <a href="pubs/toplas18.pdf"
-                      target="_blank"><button type="button" class="btn
-                      btn-default btn-xs pn-download">PDF</button></a><br>
-                    </div>
-                  </div>
-                </div> 
-              </li>      
-
               <li class="pn-conferences"><div>
                   <div class="pn-publications">
                     <a class="pn-link"><span class="pn-publications-span">
@@ -1478,7 +1559,6 @@ target="blank">Video</a>
                   </div>
                 </div> 
               </li>      
-
 
               <li class="pn-conferences"><div>
                   <div class="pn-publications">
@@ -1522,8 +1602,6 @@ target="blank">Video</a>
                   </div>
                 </div> 
               </li>      
-
-
 
               <li class="pn-conferences">
                 <div>
