@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="CS 7580 – Intensive Software, Construction and Engineering (ISCE)" />
+<meta property="og:type" content="article" />
+
+
+
+<title>CS 7580 – Intensive Software, Construction and Engineering (ISCE)</title>
+
+<style type="text/css">
+
+html {
+font-family: sans-serif; 
+-ms-text-size-adjust: 100%; 
+-webkit-text-size-adjust: 100%; 
+}
+
+body {
+margin: 0;
+}
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+display: inline-block; 
+vertical-align: baseline; 
+}
+
+audio:not([controls]) {
+display: none;
+height: 0;
+}
+
+[hidden],
+template {
+display: none;
+}
+
+
+a {
+background-color: transparent;
+}
+
+a:active,
+a:hover {
+outline: 0;
+}
+
+
+abbr[title] {
+border-bottom: 1px dotted;
+}
+
+b,
+strong {
+font-weight: bold;
+}
+
+dfn {
+font-style: italic;
+}
+
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+
+mark {
+background: #ff0;
+color: #000;
+}
+
+small {
+font-size: 80%;
+}
+
+sub,
+sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+
+
+img {
+border: 0;
+}
+
+svg:not(:root) {
+overflow: hidden;
+}
+
+
+figure {
+margin: 1em 40px;
+}
+
+hr {
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+height: 0;
+}
+
+pre {
+overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+color: inherit; 
+font: inherit; 
+margin: 0; 
+}
+
+button {
+overflow: visible;
+}
+
+button,
+select {
+text-transform: none;
+}
+
+button,
+html input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+-webkit-appearance: button; 
+cursor: pointer; 
+}
+
+button[disabled],
+html input[disabled] {
+cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+
+input {
+line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+box-sizing: border-box; 
+padding: 0; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+height: auto;
+}
+
+input[type="search"] {
+-webkit-appearance: textfield; 
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box; 
+box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+
+fieldset {
+border: 1px solid #c0c0c0;
+margin: 0 2px;
+padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+border: 0; 
+padding: 0; 
+}
+
+textarea {
+overflow: auto;
+}
+
+optgroup {
+font-weight: bold;
+}
+
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}</style>
+<style type="text/css">
+
+
+.container {
+position: relative;
+width: 100%;
+max-width: 960px;
+margin: 0 auto;
+padding: 0 20px;
+box-sizing: border-box; }
+.column,
+.columns {
+width: 100%;
+float: left;
+box-sizing: border-box; }
+
+@media (min-width: 400px) {
+.container {
+width: 85%;
+padding: 0; }
+}
+
+@media (min-width: 550px) {
+.container {
+width: 80%; }
+.column,
+.columns {
+margin-left: 4%; }
+.column:first-child,
+.columns:first-child {
+margin-left: 0; }
+.one.column,
+.one.columns { width: 4.66666666667%; }
+.two.columns { width: 13.3333333333%; }
+.three.columns { width: 22%; }
+.four.columns { width: 30.6666666667%; }
+.five.columns { width: 39.3333333333%; }
+.six.columns { width: 48%; }
+.seven.columns { width: 56.6666666667%; }
+.eight.columns { width: 65.3333333333%; }
+.nine.columns { width: 74.0%; }
+.ten.columns { width: 82.6666666667%; }
+.eleven.columns { width: 91.3333333333%; }
+.twelve.columns { width: 100%; margin-left: 0; }
+.one-third.column { width: 30.6666666667%; }
+.two-thirds.column { width: 65.3333333333%; }
+.one-half.column { width: 48%; }
+
+.offset-by-one.column,
+.offset-by-one.columns { margin-left: 8.66666666667%; }
+.offset-by-two.column,
+.offset-by-two.columns { margin-left: 17.3333333333%; }
+.offset-by-three.column,
+.offset-by-three.columns { margin-left: 26%; }
+.offset-by-four.column,
+.offset-by-four.columns { margin-left: 34.6666666667%; }
+.offset-by-five.column,
+.offset-by-five.columns { margin-left: 43.3333333333%; }
+.offset-by-six.column,
+.offset-by-six.columns { margin-left: 52%; }
+.offset-by-seven.column,
+.offset-by-seven.columns { margin-left: 60.6666666667%; }
+.offset-by-eight.column,
+.offset-by-eight.columns { margin-left: 69.3333333333%; }
+.offset-by-nine.column,
+.offset-by-nine.columns { margin-left: 78.0%; }
+.offset-by-ten.column,
+.offset-by-ten.columns { margin-left: 86.6666666667%; }
+.offset-by-eleven.column,
+.offset-by-eleven.columns { margin-left: 95.3333333333%; }
+.offset-by-one-third.column,
+.offset-by-one-third.columns { margin-left: 34.6666666667%; }
+.offset-by-two-thirds.column,
+.offset-by-two-thirds.columns { margin-left: 69.3333333333%; }
+.offset-by-one-half.column,
+.offset-by-one-half.columns { margin-left: 52%; }
+}
+
+
+html {
+font-size: 62.5%; }
+body {
+font-size: 1.5em; 
+line-height: 1.6;
+font-weight: 400;
+font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #222; }
+
+h1, h2, h3, h4, h5, h6 {
+margin-top: 0;
+margin-bottom: 2rem;
+font-weight: 300; }
+h1 { font-size: 4.0rem; line-height: 1.2; letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3; letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5; letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6; letter-spacing: 0; }
+
+@media (min-width: 550px) {
+h1 { font-size: 5.0rem; }
+h2 { font-size: 4.2rem; }
+h3 { font-size: 3.6rem; }
+h4 { font-size: 3.0rem; }
+h5 { font-size: 2.4rem; }
+h6 { font-size: 1.5rem; }
+}
+p {
+margin-top: 0; }
+
+a {
+color: #1EAEDB; }
+a:hover {
+color: #0FA0CE; }
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+display: inline-block;
+height: 38px;
+padding: 0 30px;
+color: #555;
+text-align: center;
+font-size: 11px;
+font-weight: 600;
+line-height: 38px;
+letter-spacing: .1rem;
+text-transform: uppercase;
+text-decoration: none;
+white-space: nowrap;
+background-color: transparent;
+border-radius: 4px;
+border: 1px solid #bbb;
+cursor: pointer;
+box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+color: #333;
+border-color: #888;
+outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+color: #FFF;
+background-color: #33C3F0;
+border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+color: #FFF;
+background-color: #1EAEDB;
+border-color: #1EAEDB; }
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+height: 38px;
+padding: 6px 10px; 
+background-color: #fff;
+border: 1px solid #D1D1D1;
+border-radius: 4px;
+box-shadow: none;
+box-sizing: border-box; }
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none; }
+textarea {
+min-height: 65px;
+padding-top: 6px;
+padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+border: 1px solid #33C3F0;
+outline: 0; }
+label,
+legend {
+display: block;
+margin-bottom: .5rem;
+font-weight: 600; }
+fieldset {
+padding: 0;
+border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+display: inline; }
+label > .label-body {
+display: inline-block;
+margin-left: .5rem;
+font-weight: normal; }
+
+ul {
+list-style: circle inside; }
+ol {
+list-style: decimal inside; }
+ol, ul {
+padding-left: 0;
+margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin: 1.5rem 0 1.5rem 3rem;
+font-size: 90%; }
+li {
+margin-bottom: 1rem; }
+
+code {
+padding: .2rem .5rem;
+margin: 0 .2rem;
+font-size: 90%;
+white-space: nowrap;
+background: #F1F1F1;
+border: 1px solid #E1E1E1;
+border-radius: 4px; }
+pre > code {
+display: block;
+padding: 1rem 1.5rem;
+white-space: pre; }
+
+th,
+td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+padding-left: 0; }
+th:last-child,
+td:last-child {
+padding-right: 0; }
+
+button,
+.button {
+margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+margin-bottom: 2.5rem; }
+
+.u-full-width {
+width: 100%;
+box-sizing: border-box; }
+.u-max-full-width {
+max-width: 100%;
+box-sizing: border-box; }
+.u-pull-right {
+float: right; }
+.u-pull-left {
+float: left; }
+
+hr {
+margin-top: 3rem;
+margin-bottom: 3.5rem;
+border-width: 0;
+border-top: 1px solid #E1E1E1; }
+
+
+.container:after,
+.row:after,
+.u-cf {
+content: "";
+display: table;
+clear: both; }
+
+
+
+@media (min-width: 400px) {}
+
+@media (min-width: 550px) {}
+
+@media (min-width: 750px) {}
+
+@media (min-width: 1000px) {}
+
+@media (min-width: 1200px) {}
+</style>
+<style type="text/css">.authordate {
+border-top:1px solid #94bd5a;
+border-bottom:1px solid #94bd5a;
+margin-bottom:30px;
+}
+img { max-width:100%; }
+.main-container {
+margin-top:48pt;
+color:#06062c;
+}
+h1 {
+font-weight:700;
+}
+h2 {
+color: #94bd5a;
+font-weight:500;
+}
+h3 {
+color: #94bd5a;
+font-weight:400;
+}
+h4 {
+color: #94bd5a;
+font-weight:300;
+}
+.hdr {
+position:fixed;
+width:100%;
+background:#06062c;
+color:white;
+font-weight:400;
+font-size:24pt;
+height:40pt;
+padding:2px;
+padding-right:10px;
+top: 0;
+z-index: 100;
+text-align:right;
+}
+.hdr > a:link,
+.hdr > a:visited,
+.hdr > a:hover,
+.hdr > a:active {
+color:white;
+text-decoration: none;
+}
+.hdr > a:hover {
+color:#94bd5a;
+}
+.ftr {
+border-top:1px solid #94bd5a;
+margin-top:30px;
+text-align:center;
+font-size:10px;
+}
+.ftr > a:link,
+.ftr > a:visited,
+.ftr > a:hover,
+.ftr > a:active {
+color:#06062c;
+text-decoration: none;
+}
+.ftr > a:hover {
+color:#94bd5a;
+}
+</style>
+
+
+
+
+</head>
+
+<body>
+
+<div class="hdr u-max-full-width"><a href="http://janvitek.org/">jv</a></div>
+
+<div class="container" style="margin-top:48pt">
+  <div class="row">
+    <div class="twelve columns">
+
+
+<div id="header">
+<h1 class="title">CS 7580 – Intensive Software, Construction and Engineering (ISCE)</h1>
+
+<div class="authordate">
+</div>
+</div>
+
+
+<table>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Schedule</strong></td>
+<td align="left">Wed, 6–9:15pm @ Richards 237</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Staff</strong></td>
+<td align="left"><a href="http://janvitek.org">Jan Vitek</a></td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Contact</strong></td>
+<td align="left"><a href="https://piazza.com/class/jxj2gpglhna5ob">Piazza</a> for all communication.</td>
+</tr>
+</tbody>
+</table>
+<div id="syllabus" class="section level4">
+<h4>Syllabus</h4>
+<p>Much of today’s software engineering aims to automate the process of understanding software artifacts. This graduate class focuses on techniques that analyze computer programs for purposes such as finding security vulnerabilities and errors, or understanding the software development process.</p>
+<p>Our goal is to give you a working knowledge of program analysis and its theoretical foundations rooted in abstract interpretation. After taking this class you should be able to read and understand most papers in the field.</p>
+<p>The class is split in two parts. The first part consists of lectures on key concepts of program analysis including: data flow analysis and abstract interpretation; applications to security, bug finding and testing; dynamic analysis; and machine-learning based approaches that tradeoff soundness in favor of scalability. The second part of the class focuses on research papers. Your mission, if you choose to accept it, is to reproduce one paper’s results.</p>
+</div>
+<div id="workload-and-grading" class="section level4">
+<h4>Workload and Grading</h4>
+<p>This is an advanced class designed so you can choose how much you want to invest in the class. My expectation is that most of you will spend about a day a week. Most of the work is reading and writing. There are opportunities for programming in the second half of the class, but only if you choose a reanalysis or a reproduction. I expect the deliverables to be:</p>
+<ul>
+<li>Assignments: questions on course material. (3x)</li>
+<li>Midterm: same as assignments, in-class, on October 23. (1x)</li>
+<li>Reviews: a one page review of a research paper. (2x)</li>
+<li>Presentation: a lecture on your chosen research paper. Done in group. (1x)</li>
+<li>Project: a blog post describing the outcome of your reproduction and a presentation. Done in group. (1x)</li>
+</ul>
+<p>The project is the only only open-ended task here.</p>
+<p>Grades are somewhat besides the point in a research class, but they are required by the college. My expectation is that the range of final grades will be B, B+, A- and A, where the semantics of the letter grades are that B is a below average contribution, B+ and A- mean you met expectations and A+ means you exceeded expectations.</p>
+</div>
+<div id="project" class="section level4">
+<h4>Project</h4>
+<p>The project is the emphasis of the second half of the course. Working in groups of up to 3 students, you will select a research paper, obtain its data and code from the authors, and perform a reproduction study. You will present the paper in class, and then report on your reproduction.</p>
+<div id="reproduction-study" class="section level6">
+<h6>Reproduction study</h6>
+<p>There are three alternatives: <em>repetition</em>, <em>reanalysis</em>, or <em>reproduction</em>. Detail descriptions of those terms are in this <a href="https://arxiv.org/abs/1901.10220">paper</a>. A repetition attempts to establish that given the code and data provided by the authors, the results of the paper hold. Reanalysis starts from the author’s code and data, but attempts to evaluate if the results are robust in the presence of changes to the methodology. Reproduction attempt to reimplement some part of the approach and determine if the same conclusions can still be obtained.</p>
+</div>
+<div id="report" class="section level6">
+<h6>Report</h6>
+<p>Your report should do the following: (1) summarize the paper’s approach and results, (2) describe how you validated the results, and (3) summarize what you found. In simple cases, when everything is as claimed, the report can be quite short (a couple of pages), but if there are interesting differences the reports can be longer. It is conceivable that some of the reports may be extended into papers after the end of class.</p>
+</div>
+<div id="lecture" class="section level6">
+<h6>Lecture</h6>
+<p>Each group will prepare a lecture on their paper. The lecture is 90 minutes long including time for questions and discusion. The goal of the lecture is to give an in-depth presentation of the paper, placing it in context of previous research and talk about is strenghs and limitation.</p>
+</div>
+</div>
+<div id="assignments" class="section level4">
+<h4>Assignments</h4>
+<p>We will have 3 in-class assignments, each one will consist of about 3 questions from the textbook.</p>
+</div>
+<div id="papers" class="section level4">
+<h4>Papers</h4>
+<p>Here are some ideas for papers to reproduce. We are looking for papers that come with software and data. Getting those may require interacting with the authors. You can choose other papers, e.g. from recent proceedings of conferences such as ICSE, FSE, ASE and OOPSLA.</p>
+<div id="testing" class="section level6">
+<h6>Testing</h6>
+<ul>
+<li><a href="https://dl.acm.org/citation.cfm?id=3106277">Fairness Testing: Testing Software for Discrimination</a> FSE’17</li>
+<li><a href="https://dl.acm.org/citation.cfm?id=2916135.2916250">Do Automatically Generated Unit Tests Find Real Faults?</a> ASE’15</li>
+<li><a href="https://doi.org/10.1002/stvr.1640">QuickChecking Static Analysis Properties</a> STVR’17</li>
+</ul>
+</div>
+<div id="bug-finding" class="section level6">
+<h6>Bug finding</h6>
+<ul>
+<li><a href="https://doi.org/10.1145/3276532">Finding Broken Promises in Asynchronous JavaScript Programs</a> OOPSLA’18</li>
+<li><a href="https://doi.org/10.1145/3276518">ExceLint: Automatically Finding Spreadsheet Formula Errors</a> OOPSLA’18</li>
+<li><a href="https://dl.acm.org/citation.cfm?id=3097459">To Type or Not to Type: Quantifying Detectable Bugs in JavaScript</a> ICSE’17</li>
+</ul>
+</div>
+<div id="security" class="section level6">
+<h6>Security</h6>
+<ul>
+<li><a href="https://dl.acm.org/citation.cfm?id=3117771">Automated Identification of Security Issues from Commit Messages and Bug Reports</a> FSE’17</li>
+<li><a href="https://dl.acm.org/citation.cfm?id=3097397">ZENIDS: Introspective Intrusion Detection for PHP Applications</a> ICSE’17</li>
+</ul>
+</div>
+<div id="algorithms" class="section level6">
+<h6>Algorithms</h6>
+<ul>
+<li><a href="http://doi.org/10.1145/3192366.3192383">Active Learning of Points-To Specifications</a> PLDI’18</li>
+<li><a href="https://doi.org/10.1145/3133926">P/Taint: Unified Points-to and Taint Analysis</a> OOPSLA’17</li>
+<li><a href="https://hal.sorbonne-universite.fr/hal-01884772/document">Modular static analysis of string manipulations in C programs</a> SAS’18</li>
+</ul>
+</div>
+<div id="big-code" class="section level6">
+<h6>Big Code</h6>
+<ul>
+<li><a href="https://dl.acm.org/citation.cfm?id=3106300">Automatically Diagnosing and Repairing Error Handling Bugs in C</a> FSE’17</li>
+<li><a href="https://dl.acm.org/citation.cfm?id=3106289">Recovering Clear, Natural Identifiers from Obfuscated JS Names</a> FSE’17</li>
+</ul>
+</div>
+</div>
+<div id="lectures" class="section level4">
+<h4>Lectures</h4>
+<p>Lectures are in the evening (3 hours and 15 minutes each Wednesday).</p>
+<ul>
+<li><strong>Sep. 04:</strong> Course overview. <em>Due:</em> Read PPA Ch.1, Submit pitches.</li>
+<li><strong>Sep. 11:</strong> Dataflow analysis. <em>Due:</em> Read PPA Ch.2. Return assignment 1.</li>
+<li><strong>Sep. 18:</strong> Constraint-based analysis. <em>Due:</em> Read PPA Ch.3. Return assignment 2.</li>
+<li><strong>Sep. 25:</strong> Abstract interpretation. <em>Due:</em> Read PPA Ch.4. Return assignment 3.</li>
+<li><strong>Oct. 02:</strong> Abstract interpretation.</li>
+<li><strong>Oct. 09:</strong> Dynamic analysis, BigCode and machine learning.</li>
+<li><strong>Oct. 16:</strong> Guest lectures: applications to security and bug finding.</li>
+<li><strong>Oct. 23:</strong> Midterm (PPA Ch 1-4)</li>
+<li><strong>Oct. 30:</strong> <em>Due:</em> Project updates, previews of next week’s talks.</li>
+<li><strong>Nov. 06:</strong> <em>Due:</em> Two talks, reviews, previews of next week’s talks</li>
+<li><strong>Nov. 13:</strong> <em>Due:</em> Two talks, reviews, previews of next week’s talks</li>
+<li><strong>Nov. 20:</strong> <em>Due:</em> Two talks, reviews, previews of next week’s talks</li>
+<li><strong>Dec. 04:</strong> <em>Due:</em> Two talks, reviews.</li>
+<li><strong>Dec. 11:</strong> - Final project presentations</li>
+</ul>
+</div>
+<div id="textbook" class="section level4">
+<h4>Textbook</h4>
+<p>The textbook is <a href="https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson-dp-3642084745/dp/3642084745/ref=mt_paperback?_encoding=UTF8&amp;me=&amp;qid=">Principle of Program Analysis</a> (PPA) by F. Nielson, H.R. Nielson and C. Hankin. (A slightly out of date version of the text appears to be on ResearchGate <a href="https://www.researchgate.net/publication/265352570_Principles_of_Program_Analysis">here</a>. The newest edition has 476 pages.)</p>
+</div>
+<div id="reviews-from-past-classes" class="section level4">
+<h4>Reviews from past classes</h4>
+<p><em>“Jan Vitek is the most horrible professor I’ve ever met. […] he made students read and learn all by themselves. […] He kind of enjoys watching students working so hard over night and night”</em></p>
+<p>Consider yourself warned.</p>
+</div>
+
+
+<div class="ftr">
+<a href="http://prl.ccs.neu.edu/">PRL</a> • <a href="http://ccis.neu.edu/">CCIS</a><br />
+Copyright Northeastern University, 2019
+</div>
+
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
