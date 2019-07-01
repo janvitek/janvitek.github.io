@@ -16,25 +16,21 @@ output: markdowntemplates::skeleton
 #### Syllabus
 
 Much of today's software engineering aims to automate the process of understanding software artifacts. 
-This graduate class focuses on techniques that analyze computer programs for purposes such as finding 
+This graduate class focuses on analysis of computer programs for purposes such as finding 
 security vulnerabilities and errors, or understanding the software development process.
-
-Our goal is to give you a working knowledge of program analysis and its theoretical foundations rooted 
-in abstract interpretation. After taking this class you should be able to read and understand most papers 
-in the field.
-
-The class is split in two parts. The first part consists of lectures on key concepts of program analysis 
+My goal is to give you a working knowledge of program analysis and its theoretical foundations rooted 
+in abstract interpretation.
+The class is split in two. We start with lectures on key concepts of program analysis 
 including: data flow analysis and abstract interpretation; applications to security, bug finding and testing; 
 dynamic analysis; and machine-learning based approaches that tradeoff soundness in favor of scalability.
-The second part of the class focuses on research papers. Your mission, if you choose to accept it, is to 
-reproduce one paper's results. 
+The second part, focuses on reading, presenting and validating research papers. 
 
 #### Workload and Grading
 
-This is an advanced class designed so you can choose how much you want to invest in the class.
-My expectation is that most of you will spend about a day a week. Most of the work is reading
-and writing. There are opportunities for programming in the second half of the class, but only
-if you choose a reanalysis or a reproduction.  I expect the deliverables to be:
+My expectation is that most of you will spend about a day a week on the course. 
+Most of the work is reading and writing. 
+There opportunities for programming are in the second half, but are optional. 
+The deliverables are:
 
  * Assignments: questions on  course material. (3x)
  * Midterm: same as assignments, in-class, on October 23.  (1x)
@@ -42,16 +38,14 @@ if you choose a reanalysis or a reproduction.  I expect the deliverables to be:
  * Presentation: a lecture on your chosen research paper. Done in group. (1x)
  * Project: a blog post describing the outcome of your reproduction and a presentation. Done in group. (1x)
 
-The project is the only only open-ended task here. 
+The project is the only only open-ended task. 
 
-Grades are somewhat besides the point in a research class, but they are required by the college.
-My expectation is that the range of final grades will be B, B+, A- and A, where the semantics 
-of the letter grades are that B is a below average contribution, B+ and A- mean you
-met  expectations and A+ means you exceeded expectations.
+Grades are somewhat besides the point in a research class, but they are required.
+My expectation for the range of final grades is [B, B+, A-, A], where the semantics 
+of the letter grades are that B is a below average, B+ and A- means you met expectations and A+ means you exceeded them.
 
 #### Project
 
-The project is the emphasis of the second half of the course.
 Working in groups of up to 3 students, you will select a research paper, obtain its data and code from the authors, and perform a reproduction study.
 You will present the paper in class, and then report on your reproduction.
 
@@ -63,11 +57,11 @@ Reanalysis starts from the author's code and data, but attempts to evaluate if t
 
 ###### Report
 
-Your report should do the following: (1) summarize the paper's approach and results, (2) describe how you validated the results, and (3) summarize what you found. In simple cases, when everything is as claimed, the report can be quite short (a couple of pages), but if there are interesting differences the reports can be longer.  It is conceivable that some of the reports may be extended into papers after the end of class.
+Your report should do the following: (1) summarize the paper's approach and results, (2) describe how you validated the results, and (3) summarize what you found. In simple cases, when all is as claimed, the report can be  just a couple of pages. If there are interesting differences a  report could be extended into a full paper.
 
 ###### Lecture
 
-Each group will prepare a lecture on their paper. The lecture is 90 minutes long including time for questions and discusion. The goal of the lecture is to give an in-depth presentation of the paper, placing it in context of previous research and talk about is strenghs and limitation.
+Each group will prepare a lecture on their paper. The lecture is 90 minutes long including time for questions and discusion. The goal is to give an in-depth presentation of the paper, placing it in context of previous research and talk about is strenghs and limitation.
 
 #### Assignments
 
@@ -78,7 +72,6 @@ We will have 3 in-class assignments, each one will consist of about 3 questions 
 
 Here are some ideas for papers to reproduce.
 We are looking for papers that come with software and data. 
-Getting those may require interacting with the authors.
 You can choose other papers, e.g. from recent proceedings of conferences such as ICSE, FSE, ASE and OOPSLA.
 
 ###### Testing
@@ -126,15 +119,15 @@ Lectures are in the evening (3 hours and 15 minutes each Wednesday).
  + **Nov. 13:** _Due:_ Two talks, reviews, previews of next week's talks
  + **Nov. 20:** _Due:_ Two talks, reviews, previews of next week's talks
  + **Dec. 04:** _Due:_ Two talks, reviews.
- + **Dec. 11:** - Final project presentations
+ + **Dec. 11:** _Due:_ Final project presentations
 
 #### Textbook
 
-The textbook is [Principle of Program Analysis](https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson-dp-3642084745/dp/3642084745/ref=mt_paperback?_encoding=UTF8&me=&qid=) (PPA) by F. Nielson, H.R. Nielson and C. Hankin.  (A slightly out of date version of the text appears to be on ResearchGate [here](https://www.researchgate.net/publication/265352570_Principles_of_Program_Analysis). The newest edition has 476 pages.)
+The textbook is [Principle of Program Analysis](https://www.amazon.com/Principles-Program-Analysis-Flemming-Nielson-dp-3642084745/dp/3642084745/ref=mt_paperback?_encoding=UTF8&me=&qid=) (PPA) by F. Nielson, H.R. Nielson and C. Hankin.  (An old version of the text is on ResearchGate [here](https://www.researchgate.net/publication/265352570_Principles_of_Program_Analysis). The newest edition has 476 pages.)
 
 
 ####  Reviews from past classes
 
 _"Jan Vitek is the most horrible professor I've ever met. [...] he made students read and learn all by themselves. [...] He kind of enjoys watching students working so hard  over night and night"_
 
-Consider yourself warned.
+You are warned.
