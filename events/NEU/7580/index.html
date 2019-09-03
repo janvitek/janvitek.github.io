@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
 	<title>Home | CS7580</title>
-	<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/Mountains/consolidated-0.css?rwcache=585652594" />
+	<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/Mountains/consolidated-0.css?rwcache=589179396" />
 		
 	    
 </head>
@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col">
                         <h1 class="hero-title display-1" data-aos="fade-right" data-aos-delay="300" data-aos-duration="500">CS7580</h1>
-                        <h2 class="hero-slogan font-italic display-4" data-aos="fade-right" data-aos-delay="350" data-aos-duration="500">Intensive Software, Construction and Engineering</h2>
+                        <h2 class="hero-slogan font-italic display-4" data-aos="fade-right" data-aos-delay="350" data-aos-duration="500">Intensive Construction of Software and its Engineering</h2>
                     </div>
                 </div>
             </div>
@@ -54,12 +54,43 @@
 			<div class="row intro justify-content-between">
 				<div class="col-sm-8 intro-col" data-aos="fade-right" data-aos-delay="300" data-aos-duration="500">
                     <blockquote>
-<p><em>Scaling Software Engineering to Big Code with Machine Learning</em></p>
+<p><em>Scaling Software Engineering to Big Code with Static Analysis, Dynamic Analysis and Machine Learning</em></p>
 </blockquote>
 
 <h3 id="syllabus">Syllabus</h3>
 
-<p>One of the aims of modern software engineering is to automate the process of understanding software artifacts. This course focuses on techniques for analyzing programs to find, e.g., security vulnerabilities and errors, as well as understanding the software development process. You will gain a working knowledge of program analysis and its theoretical underpinning foundations rooted in abstract interpretation. The class starts with lectures on key concepts of program analysis including <em>data flow analysis</em> and <em>abstract interpretation</em> as well as applications to security, bug finding and testing. Topics in <em>dynamic analysis</em> and <em>machine-learning</em> will be covered to explore the tradeoff between soundness and scalability. The second part of the course focuses on reading, presenting and validating research papers.</p>
+<p>One of the aims of modern software engineering is to automate the process of understanding software artifacts. This course focuses on techniques for analyzing programs to find, e.g., security vulnerabilities and errors, as well as understanding the software development process. You will gain a working knowledge of program analysis and its theoretical foundations rooted in abstract interpretation. The class starts with lectures on key concepts of program analysis including <em>data flow analysis</em>, <em>constraint-based analysis</em> and <em>abstract interpretation</em>. Applications to security and bug finding will be used as motivation. Topics in <em>dynamic analysis</em> and <em>machine-learning</em> will be covered to explore the tradeoff between soundness and scalability. The second part of the course focuses on reading, presenting and validating research papers.</p>
+
+<h3 id="readings">Readings</h3>
+
+<p>You are expected to read the following <em>before</em> each lecture, it will increase your understanding of the material.</p>
+
+<h6 id="week1">Week 1</h6>
+
+<ul>
+<li><a href="papers/PPA-chapter1.pdf">PoPA Chapter 1</a></li>
+<li>D Distefano, et al. Scaling Static Analyses at Facebook, CACM19 <a href="papers/cacm19-fb.pdf">PDF</a></li>
+<li>C Sadowski, et al. Lessons from Building Static Analysis Tools at Google. CACM18. <a href="papers/cacm-Google.pdf">PDF</a></li>
+<li>B Livshits, et al. In Defense of Soundiness: A Manifesto. CACM15. <a href="cacm-Soundy.pdf">PDF</a></li>
+</ul>
+
+<h6 id="week2">Week 2</h6>
+
+<ul>
+<li>PoPA Chapter 2</li>
+</ul>
+
+<h6 id="week3">Week 3</h6>
+
+<ul>
+<li>PoPA Chapter 3</li>
+</ul>
+
+<h6 id="week4">Week 4</h6>
+
+<ul>
+<li>PoPA Chapter 4</li>
+</ul>
 
 <h4 id="workloadandgrading">Workload and Grading</h4>
 
@@ -73,6 +104,22 @@
 </ul>
 
 <p>The project is the only open-ended task. While grades are besides the point in a research class, they are required and the expectation is for them to fall the range [B, B+, A-, A], where a B is below average, B+ and A- mean expectations were met, and A+ means awesome.</p>
+
+<h4 id="project">Project</h4>
+
+<p>Working in groups students, you will select a research paper, obtain its data and code and <em>perform a reproduction study</em>, <em>write a report</em>, and <em>give a lecture</em>.</p>
+
+<h6 id="reproductionstudy">Reproduction study</h6>
+
+<p>Depending on time and energy students can perform a repetition, reanalysis or reproduction. A <em>repetition</em> is the simplest kind of reproduction where you simply run the code provided by the authors on their data and report on the results. A <em>reanalysis</em> starts from the author’s code and data, but attempts to evaluate if the results are robust in the presence of changes to the methodology. A <em>reproduction</em> is an attempt to replicate an experiment from first principles.</p>
+
+<h6 id="report">Report</h6>
+
+<p>Your report should do the following: (1) summarize the paper’s approach and results, (2) describe how you validated the results, and (3) summarize what you found. In simple cases, when all is as claimed, the report can be just a couple of pages. If there are interesting differences a report could be extended into a full paper.</p>
+
+<h6 id="lecture">Lecture</h6>
+
+<p>A lecture is 90 minutes long including time for questions and discusion. The goal is to give an in-depth presentation of the paper, placing it in context of previous research and talk about is strenghs and limitation.</p>
 
 <h3 id="textbookandpapers">Textbook and Papers</h3>
 
@@ -116,22 +163,6 @@
 <li>Recovering Clear, Natural Identifiers from Obfuscated JS Names FSE 2017. <a href="https://dl.acm.org/citation.cfm?id=3106289">link</a></li>
 </ul>
 
-<h3 id="project">Project</h3>
-
-<p>Working in groups students, you will select a research paper, obtain its data and code and <em>perform a reproduction study</em>, <em>write a report</em>, and <em>give a lecture</em>.</p>
-
-<h6 id="reproductionstudy">Reproduction study</h6>
-
-<p>Depending on time and energy students can perform a repetition or reanalysis. A <em>repetition</em> is the simplest kind of reproduction where you simply run the code provided by the authors on their data and report on the results. A <em>reanalysis</em> starts from the author’s code and data, but attempts to evaluate if the results are robust in the presence of changes to the methodology. </p>
-
-<h6 id="report">Report</h6>
-
-<p>Your report should do the following: (1) summarize the paper’s approach and results, (2) describe how you validated the results, and (3) summarize what you found. In simple cases, when all is as claimed, the report can be just a couple of pages. If there are interesting differences a report could be extended into a full paper.</p>
-
-<h6 id="lecture">Lecture</h6>
-
-<p>A lecture is 90 minutes long including time for questions and discusion. The goal is to give an in-depth presentation of the paper, placing it in context of previous research and talk about is strenghs and limitation.</p>
-
 <h3 id="reviews">Reviews</h3>
 
 <p><em>“Jan Vitek is the most horrible professor I’ve ever met. […] he made students read and learn all by themselves. […] He kind of enjoys watching students working so hard over night and night”</em> Be warned.</p>
@@ -145,7 +176,7 @@
                         <h3 class="sidebar-title">
                             Course Info
                         </h3>
-                        <strong>Schedule:</strong> Wed, 6&ndash;9:15pm @ Richards 237<strong><br />Staff:  </strong><a href="http:janvitek.org" target="_blank">Jan Vitek</a><strong><br />Contact:</strong>	<a href="https://piazza.com/class/jxj2gpglhna5ob">Piazza</a> for all communication.<br /><br /><strong>Lectures<br /></strong><br />Lectures are in the evening (3 hours and 15 minutes each Wednesday).<br /><br /><strong>Sep. 04</strong>: Course overview. <br /><em>Due</em>: PPA/Ch.1.<br /><strong>Sep. 11</strong>: Dataflow analysis.<br /><em>Due: </em>PPA.Ch.2, Ass.1<br /><strong>Sep. 18: </strong>Constraint-based analysis. <br /><em>Due:</em> PPA.Ch.3, Ass.2<br /><strong>Sep. 25</strong>: Abstract interpretation. <br /><em>Due:</em> PPA.Ch.4, Ass.3<br /><strong>Oct. 02:</strong> Abstract interpretation.<br /><strong>Oct. 09:</strong> Dynamic analysis, BigCode and machine learning.<br /><strong>Oct. 16: </strong>Guest lectures, applications to security and bug finding.<br /><strong>Oct. 23: </strong>Midterm (PPA Ch 1-4)<br /><strong>Oct. 30:</strong> <em>Due: </em>Project updates, previews of next week&rsquo;s talks.<br /><strong>Nov. 06: </strong>2 talks, reviews, previews of next week&rsquo;s talks<br /><strong>Nov. 13:</strong> 2 talks, reviews, previews of next week&rsquo;s talks<br /><strong>Nov. 20: </strong>2 talks, reviews, previews of next week&rsquo;s talks<br /><strong>Dec. 04:</strong> 2 talks, reviews.<br /><strong>Dec. 11:</strong> Project presentations<br />
+                        <strong>Schedule:</strong> Wed, 6&ndash;9:15pm @ Richards 237<strong><br />Staff:  </strong><a href="http:janvitek.org" target="_blank">Jan Vitek</a><strong><br />Contact:</strong>	<a href="https://piazza.com/class/jxj2gpglhna5ob">Piazza</a> for all communication.<br /><br /><strong>Lectures<br /></strong><br />Lectures are in the evening (3 hours and 15 minutes each Wednesday).<br /><br /><strong>Week 1 (Sep. 04)</strong>  Overview of static program analysis<br /><strong>Week 2 (Sep 11)</strong> Dataflow analysis.<br /><strong>(Sep 18) </strong>Self study<br /><strong>Week 3 (Sep 25)</strong> Abstract interpretation. <br /><strong>Week 4 (Oct 02)</strong> Abstract interpretation.<br /><strong>Week 5 (Oct 09)</strong> Dynamic analysis and ML4PL<br /><strong>Week 6 (Oct 16) </strong>Guest lectures, applications to security and bug finding.<br /><strong>Week 7  (Oct 23) Exam</strong> (PPA Ch 1-4)<br /><strong>Week 8 (Oct 30)</strong> <em>Due: </em>Project updates, previews of next week&rsquo;s talks.<br /><strong>Week 9 (Nov 06) </strong>Talks, reviews, and previews<br /><strong>Week 10 (Nov 13)</strong> Talks, reviews, and previews<br /><strong>Week 11 (Nov. 20) </strong>Talks, reviews, and previews<br /><strong>(Nov 27) </strong>Thanksgiving<br /><strong>Week 12 (Dec 04)</strong>  Talks & reviews<br /><strong>Week 13 (Dec 11) </strong> Project presentations<br />
                         
                     </div>
 				</div>
@@ -167,7 +198,7 @@
 		</div>
 	</main>
 
-	<script type="text/javascript" src="rw_common/themes/Mountains/js/main.js?rwcache=585652594"></script>
+	<script type="text/javascript" src="rw_common/themes/Mountains/js/main.js?rwcache=589179396"></script>
 </body>
 
 </html>
