@@ -1,0 +1,57 @@
+
+dacapo
+  Results from Dacapo 2006 and Dacapo 2009 benchmarks run on OpenJDK Java
+  VM.  Sources and compiled code for the benchmarks are available at
+  http://www.dacapobench.org/.  Each benchmark was run 3 times, in each run
+  repeating 300 iterations.  The benchmarks were run on 64-bit AMD Opteron
+  (4x16 cores) with 64G RAM, Linux.
+
+fft_ia64
+  Results from FFT benchmark from ftp://ftp.nosc.mil/pub/aburto/fft,
+  modified to run multiple iterations in each executions (512 warmup
+  iterations are thrown away, 2048 following iterations are recorded). 
+  Records a number of hardware performance counters related to execution
+  time, cache and TLB performance. The CPU frequency was about 800.179008
+  MHz.
+
+  Executed on Itanium CPU with 96K L2 cache, 2M L3 cache running Debian
+  Linux, dual-CPU system but the benchmark running on a single processor. 
+  100 executions of the benchmark.
+
+fft_p4
+  The same FFT benchmark executed on a system with a single Pentium 4 CPU
+  with 512K L2 cache running Linux.  The CPU frequency was about 2194.055
+  MHz.
+
+ast.out
+  Results from R version of the Language Shootout benchmarks, available at
+  https://github.com/allr/purdue-fastr/tree/master/test/r/shootout Run in
+  GNU-R version 3.0.2 compiled using GCC (default options) on 64-bit Ubuntu
+  12.04.  Run on dual-CPU Xeon 2.1GHz, 48G RAM.  As per default, the AST
+  interpreter is used to evaluate the benchmarks.  Each benchmark is
+  executed 10 times.
+    
+bc.out
+  The same benchmarks run using the byte-code just-in-time compiler and
+  byte-code interpreter, at highest optimization level (3).
+
+fft_ia64.out
+  One run from the "fft_ia64" data.
+
+fft_p4.out
+  One run from the "fft_p4" data.
+
+fop.out
+  The DaCapo 2009 fop benchmark run 100 times on a laptop with 64-bit
+  Core-i7-3610QM CPU (2.30 GHz), quadcore, 8G RAM - run as shown on slides. 
+  The data is indented only for demonstration purposes, no precaution was
+  taken to limit interference, avoid frequency scaling, etc.
+  
+snorm.out
+  The Spectralnorm benchmark from the Language Shootout benchmarks for R,
+  available at
+  https://github.com/allr/purdue-fastr/blob/master/test/r/shootout/spectralnorm/spectralnorm.r
+  Run on the same laptop ast fop.out, in the way as shown on slides, using
+  the system version of R (3.2.3) in Ubuntu 16.04.  The data is indented
+  only for demonstration purposes, no precaution was taken to limit
+  interference, avoid frequency scaling, etc. Executed 100 times.

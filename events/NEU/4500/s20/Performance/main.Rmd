@@ -1,0 +1,597 @@
+---
+title: "Experimental Evaluation of Software Systems"
+author: "Tomas Kalibera and Jan Vitek"
+output:
+  tufte::tufte_handout:
+    toc: yes
+  tufte::tufte_html:
+    toc: yes
+---
+
+
+```{r setup, echo=FALSE,results='hide',message=FALSE, warning=FALSE, cache=TRUE}
+if (file.exists("/Users/jan")) {
+  knitr::opts_knit$set(root.dir = normalizePath("/Users/jan/Dropbox/j/teach/5110/DataAnalysis17/Performance/data/files")) 
+} else {
+  knitr::opts_knit$set(root.dir = normalizePath("/Users/jv/Dropbox/j/teach/5110/DataAnalysis17/Performance/data/files")) 
+}
+FAST <- F
+Fast <- function(x) if (!FAST) return(x)
+
+require("tufte")
+require("ggplot2")
+require("dplyr")
+require("assertthat")
+require("testthat")
+require("tufte")
+```
+
+\newpage
+
+
+On modern computer systems, a program never runs for the same amount of time twice.
+Execution time is affected by the hardware, different runs may be loaded into different memory locations and experience different cache behaviors.
+Execution time is affected by the software, the operating system is working concurrently to the program and can interrupt it to perform house cleaning tasks or to let other programs execute.
+Execution time is affected by the way the program was built, modern compilers are non-deterministic as they compile the code of the program as it is running.
+Execution time is affected by the program's inputs, some slight perturbations in the values given to the program can result in significant changes of performance.
+How can we answer questions such as *"Is program A faster than program B?"*
+
+
+# Experimental design
+
+We start by designing the experiment that captures the raw data. A design depends on the choice of *goals*, i.e. what the study should demonstrate, and on the intended  *scope* of its conclusions, i.e. how broadly it can be applied. 
+
+## Builds, Runs and Iteration
+
+We measure **iterations** of a system (e.g. time to process a request for a web server or compile a file for a compiler). 
+A **run** of the system can have multiple iterations (e.g. a web server is started, it services a number of requests and then terminates).
+A **build** of the system refers to activities such as compilation and deployment of the system. One build can be used for multiple runs.
+
+## Metrics
+
+Typical metrics include: *responsiveness* (response time, latency, e.g. time between arrival of packets to the gateway and its successful delivery to the destination), *productivity* (throughput, speed, network bandwidth, e.g. number of transactions processed per second by application server), *utilization* (percentage of time a particular resource is at a given load level, e.g. percentage of time the CPU is not idle).
+
+
+```{marginfigure}
+*Reporting ratios:*
+Imagine you need to compare two versions of a system, **o**ld and **n**ew, they run in 58s and 18s respectively.   **o** is the **baseline**.
+Different authors have used: 
+     *ratio of execution times* is $\frac{\mathbf{n}}{\mathbf{o}} = 0.28$  (28%), 
+    *percentage improvement in execution  time* is $1-\frac{\mathbf{o}}{\mathbf{n}} = 0.72$   (**72%**),  
+    *speedup* is  $\frac{\mathbf{o}}{\mathbf{n}} = 3.63$ (**363%, 3.63x**), or
+   *percentage improvement in speed* is   $\frac{\mathbf{o}}{\mathbf{n}}-1 = 2.63$ (263%).
+We prefer speedup.
+```
+
+Metrics are either reported  as **ratios**  (e.g. measure of optimization such as speed-up, parallel speed-up, performance overhead) or as *absolute* values (eg. time of a system to boot and start accepting input, time of a garbage collection cycle, time to call a function).
+
+## Data acquisition
+
+Measurements are done either *internally* by instrumenting the system to keep track of time, or *externally* by relying on the operating system to give end-to-end time (as well as other measures such as memory, page faults, etc.). External measurement have to take into account the cost of starting the process, they should not be used for short running systems (say less than 100 ms).
+
+## Configuration
+
+
+```{marginfigure}
+*Sample configuration:*  DaCapo 2006-10- MR2 [6] and 9.12-bach with their largest inputs. Trace data is collected on one iteration of the benchmark excluding start-up. Timings are recorded on uninstrumented runs where we strived to get at least 5 repetitions and 10 iterations; unless specified otherwise timings are the mean of these runs. We ran HotSpot 1.7.0 01 for Linux/x86 64, btrace 1.2.1 and ASM 3.3 on a 4.8GHz Intel Core i7, with 4 hardware threads (hyper-threading disabled) and 16GB of RAM.  [Kalibera, ea. OOPSLA 2012]
+```
+
+A **configuration** describes how an experiment is conducted. For a software system, a configuration include the hardware on which the program is run (the processor model and the memory available), the way the system was built (the compiler, any relevant options), the way the software is run (any options passed to it and the inputs), and any other relevant characteristics of the execution environment (e.g. what other programs are running).
+
+## Scope
+
+```{marginfigure}
+SPEC for C, https://www.spec.org/cpu2006, and Java, https://www.spec.org/jvm2008, or Dacapo http://dacapobench.org. 
+```
+
+Any non-trivial system has an infinite number of configurations.  
+The scope of a study defines defines how broadly it may be applied.  Are the result valid for single-core or do they also apply to multi-core processors? 
+In practice, most performance studies are limited to a handful of hardware/software platforms and to standardized benchmarks with a handful of different inputs.
+When reporting on a study describe precisely the configurations used.
+
+## Goals
+
+Performance studies can be  **ends-based**, that is to say they are designed to allow comparison between systems with similar functionalities, or **exploratory**, that is designed to understand a particular aspect of a system's behavior.
+Goals impact what will be measured. End-based studies can be limited to a single measurement whereas explanatory studies benefit from measuring as many observable characteristics as is practical (for instance, cache misses, page faults, time spent in GC, compilation time, etc.) in the hope that some of those measurement will prove useful.
+
+## Factors impacting execution time
+
+**Fixed effects** and **random effects** can impact on execution time. 
+Fixed effects include the *details of the algorithms* in the system under study (e.g. the optimizations performed by a compiler, or the details of a the indexing scheme used in a database system), *the input* (values passed into the system), *hw/sw environment* (CPU, OS, libraries, compiler optimizations, location in virtual memory). 
+Random effects include location in physical memory, system load, scheduling, context switches, hw interrupts, randomized algorithms.
+Fixed effects depend on the configuration, randomize the aspects of the configuration that affect execution time.
+Random effects are modeled or summarized using statistical methods.
+
+# Use-case 1: Java FOP
+
+Our first use-case is an ends-based analysis of the Java `fop` benchmark. Fop belongs to the Dacapo benchmark suite; it takes an XSL-FO file, parses it and formats it, generating a PDF file as output. The metric here is execution time of one iteration.
+
+## Acquisition
+
+```
+for I in `seq 1 100` ; do
+	java -jar dacapo-9.12-bach.jar fop
+done > fop.out 2>&1
+```
+
+Each run of the program performs one iteration of the benchmark.
+
+## Import
+
+The output of 100 runs are stored in `fop.out`. This reads the data into R and converts time from milliseconds to seconds.
+
+```{r cache=TRUE}
+out <- readLines("fop.out")
+rlines <-  grep("==== DaCapo .* in [0-9]+ msec.*", out, val=T)
+timesms <-  as.numeric(gsub(".* in ([0-9]+) msec.*","\\1",rlines))
+x <- timesms / 1000
+```
+
+We assume the observed times come from the same process, we thus have the same expectations about `x[1]` as about `x[2]`. In other words, we assume measured times to be (statistically) independent, the fact that `x[1]` is `r x[1]` doesn't give us a clue what `x[2]` will be.
+
+## Analysis
+
+```{r cache=TRUE,fig.margin=TRUE}
+hist(x, freq=T)
+```
+
+The data can be plotted with a **histogram**. By default, R chooses a granularity (a range), bins the observations and display the count for elements in each bin.
+
+We can also ask R to compute probability densities (with `freq`) and plot the kernel density estimate with `density`.
+
+```{r cache=TRUE,fig.margin=TRUE}
+hist(x, freq=F, ylim=c(0,5))
+lines(density(x))
+```
+
+The width of each bin multiplied by its height give the probability of observation falling into this range.
+
+A summary of the density function is the mean, here it is `r mean(x)`.
+
+The more observations we have the closer we should get to the actual mean.
+
+If we plot the mean of the first `n` observation, with `n` ranging from 1 to `length(x)`. We see how the value converges towards `mean(x)`.
+
+
+```{r cache=TRUE,fig.margin=TRUE}
+plot(
+    sapply(
+      1:length(x),
+      function(i) mean(x[1:i])),
+    type="o",
+    ylab="Mean of first N",
+    xlab="N"
+  )
+```  
+
+Notice the "bump" towards the end, how can it be explained?  Looking at the raw data with a **scatter plot**, reveals two outliers toward the end of the sequence of observations. 
+  
+
+```{r cache=TRUE,fig.margin=TRUE}
+plot(x)
+```
+
+
+It is fair to ask how close the of the observed data is to the true mean?
+
+Given our assumptions of independence, lets simulate more experiments by re-sampling the measured values 100 times (with replacement).
+
+The following plots the means of the simulations.
+
+```{r cache=TRUE,fig.margin=TRUE}
+simulatedMeans <- sapply(1:100,
+    function(i)
+    mean(sample(x, replace=T))) 
+hist(simulatedMeans, prob=T)
+lines(density(simulatedMeans))
+```
+  
+The 6 bins from 1.61 to 1.67, cover 91%  of the area of the histogram. 
+
+Intuitively, with 91% confidence, the true expectation should be between 1.61s and 1.67s.  
+
+
+Lets find bounds that covers the true mean with a fixed confidence. 
+
+`quantile` is an R function that takes a vector of probabilities and returns values in the input data range.
+
+```{r cache=TRUE}
+r <- quantile(simulatedMeans, probs=c(0.975, 0.025))
+r
+```
+
+With 95% confidence, the true mean lies between `r round(r[2],3)` and `r round(r[1],3)`.  
+
+As an alternative, we can use bootstrap and the `boot.ci` function to compute this.
+
+```{r cache=TRUE}
+library(boot)
+b <- boot(x, function(d, sel) mean(d[sel]), R=10000)
+boot.ci(b, conf=0.95, type="perc")
+```
+
+# Use-case 2: Dependence
+
+Recall the assumption that our data was independent, this not always the case. 
+
+## Acquisition
+
+Generate fifty dependent data point and fifty independent ones by sampling.
+
+```{r cache=TRUE}
+d <- sapply(1:50, function(x)1/x)
+i <- sample(d,replace=F)
+```
+
+`i` holds randomly reordered observations.
+
+## Run charts
+
+
+```{r cache=TRUE,fig.margin=TRUE}
+plot(d)
+plot(i)
+``` 
+
+Visually it is obvious that `d` has dependent observations whereas `i` seems random.
+
+There plots are called run charts, or *run-sequence plots*, they display observed data in a time sequence. 
+
+A run-sequence chart can uncover obvious dependence in the data.
+
+## Lag plots
+
+Another technique to uncover dependence is to use **lag plots**. 
+
+A lag plot checks whether there is dependence between pairs of observations by plotting the current value against a previous value. 
+
+```{r cache=TRUE,fig.margin=TRUE}
+lag.plot(d)
+```
+
+The x axis is `d[i+1]`, the y axis shows `d[i]`.
+
+Independent data should have no clear structure. It should be roughly symmetrical over the diagonal. 
+
+The following lag plot for th `i` does not have structure.
+
+```{r cache=TRUE,fig.margin=TRUE}
+lag.plot(i,
+         do.lines=F, # don't draw lines
+         labels=F,   # don't put labels
+         pch=3)      # use crosses for points
+```
+
+
+Depending on the kind of dependence different lags should be applied. Consider the following data set where every even observation is independent.
+
+```{r cache=TRUE,fig.margin=TRUE}
+c <- d
+c[c(T,F)] <- i[c(T,F)]
+
+plot(c)
+```
+
+The lag plot with a lag of one does not show dependence.
+
+```{r cache=TRUE}
+lag.plot(c, labels=F,do.lines=F)
+```
+
+With a lag of 2 a little more structure can be observed.
+
+```{r cache=TRUE}
+lag.plot(i[1:21], lags=4)
+```
+
+## Auto-correlation function
+
+```{r cache=TRUE,fig.margin=TRUE}
+acf(d)
+```
+
+The auto correlation function compute the correlation between points separated by various time lags.
+
+Details at https://en.wikipedia.org/wiki/Auto correlation 
+
+```{marginfigure}
+${\hat {R}}(k)={\frac {1}{(n-k)\sigma ^{2}}}\sum _{t=1}^{n-k}(X_{t}-\mu )(X_{t+k}-\mu )$
+```
+
+
+
+There is a clear correlation at lag 1, and 2.
+
+```{r cache=TRUE}
+acf(i)
+```
+
+The blue line is marks the auto-correlation of white noise.
+
+```{r cache=TRUE}
+acf(c)
+```
+
+In `c` lag two shows some degree of auto-correlation.
+
+# Use-case 3: FFT benchmark
+
+This use-case investigates the FFT benchmark; a fast Fourier transform (FFT) algorithm computes the discrete Fourier transform  of a sequence.  The FFT benchmark is run by a harness which controls multiple iterations of the benchmark. We also do multiple runs of the benchmark.
+
+## Import
+
+We do 100 runs of the FFT benchmark and for each run we have 2048 iterations taken on an Itanium operating at a clock rate of 800.179008 MHz. Each run is stored in one file.
+
+```{r cache=TRUE}
+read_bench <- function(name, n)  read.table(paste(name, n, ".out", sep=""), header=T)
+read_fft <- function(n)  read_bench("fft_ia64/run", n)
+summary(read_fft(1))
+```
+
+The data consists of four columns with processor-level information.  A peek at the raw data gives the following.
+
+```{r cache=TRUE}
+read_fft(1)[1:10,]
+```
+
+Since we are interested in an ends-based, lets read all data files, select CPU_CYCLES, merge data to a single long vector and scale the measurement to seconds by dividing the cycles by the clock rate of the processor.
+
+```{r cache=TRUE}
+runs <- lapply(1:100, function(n) (read_fft(n))[["CPU_CYCLES"]] )
+ia64 <- Reduce(c, runs)
+ia64 <- ia64/(800.179008*1e6)
+ia64[1:10]
+```
+
+## Analysis 
+
+```{r cache=TRUE,fig.margin=TRUE}
+Fast(plot(ia64))
+```
+
+The number of observations makes it hard to see what is going here, let's zoom in on the first five runs.
+
+```{r cache=TRUE,fig.margin=TRUE}
+plot(ia64[1:(2048*5)])
+```
+
+Clearly non-determinism affects the runs of the benchmark. So we must increase the number of runs, on the other hand each run can have fewer  iterations.
+
+We plot all of the data at hand to see if an explanation for the inter-run variance can be found. 
+
+
+There is an obvious correlation between CPU_CYCLES an L3 cache misses.  
+
+L3 cache:  A memory bank built onto the motherboard or within the CPU module. The L3 cache feeds the L2 cache, and its memory is typically slower than the L2 memory, but faster than main memory. The L3 cache feeds the L2 cache, which feeds the L1 cache, which feeds the processor.  The TLB stores the recent translations of virtual memory to physical memory and can be called an address-translation cache. 
+
+
+
+```{r cache=TRUE,fig.margin=TRUE}
+runs <- lapply(1:100, function(n) read_bench("fft_ia64/run", n))
+ia64 <- Reduce(rbind, runs)
+Fast(plot(ia64))
+```
+
+
+```
+      0.5 ns - CPU L1 dCACHE reference
+           1   ns - speed-of-light (a photon) travel a 1 ft (30.5cm) distance
+           5   ns - CPU L1 iCACHE Branch mispredict
+           7   ns - CPU L2  CACHE reference
+          25   ns - CPU L3  CACHE reference
+         100   ns - MUTEX lock/unlock
+         100   ns - Main DDR MEMORY reference
+      10,000   ns - Compress 1K bytes with Zippy PROCESS
+      20,000   ns - Send 2K bytes over 1 Gbps NETWORK
+     250,000   ns - Read 1 MB sequentially from MEMORY
+     500,000   ns - Round trip within a same DataCenter
+  10,000,000   ns - DISK seek
+  10,000,000   ns - Read 1 MB sequentially from NETWORK
+  30,000,000   ns - Read 1 MB sequentially from DISK
+ 150,000,000   ns - Send a NETWORK packet CA -> Netherlands
+|   |   |   |
+|   |   | ns|
+|   | us|
+| ms|
+```
+
+## Build-level non-determinism
+
+Non-determinism can show up in the process of building or deploying a system. For example, if the compiler has some non-determinism, all runs and all iterations of a particular executable will be affected.  In that case, it is necessary recompile the program before each iteration of the experiment.
+
+Examples include: on some systems the order in which the compiled files are given to the linker may impact performance (e.g. SPECCPU, training size). This is a fixed effect (all runs will feel it) that can be controlled. You can randomize the linking order (or anything else that affects performance) and repeat compilation.   The challenge is knowing what to control for. On some systems, build is non-deterministic, e.g. C++ compiler implementing anonymous namespaces.  There, the only way is compile many times.
+
+The following plot show Mono .Net compilation data. There are clear patterns. Performance seems to be tiered.
+
+```{marginfigure}
+<img src="plots/mono.pdf">
+```
+
+## Apparté: Builds vs Runs vs Iterations?
+
+Find the highest level of non-determinism in the system: i.e. builds, runs or iterations. Identify important uncontrolled fixed effects and randomize them (like linking order, code layout). Check if building is deterministic, binaries have different performance. If runs are cheap, have multiple runs, otherwise multiple iterations.
+
+## USE-CASE 4: FFT on P4
+
+Spotting non-determinism in an experiment can sometimes be done by visual inspection of scatter plots of the original data compared to sampled data. The difference is apparent if the original data has structure whereas the sampled data does not.
+
+Consider the following data set where we measured the FFT benchmark running on a P4 processor. The same data is sampled and plotted.  The scatter plot makes the issue quite clear, points are clustered in runs.
+
+```{r cache=TRUE,fig.margin=TRUE}
+runs4 <- lapply(1:100, function(n) read_bench("fft_p4/run", n)[["tsc"]])
+p4 <- Reduce(c, runs4)
+p4 <- p4/(2194.055*1e6)
+plot(p4[1:10000])
+plot(sample(p4, replace=F)[1:10000])
+```
+
+But, what if visual inspection is inconclusive? We can also compare variances (variance estimates) for iterations in the same execution and iterations in different executions.
+
+*Variance* Var(X) is a measure of dispersion/spread of random variable, “mean square distance from the expectation”. It is computed with `var(x)`. *Standard deviation* sd(X) is square root of the variance (so in units of variable X). *Coefficient of variation* (COV) is standard deviation divided by the mean (aka variation, relative variation, sometimes given as percentage). They are computed, respectively, with `sd(x)` and `sd(x)/means(x)`.
+
+```{r cache=TRUE}
+x <- read_bench("fft_p4/run",1)$tsc
+sd(x)/mean(x)
+```
+
+```{r cache=TRUE}
+r <- sapply(1:100, function(n) read_bench("fft_p4/run", n)$tsc[1])
+sd(r)/mean(r)
+```
+
+In many cases the difference in variations is not this obvious.
+
+A sophisticated method for comparing variations is ANOVA (analysis of variance), but it has its own assumptions, and only focuses on variance.
+
+# USE-CASE 5: Dacapo Warmup
+
+Another instance of data that is not independent comes from the warmup that many computer systems experience By warmup we mean that the system has two (at least) distinct modes of execution or two phases: the **warmup** and the **steady state**.
+
+Typically warmup is characterized by slower execution time and greater variability. When steady state is reached, the executions are typically more predictable and faster.
+
+```{r cache=TRUE,fig.margin=TRUE}
+read_Dacapo <- function(fn) {
+  out <- readLines(fn)
+  rlines <- grep("==== DaCapo .* in [0-9]+ msec.*", out, val=T) 
+  timesms <- as.numeric(gsub(".* in ([0-9]+) msec.*","\\1",rlines)) 
+  timesms / 1000
+}
+x <- read_Dacapo("dacapo/chart6/chart6_1_1.out")
+plot(x)
+x <- read_Dacapo("dacapo/chart6/chart6_2_1.out")
+plot(x)
+x <- read_Dacapo("dacapo/chart6/chart6_3_1.out")
+plot(x)
+```
+
+
+During the warmup phase data is not independent. What we must do then, is to identify how many iterations/runs are affected by the system initialization.  One good way to do so is to use run-sequence plots at different scales and validate our observation by repeating the experiment. 
+
+The goal is to find the point where the data becomes independent, as only independent data can be used for summarization (e.g. to compute a confidence interval).
+
+Of course, it is possible that in some systems there is no steady state and that data remains dependent. 
+
+To sum up if there is warmup across iterations, do more runs, if there is warmup across runs, repeat experiment.
+
+There are frameworks that attempt to automatically detect when data reach steady state, but this is still a research problem and they have been shown to not be accurate (they do not always detect the end of warmup or independence). 
+
+#USE-CASE 6: The Java Dacapo Benchmark suite
+
+How to report on the performance of a system across multiple benchmarks?  We can't use a single mean to summarize them all, as they are incomparable individually. Instead, we can summarize them with a bar plot.
+
+## Import
+
+The `dacapo` directory contains one sub-directory per benchmark, and, in each, one file per run. 
+
+```{r cache=TRUE}
+list_out_files <- function(bench)  list.files(paste("dacapo", bench, sep="/"), pattern="*.out")
+
+read_dacapo_bench <- function(bench) 
+   sum( 
+     sapply( list_out_files(bench), 
+            function(f) sum(read_Dacapo(paste("dacapo", bench, f, sep="/")))))
+
+
+st <-sapply(list.files("dacapo"), read_dacapo_bench)
+st
+```
+
+## Plotting total time
+
+First, we start by plotting the total time, in hours, spent running the benchmarks. Since the time reported is in seconds, we can write `sum(st)` to see that the whole experiment took `r round(sum(st),2)` hours to run.
+
+Now let's plot it with ggplot.
+
+```{r cache=TRUE,fig.margin=TRUE}
+df <- data.frame( Time=round(st/3600,3))
+
+ggplot(df)  +
+  geom_bar(mapping = aes(x=rownames(df), y=Time), stat="identity") +
+  xlab("") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
+
+
+#USE-CASE 7: AST vs BC
+
+In this last use-case we will look at data for performance of two versions of the R interpreter on a suite of benchmarks programs. This is an ends-based study. We want to know if the ast interpreter (AST) is faster or slower than the bytecode interpreter (BC).
+
+## Data import
+
+```{r cache=TRUE}
+ast <- as.matrix(read.table("ast.out", row.names=1))
+bc <- as.matrix(read.table("bc.out", row.names=1))
+ast
+```
+  
+## Summarizing performance difference for one benchmark.
+
+Let's pick one benchmark randomly, "pidigits", and report the speedup of bc over ast. Here ast is the old system and bc is the new, so we computer old/new.
+
+```{r cache=TRUE}
+mean(ast["pidigits",]/bc["pidigits",])
+
+```
+
+It would be better to compute a confidence interval.
+
+```{r cache=TRUE}
+pidata <- data.frame(new=bc["pidigits",], old=ast["pidigits",]) 
+
+f <- function(d, sel) mean(d[sel,"old"])/mean(d[sel,"new"])
+
+b <- boot(pidata, f, R=1000)
+ci <- boot.ci(b, conf=0.95, type="perc")
+ci
+```
+
+With 95% confidence, the BC is between 1.68x and 1.70x faster than AST when running the pidigits benchmark.
+
+## Summarizing multiple benchmarks
+
+Barplot for the speedup of BC over AST, with confidence intervals for the ratio of means.
+
+```{r cache=TRUE}
+
+# df_row_mean: DataFrame x [Num] -> [Num]
+# Return the ration of the mean
+df_row_mean <- function(df, sel) mean(df[sel,"old"]) / mean(df[sel, "new"]) 
+
+# cfratio: Num x Num -> result is [Num, Num]
+# Returns result which is a pair of numbers
+cfratio <- function(oldvec, newvec) { 
+  df <- data.frame(old=oldvec, new=newvec)
+  b <- boot(df, df_row_mean, R=1000)
+  ci <- boot.ci(b, conf=0.95, type="perc")
+  ci$perc[4:5] # low, hi
+}
+
+
+cfratios <- function(old, new) { # old/new - matrices benchmarks x times 
+  m <- sapply(rownames(old), function(b) {
+    o <- old[b,]
+    n <- new[b,]
+    c(cfratio(o,n), mean(o)/mean(n))
+  })
+ rownames(m) <- c("low", "hi", "meansRatio")
+ t(m) # matrix benchmarks x c("low", "hi", "meansRatio")
+}
+```
+
+
+```{r cache=TRUE,fig.margin=TRUE}
+df <-as.data.frame( cfratios(ast, bc))
+
+ggplot(df, aes(x=row.names(df), y=meansRatio)) + 
+  geom_bar(position=position_dodge(), stat="identity") +
+  geom_errorbar(aes(ymin=low, ymax=hi), position=position_dodge(),
+      colour="red") +
+  xlab("") +
+  theme(axis.text.x = element_text(angle=90, hjust=1) )
+```
+
+
+
+More to talk about:  p-values, t-test,  discuss geometric mean, ...
+
