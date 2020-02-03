@@ -37,9 +37,19 @@ to mean), and finally a recommendation to management of which product
 to select.</p><p>To do this you will have to design a set of benchmarks, carry out
 measurements, document the goals, scope and outcomes of your experiments.
 You will also have to look at the code of the different artifacts.</p><p><span style="font-weight: bold">Deliverables:</span> Your deliverable for Part I is a file named
-<span class="stt">MEMO.pdf</span>, in a directory part1. This memo should have at least
-the following sections, clearly labelled:</p><ul><li><p>Description of analysis performed,</p></li><li><p>Comparison of the products&rsquo; relative performance, with graphs and as an ordered list (best first),</p></li><li><p>Recommendation to management which consists of a list of the projects
-in order of preference, and a rationale for your top choice (consider also code quality).</p></li></ul><p><span style="color: red">Hints:</span> Read the material shared on Piazza about performance. Think
+<span class="stt">MEMO.pdf</span>, in a directory <span class="stt">part1</span>. This memo should have at
+least the following sections, clearly labelled. The section names are
+bolded, and each is followed by a description of its contents.</p><ul><li><p><span style="color: red"><span style="font-weight: bold">Introduction</span> - describes the goal of the report (an
+ends-based study of performance and of code quality) that will
+allow us to select a data adapter for our project.</span></p></li><li><p><span style="color: red"><span style="font-weight: bold">Description of the analysis performed</span> - describe your
+benchmarks, why and how you created them. Describe what you are
+going to measure and how. (e.g. builds vs. runs vs. iterations)
+Describe also the HW/SW infrastructure (OS, docker?, compiler, ...)</span></p></li><li><p><span style="color: red"><span style="font-weight: bold">Comparison of the products&#8217; relative performance</span>
+Include graphs and an ordered list (best first). Avoid single
+runs. Describe the sources of non-determinism.</span></p></li><li><p><span style="color: red"><span style="font-weight: bold">Threats to validity</span> What could make your results wrong
+for someone else?</span></p></li><li><p><span style="color: red"><span style="font-weight: bold">Recommendation to management</span> which consists of a list of the
+projects in order of preference, and a rationale for your top
+choice (consider also code quality and effort to integrate).</span></p></li></ul><p><span style="color: red">Hints:</span> Read the material shared on Piazza about performance. Think
 about what a reasonable workload would be for a data adapter (i.e. guess
 what kind of files will it have to process?)  and design benchmarks that
 will measure performance. Avoid single measurements, avoid single runs, make
