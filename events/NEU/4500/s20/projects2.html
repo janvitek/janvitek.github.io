@@ -55,19 +55,7 @@ sends all addresses to its clients. Directed communication means that
 each client can send messages directly to any other client. Your
 network layer can be written using the POSIX networking library
 functions, but should be encapsulated in its own class. Server and
-client need to take IP address as arguments on the command line:</p><p>&ldquo;&lsquo;
-$ ./server 102.168.0.1
-&ldquo;&lsquo;</p><p>Deliverables:</p><p>part2/
-    MEMO.pdf  ## PDF
-    src/
-     ... other .h files
-     network.h  # CwC
-     main.ccp   # CwC
-     Makefile
-       build   # compile
-       run     # run
-    test/
-      ... your tests</p><p>The MEMO.pdf should be a PDF file, single-spaced, no more than two pages
+client need to take IP address as arguments on the command line:</p><p><table cellspacing="0" cellpadding="0" class="SVerbatim"><tr><td><p><span class="stt">$ ./server -ip 102.168.0.1</span></p></td></tr></table></p><p>Deliverables:</p><p><table cellspacing="0" cellpadding="0" class="SVerbatim"><tr><td><p><span class="stt">part2/</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt">MEMO.pdf</span><span class="hspace">&nbsp;&nbsp;</span><span class="stt">## PDF</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt">src/</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">... other .h files</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">network.h</span><span class="hspace">&nbsp;&nbsp;</span><span class="stt"># CwC</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">main.ccp</span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt"># CwC</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">Makefile</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">build</span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt"># compile</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">run</span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt"># run</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt">test/</span></p></td></tr><tr><td><p><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="stt">... your tests</span></p></td></tr></table></p><p>The MEMO.pdf should be a PDF file, single-spaced, no more than two pages
 long. It should have an *Introduction*, describing what you have implemented
 in high-level terms, a *Design* section, explaning you design with API bits
 and an *Challengs and Open issues* section, telling the readers about
