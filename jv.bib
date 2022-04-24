@@ -2,7 +2,24 @@
 @string{ECOOP  = {European Conference on Object-Oriented Programming (ECOOP)}}
 @string{POPL  = {Symposium on Principles of Programming Languages (POPL)}}
 @string{PACMPL = {Proc. ACM Program. Lang.}}
+@string{PLDI = {Programming Language Design and Implementation Conference (PLDI)}}
 
+@inproceedings{pldi22,
+  author = "Olivier Flückiger and
+             Jan Ječmen and Sebastián Krynski and Jan Vitek",
+  title = "Deoptless: Speculation with Dispatched On-Stack Replacement and Specialized Continuations",
+  booktitle = PLDI
+  year = 2022,
+  doi = {}}
+
+@article{oopsla21c,
+  author = {Pelenitsyn, Artem and Belyakova, Julia and
+           Chung, Benjamin and Tate, Ross and Vitek, Jan},
+  title = {Type Stability in Julia: Avoiding Performance Pathologies in JIT Compilation},
+  year = {2021},
+  journal = PACMPL,
+  issue = {(OOSPLA)},
+  doi = {10.1145/3485527}}
 
 @article{oopsla21b,
   author = "Aviral Goel and Jan Ječmen and
@@ -10,7 +27,9 @@
    year = 2021,
    title = {Promises Are Made To Be Broken: Migrating {R} to Strict Semantics},
    journal = PACMPL,
-   issue = {(OOPSLA}}
+   issue = {(OOPSLA},
+   doi = {10.1145/3485478}
+   }
 
 @article{oopsla21a,
   author = "Aviral Goel and Pierre Donat-Bouillud and Filip Křikava
@@ -19,8 +38,15 @@
    title = {What We Eval in the Shadows: A Large-scale Study of Eval
            in {R} programs},
    journal = PACMPL,
-   issue = {(OOPSLA}}
+   issue = {(OOPSLA},
+   doi = {10.1145/3485502}}
 
+@inproceedings{dls21,
+  author = {Goel, Aviral and Vitek, Jan},
+  title = {First-Class Environments in R},
+  year = {2021}, 
+  doi = {10.1145/3486602.3486768},
+  booktitle = {Symposium on Dynamic Languages (DLS)}}
 
 @inproceedings{ecoop21,
   author    = {Petr Maj and Konrad Seik and Alexander Kovalenko
@@ -29,7 +55,7 @@
                   Repositories},
   booktitle = ECOOP,
   year      = {2021},
-  doi = {10.1145/2658987}}
+  doi = {10.4230/LIPIcs.ECOOP.2021.6}}
 
 @article{popl21,
   author = {Aurele Barriere and Olivier Fl{\"{u}}ckiger and Sandrine
@@ -40,7 +66,7 @@
   journal = PACMPL,
   number = {{POPL}},
   volume = 5,
-  doi = {}}
+  doi = {10.1145/3434327}}
 
 @inproceedings{dls20,
   author    = {Olivier Fl{\"{u}}ckiger and Sebasti{\'{a}}n Krynski,
@@ -422,8 +448,7 @@
   title =   {Terra: a multi-stage language for high-performance computing},
   author = {Zachary DeVito and James Hegarty and
              Jan Vitek and Alex Aiken and Pat Hanrahan},
-  booktitle = "Proceedings of the ACM Programming Language Design
-             and Implementation Conference (PLDI)",
+  booktitle = PLDI, 
   mon = jun,
   year = {2013},
   doi={10.1145/2499370.2462166}
