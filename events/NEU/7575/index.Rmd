@@ -28,3 +28,40 @@ In other words: You pick what you want to do and how you want to be graded. The 
 
 While grades are besides the point in a research class, they are required and the expectation is for them to fall the range [B, B+, A-, A], where a B is below average, B+ and A- mean expectations were met, and A+ means awesome.
 
+## Textbook and Papers
+
+The textbook is Principle of Program Analysis (PPA) by F. Nielson, H.R. Nielson and C. Hankin. (An old version of the text is on ResearchGate here. The newest edition has 476 pages.)
+
+Some paper ideas:
+
+### Testing
+
+  * Fairness Testing: Testing Software for Discrimination FSE 2017. 
+  * Do Automatically Generated Unit Tests Find Real Faults? ASE 2015.
+  * QuickChecking Static Analysis Properties STVR 2017. 
+
+### Bug finding
+
+  * Finding Broken Promises in Asynchronous JavaScript Programs OOPSLA 2018. 
+  * ExceLint: Automatically Finding Spreadsheet Formula Errors OOPSLA 2018. 
+  * To Type or Not to Type: Quantifying Detectable Bugs in JavaScript ICSE 2017. 
+
+### Security
+
+  * Automated Identification of Security Issues from Commit Messages and Bug Reports FSE 2017. 
+  * ZENIDS: Introspective Intrusion Detection for PHP Applications ICSE 2017.
+
+### Algorithms
+
+  * Active Learning of Points-To Specifications PLDI 2018. 
+  * P/Taint: Unified Points-to and Taint Analysis OOPSLA 2017. 
+  * Modular static analysis of string manipulations in C programs SAS 2018. 
+
+### Big Code
+
+  * Automatically Diagnosing and Repairing Error Handling Bugs in C FSE 2017. 
+  * Recovering Clear, Natural Identifiers from Obfuscated JS Names FSE 2017. 
+
+## Reviews
+
+“Jan Vitek is the most horrible professor I’ve ever met. […] he made students read and learn all by themselves. […] He kind of enjoys watching students working so hard over night and night”
