@@ -1,0 +1,30 @@
+---
+title: '7575'
+author: "Jan Vitek"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Scaling Software Engineering to Big Code with Static Analysis
+
+One of the aims of modern software engineering is to automate the process of understanding software artifacts. This course focuses on techniques for analyzing programs to find, e.g., security vulnerabilities and errors, as well as understanding the software development process. You will gain a working knowledge of program analysis and its theoretical foundations rooted in abstract interpretation. The class starts with lectures on key concepts of program analysis including data flow analysis, constraint-based analysis and abstract interpretation. Applications to security and bug finding will be used as motivation. Topics in dynamic analysis will be covered to explore the tradeoff between soundness and scalability. The second part of the course focuses on reading, presenting and validating research papers.
+
+# Workload and Grading
+
+We meet once a week for several hours. Between meetings you will read the book abd papers selected for the week. For the first half of the course, the expected workload is one day a week, mostly reading.  The second half of the course will be either research or coding.
+
+Grading will be based on one of the following three options:
+
+	•	Presentation of a research paper.
+	•	Written exam on the book.
+	•	Reproduction of a research result.
+	•	Implementation of a static analysis algorithm.
+
+In other words: You pick what you want to do and how you want to be graded. The most boring option is to be graded on the readings, but that means you don't have to present or code anything. The next level up, is to prepare a lecture on one research paper that we agree upon. The quality of the lecture would be your grade. Then you could also try to see if you can reproduce the results of the paper using any available artifacts. Or you can implement something relevant to the course topics. Ideas will be hashed out in the first weeks.
+
+While grades are besides the point in a research class, they are required and the expectation is for them to fall the range [B, B+, A-, A], where a B is below average, B+ and A- mean expectations were met, and A+ means awesome.
+
