@@ -9,11 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Scaling Software Engineering to Big Code with Static Analysis
+# Scaling Program Analysis to Big Code
 
-One of the aims of modern software engineering is to automate the process of understanding software artifacts. This course focuses on techniques for analyzing programs to find, e.g., security vulnerabilities and errors, as well as understanding the software development process. You will gain a working knowledge of program analysis and its theoretical foundations rooted in abstract interpretation. The class starts with lectures on key concepts of program analysis including data flow analysis, constraint-based analysis and abstract interpretation. Applications to security and bug finding will be used as motivation. Topics in dynamic analysis will be covered to explore the tradeoff between soundness and scalability. The second part of the course focuses on reading, presenting and validating research papers.
+One of the aims of modern software engineering is to automate the process of understanding software artifacts. This course focuses on techniques for analyzing programs to find bugs and vulnerabilities. You will gain a working knowledge of program analysis and its theoretical foundations rooted in abstract interpretation. The class starts with lectures on key concepts of program analysis including data flow analysis, constraint-based analysis and abstract interpretation. Applications to security and bug finding will be used as motivation. Topics in dynamic analysis will be covered to explore the tradeoff between soundness and scalability. The second part of the course focuses on reading, presenting and validating research papers.
 
-# Workload and Grading
+## Workload and Grading
 
 We meet once a week for several hours. Between meetings you will read the book abd papers selected for the week. For the first half of the course, the expected workload is one day a week, mostly reading.  The second half of the course will be either research or coding.
 
@@ -36,32 +36,39 @@ Some paper ideas:
 
 ### Testing
 
-  * Fairness Testing: Testing Software for Discrimination FSE 2017. 
-  * Do Automatically Generated Unit Tests Find Real Faults? ASE 2015.
-  * QuickChecking Static Analysis Properties STVR 2017. 
+  * [QuickChecking Static Analysis Properties](pubs/quickcheck-15.pdf) STVR 2017. 
+  * [DART: Directed Automated Random Testing](pubs/concolic.pdf) PLDI 2005.
+  
+### Dynamic Analysis
+
+  * [Systematic Approaches for Increasing Soundness and Precision of Static Analyzers](pubs/inc-sound-17.pdf) SOAP 2017.
+  * [Active Learning of Points-To Specifications](pubs/atlas.pdf) PLDI 2018. 
+  * [Concerto: A Framework for Combined Concrete and Abstract Interpretation](pubs/concerto.pdf) POPL 2019.
+  * [Principles of Staged Static+Dynamic Partial Analysis](pubs/sas.pdf) SAS 2022.
 
 ### Bug finding
+ 
+  * [ExceLint: Automatically Finding Spreadsheet Formula Errors](pubs/exel.pdf) OOPSLA 2018. 
+  * [ZENIDS: Introspective Intrusion Detection for PHP Applications](pubs/zenids.pdf) ICSE 2017.
 
-  * Finding Broken Promises in Asynchronous JavaScript Programs OOPSLA 2018. 
-  * ExceLint: Automatically Finding Spreadsheet Formula Errors OOPSLA 2018. 
-  * To Type or Not to Type: Quantifying Detectable Bugs in JavaScript ICSE 2017. 
+### Static Analysis
 
-### Security
-
-  * Automated Identification of Security Issues from Commit Messages and Bug Reports FSE 2017. 
-  * ZENIDS: Introspective Intrusion Detection for PHP Applications ICSE 2017.
-
-### Algorithms
-
-  * Active Learning of Points-To Specifications PLDI 2018. 
-  * P/Taint: Unified Points-to and Taint Analysis OOPSLA 2017. 
-  * Modular static analysis of string manipulations in C programs SAS 2018. 
+  * [Modular static analysis of string manipulations in C programs](pubs/modular.pdf) SAS 2018.  
+  * [Static analysis of Java enterprise applications: frameworks and caches, the elephants in the room](pubs/elephant.pdf) PLDI 2020
+  * [Abstract interpretation repair](pubs/repair.pdf) PLDI 2022.
+  * [Incorrectness logic](pubs/incorrect.pdf) POPL 2020.
+  * [Sound and reusable components for abstract interpretation](pubs/components.pdf) POPL 2019.
+  * [A Multilanguage Static Analysis of Python Programs with Native C Extensions](pubs/monat.pdf) PhDThesis 2021.
 
 ### Big Code
 
-  * Automatically Diagnosing and Repairing Error Handling Bugs in C FSE 2017. 
-  * Recovering Clear, Natural Identifiers from Obfuscated JS Names FSE 2017. 
+ * [To Type or Not to Type: Quantifying Detectable Bugs in JavaScript](pubs/no-type.pdf) ICSE 2017. 
+ * [Learning a Static Analyzer from Data](pubs/learn-static.pdf) CAV 2017.
+ * [Predicting program properties from 'big code'](pubs/fatcode.pdf) POPL 2015.
+ * [Using Data Mining for Static Code Analysis of C](pubs/learn-static.pdf)  ADMA 2012
 
+
+ 
 ## Reviews
 
 “Jan Vitek is the most horrible professor I’ve ever met. […] he made students read and learn all by themselves. […] He kind of enjoys watching students working so hard over night and night”

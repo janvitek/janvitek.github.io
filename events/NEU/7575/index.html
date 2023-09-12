@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jan Vitek" />
 
-<meta name="date" content="2023-06-02" />
+<meta name="date" content="2023-09-12" />
 
 <title>7575</title>
 
@@ -352,29 +352,26 @@ display: none;
 
 <h1 class="title toc-ignore">7575</h1>
 <h4 class="author">Jan Vitek</h4>
-<h4 class="date">2023-06-02</h4>
+<h4 class="date">2023-09-12</h4>
 
 </div>
 
 
-<div id="scaling-software-engineering-to-big-code-with-static-analysis" class="section level1">
-<h1>Scaling Software Engineering to Big Code with Static Analysis</h1>
+<div id="scaling-program-analysis-to-big-code" class="section level1">
+<h1>Scaling Program Analysis to Big Code</h1>
 <p>One of the aims of modern software engineering is to automate the
 process of understanding software artifacts. This course focuses on
-techniques for analyzing programs to find, e.g., security
-vulnerabilities and errors, as well as understanding the software
-development process. You will gain a working knowledge of program
-analysis and its theoretical foundations rooted in abstract
-interpretation. The class starts with lectures on key concepts of
-program analysis including data flow analysis, constraint-based analysis
-and abstract interpretation. Applications to security and bug finding
-will be used as motivation. Topics in dynamic analysis will be covered
-to explore the tradeoff between soundness and scalability. The second
-part of the course focuses on reading, presenting and validating
-research papers.</p>
-</div>
-<div id="workload-and-grading" class="section level1">
-<h1>Workload and Grading</h1>
+techniques for analyzing programs to find bugs and vulnerabilities. You
+will gain a working knowledge of program analysis and its theoretical
+foundations rooted in abstract interpretation. The class starts with
+lectures on key concepts of program analysis including data flow
+analysis, constraint-based analysis and abstract interpretation.
+Applications to security and bug finding will be used as motivation.
+Topics in dynamic analysis will be covered to explore the tradeoff
+between soundness and scalability. The second part of the course focuses
+on reading, presenting and validating research papers.</p>
+<div id="workload-and-grading" class="section level2">
+<h2>Workload and Grading</h2>
 <p>We meet once a week for several hours. Between meetings you will read
 the book abd papers selected for the week. For the first half of the
 course, the expected workload is one day a week, mostly reading. The
@@ -396,6 +393,7 @@ Ideas will be hashed out in the first weeks.</p>
 required and the expectation is for them to fall the range [B, B+, A-,
 A], where a B is below average, B+ and A- mean expectations were met,
 and A+ means awesome.</p>
+</div>
 <div id="textbook-and-papers" class="section level2">
 <h2>Textbook and Papers</h2>
 <p>The textbook is Principle of Program Analysis (PPA) by F. Nielson,
@@ -405,48 +403,63 @@ ResearchGate here. The newest edition has 476 pages.)</p>
 <div id="testing" class="section level3">
 <h3>Testing</h3>
 <ul>
-<li>Fairness Testing: Testing Software for Discrimination FSE 2017.</li>
-<li>Do Automatically Generated Unit Tests Find Real Faults? ASE
-2015.</li>
-<li>QuickChecking Static Analysis Properties STVR 2017.</li>
+<li><a href="pubs/quickcheck-15.pdf">QuickChecking Static Analysis
+Properties</a> STVR 2017.</li>
+<li><a href="pubs/concolic.pdf">DART: Directed Automated Random
+Testing</a> PLDI 2005.</li>
+</ul>
+</div>
+<div id="dynamic-analysis" class="section level3">
+<h3>Dynamic Analysis</h3>
+<ul>
+<li><a href="pubs/inc-sound-17.pdf">Systematic Approaches for Increasing
+Soundness and Precision of Static Analyzers</a> SOAP 2017.</li>
+<li><a href="pubs/atlas.pdf">Active Learning of Points-To
+Specifications</a> PLDI 2018.</li>
+<li><a href="pubs/concerto.pdf">Concerto: A Framework for Combined
+Concrete and Abstract Interpretation</a> POPL 2019.</li>
+<li><a href="pubs/sas.pdf">Principles of Staged Static+Dynamic Partial
+Analysis</a> SAS 2022.</li>
 </ul>
 </div>
 <div id="bug-finding" class="section level3">
 <h3>Bug finding</h3>
 <ul>
-<li>Finding Broken Promises in Asynchronous JavaScript Programs OOPSLA
-2018.</li>
-<li>ExceLint: Automatically Finding Spreadsheet Formula Errors OOPSLA
-2018.</li>
-<li>To Type or Not to Type: Quantifying Detectable Bugs in JavaScript
-ICSE 2017.</li>
+<li><a href="pubs/exel.pdf">ExceLint: Automatically Finding Spreadsheet
+Formula Errors</a> OOPSLA 2018.</li>
+<li><a href="pubs/zenids.pdf">ZENIDS: Introspective Intrusion Detection
+for PHP Applications</a> ICSE 2017.</li>
 </ul>
 </div>
-<div id="security" class="section level3">
-<h3>Security</h3>
+<div id="static-analysis" class="section level3">
+<h3>Static Analysis</h3>
 <ul>
-<li>Automated Identification of Security Issues from Commit Messages and
-Bug Reports FSE 2017.</li>
-<li>ZENIDS: Introspective Intrusion Detection for PHP Applications ICSE
-2017.</li>
-</ul>
-</div>
-<div id="algorithms" class="section level3">
-<h3>Algorithms</h3>
-<ul>
-<li>Active Learning of Points-To Specifications PLDI 2018.</li>
-<li>P/Taint: Unified Points-to and Taint Analysis OOPSLA 2017.</li>
-<li>Modular static analysis of string manipulations in C programs SAS
-2018.</li>
+<li><a href="pubs/modular.pdf">Modular static analysis of string
+manipulations in C programs</a> SAS 2018.<br />
+</li>
+<li><a href="pubs/elephant.pdf">Static analysis of Java enterprise
+applications: frameworks and caches, the elephants in the room</a> PLDI
+2020</li>
+<li><a href="pubs/repair.pdf">Abstract interpretation repair</a> PLDI
+2022.</li>
+<li><a href="pubs/incorrect.pdf">Incorrectness logic</a> POPL 2020.</li>
+<li><a href="pubs/components.pdf">Sound and reusable components for
+abstract interpretation</a> POPL 2019.</li>
+<li><a href="pubs/monat.pdf">A Multilanguage Static Analysis of Python
+Programs with Native C Extensions</a> PhDThesis 2021.</li>
 </ul>
 </div>
 <div id="big-code" class="section level3">
 <h3>Big Code</h3>
 <ul>
-<li>Automatically Diagnosing and Repairing Error Handling Bugs in C FSE
-2017.</li>
-<li>Recovering Clear, Natural Identifiers from Obfuscated JS Names FSE
-2017.</li>
+<li><a href="pubs/no-type.pdf">To Type or Not to Type: Quantifying
+Detectable Bugs in JavaScript</a> ICSE 2017.</li>
+<li><a href="pubs/learn-static.pdf">Learning a Static Analyzer from
+Data</a> CAV 2017.</li>
+<li><a href="pubs/fatcode.pdf">Predicting program properties from ‘big
+code’</a> POPL 2015.</li>
+<li><a href="pubs/learn-static.pdf">Using Data Mining for Static Code
+Analysis of C</a> ADMA 2012</li>
 </ul>
 </div>
 </div>
