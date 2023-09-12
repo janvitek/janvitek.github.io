@@ -1,19 +1,21 @@
 ---
-title: '7575'
+title: 'Scaling Program Analysis to Big Code CS-7575'
 author: "Jan Vitek"
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  html_document:
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Scaling Program Analysis to Big Code
+## Syllabus 
 
 One of the aims of modern software engineering is to automate the process of understanding software artifacts. This course focuses on techniques for analyzing programs to find bugs and vulnerabilities. You will gain a working knowledge of program analysis and its theoretical foundations rooted in abstract interpretation. The class starts with lectures on key concepts of program analysis including data flow analysis, constraint-based analysis and abstract interpretation. Applications to security and bug finding will be used as motivation. Topics in dynamic analysis will be covered to explore the tradeoff between soundness and scalability. The second part of the course focuses on reading, presenting and validating research papers.
 
-## Workload and Grading
+## Workload 
 
 We meet once a week for several hours. Between meetings you will read the book abd papers selected for the week. For the first half of the course, the expected workload is one day a week, mostly reading.  The second half of the course will be either research or coding.
 
@@ -28,9 +30,11 @@ In other words: You pick what you want to do and how you want to be graded. The 
 
 While grades are besides the point in a research class, they are required and the expectation is for them to fall the range [B, B+, A-, A], where a B is below average, B+ and A- mean expectations were met, and A+ means awesome.
 
-## Textbook and Papers
+## Textbook 
 
 The textbook is Principle of Program Analysis (PPA) by F. Nielson, H.R. Nielson and C. Hankin. (An old version of the text is on ResearchGate here. The newest edition has 476 pages.)
+
+## Papers
 
 Some paper ideas:
 
@@ -67,8 +71,10 @@ Some paper ideas:
  * [Predicting program properties from 'big code'](pubs/fatcode.pdf) POPL 2015.
  * [Using Data Mining for Static Code Analysis of C](pubs/learn-static.pdf)  ADMA 2012
 
+## Meetings
 
+We meet on Wednesday 10:15 EST, on [Zoom](https://northeastern.zoom.us/my/jvroom).
  
 ## Reviews
 
-“Jan Vitek is the most horrible professor I’ve ever met. […] he made students read and learn all by themselves. […] He kind of enjoys watching students working so hard over night and night”
+_“Jan Vitek is the most horrible professor I’ve ever met. […] he made students read and learn all by themselves. […] He kind of enjoys watching students working so hard over night and night”_
