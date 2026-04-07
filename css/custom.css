@@ -235,6 +235,11 @@ ul.pn-ul-triangle li.pn-other .pn-publications-span
   width: 100px;
 }
 
+table.pn-students tr td
+{
+  padding: 1px 0px 1px 0;
+}
+
 .pn-inline-link
 {
   height: 17px;
