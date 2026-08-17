@@ -1158,6 +1158,63 @@ target="blank">[Video]</a>
           <div class="col-md-12">
             <ul class="pn-ul-triangle">
 
+              <li class="pn-journal"><div>
+                  <div class="pn-publications">
+                    <A class="pn-link">
+		      <span class="pn-publications-span">
+			<strong>TOPLAS'26</strong>
+		     </span> A Typed Intermediate Representation for Dynamic Languages</a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Mickaël Laurent, Jakob Hain, Filip Křikava, Sebastián Krynski, Jan Vitek<br>
+                      <strong>Abstract</strong>: This paper presents key design decisions for a statically typed, high-level intermediate representation that directly supports optimizations such as specialization, devirtualization, inlining, and copy elimination. Dynamic programming languages pose significant challenges for optimizing compilers due to features such as dynamic typing, late binding, reflection, copy-on-write, and delayed evaluation. To generate efficient code, compilers must speculate on which dynamic features will be exercised and produce specialized code based on these assumptions. This paper presents the design of a statically typed, high-level intermediate representation that makes dynamic behaviors explicit and amenable to static analysis. Our IR combines gradual typing with ownership tracking, and explicitly represents promises, multiple function versions, and contextual dispatch. Together, these features directly support optimizations such as specialization, inlining, scope elision, and copy elimination. We formalize a core calculus, called FIR, that captures the essential features required for these optimizations. We provide an operational semantics, a type system, and flow and reflection analyses, and we prove the soundness of the type system.<br>
+                      <strong>Venue</strong>: ACM Transactions on Programming Languages and Systems (TOPLAS)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/3811921"
+                      target="_blank">10.1145/3811921</a>
+                      <a href="pubs/toplas26.pdf"
+                      target="_blank"><button type="button" class="btn  btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="pn-conferences"><div>
+                  <div class="pn-publications">
+                    <A class="pn-link">
+		      <span class="pn-publications-span">
+			<strong>ECOOP'26</strong>
+		     </span> Characterizing Type Feedback in Just-In-Time Compilation</a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Sebastián Krynski, Filip Ríha, Filip Křikava, Jan Vitek<br>
+                      <strong>Abstract</strong>: Just-in-time (JIT) compilers leverage type feedback to optimize dynamic languages by recording runtime observations during interpretation and using them to generate specialized code. However, this recording process introduces significant execution time overhead to program warmup. This paper presents a characterization study of how feedback information is utilized by JIT compilers, providing motivation for future work on reducing recording overhead. We instrument the Ř compiler for the R language to track feedback slot usage throughout compilation, analyzing well-known benchmarks and real-world programs. Our measurements reveal that recording adds overhead to the interpreter up to 1.6× (mean 1.2×), yet at least 59% of non-empty slots are not used by the compiler. A large fraction of these unused slots can be attributed to dead code that the compiler eliminated. Most of the remaining slots are type-stable — meaning the inferred type matches the observed type — making speculation futile. To quantify the potential for improvement, we evaluate two oracle-based configurations that establish upper bounds on achievable reduction: a conservative set approach that preserves optimization quality while improving warmup, and an optimistic set approach that sacrifices some compiled code performance for faster interpretation.<br>
+                      <strong>Venue</strong>: European Conference on Object-Oriented Programming (ECOOP)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.4230/LIPIcs.ECOOP.2026.16"
+                      target="_blank">10.4230/LIPIcs.ECOOP.2026.16</a>
+                      <a href="pubs/ecoop26.pdf"
+                      target="_blank"><button type="button" class="btn  btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="pn-conferences"><div>
+                  <div class="pn-publications">
+                    <A class="pn-link">
+		      <span class="pn-publications-span">
+			<strong>MPLR'26</strong>
+		     </span> Leveraging Copy-and-Patch JIT Compilation for Low-Overhead Dynamic Program Analysis</a>
+                    <div class="pn-readmore">
+                      <strong>Authors</strong>: Matěj Kocourek, Filip Křikava, Pierre Donat-Bouillud, Jan Vitek<br>
+                      <strong>Abstract</strong>: Copy-and-patch compilation is an approach for building baseline just-in-time compilers from AST or bytecode interpreters. It features very fast compilation times while generating good quality code. It has been used as a baseline tier for a number of languages including Lua, Python, and R. In this paper, we explore copy-and-patch as a foundation for dynamic program analysis, and implement four analyses on top of an existing copy-and-patch JIT for R: code instrumentation, code coverage, performance profiling, and native debugging. Two properties make copy-and-patch particularly well-suited for this purpose. First, since the code templates (stencils) are compiled by a standard C compiler, DWARF debug information is available as a by-product. This lets us reuse native tooling for profiling and debugging directly, with R and native code appearing in a single unified view. Second, analyses that operate at the bytecode level reduce to injecting stencils into the bytecode stream at JIT compile time, incurring minimal overhead. Our prototype evaluation yields instrumentation with no measurable overhead; code coverage that is faster than the existing solution while covering 17% more lines; and profiling that remains, on average, faster than GNU R.<br>
+                      <strong>Venue</strong>: ACM SIGPLAN International Conference on Managed Programming Languages and Runtimes (MPLR)<br>
+                      <strong>DOI</strong>: <a href="https://dx.doi.org/10.1145/3828170.3828176"
+                      target="_blank">10.1145/3828170.3828176</a>
+                      <a href="pubs/mplr26.pdf"
+                      target="_blank"><button type="button" class="btn  btn-default btn-xs pn-download">PDF</button></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
               <li class="pn-conferences"><div>
                   <div class="pn-publications">
                     <A class="pn-link">
